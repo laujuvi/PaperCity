@@ -9,9 +9,22 @@ public class PlayerInteractUI : MonoBehaviour
     [SerializeField] private PlayerInteract _playerInteract;
     [SerializeField] private TextMeshProUGUI interactText;
 
+    private BoxMessageManager boxMessageManager;
+
+    public void Start()
+    {
+        boxMessageManager = FindObjectOfType<BoxMessageManager>();
+
+        if (boxMessageManager == null)
+        {
+            Debug.LogError("No se encontró un BoxMessageManager en la escena.");
+            return;
+        }
+    }
+
     private void Update()
     {
-        if(_playerInteract.GetInteractableObject() != null)
+        if(_playerInteract.GetInteractableObject() != null && !boxMessageManager.IsDisplayingMessage() )
         {
             Show(_playerInteract.GetInteractableObject());
         } 
@@ -20,6 +33,7 @@ public class PlayerInteractUI : MonoBehaviour
             Hide();
         }
     }
+
     private void Show(IInteractable interactable)
     {
         _containerGameObject.SetActive(true);
