@@ -175,7 +175,7 @@ MonoBehaviour:
   gravityScale: -20
   walkSpeed: 3
   runSpeed: 7
-  rotationSensibility: 2000
+  rotationSensibility: 200
   jumpHeight: 1.9
 --- !u!143 &65271237
 CharacterController:
