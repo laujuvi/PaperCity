@@ -7,6 +7,8 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     [SerializeField] private string interactText;
     private BoxMessageManager boxMessageManager;
+    private DialogManager dialogManager;
+
 
     private bool isDialog2 = false;
     private bool isDialog3 = false;
@@ -16,6 +18,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     public void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
+        dialogManager = FindObjectOfType<DialogManager>();
 
         if (boxMessageManager == null)
         {
@@ -27,7 +30,8 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        TestMessages();
+        //TestMessages();
+        dialogManager.DisplayDialog("NPC1");
         Debug.Log("INTERACTUASTE");
     }
 
