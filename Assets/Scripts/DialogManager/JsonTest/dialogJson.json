@@ -10,7 +10,7 @@
                     "talked": false,
                     "evidense":{
                         "hasEvidense": false,
-                        "objectName": null
+                        "evidenseName": ""
                     },
                     "message": "Hello, player!",
                     "emotion": "Talking"
@@ -19,7 +19,7 @@
                     "talked": false,
                     "evidense":{
                         "hasEvidense": false,
-                        "objectName": null
+                        "objectName": ""
                     },
                     "message": "I'm NPC1",
                     "emotion": "Talking"
