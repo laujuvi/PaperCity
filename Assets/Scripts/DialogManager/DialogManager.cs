@@ -75,7 +75,18 @@ public class DialogManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Requiere evidencia:" + message.evidence.evidenseName);
+                        foreach (GameObject evidenceObject in evidenceArray)
+                        {
+                            if (evidenceObject.name == message.evidence.evidenseName)
+                            {
+                                // El objeto existe en evidenceArray
+                                Debug.Log("Requiere evidencia: " + message.evidence.evidenseName);
+                                return;
+                            }
+                        }
+
+                        // El objeto no existe en evidenceArray
+                        Debug.Log("No se encontró la evidencia: " + message.evidence.evidenseName);
                     }
                 }
 

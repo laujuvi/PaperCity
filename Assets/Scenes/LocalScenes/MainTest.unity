@@ -1503,6 +1503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695555609}
+  - component: {fileID: 1695555610}
   m_Layer: 0
   m_Name: DialogManager
   m_TagString: Untagged
@@ -1525,6 +1526,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695555610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695555608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266dd8558579d014d827658e5a020faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguesJson: {fileID: 4900000, guid: 1e8dd02ff4c50ec4cb9b4ea5e757dd63, type: 3}
+  evidenceArray: []
 --- !u!1 &1700533483
 GameObject:
   m_ObjectHideFlags: 0
