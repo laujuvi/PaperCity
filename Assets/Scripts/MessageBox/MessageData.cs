@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum Emotions { Neutral, Angry, Talking, Thinking };
+public enum Emotions { None, Neutral, Angry, Talking, Thinking };
 
 public class MessageData
 {
