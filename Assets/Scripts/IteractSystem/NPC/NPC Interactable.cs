@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
 
     [SerializeField] private string interactText;
-    private BoxMessageManager boxMessageManager;
+    [SerializeField] private string pickableText;
 
-    private bool isDialog2 = false;
-    private bool isDialog3 = false;
-    private bool isDialog4 = false;
-    private int interects = 0;
+    private BoxMessageManager boxMessageManager;
+    private DialogManager dialogManager;
 
     public void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
+        dialogManager = FindObjectOfType<DialogManager>();
 
         if (boxMessageManager == null)
         {
@@ -27,8 +27,16 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        TestMessages();
-        Debug.Log("INTERACTUASTE");
+        if (gameObject.layer == LayerMask.NameToLayer("NPC"))
+        {
+            dialogManager.DisplayDialog(gameObject.name);
+            Debug.Log("INTERACTUASTE");
+        } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
+        {
+            dialogManager.SetEvidenceStatus(gameObject.name, true);
+            boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
+            gameObject.SetActive(false);
+        }
     }
 
     public string GetInteractText()
@@ -41,29 +49,4 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         return transform;
     }
 
-    // ESTE METODO ES A MODO PRUEBA
-    private void TestMessages()
-    {
-        if (interects <= 1)
-        {
-            boxMessageManager.SendMessage("NPC", Color.blue, "Hello, player!", Emotions.Neutral);
-            interects++;
-            
-        }
-        else if (!isDialog2)
-        {
-            boxMessageManager.SendMessage("NPC", Color.blue, "Why do you keep bothering me?", Emotions.Neutral);
-            isDialog2 = true;
-        }
-        else if (!isDialog3)
-        {
-            boxMessageManager.SendMessage("NPC", Color.blue, "I'm getting really annoyed now.", Emotions.Angry);
-            isDialog3 = true;
-        }
-        else if (!isDialog4)
-        {
-            boxMessageManager.SendMessage("NPC", Color.blue, "That's it, I'm done talking to you.", Emotions.Angry);
-            isDialog4 = true;
-        }
-    }
 }

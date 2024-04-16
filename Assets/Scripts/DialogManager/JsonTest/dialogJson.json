@@ -1,0 +1,70 @@
+{
+    "dialogues": [
+        {
+            "name": "NPC1",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "Hello, player!",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "I'm NPC1",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+        {
+            "name": "NPC2",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Hello, player!",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Can you give me a pickable item?",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "I need Pickeable item"
+
+                    },
+                    "message": "Thank you!",
+                    "emotion": "Talking"
+                }
+            ]
+        }
+    ]
+}
