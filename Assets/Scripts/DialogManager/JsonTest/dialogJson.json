@@ -11,18 +11,18 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello, player!",
-                    "emotion": "Talking"
+                    "message": "You better solve this quick i want my husband killer behind the bars",
+                    "emotion": "Angry"
                 },
                 {
                     "talked": false,
                     "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": ""
+                        "hasEvidence": true,
+                        "evidenceName": "Knife",
+                        "requiredMessage": "I already told you everything"
 
                     },
-                    "message": "I'm NPC1",
+                    "message": "That must be the butcher's",
                     "emotion": "Talking"
                 }
             ]
