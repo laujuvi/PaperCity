@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "NPC1",
+            "name": "Judy (Major's wife)",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -65,6 +65,90 @@
                     "emotion": "Talking"
                 }
             ]
-        }
+        },
+        {
+        	"name": "Assistant Elena",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "helo detective!",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "i will open the door right now",
+                    "emotion": "Talking"
+                }
+
+        	 ]
+         },
+         {
+        	"name": "Butcher Frank",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "helo detective!",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "i'm just here because i had a meteeing with the major",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "Knife",
+                        "requiredMessage": "I don't think i will be seeing the major today"
+
+                    },
+                    "message": "What how did you get that, it was on my bag",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "But i can assure you i didn't have anithing to do with Joes (janitor) dead, that knife its to small for my hands, it's from one of my partners at the Butcher",
+                    "emotion": "Talking"
+                }
+
+
+
+        	 ]
+         }
+
+       
     ]
 }
