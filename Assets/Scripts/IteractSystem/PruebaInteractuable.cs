@@ -60,5 +60,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     {
         isOpening = false; // Marca la puerta como no abriéndose
         transform.rotation = closedRotation; // Vuelve a la rotación cerrada
+        
+
     }
 }
