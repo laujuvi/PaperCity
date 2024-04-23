@@ -67,6 +67,7 @@ public class GuiltySelector : MonoBehaviour
 
             // Cambiar el color del botón
             Image buttonImage = suspect.SuspectButton.GetComponent<Image>();
+            buttonImage = suspect.MiniImage.GetComponent<Image>();
             if (buttonImage != null)
             {
                 buttonImage.color = Color.red;
