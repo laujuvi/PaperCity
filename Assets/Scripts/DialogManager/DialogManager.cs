@@ -93,15 +93,12 @@ public class DialogManager : MonoBehaviour
                                 boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                                 message.talked = true;
                                 return;
-                            } else
-                            {
-                                boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                                return;
                             }
                         }
 
+                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                         // El objeto no existe en evidenceArray
-                        Debug.Log("No se encontró la evidencia: " + message.evidence.evidenceName);
+                        Debug.LogWarning("No se encontró la evidencia: " + message.evidence.evidenceName);
                     }
                 }
 
