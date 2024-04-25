@@ -968,6 +968,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: dialoguesPhase1Json
+      value: 
+      objectReference: {fileID: 4900000, guid: 2a6834d33c5d2864ebac3fdc1b771058, type: 3}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: dialoguesPhase2Json
+      value: 
+      objectReference: {fileID: 4900000, guid: 1e8dd02ff4c50ec4cb9b4ea5e757dd63, type: 3}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: evidenceArray.Array.data[0]
       value: 
       objectReference: {fileID: 177176337}
@@ -2181,6 +2189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Hablar con NPC Prueba
   pickableText: 
+  isFakeEvidence: 0
 --- !u!1 &1773361660
 GameObject:
   m_ObjectHideFlags: 0
