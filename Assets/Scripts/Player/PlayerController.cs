@@ -22,6 +22,15 @@ public class PlayerController : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float jumpHeight = 1.9f;
 
+    [Header("Crouch")]
+    public float crouchHeight;
+    public bool crouch;
+
+    [Header("LookUp")]
+    public float lookUphHeight;
+    public bool lookUp;
+
+    [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
     Vector3 moveInput = Vector3.zero;
     Vector3 rotationInput = Vector3.zero;
@@ -34,6 +43,8 @@ public class PlayerController : MonoBehaviour
     {
         Look();
         Move();
+        Crouch();
+        LookUp();
     }
     private void Move()
     {
@@ -68,5 +79,20 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(Vector3.up * rotationInput.x);
         playerCamera.transform.localRotation = Quaternion.Euler(-cameraVerticalAngle, 0f, 0f);
+    }
+    private void Crouch()
+    {
+        crouch = Input.GetKey(KeyCode.LeftControl);
+
+        float crouchLocalScaleY = crouch ? crouchHeight : 1f;
+        float newCrouchScaleY = Mathf.Lerp(transform.localScale.y, crouchLocalScaleY, Time.deltaTime * smooth);
+        transform.localScale = new Vector3(1, newCrouchScaleY, 1);
+    }
+    private void LookUp()
+    {
+        lookUp = Input.GetKey(KeyCode.V);
+        float targetLocalScaleY = lookUp ? lookUphHeight : 1f;
+        float newScaleY = Mathf.Lerp(transform.localScale.y, targetLocalScaleY, Time.deltaTime * smooth);
+        transform.localScale = new Vector3(1, newScaleY, 1);
     }
 }
