@@ -11,7 +11,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello, player We are in phase 2!!!",
+                    "message": "Hello, player We are in phase 2",
                     "emotion": "Talking"
                 },
                 {
@@ -22,7 +22,7 @@
                         "requiredMessage": ""
 
                     },
-                    "message": "I'm NPC1",
+                    "message": "Congrats!",
                     "emotion": "Talking"
                 }
             ]
