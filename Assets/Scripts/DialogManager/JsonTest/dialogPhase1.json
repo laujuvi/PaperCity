@@ -11,7 +11,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello, player We are in phase 1",
+                    "message": "Hello player, we are in phase 1, you need 2 pickeables for next phase",
                     "emotion": "Talking"
                 },
                 {
