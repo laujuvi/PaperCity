@@ -8,6 +8,8 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     [SerializeField] private string interactText;
     [SerializeField] private string pickableText;
+    [SerializeField] private bool isFakeEvidence;
+
 
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
@@ -33,9 +35,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             Debug.Log("INTERACTUASTE");
         } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {
-            dialogManager.SetEvidenceStatus(gameObject.name, true);
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
+            if (!isFakeEvidence) { 
+            dialogManager.SetEvidenceStatus(gameObject.name, true);
             gameObject.SetActive(false);
+            }
         }
     }
 

@@ -1,0 +1,32 @@
+{
+    "dialogues": [
+        {
+            "name": "NPC1",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "Hello, player We are in phase 2, you need 1 pickeables for final phase",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Congrats!",
+                    "emotion": "Talking"
+                }
+            ]
+        }
+       
+    ]
+}

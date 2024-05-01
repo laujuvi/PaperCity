@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,19 +35,32 @@ public class DialoguesWrapper
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] private TextAsset dialoguesJson;
-    [SerializeField] private GameObject[] evidenceArray;
-    private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
-
+    /*BOXMESSAGEMANAGER*/
     private BoxMessageManager boxMessageManager;
 
-    private DialoguesWrapper dialoguesWrapper;
+    /*JSON*/
+    [SerializeField] private TextAsset dialoguesPhase1Json;
+    [SerializeField] private TextAsset dialoguesPhase2Json;
+    [SerializeField] private TextAsset dialoguesPhaseFinalJson;
 
+    private DialoguesWrapper currentDialoguesWrapper;
+
+    private DialoguesWrapper dialoguesPhase1Wrapper;
+    private DialoguesWrapper dialoguesPhase2Wrapper;
+    private DialoguesWrapper dialoguesPhaseFinalWrapper;
+
+    /*EVIDENCE*/
+    [SerializeField] private GameObject[] evidenceArray;
+    [SerializeField] private int minEvidenceForPhase2 = 1;
+    [SerializeField] private int minEvidenceForPhaseFinal = 2;
+
+    private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
 
     private void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
-        if (dialoguesJson != null)
+
+        if (dialoguesPhase1Json != null && dialoguesPhase2Json != null && dialoguesPhaseFinalJson != null)
         {
             LoadDialoguesFromJson();
         }
@@ -64,12 +78,21 @@ public class DialogManager : MonoBehaviour
 
     private void LoadDialoguesFromJson()
     {
-        dialoguesWrapper = JsonUtility.FromJson<DialoguesWrapper>(dialoguesJson.ToString());
+        dialoguesPhase1Wrapper = JsonUtility.FromJson<DialoguesWrapper>(dialoguesPhase1Json.ToString());
+        dialoguesPhase2Wrapper = JsonUtility.FromJson<DialoguesWrapper>(dialoguesPhase2Json.ToString());
+        dialoguesPhaseFinalWrapper = JsonUtility.FromJson<DialoguesWrapper>(dialoguesPhaseFinalJson.ToString());
+
+        currentDialoguesWrapper = dialoguesPhase1Wrapper;
+
     }
 
     public void DisplayDialog(string name)
     {
-        DialogData dialog = FindDialogByName(name);
+        int totalCurrentEvidence = GetTrueEvidenceCount();
+
+        if (totalCurrentEvidence >= minEvidenceForPhase2 && totalCurrentEvidence < minEvidenceForPhaseFinal) currentDialoguesWrapper = dialoguesPhase2Wrapper;
+        if (totalCurrentEvidence >= minEvidenceForPhaseFinal) currentDialoguesWrapper = dialoguesPhaseFinalWrapper;
+        DialogData dialog = FindDialogByName(name, currentDialoguesWrapper);
 
         if (dialog != null)
         {
@@ -92,15 +115,12 @@ public class DialogManager : MonoBehaviour
                                 boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                                 message.talked = true;
                                 return;
-                            } else
-                            {
-                                boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                                return;
                             }
                         }
 
-                        // El objeto no existe en evidenceArray
-                        Debug.Log("No se encontró la evidencia: " + message.evidence.evidenceName);
+                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                        // El objeto no existe en evidenceArray o no esta en true
+                        Debug.LogWarning("No se encontró la evidencia: " + message.evidence.evidenceName);
                     }
                 }
 
@@ -110,9 +130,9 @@ public class DialogManager : MonoBehaviour
         Debug.LogWarning("Dialog not found or all messages require evidence.");
     }
 
-    private DialogData FindDialogByName(string name)
+    private DialogData FindDialogByName(string name, DialoguesWrapper jsonDialogues)
     {
-        foreach (var dialog in dialoguesWrapper.dialogues)
+        foreach (var dialog in jsonDialogues.dialogues)
         {
             if (dialog.name == name)
             {
@@ -125,6 +145,7 @@ public class DialogManager : MonoBehaviour
 
     public void SetEvidenceStatus(string evidenceName, bool status)
     {
+        Debug.Log("Recibido");
         if (evidenceStatus.ContainsKey(evidenceName))
         {
             evidenceStatus[evidenceName] = status;
@@ -146,5 +167,19 @@ public class DialogManager : MonoBehaviour
             Debug.LogError("Evidence with name " + evidenceName + " not found in evidenceArray.");
             return false;
         }
+    }
+
+    /*Obtiene la cantidad de evidencia que ya recolectamos*/
+    public int GetTrueEvidenceCount() 
+    {
+        int count = 0;
+        foreach (var e in evidenceStatus)
+        {
+            if (e.Value)
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
