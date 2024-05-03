@@ -10,25 +10,25 @@ public class PlayerController : MonoBehaviour
     public Camera playerCamera;
 
     [Header("General")]
-    [SerializeField] private float gravityScale = -20f;
+    [SerializeField] float gravityScale = -20f;
 
     [Header("Movement")]
-    [SerializeField] private float walkSpeed = 3;
-    [SerializeField] private float runSpeed = 7;
+    [SerializeField] float walkSpeed = 3;
+    [SerializeField] float runSpeed = 7;
 
     [Header("Rotation")]
-    [SerializeField] private float rotationSensibility = 200;
+    [SerializeField] float rotationSensibility = 200;
 
     [Header("Jump")]
-    [SerializeField] private float jumpHeight = 1.9f;
+    [SerializeField] float jumpHeight = 1.9f;
 
     [Header("Crouch")]
-    public float crouchHeight;
-    public bool crouch;
+    [SerializeField] float crouchHeight;
+    bool crouch;
 
     [Header("LookUp")]
-    public float lookUphHeight;
-    public bool lookUp;
+    [SerializeField] float lookUphHeight;
+    bool lookUp;
 
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
