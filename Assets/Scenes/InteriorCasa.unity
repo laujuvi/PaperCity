@@ -324,10 +324,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: divorcePapers
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 267731743}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 267731744}
   m_SourcePrefab: {fileID: 100100000, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
 --- !u!1 &37446445
 GameObject:
@@ -1232,14 +1242,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7305443566251847385, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4134129291480835713, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
       propertyPath: m_Name
       value: catalogosdecasa
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 298176734}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 298176735}
   m_SourcePrefab: {fileID: 100100000, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
 --- !u!1 &235746596
 GameObject:
@@ -1608,6 +1636,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264016194}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &267731739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+  m_PrefabInstance: {fileID: 30834065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &267731743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267731739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Papeles de divorcio
+  pickableText: "los papeles de divorcio fueron encontrados en la cocina. Solamente
+    est\xE1n firmados por el se\xF1or Ackroyd, lo que indica que su esposa o a\xFAn
+    no sab\xEDa del asunto\u2026 o no quiso firmarlos. El hecho de que est\xE9n en
+    la cocina sugiere que no eran un secreto, es decir, la cocina es uno de los lugares
+    m\xE1s transitados de la casa, por lo que es probable que incluso hayan estado
+    discutiendo acerca de esto el d\xEDa anterior a la muerte."
+  isFakeEvidence: 0
+--- !u!65 &267731744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267731739}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.007749101, y: 0.010000001, z: 8.666758e-11}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &271113957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +2030,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930615094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &298176732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 360603367649b1f40b18fb497abef3d6, type: 3}
+  m_PrefabInstance: {fileID: 195118727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &298176734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298176732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Revistas de inmobiliarias
+  pickableText: "\u201CSon muchas revistas de inmobiliarias y los Ackroyd viven del
+    puerto\u2026 \xBFPodr\xEDa ser que alguno de los Ackroyd estuviera buscando otro
+    lugar donde vivir?\u201D"
+  isFakeEvidence: 0
+--- !u!65 &298176735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298176732}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6423637, y: 0.23566055, z: 0.9618139}
+  m_Center: {x: -0.08092839, y: -0.05539, z: -0.019093035}
 --- !u!1 &320716584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,7 +2380,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0aa10ddd0ae3b5346ab67431c7bcb0f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2883,10 +3000,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PregnancyTest
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1257374961}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1257374962}
   m_SourcePrefab: {fileID: 100100000, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
 --- !u!1 &603295592
 GameObject:
@@ -5110,7 +5237,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059069818}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6101,6 +6228,50 @@ Transform:
   - {fileID: 2000640027}
   m_Father: {fileID: 930615094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1257374957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
+  m_PrefabInstance: {fileID: 550400671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1257374961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257374957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Test de embarazo
+  pickableText: "el test de embarazo encontrado en un caj\xF3n del cuarto vac\xEDo
+    indica que la se\xF1ora Ackroyd est\xE1 embarazada. Claramente fue comprado hace
+    poco y el hecho de que est\xE9 en el caj\xF3n tal vez indique que esto era un
+    secreto."
+  isFakeEvidence: 0
+--- !u!65 &1257374962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257374957}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.02032077, z: 0.028579328}
+  m_Center: {x: 0, y: -0.0001604303, z: 0.004289667}
 --- !u!1 &1357344129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7330,7 +7501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937357442813065369, guid: 8ba4435e740d97b4e9228d91ff260477, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.014884
+      value: -39.1
       objectReference: {fileID: 0}
     - target: {fileID: 6937357442813065369, guid: 8ba4435e740d97b4e9228d91ff260477, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7338,7 +7509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937357442813065369, guid: 8ba4435e740d97b4e9228d91ff260477, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.1902776
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: 6937357442813065369, guid: 8ba4435e740d97b4e9228d91ff260477, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9802,8 +9973,8 @@ Transform:
   m_GameObject: {fileID: 2116109816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.2653, y: 0, z: 14.5553}
-  m_LocalScale: {x: 1.7671796, y: 1, z: 1.6632451}
+  m_LocalPosition: {x: -43.2653, y: -0, z: 13.5166}
+  m_LocalScale: {x: 1.7671796, y: 1, z: 1.4555087}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
