@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/3D Objects/Mesa/Mesa.fbx.meta
-guid: 1fb4aabeb0154474d8d3eafca1262727
-========
-guid: 1bde81508e869a14a9bd275c127b9736
->>>>>>>> main:Assets/3D Objects/Inodoro/inodoro.fbx.meta
+guid: 0b3e3813bdce2cd4c948834c18ab1f0d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/3D Objects/Mesa/Mesa.fbx.meta
-guid: 1fb4aabeb0154474d8d3eafca1262727
-========
-guid: 1bde81508e869a14a9bd275c127b9736
->>>>>>>> main:Assets/3D Objects/Inodoro/inodoro.fbx.meta
+guid: bdc520e71290c414dad86377960dc701
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -41,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
