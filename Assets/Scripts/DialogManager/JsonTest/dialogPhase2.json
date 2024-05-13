@@ -17,9 +17,9 @@
                 {
                     "talked": false,
                     "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": ""
+                        "hasEvidence": true,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "asdasd"
 
                     },
                     "message": "Congrats!",
