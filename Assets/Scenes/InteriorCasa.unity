@@ -702,7 +702,7 @@ MonoBehaviour:
   crouch: 0
   lookUphHeight: 0
   lookUp: 0
-  smooth: 4
+  smooth: 2
 --- !u!143 &65271237
 CharacterController:
   m_ObjectHideFlags: 0
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf9410f450442143b42014cac9a5228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InteractRange: 3.45
+  _InteractRange: 1
 --- !u!4 &74475872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8948952419401208810, guid: 416001780233fad4fa19bf98539c4c3e, type: 3}
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Escena del crimen
   pickableText: 
   isFakeEvidence: 0
 --- !u!65 &210415617
@@ -1995,7 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Papeles de divorcio
   pickableText: 
   isFakeEvidence: 0
 --- !u!65 &267731741
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Revistas inmobiliarias
   pickableText: 
   isFakeEvidence: 0
 --- !u!65 &298176734
@@ -6177,7 +6177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Test de embarazo
   pickableText: 
   isFakeEvidence: 0
 --- !u!65 &1257374959
@@ -6641,7 +6641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Bola de pelos
   pickableText: 
   isFakeEvidence: 0
 --- !u!1001 &1464474093
