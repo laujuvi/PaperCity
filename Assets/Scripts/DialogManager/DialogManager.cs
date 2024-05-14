@@ -116,7 +116,6 @@ public class DialogManager : MonoBehaviour
                             {
                                 boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                                 message.talked = true;
-                                gameManager.CheckGuiltyNPC(dialog.name);
                                 return;
                             }
                         }
