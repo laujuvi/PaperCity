@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if (collider.TryGetComponent(out IInteractable interactable))
             {
-                InteractableList.Add(interactable); 
+                InteractableList.Add(interactable);
             }
         }
 
