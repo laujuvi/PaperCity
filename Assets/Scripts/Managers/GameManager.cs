@@ -19,7 +19,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject guiltyNPC;
     [SerializeField] private string intermediateMessage;
     [SerializeField] private string definitiveMessage;
-    private int currentEvidence = 0;
+    public int currentEvidence = 0;
+    public int totalEvidence = 0;
+
+    /* NPC IMFO */
+    private bool isNPCTalking = false;
+    private string lastNPCName;
 
     private void Start()
     {
@@ -30,6 +35,23 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogWarning("PlayerInteract component not found in the scene.");
+        }
+    }
+
+    private void Update()
+    {
+        if (isNPCTalking) 
+        {
+            if (currentEvidence < minEvidence)
+            {
+                isNPCTalking = false;
+                return;
+            }
+
+            if(!boxMessageManager.IsDisplayingMessage()){
+                CheckGuiltyNPC();
+                isNPCTalking = false;
+            }
         }
     }
     private void DisablePlayerInputs()
@@ -45,12 +67,10 @@ public class GameManager : MonoBehaviour
         _playerController.enabled = true;
     }
 
-    public void CheckGuiltyNPC(string NPCName)
+    public void CheckGuiltyNPC()
     {
-        if (currentEvidence < minEvidence) return;
-        while (!boxMessageManager.IsDisplayingMessage())
-        {
-            if (guiltyNPC.name == NPCName)
+
+            if (guiltyNPC.name == lastNPCName)
             {
                 Debug.Log("WIN");
                 return;
@@ -59,8 +79,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("LOSE");
                 return;
             }
-        }
-
+        
     }
 
     public void CheckCurrentEvidence()
@@ -76,5 +95,11 @@ public class GameManager : MonoBehaviour
             boxMessageManager.SendMessage("", Color.white, intermediateMessage, Emotions.None);
             return;
         }
+    }
+
+    public void SetNPCName (string NPCName)
+    {
+        lastNPCName = NPCName;
+        isNPCTalking = true;
     }
 }

@@ -106,6 +106,7 @@ public class DialogManager : MonoBehaviour
                     {
                         boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                         message.talked = true;
+                        gameManager.SetNPCName(dialog.name);
                         return;
                     }
                     else
@@ -116,11 +117,13 @@ public class DialogManager : MonoBehaviour
                             {
                                 boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                                 message.talked = true;
+                                gameManager.SetNPCName(dialog.name);
                                 return;
                             }
                         }
 
                         boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                        gameManager.SetNPCName(dialog.name);
                         // El objeto no existe en evidenceArray o no esta en true
                         Debug.LogWarning("No se encontró la evidencia: " + message.evidence.evidenceName);
                     }
