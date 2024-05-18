@@ -13,17 +13,14 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
+    private GameManager gameManager;
 
     public void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         dialogManager = FindObjectOfType<DialogManager>();
+        gameManager = FindObjectOfType<GameManager>();
 
-        if (boxMessageManager == null)
-        {
-            Debug.LogError("No se encontró un BoxMessageManager en la escena.");
-            return;
-        }
     }
 
 
@@ -38,6 +35,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
             if (!isFakeEvidence) { 
             dialogManager.SetEvidenceStatus(gameObject.name, true);
+            gameManager.CheckCurrentEvidence();
             gameObject.SetActive(false);
             }
         }
