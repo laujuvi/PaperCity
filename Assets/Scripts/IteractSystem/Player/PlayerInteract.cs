@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] private float _InteractRange = 2f;
+    [SerializeField] private float _InteractRange = 0.1f;
     public event Action OnInteract;
     // Update is called once per frame
     void Update()
