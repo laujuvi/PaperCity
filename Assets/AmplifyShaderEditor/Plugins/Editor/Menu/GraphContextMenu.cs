@@ -155,8 +155,8 @@ namespace AmplifyShaderEditor
 							ContextMenuItem newItem = new ContextMenuItem( attribute, type, attribute.Name, attribute.Tags, attribute.Category, attribute.Description, null, attribute.ShortcutKey );
 							if( UIUtils.GetNodeAvailabilityInBitArray( attribute.NodeAvailabilityFlags, NodeAvailability.SurfaceShader ) )
 								m_items.Add( newItem );
-							else if( UIUtils.GetNodeAvailabilityInBitArray( attribute.NodeAvailabilityFlags, currentGraph.ParentWindow.CurrentNodeAvailability ) )
-								m_items.Add( newItem );
+							//else if( UIUtils.GetNodeAvailabilityInBitArray( attribute.NodeAvailabilityFlags, currentGraph.ParentWindow.CurrentNodeAvailability ) )
+								//m_items.Add( newItem );
 							else if( UIUtils.GetNodeAvailabilityInBitArray( attribute.NodeAvailabilityFlags, currentGraph.CurrentCanvasMode ) )
 								m_items.Add( newItem );
 
