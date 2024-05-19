@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
     /* NPC IMFO */
     private bool isNPCTalking = false;
     private string lastNPCName;
+
+    public Text evidenceCounter;
 
     private void Start()
     {
@@ -85,6 +88,8 @@ public class GameManager : MonoBehaviour
     public void CheckCurrentEvidence()
     {
         currentEvidence++;
+        evidenceCounter.text = currentEvidence.ToString();
+
         if (currentEvidence >= maxEvidence) { 
         boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
             return;
