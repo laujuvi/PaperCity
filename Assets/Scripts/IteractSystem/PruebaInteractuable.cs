@@ -6,61 +6,76 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
 
-    public float openAngle = 90f; // Ángulo de apertura de la puerta
-    public float openSpeed = 2f; // Velocidad de apertura de la puerta
+    public float openAngle = 90f; 
+    public float openSpeed = 2f; 
 
-    private Quaternion closedRotation; // Rotación de la puerta cerrada
-    private Quaternion openRotation; // Rotación de la puerta abierta
-    private bool isOpening = false; // Variable para controlar si la puerta está abriéndose
-    public void Interact()
-    {
-        if (!isOpening)
-        {
-            OpenDoor();
-        }
-        else if (isOpening)
-        {
-            CloseDoor();
-        }
-    }
+    private Quaternion closedRotation; 
+    private Quaternion openRotation;
+    private bool isOpening = false;
+    private bool isClosed = true;
 
-    public string GetInteractText()
-    {
-        return interactText;
-    }
-
-    public Transform GetTransform()
-    {
-        return transform;
-    }
-
-    private void Start()
+    void Start()
     {
         closedRotation = transform.rotation; // Guarda la rotación inicial de la puerta
         openRotation = Quaternion.Euler(0, openAngle, 0) * closedRotation; // Calcula la rotación abierta
     }
 
-    private void Update()
+    void Update()
     {
-        // Si la puerta está abriéndose, interpola la rotación hacia la rotación abierta
-        if (isOpening)
+        if (isOpening && transform.rotation != openRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, openRotation, openSpeed * Time.deltaTime);
+            if (Quaternion.Angle(transform.rotation, openRotation) < 0.1f)
+            {
+                transform.rotation = openRotation;
+                isOpening = false; // La puerta está completamente abierta
+            }
         }
+        else if (!isOpening && !isClosed && transform.rotation != closedRotation)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, closedRotation, openSpeed * Time.deltaTime);
+            if (Quaternion.Angle(transform.rotation, closedRotation) < 0.1f)
+            {
+                transform.rotation = closedRotation;
+                isClosed = true; // La puerta está completamente cerrada
+            }
+        }
+    }
+
+    public void Interact()
+    {
+        if (isClosed)
+        {
+            OpenDoor();
+        }
+        else
+        {
+            CloseDoor();
+        }
+    }
+
+   
+    public string GetInteractText()
+    {
+        return interactText;
+    }
+
+    
+    public Transform GetTransform()
+    {
+        return transform;
     }
 
     // Método para abrir la puerta
     public void OpenDoor()
     {
-        isOpening = true; // Marca la puerta como abriéndose
+        isOpening = true; 
+        isClosed = false; 
     }
 
     // Método para cerrar la puerta
     public void CloseDoor()
     {
         isOpening = false; // Marca la puerta como no abriéndose
-        transform.rotation = closedRotation; // Vuelve a la rotación cerrada
-        
-
     }
 }
