@@ -14,7 +14,6 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     private bool isOpening = false;
     private bool isClosing = false;
     private bool isClosed = true; // Inicialmente la puerta está cerrada
-    private bool isOpen = false;
 
     void Start()
     {
@@ -25,23 +24,26 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     void Update()
     {
         // Si la puerta está abriéndose, interpola la rotación hacia la rotación abierta
-        if (isOpening && transform.rotation != openRotation)
+        if (isOpening)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, openRotation, openSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, openRotation) < 0.1f)
             {
                 transform.rotation = openRotation;
                 isOpening = false; // La puerta está completamente abierta
+                isClosed = false;
             }
         }
         // Si la puerta se está cerrando, interpola la rotación hacia la rotación cerrada
-        else if (!isOpening && !isClosed && transform.rotation != closedRotation)
+        else if (isClosing)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, closedRotation, openSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, closedRotation) < 0.1f)
             {
                 transform.rotation = closedRotation;
+                isClosing = false;
                 isClosed = true; // La puerta está completamente cerrada
+                
             }
         }
     }
@@ -53,7 +55,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
         {
             OpenDoor();
         }
-        else if (isOpen)
+        else //if (isOpen)
         {
             CloseDoor();
         }
@@ -74,15 +76,20 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     // Método para abrir la puerta
     public void OpenDoor()
     {
-        isOpening = true; // Marca la puerta como abriéndose
-        isClosed = false; // Marca la puerta como no cerrada
+        if(!isOpening && isClosed)
+        {
+            isOpening = true; 
+            isClosing = false;
+        }
     }
 
     // Método para cerrar la puerta
     public void CloseDoor()
     {
-        isOpening = false; // Marca la puerta como no abriéndose
-        isClosing = true;
-        isClosed = false; // Marca la puerta como no cerrada
+        if(!isClosing && !isClosed)
+        {
+            isClosing = true;
+            isOpening = false;
+        }
     }
 }
