@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private float _InteractRange = 0.1f;
+    [SerializeField] private GameObject _RaycastPoint;
+    [SerializeField] private float _RaycastDistance;
+    [SerializeField] private LayerMask interactableLayerMask;
     public event Action OnInteract;
     // Update is called once per frame
     void Update()
@@ -19,6 +23,7 @@ public class PlayerInteract : MonoBehaviour
                 interactable.Interact();
             }          
         }
+        Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
     }
 
     public IInteractable GetInteractableObject()
@@ -26,36 +31,19 @@ public class PlayerInteract : MonoBehaviour
         List<IInteractable> InteractableList = new List<IInteractable>();
 
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, _InteractRange);
-        foreach (Collider collider in colliderArray)
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit[] hits = Physics.RaycastAll(ray, _InteractRange, interactableLayerMask);
+
+
+        IInteractable InteractableObject = null;
+        foreach (RaycastHit hit in hits)
         {
-            if (collider.TryGetComponent(out IInteractable interactable))
+            if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
-                InteractableList.Add(interactable); 
+                InteractableObject = interactable;
             }
         }
+        return InteractableObject;
 
-        IInteractable closestInteractable = null;
-        foreach(IInteractable interactable in InteractableList)
-        {
-            if(closestInteractable == null)
-            {
-                closestInteractable = interactable;
-            }
-            else
-            {
-                if (Vector3.Distance(transform.position, interactable.GetTransform().position) <
-                    Vector3.Distance(transform.position, closestInteractable.GetTransform().position))
-                {
-                    closestInteractable = interactable;
-                }
-            }
-        }
-        return closestInteractable;
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _InteractRange);
     }
 }

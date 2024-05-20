@@ -6,13 +6,15 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
 
-    public float openAngle = 90f; 
-    public float openSpeed = 2f; 
+    public float openAngle = 90f; // Ángulo de apertura de la puerta
+    public float openSpeed = 2f; // Velocidad de apertura de la puerta
 
-    private Quaternion closedRotation; 
+    private Quaternion closedRotation; // Rotación de la puerta cerrada
     private Quaternion openRotation;
     private bool isOpening = false;
-    private bool isClosed = true;
+    private bool isClosing = false;
+    private bool isClosed = true; // Inicialmente la puerta está cerrada
+    private bool isOpen = false;
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
 
     void Update()
     {
+        // Si la puerta está abriéndose, interpola la rotación hacia la rotación abierta
         if (isOpening && transform.rotation != openRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, openRotation, openSpeed * Time.deltaTime);
@@ -31,6 +34,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
                 isOpening = false; // La puerta está completamente abierta
             }
         }
+        // Si la puerta se está cerrando, interpola la rotación hacia la rotación cerrada
         else if (!isOpening && !isClosed && transform.rotation != closedRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, closedRotation, openSpeed * Time.deltaTime);
@@ -42,25 +46,26 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
         }
     }
 
+    // Método para interactuar con la puerta
     public void Interact()
     {
         if (isClosed)
         {
             OpenDoor();
         }
-        else
+        else if (isOpen)
         {
             CloseDoor();
         }
     }
 
-   
+    // Método para obtener el texto de interacción
     public string GetInteractText()
     {
         return interactText;
     }
 
-    
+    // Método para obtener el transform
     public Transform GetTransform()
     {
         return transform;
@@ -69,13 +74,15 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     // Método para abrir la puerta
     public void OpenDoor()
     {
-        isOpening = true; 
-        isClosed = false; 
+        isOpening = true; // Marca la puerta como abriéndose
+        isClosed = false; // Marca la puerta como no cerrada
     }
 
     // Método para cerrar la puerta
     public void CloseDoor()
     {
         isOpening = false; // Marca la puerta como no abriéndose
+        isClosing = true;
+        isClosed = false; // Marca la puerta como no cerrada
     }
 }
