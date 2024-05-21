@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 6080351486218856254}
   - component: {fileID: 1679015804040196036}
   - component: {fileID: 384689702720641212}
-  - component: {fileID: 2200789525071875776}
   m_Layer: 5
   m_Name: InGameMenu
   m_TagString: Untagged
@@ -345,19 +344,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2200789525071875776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4670045875317772662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6992dbebfd14f5c418896934b8f527be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuUI: {fileID: 4670045875317772662}
 --- !u!1 &6169610259136790731
 GameObject:
   m_ObjectHideFlags: 0
