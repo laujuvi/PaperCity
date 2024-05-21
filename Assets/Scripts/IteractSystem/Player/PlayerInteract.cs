@@ -30,20 +30,20 @@ public class PlayerInteract : MonoBehaviour
     {
         List<IInteractable> InteractableList = new List<IInteractable>();
 
-        //Collider[] colliderArray = Physics.OverlapSphere(transform.position, _InteractRange);
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(_RaycastPoint.transform.position, _RaycastPoint.transform.forward);
         RaycastHit[] hits = Physics.RaycastAll(ray, _InteractRange, interactableLayerMask);
 
-
         IInteractable InteractableObject = null;
+
         foreach (RaycastHit hit in hits)
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
                 InteractableObject = interactable;
+                //return interactable;
             }
         }
         return InteractableObject;
-
+        //return null;
     }
 }

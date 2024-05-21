@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
-
     [SerializeField] private string interactText;
     [SerializeField] private string pickableText;
     [SerializeField] private bool isFakeEvidence;
-
 
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
@@ -20,10 +18,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         dialogManager = FindObjectOfType<DialogManager>();
         gameManager = FindObjectOfType<GameManager>();
-
     }
-
-
     public void Interact()
     {
         if (gameObject.layer == LayerMask.NameToLayer("NPC"))
