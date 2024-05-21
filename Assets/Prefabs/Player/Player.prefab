@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1398755376662377887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9080607365214253435}
+  m_Layer: 0
+  m_Name: RaycastPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9080607365214253435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398755376662377887}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.076999664, y: -0.17099988, z: 0.09899998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 16347982354711075}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3018522263892728295
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 3206688650389882107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -23.4, y: 0.97, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -162,7 +193,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
+  m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -185,9 +216,9 @@ MonoBehaviour:
   gravityScale: -20
   walkSpeed: 3
   runSpeed: 7
-  rotationSensibility: 500
+  rotationSensibility: 250
   jumpHeight: 1.9
-  crouchHeight: 0.1
+  crouchHeight: 0
   crouch: 0
   lookUphHeight: 0
   lookUp: 0
@@ -204,7 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf9410f450442143b42014cac9a5228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InteractRange: 3.45
+  _interactRange: 0.1
+  _raycastPoint: {fileID: 0}
+  _RaycastDistance: 2
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!1 &7835376489291983460
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,10 +268,11 @@ Transform:
   m_GameObject: {fileID: 7835376489291983460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.33, z: 0.612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 9080607365214253435}
   m_Father: {fileID: 8307456181129438541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5436298318634581636
@@ -248,7 +285,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -54,6 +54,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private GameObject[] evidenceArray;
     [SerializeField] private int minEvidenceForPhase2 = 1;
     [SerializeField] private int minEvidenceForPhaseFinal = 2;
+    private int totalEvidence;
 
     private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
 
@@ -75,6 +76,7 @@ public class DialogManager : MonoBehaviour
         foreach (GameObject evidenceObject in evidenceArray)
         {
             evidenceStatus.Add(evidenceObject.name, false);
+            totalEvidence++;
         }
     }
 
@@ -186,5 +188,10 @@ public class DialogManager : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public int GetTotalEvidence()
+    {
+        return totalEvidence;
     }
 }

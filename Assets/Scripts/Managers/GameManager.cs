@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     /* MANAGERS */
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
-    
+    [SerializeField] private UIManager uIManager;
+
     /* DELAY */
     [SerializeField] private float _delay;
     public PlayerInteract _playerInteract;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("PlayerInteract component not found in the scene.");
         }
+
+        uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
     }
 
     private void Update()
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour
     public void CheckCurrentEvidence()
     {
         currentEvidence++;
+        uIManager.UpdateCurrentEvidence(currentEvidence);
         if (currentEvidence >= maxEvidence) { 
         boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
             return;
