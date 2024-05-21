@@ -25,11 +25,11 @@ Transform:
   m_GameObject: {fileID: 1398755376662377887}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.077, y: 1.159, z: 0.711}
+  m_LocalPosition: {x: 0.076999664, y: -0.17099988, z: 0.09899998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8307456181129438541}
+  m_Father: {fileID: 16347982354711075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3018522263892728295
 GameObject:
@@ -172,7 +172,6 @@ Transform:
   m_Children:
   - {fileID: 16347982354711075}
   - {fileID: 3747742134101645644}
-  - {fileID: 9080607365214253435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &7523875827761418009
@@ -236,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf9410f450442143b42014cac9a5228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InteractRange: 3
-  _RaycastPoint: {fileID: 1398755376662377887}
+  _interactRange: 0.1
+  _raycastPoint: {fileID: 0}
   _RaycastDistance: 2
   interactableLayerMask:
     serializedVersion: 2
@@ -272,7 +271,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.33, z: 0.612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 9080607365214253435}
   m_Father: {fileID: 8307456181129438541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5436298318634581636
