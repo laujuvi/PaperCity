@@ -218,11 +218,11 @@ MonoBehaviour:
   runSpeed: 7
   rotationSensibility: 250
   jumpHeight: 1.9
-  crouchHeight: 0
+  crouchHeight: -1
   crouch: 0
-  lookUphHeight: 0
+  lookUphHeight: 2.1
   lookUp: 0
-  smooth: 4
+  smooth: 2
 --- !u!114 &6706717249794367922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,12 +235,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf9410f450442143b42014cac9a5228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactRange: 0.1
-  _raycastPoint: {fileID: 0}
+  _InteractRange: 0.1
+  _RaycastPoint: {fileID: 0}
   _RaycastDistance: 2
-  interactableLayerMask:
+  _RaycastDistance_2: 0
+  interactableLayerMask_1:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 0
+  interactableLayerMask_2:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7835376489291983460
 GameObject:
   m_ObjectHideFlags: 0
