@@ -18,7 +18,7 @@ public class LookToPlayer : MonoBehaviour
         {
             //transform.rotation = Quaternion.RotateTowards(transform.rotation, _objective.transform.rotation, 0.5f);
             transform.LookAt(_objective.transform);
-        }
+        }  
     }
 
     private void OnDrawGizmosSelected()
