@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: KitchenFloor-Shader
+  m_Name: FloorTextures-Shader
   m_Shader: {fileID: 4800000, guid: d80b425b4fb8f99438ee31d16736e7c7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
