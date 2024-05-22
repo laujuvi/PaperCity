@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: da8737251a63db44dae450cd3ba81076, type: 2}
     - target: {fileID: 919132149155446097, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_Name
-      value: Dwarf Idle
+      value: PrefabDwarf Idle
       objectReference: {fileID: 0}
     - target: {fileID: 4695988177486085469, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -234,7 +234,7 @@ PrefabInstance:
       addedObject: {fileID: 4852398365514538751}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4559019535301486430}
+      addedObject: {fileID: 9190164271885542254}
   m_SourcePrefab: {fileID: 100100000, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
 --- !u!1 &5918772314794922400 stripped
 GameObject:
@@ -260,13 +260,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 14.41
+  m_Radius: 2.4
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: -0.79, y: 6.88, z: 0}
 --- !u!114 &4361416051737459942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   jumpHeight: 1.9
   crouchHeight: -1
   crouch: 0
+  animator: {fileID: 9190164271885542254}
   lookUphHeight: 2.1
   lookUp: 0
   smooth: 2
@@ -312,28 +313,27 @@ MonoBehaviour:
   interactableLayerMask_2:
     serializedVersion: 2
     m_Bits: 64
---- !u!64 &4559019535301486430
-MeshCollider:
+--- !u!95 &9190164271885542254
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5918772314794922400}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f9a4aae151b6e3499c2519b18afff8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &6442509918925015834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
