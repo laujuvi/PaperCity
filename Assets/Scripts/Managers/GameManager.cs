@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isNPCTalking) 
+        if (isNPCTalking)
         {
             if (currentEvidence < minEvidence)
             {
@@ -51,46 +51,56 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
-            if(!boxMessageManager.IsDisplayingMessage()){
+            if (!boxMessageManager.IsDisplayingMessage())
+            {
                 CheckGuiltyNPC();
                 isNPCTalking = false;
             }
         }
     }
+
     private void DisablePlayerInputs()
     {
         StartCoroutine(DisablePlayerInputsCoroutine(_delay));
     }
+
     private IEnumerator DisablePlayerInputsCoroutine(float delay)
     {
         _playerInteract.enabled = false;
         _playerController.enabled = false;
-        yield return new WaitForSeconds(delay);
+
+        yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
+
+        while (boxMessageManager.IsDisplayingMessage())
+        {
+            yield return null;
+        }
+
         _playerInteract.enabled = true;
         _playerController.enabled = true;
     }
 
     public void CheckGuiltyNPC()
     {
-
-            if (guiltyNPC.name == lastNPCName)
-            {
-                Debug.Log("WIN");
-                return;
-            } else
-            {
-                Debug.Log("LOSE");
-                return;
-            }
-        
+        if (guiltyNPC.name == lastNPCName)
+        {
+            Debug.Log("WIN");
+            return;
+        }
+        else
+        {
+            Debug.Log("LOSE");
+            return;
+        }
     }
 
     public void CheckCurrentEvidence()
     {
         currentEvidence++;
         uIManager.UpdateCurrentEvidence(currentEvidence);
-        if (currentEvidence >= maxEvidence) { 
-        boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
+        if (currentEvidence >= maxEvidence)
+        {
+            boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
             return;
         }
 
@@ -101,7 +111,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetNPCName (string NPCName)
+    public void SetNPCName(string NPCName)
     {
         lastNPCName = NPCName;
         isNPCTalking = true;
