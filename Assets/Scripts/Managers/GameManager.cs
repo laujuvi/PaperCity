@@ -27,8 +27,13 @@ public class GameManager : MonoBehaviour
     private bool isNPCTalking = false;
     private string lastNPCName;
 
+    [SerializeField] private GameObject win;
+    [SerializeField] private GameObject lose;
+
     private void Start()
     {
+        win.SetActive(false);
+        lose.SetActive(false);
         if (_playerInteract != null)
         {
             _playerInteract.OnInteract += DisablePlayerInputs;
@@ -85,11 +90,13 @@ public class GameManager : MonoBehaviour
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
+            win.SetActive(true);
             return;
         }
         else
         {
             Debug.Log("LOSE");
+            lose.SetActive(true);
             return;
         }
     }
