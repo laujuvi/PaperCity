@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
     public float lookUphHeight;
     public bool lookUp;
 
+    [Header("Animator")]
+    public Animator animator;
+    private Rigidbody rb;
+
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
     Vector3 moveInput = Vector3.zero;
@@ -38,7 +42,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
+
     private void Update()
     {
         Look();
@@ -52,18 +58,24 @@ public class PlayerController : MonoBehaviour
         {
             moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
             moveInput = Vector3.ClampMagnitude(moveInput, 1f);
+            float speed = moveInput.magnitude;
 
             if (Input.GetButton("Sprint"))
             {
                 moveInput = transform.TransformDirection(moveInput) * runSpeed;
+                //animator.SetBool("walking", true);
+                animator.SetFloat("velocity", speed);
             }
             else
             {
                 moveInput = transform.TransformDirection(moveInput) * walkSpeed;
+                //animator.SetBool("walking", true);
+
             }
             if (Input.GetButtonDown("Jump"))
             {
                 moveInput.y = Mathf.Sqrt(jumpHeight * -2f * gravityScale);
+                //animator.SetBool("walking", false);
             }
         }
         moveInput.y += gravityScale * Time.deltaTime;
