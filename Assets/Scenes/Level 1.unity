@@ -2378,8 +2378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -774.2322, y: -49}
-  m_SizeDelta: {x: 978.4912, y: 600}
+  m_AnchoredPosition: {x: -725, y: -2}
+  m_SizeDelta: {x: 821.8542, y: 770.2576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311643321
 MonoBehaviour:
@@ -2401,7 +2401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5dcde17ac5915bf4e8aa2f873bc512b0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 638c2a3bf36a2ca49b8b912d3d7e30b3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8710,6 +8710,7 @@ GameObject:
   - component: {fileID: 1065061025}
   - component: {fileID: 1065061024}
   - component: {fileID: 1065061026}
+  - component: {fileID: 1065061027}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -8735,7 +8736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 51.45874, y: -195.6914}
+  m_AnchoredPosition: {x: 152, y: -195.6914}
   m_SizeDelta: {x: -737.7951, y: -31.7129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065061024
@@ -8826,6 +8827,27 @@ MonoBehaviour:
     pongo a investigar. Debe haber suficientes pistas para resolver el caso en esta
     casa\u2026 O al menos eso espero\u2026"
   textSpeed: 0.05
+--- !u!95 &1065061027
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065061022}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19cfd64511944a14b9c1f9e3f14b5561, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1069396731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9485,6 +9507,10 @@ PrefabInstance:
     - target: {fileID: 6050622800925407181, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334158979012687958, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

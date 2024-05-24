@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Look()
     {
-        if (PlayerDialogue.isHavingDialogue)
+        if (!PlayerDialogue.isHavingDialogue)
         {
             rotationInput.x = Input.GetAxis("Mouse X") * rotationSensibility * Time.deltaTime;
             rotationInput.y = Input.GetAxis("Mouse Y") * rotationSensibility * Time.deltaTime;
