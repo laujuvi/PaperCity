@@ -8735,8 +8735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 160.17822, y: -195.69135}
-  m_SizeDelta: {x: -520.3564, y: -31.7129}
+  m_AnchoredPosition: {x: 51.45874, y: -195.6914}
+  m_SizeDelta: {x: -737.7951, y: -31.7129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065061024
 MonoBehaviour:
@@ -8790,9 +8790,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1640214471}
   lines:
-  - esta es una prueba
-  - me gusta mucho el lolarrdo
-  textSpeed: 0.1
+  - "Finalmente aqu\xED estoy nuevamente, en la casa de los Ackroyd. Aunque es la
+    primera vez que no sostengo un martini doble con una mano e intento no perder
+    el equilibrio con la otra."
+  - "Si hab\xEDa algo por lo que Roger era famoso en la ciudad, adem\xE1s de su creciente
+    fortuna, era por sus fiestas extravagantes. El \xFAnico rico que no emit\xEDa
+    invitaciones privadas para sus fiestas."
+  - "Todos siempre estaban invitaos, lo cual le supuso ganar un gran n\xFAmero de
+    amigos\u2026"
+  - "Todos siempre estaban invitaos, lo cual le supuso ganar un gran n\xFAmero de
+    amigos\u2026"
+  - "Pero nadie se hace muchos amigos sin algunos enemigos\u2026"
+  - Y ahora Roger Ackroyd ha sido asesinado.
+  - "En la \xFAltima de sus fiestas conoc\xED a todos los que est\xE1n aqu\xED. Todos
+    los que estuvieron al momento de su muerte."
+  - "A Layla, su bella esposa, quien aparentemente no ha hecho m\xE1s que llorar
+    desde que me llam\xF3 anoche. La delatan unas oscuras y pesadas bolsas debajo
+    de sus ojos."
+  - "\xBFSer\xEDan ciertos los rumores del mal tiempo que atravesaba el matrimonio?
+    \xBFPodr\xEDa haber llegado tan lejos como para asesinar a su esposo? Deber\xEDa
+    investigar antes de hacer ninguna acusaci\xF3n semejante\u2026 La se\xF1ora Ackroy
+    realmente est\xE1 muy sensible\u2026"
+  - "Luego tenemos a Bruce Ackroyd\u2026, \xBFc\xF3mo olvidarlo? "
+  - "el \xFAnico hijo del matrimonio, un fil\xE1ntropo que parti\xF3 a Suiza al cumplir
+    los 18 a\xF1os de edad. Curiosamente ha vuelto a la casa de los Ackroyd la misma
+    noche del asesinato de su padre. \xBFCasualidad o causalidad?"
+  - "Puede haber vuelto porque se qued\xF3 sin dinero\u2026 Puede haber vuelto porque
+    ven\xEDa a presentar a una nueva novia\u2026 Puede haber vuelto simplemente a
+    saludar\u2026 Mejor investigo antes de acusar a un hijo de asesinar a su padre\u2026"
+  - "Y finalmente James Moriarty, el vecino de los Ackroyd. Un hombre que no puede
+    ser m\xE1s diferente a Roger y que, sin embargo, han sido grandes amigos durante
+    mucho tiempo. \xC9l tambi\xE9n ha estado aqu\xED la noche del asesinato."
+  - "Es el \xFAnico que no tiene motivo para estar aqu\xED."
+  - "Cualquiera de ellos podr\xEDa ser culpable del asesinato de Roger. Mejor me
+    pongo a investigar. Debe haber suficientes pistas para resolver el caso en esta
+    casa\u2026 O al menos eso espero\u2026"
+  textSpeed: 0.05
 --- !u!1001 &1069396731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13076,8 +13109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98.267975, y: 0}
-  m_SizeDelta: {x: 1044.1279, y: 300}
+  m_AnchoredPosition: {x: -32.190826, y: 17.289684}
+  m_SizeDelta: {x: 783.2103, y: 277.995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640214471
 MonoBehaviour:
@@ -13101,8 +13134,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13126,8 +13159,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.22
-  m_fontSizeBase: 52.22
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13162,7 +13195,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -37.456665}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
