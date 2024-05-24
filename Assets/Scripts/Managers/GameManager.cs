@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     /* MANAGERS */
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
-    
+    [SerializeField] private UIManager uIManager;
+
     /* DELAY */
     [SerializeField] private float _delay;
     public PlayerInteract _playerInteract;
@@ -27,10 +27,13 @@ public class GameManager : MonoBehaviour
     private bool isNPCTalking = false;
     private string lastNPCName;
 
-    public Text evidenceCounter;
+    [SerializeField] private GameObject win;
+    [SerializeField] private GameObject lose;
 
     private void Start()
     {
+        win.SetActive(false);
+        lose.SetActive(false);
         if (_playerInteract != null)
         {
             _playerInteract.OnInteract += DisablePlayerInputs;
@@ -39,11 +42,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("PlayerInteract component not found in the scene.");
         }
+
+        uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
     }
 
     private void Update()
     {
-        if (isNPCTalking) 
+        if (isNPCTalking)
         {
             if (currentEvidence < minEvidence)
             {
@@ -51,47 +56,58 @@ public class GameManager : MonoBehaviour
                 return;
             }
 
-            if(!boxMessageManager.IsDisplayingMessage()){
+            if (!boxMessageManager.IsDisplayingMessage())
+            {
                 CheckGuiltyNPC();
                 isNPCTalking = false;
             }
         }
     }
+
     private void DisablePlayerInputs()
     {
         StartCoroutine(DisablePlayerInputsCoroutine(_delay));
     }
+
     private IEnumerator DisablePlayerInputsCoroutine(float delay)
     {
         _playerInteract.enabled = false;
         _playerController.enabled = false;
-        yield return new WaitForSeconds(delay);
+
+        yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
+
+        while (boxMessageManager.IsDisplayingMessage())
+        {
+            yield return null;
+        }
+
         _playerInteract.enabled = true;
         _playerController.enabled = true;
     }
 
     public void CheckGuiltyNPC()
     {
-
-            if (guiltyNPC.name == lastNPCName)
-            {
-                Debug.Log("WIN");
-                return;
-            } else
-            {
-                Debug.Log("LOSE");
-                return;
-            }
-        
+        if (guiltyNPC.name == lastNPCName)
+        {
+            Debug.Log("WIN");
+            win.SetActive(true);
+            return;
+        }
+        else
+        {
+            Debug.Log("LOSE");
+            lose.SetActive(true);
+            return;
+        }
     }
 
     public void CheckCurrentEvidence()
     {
         currentEvidence++;
-        evidenceCounter.text = currentEvidence.ToString();
-
-        if (currentEvidence >= maxEvidence) { 
-        boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
+        uIManager.UpdateCurrentEvidence(currentEvidence);
+        if (currentEvidence >= maxEvidence)
+        {
+            boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
             return;
         }
 
@@ -102,7 +118,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetNPCName (string NPCName)
+    public void SetNPCName(string NPCName)
     {
         lastNPCName = NPCName;
         isNPCTalking = true;
