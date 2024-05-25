@@ -15,7 +15,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_2;
     public event Action OnInteract;
     private int _currentLayerMask;
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
