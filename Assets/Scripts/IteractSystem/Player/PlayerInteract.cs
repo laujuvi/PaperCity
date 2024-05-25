@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
     public event Action OnInteract;
+    private int _currentLayerMask;
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
             IInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
-                OnInteract?.Invoke();
+                if (_currentLayerMask == 3) OnInteract?.Invoke(); //Layer 3 deberia ser NPC
                 interactable.Interact();
             }          
         }
@@ -47,7 +49,9 @@ public class PlayerInteract : MonoBehaviour
                
                 InteractableObject = interactable;
                 //return interactable;
-                
+                _currentLayerMask = hit.collider.gameObject.layer;
+
+
             }
         }
         foreach (RaycastHit hit_2 in hits_2)
@@ -55,6 +59,8 @@ public class PlayerInteract : MonoBehaviour
             if (hit_2.collider.TryGetComponent(out IInteractable interactable1))
             {
                 InteractableObject = interactable1;
+                _currentLayerMask = hit_2.collider.gameObject.layer;
+
             }
         }
         return InteractableObject;
