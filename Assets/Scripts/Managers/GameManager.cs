@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
+    private NPCInteractable nPCInteractable;
 
-    /* DELAY */
-    [SerializeField] private float _delay;
+    /* WAIT */
     public PlayerInteract _playerInteract;
     public PlayerController _playerController;
 
@@ -66,10 +66,10 @@ public class GameManager : MonoBehaviour
 
     private void DisablePlayerInputs()
     {
-        StartCoroutine(DisablePlayerInputsCoroutine(_delay));
+        StartCoroutine(DisablePlayerInputsCoroutine());
     }
 
-    private IEnumerator DisablePlayerInputsCoroutine(float delay)
+    private IEnumerator DisablePlayerInputsCoroutine()
     {
         _playerInteract.enabled = false;
         _playerController.enabled = false;
@@ -116,6 +116,27 @@ public class GameManager : MonoBehaviour
             boxMessageManager.SendMessage("", Color.white, intermediateMessage, Emotions.None);
             return;
         }
+    }
+
+    public IEnumerator DisableNPCInteractable()
+    {
+        _playerInteract.enabled = false;
+
+        yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
+
+        while (boxMessageManager.IsDisplayingMessage())
+        {
+            yield return null;
+        }
+
+        _playerInteract.enabled = true;
+
+    }
+
+    public void DisableNPCInteractableCorrutine(NPCInteractable interactable)
+    {
+        StartCoroutine(DisableNPCInteractable());
+
     }
 
     public void SetNPCName(string NPCName)
