@@ -12,7 +12,6 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] float letterDelay = 0.05f;
     [SerializeField] float hideDialogDelay = 1f;
 
-    private string nameSpeaker;
     private bool isDisplayingMessage = false;
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
