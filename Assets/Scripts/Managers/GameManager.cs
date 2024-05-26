@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
-    private NPCInteractable nPCInteractable;
 
     /* WAIT */
     public PlayerInteract _playerInteract;
@@ -34,16 +33,6 @@ public class GameManager : MonoBehaviour
     {
         win.SetActive(false);
         lose.SetActive(false);
-        if (_playerInteract != null)
-        {
-            _playerInteract.OnInteract += DisablePlayerInputs;
-            _playerInteract.OnInteractDialog +=SpeedUpDialog;
-            _playerInteract.OnInteractSkipDialog += SkipDialog;
-        }
-        else
-        {
-            Debug.LogWarning("PlayerInteract component not found in the scene.");
-        }
 
         uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
     }
@@ -66,14 +55,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void DisablePlayerInputs()
+    public void DisablePlayerInputs()
     {
         StartCoroutine(DisablePlayerInputsCoroutine());
     }
 
     private IEnumerator DisablePlayerInputsCoroutine()
     {
-        _playerInteract.enabled = false;
+        //_playerInteract.enabled = false;
         _playerController.enabled = false;
 
         yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
@@ -83,7 +72,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        _playerInteract.enabled = true;
+        //_playerInteract.enabled = true;
         _playerController.enabled = true;
     }
 
@@ -120,40 +109,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator DisableNPCInteractable()
-    {
-        _playerInteract.enabled = false;
-
-        yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
-
-        while (boxMessageManager.IsDisplayingMessage())
-        {
-            yield return null;
-        }
-
-        _playerInteract.enabled = true;
-
-    }
-
-    public void DisableNPCInteractableCorrutine(NPCInteractable interactable)
-    {
-        StartCoroutine(DisableNPCInteractable());
-
-    }
-
     public void SetNPCName(string NPCName)
     {
         lastNPCName = NPCName;
         isNPCTalking = true;
     }
 
-    private void SpeedUpDialog()
-    {
-
-    }
-
-    private void SkipDialog()
-    {
-
-    }
 }

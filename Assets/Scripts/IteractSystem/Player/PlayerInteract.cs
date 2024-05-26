@@ -13,10 +13,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float _RaycastDistance_2;
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
-    //[SerializeField] private BoxMessageManager boxMessageManager;
-    public event Action OnInteract;
-    public event Action OnInteractDialog;
-    public event Action OnInteractSkipDialog;
+    [SerializeField] private BoxMessageManager _boxMessageManager;
 
 
     private int _currentLayerMask;
@@ -27,8 +24,13 @@ public class PlayerInteract : MonoBehaviour
             IInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
-                if (_currentLayerMask == 3) OnInteract?.Invoke(); //Layer 3 deberia ser NPC
-                interactable.Interact();
+                if (_boxMessageManager.IsDisplayingMessage())
+                {
+                    _boxMessageManager.CheckSkipDialog();
+                } else
+                {
+                    interactable.Interact();
+                }
             }          
         }
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
