@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
         if (_playerInteract != null)
         {
             _playerInteract.OnInteract += DisablePlayerInputs;
+            _playerInteract.OnInteractDialog +=SpeedUpDialog;
+            _playerInteract.OnInteractSkipDialog += SkipDialog;
         }
         else
         {
@@ -143,5 +145,15 @@ public class GameManager : MonoBehaviour
     {
         lastNPCName = NPCName;
         isNPCTalking = true;
+    }
+
+    private void SpeedUpDialog()
+    {
+
+    }
+
+    private void SkipDialog()
+    {
+
     }
 }

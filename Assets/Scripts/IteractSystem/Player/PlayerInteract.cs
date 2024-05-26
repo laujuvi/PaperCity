@@ -13,7 +13,12 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float _RaycastDistance_2;
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
+    //[SerializeField] private BoxMessageManager boxMessageManager;
     public event Action OnInteract;
+    public event Action OnInteractDialog;
+    public event Action OnInteractSkipDialog;
+
+
     private int _currentLayerMask;
     void Update()
     {

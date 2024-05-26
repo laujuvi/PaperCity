@@ -13,6 +13,7 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] float hideDialogDelay = 1f;
 
     private bool isDisplayingMessage = false;
+    private bool isSkippingDialog = false;
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
     public void SendMessage(string name, Color color, string message, Emotions emotion)
@@ -50,6 +51,7 @@ public class BoxMessageManager : MonoBehaviour
         }
 
         isDisplayingMessage = false;
+        ResetTimers();
         bgDialog.SetActive(false);
     }
 
@@ -64,5 +66,25 @@ public class BoxMessageManager : MonoBehaviour
     public bool IsDisplayingMessage()
     {
         return isDisplayingMessage;
+    }
+
+    public void SpeedUpDialog()
+    {
+        isSkippingDialog = true;
+        letterDelay = 0.01f;
+        hideDialogDelay = 100f;
+    }
+
+    public void SkipDialog()
+    {
+        hideDialogDelay = 0f;
+        isSkippingDialog = false;
+    }
+
+    private void ResetTimers()
+    {
+        letterDelay = 0.05f;
+        hideDialogDelay = 1f;
+        isSkippingDialog = false;
     }
 }
