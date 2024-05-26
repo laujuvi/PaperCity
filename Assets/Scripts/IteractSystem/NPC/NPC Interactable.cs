@@ -23,11 +23,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("NPC"))
         {
+            gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
             Debug.Log("INTERACTUASTE");
         } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {
-            gameManager.DisableNPCInteractableCorrutine(this);
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
             if (!isFakeEvidence) { 
             dialogManager.SetEvidenceStatus(gameObject.name, true);
