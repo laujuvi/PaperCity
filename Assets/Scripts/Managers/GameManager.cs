@@ -9,8 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
 
-    /* DELAY */
-    [SerializeField] private float _delay;
+    /* WAIT */
     public PlayerInteract _playerInteract;
     public PlayerController _playerController;
 
@@ -34,14 +33,6 @@ public class GameManager : MonoBehaviour
     {
         win.SetActive(false);
         lose.SetActive(false);
-        if (_playerInteract != null)
-        {
-            _playerInteract.OnInteract += DisablePlayerInputs;
-        }
-        else
-        {
-            Debug.LogWarning("PlayerInteract component not found in the scene.");
-        }
 
         uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
     }
@@ -64,14 +55,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void DisablePlayerInputs()
+    public void DisablePlayerInputs()
     {
-        StartCoroutine(DisablePlayerInputsCoroutine(_delay));
+        StartCoroutine(DisablePlayerInputsCoroutine());
     }
 
-    private IEnumerator DisablePlayerInputsCoroutine(float delay)
+    private IEnumerator DisablePlayerInputsCoroutine()
     {
-        _playerInteract.enabled = false;
+        //_playerInteract.enabled = false;
         _playerController.enabled = false;
 
         yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
@@ -81,7 +72,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        _playerInteract.enabled = true;
+        //_playerInteract.enabled = true;
         _playerController.enabled = true;
     }
 
@@ -123,4 +114,5 @@ public class GameManager : MonoBehaviour
         lastNPCName = NPCName;
         isNPCTalking = true;
     }
+
 }

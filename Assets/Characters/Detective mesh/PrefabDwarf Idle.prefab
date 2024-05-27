@@ -134,15 +134,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.29
+      value: 0.22999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.29
+      value: 0.22999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.29
+      value: 0.22999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e9c1ed2c4be30a4da6bc3e7d03caf84, type: 3}
       propertyPath: m_LocalPosition.x
@@ -287,9 +287,9 @@ MonoBehaviour:
   jumpHeight: 1.9
   crouchHeight: -1
   crouch: 0
-  animator: {fileID: 9190164271885542254}
   lookUphHeight: 2.1
   lookUp: 0
+  animator: {fileID: 9190164271885542254}
   smooth: 2
 --- !u!114 &4852398365514538751
 MonoBehaviour:
@@ -313,6 +313,7 @@ MonoBehaviour:
   interactableLayerMask_2:
     serializedVersion: 2
     m_Bits: 64
+  _boxMessageManager: {fileID: 0}
 --- !u!95 &9190164271885542254
 Animator:
   serializedVersion: 5

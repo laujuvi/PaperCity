@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using UnityEngine;
 
@@ -12,8 +13,10 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float _RaycastDistance_2;
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
-    public event Action OnInteract;
-    // Update is called once per frame
+    [SerializeField] private BoxMessageManager _boxMessageManager;
+
+
+    private int _currentLayerMask;
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -21,8 +24,13 @@ public class PlayerInteract : MonoBehaviour
             IInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
-                OnInteract?.Invoke();
-                interactable.Interact();
+                if (_boxMessageManager.IsDisplayingMessage())
+                {
+                    _boxMessageManager.CheckSkipDialog();
+                } else
+                {
+                    interactable.Interact();
+                }
             }          
         }
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
@@ -47,7 +55,9 @@ public class PlayerInteract : MonoBehaviour
                
                 InteractableObject = interactable;
                 //return interactable;
-                
+                _currentLayerMask = hit.collider.gameObject.layer;
+
+
             }
         }
         foreach (RaycastHit hit_2 in hits_2)
@@ -55,6 +65,8 @@ public class PlayerInteract : MonoBehaviour
             if (hit_2.collider.TryGetComponent(out IInteractable interactable1))
             {
                 InteractableObject = interactable1;
+                _currentLayerMask = hit_2.collider.gameObject.layer;
+
             }
         }
         return InteractableObject;

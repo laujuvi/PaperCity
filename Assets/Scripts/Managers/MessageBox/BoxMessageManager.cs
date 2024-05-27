@@ -12,9 +12,19 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] float letterDelay = 0.05f;
     [SerializeField] float hideDialogDelay = 1f;
 
-    private string nameSpeaker;
     private bool isDisplayingMessage = false;
+    private bool isSkippingDialog = false;
+    private bool interruptWait = false;
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
+
+    public bool IsDisplayingMessage()
+    {
+        return isDisplayingMessage;
+    }
+    public bool IsSkippingDialog()
+    {
+        return isSkippingDialog;
+    }
 
     public void SendMessage(string name, Color color, string message, Emotions emotion)
     {
@@ -45,12 +55,19 @@ public class BoxMessageManager : MonoBehaviour
                 yield return new WaitForSeconds(letterDelay);
             }
 
-            yield return new WaitForSeconds(hideDialogDelay);
+            float elapsedTime = 0f;
+            while (elapsedTime < hideDialogDelay && !interruptWait)
+            {
+                yield return null;
+                elapsedTime += Time.deltaTime;
+            }
+
             textMeshPro.text = "";
             nameTextMeshPro.text = "";
         }
 
         isDisplayingMessage = false;
+        ResetSkippingTimers();
         bgDialog.SetActive(false);
     }
 
@@ -62,8 +79,34 @@ public class BoxMessageManager : MonoBehaviour
         return $"[{emotion}] \"{message}\"";
     }
 
-    public bool IsDisplayingMessage()
+    public void CheckSkipDialog()
     {
-        return isDisplayingMessage;
+        if (!isSkippingDialog) { 
+            SpeedUpDialog();
+        }
+        else
+        {
+            SkipDialog();
+        }
+    }
+    private void SpeedUpDialog()
+    {
+        isSkippingDialog = true;
+        letterDelay = 0.01f;
+        hideDialogDelay = 100f;
+    }
+
+    private void SkipDialog()
+    {
+        interruptWait = true;
+        isSkippingDialog = false;
+    }
+
+    private void ResetSkippingTimers()
+    {
+        letterDelay = 0.05f;
+        hideDialogDelay = 1f;
+        isSkippingDialog = false;
+        interruptWait = false;
     }
 }

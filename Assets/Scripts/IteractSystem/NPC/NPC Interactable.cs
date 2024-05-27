@@ -23,6 +23,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("NPC"))
         {
+            gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
             Debug.Log("INTERACTUASTE");
         } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
@@ -45,6 +46,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     public Transform GetTransform()
     {
         return transform;
+    }
+
+    public bool GetisFakeEvidence()
+    {
+        return isFakeEvidence;
     }
 
 }
