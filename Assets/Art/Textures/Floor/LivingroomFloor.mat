@@ -48,6 +48,7 @@ Material:
     - _Darkness: 1
     - _Float0: 0.92
     - _Metalic: 0
+    - _Roughtness: 0.09
     - _Smoothness: 0
     - __dirty: 0
     m_Colors:
