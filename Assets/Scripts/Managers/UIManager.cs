@@ -10,12 +10,6 @@ public class UIManager : MonoBehaviour
     private int currentEvidence = 0;
     private int totalEvidence = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     public void UpdateCurrentEvidence(int currentInt)
     {
         currentEvidence = currentInt;
