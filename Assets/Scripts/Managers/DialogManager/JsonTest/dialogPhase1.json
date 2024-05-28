@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "NPC1",
+            "name": "MrAckroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -11,7 +11,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello player, we are in phase 1, you need 2 pickeables for next phase",
+                    "message": "Es cierto que mi padre no era un gran hombre, pero definitivamente no merecía esto... Espero que encuentre al culpable pronto, detective...",
                     "emotion": "Talking"
                 },
                 {
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "name": "NPC2",
+            "name": "SraAckroyd",
             "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -39,7 +39,7 @@
                         "requiredMessage": ""
 
                     },
-                    "message": "Hello, player!",
+                    "message": "Mi Roger... Ya no está... Aún no puedo creerlo... Espero que encuentre pronto a quien haya hecho esto, detective...",
                     "emotion": "Talking"
                 },
                 {
