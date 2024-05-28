@@ -18,7 +18,7 @@
                     "talked": false,
                     "evidence":{
                         "hasEvidence": false,
-                        "evidenceName": "",
+                        "evidenceName": "Pickeable",
                         "requiredMessage": "¿Qué es esto?"
 
                     },
@@ -29,7 +29,7 @@
                     "talked": false,
                     "evidence":{
                         "hasEvidence": false,
-                        "evidenceName": "Pickeable",
+                        "evidenceName": "MuebleConGolpe",
                         "requiredMessage": "Mejor vaya a investigar..."
 
                     },

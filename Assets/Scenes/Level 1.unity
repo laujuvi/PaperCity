@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20379,8 +20379,12 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: evidenceArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: minEvidenceForPhaseFinal
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: evidenceArray.Array.data[0]
@@ -20402,6 +20406,10 @@ PrefabInstance:
       propertyPath: evidenceArray.Array.data[4]
       value: 
       objectReference: {fileID: 2127866130}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: evidenceArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 1200701541}
     - target: {fileID: 6811422022252384151, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: m_Name
       value: DialogManager
@@ -26134,23 +26142,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2810295946927877721, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3246906088793835145, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Name
-      value: PrefabEncimeraDer 1 (4)
+      value: MuebleConGolpe
       objectReference: {fileID: 0}
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5949953892232128708, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8437332233357220170, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26159,13 +26167,63 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200701543}
+    - targetCorrespondingSourceObject: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200701542}
   m_SourcePrefab: {fileID: 100100000, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
 --- !u!4 &1200701540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
   m_PrefabInstance: {fileID: 1200701539}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1200701541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+  m_PrefabInstance: {fileID: 1200701539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200701542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200701541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Mueble golpeado
+  pickableText: "Hmmm... Parece un golpe hecho por una mano fuerte. Alguien tuvo
+    una discuci\xF3n acalorada en la cocina y ha golpeado el mueble. Dir\xEDa que
+    la persona que hizo este agujero en el mueble no puede ser la misma que asesin\xF3
+    a Roger. Este golpe fue hecho con mucha fuerza."
+  isFakeEvidence: 1
+--- !u!65 &1200701543
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200701541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5717057, y: 1.9702513, z: 1}
+  m_Center: {x: -0.28585327, y: 0.48512542, z: 0.00000022450759}
 --- !u!1 &1203682777
 GameObject:
   m_ObjectHideFlags: 0
