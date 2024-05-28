@@ -22,7 +22,7 @@
                         "requiredMessage": ""
 
                     },
-                    "message": "Good luck!",
+                    "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
                     "emotion": "Talking"
                 }
             ]
@@ -50,7 +50,7 @@
                         "requiredMessage": ""
 
                     },
-                    "message": "Can you give me a pickable item?",
+                    "message": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?",
                     "emotion": "Talking"
                 },
                 {

@@ -44,6 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266dd8558579d014d827658e5a020faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguesJson: {fileID: 4900000, guid: 1e8dd02ff4c50ec4cb9b4ea5e757dd63, type: 3}
+  dialoguesPhase1Json: {fileID: 4900000, guid: 2a6834d33c5d2864ebac3fdc1b771058, type: 3}
+  dialoguesPhase2Json: {fileID: 4900000, guid: 1e8dd02ff4c50ec4cb9b4ea5e757dd63, type: 3}
+  dialoguesPhaseFinalJson: {fileID: 4900000, guid: db0389985989666478cab2832e4d107e, type: 3}
   evidenceArray:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  minEvidenceForPhase2: 3
+  minEvidenceForPhaseFinal: 4

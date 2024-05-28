@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "NPC1",
+            "name": "MrAckroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -11,7 +11,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello, player We are in phase 2, you need 1 pickeables for final phase",
+                    "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? Es cierto que mi padre y yo teníamos nuestras diferencias, pero jamás sería capaz de hacer algo así... Lo siento mucho detective, pero yo no soy el culpable...",
                     "emotion": "Talking"
                 },
                 {
