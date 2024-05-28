@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: d5539ddc339c1c54c8decb4bf3f7c24e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 244a43d9d394e5c4dbf358a75f78ed64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _wood_floor_disp_4k:
@@ -48,8 +48,9 @@ Material:
     - _Darkness: 1
     - _Float0: 0.92
     - _Metalic: 0
+    - _Roughtness: 0.09
     - _Smoothness: 0
     - __dirty: 0
     m_Colors:
-    - _Color0: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 0}
+    - _Color0: {r: 0.7264151, g: 0.52689797, b: 0.3255162, a: 0}
   m_BuildTextureStacks: []

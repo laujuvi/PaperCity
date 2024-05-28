@@ -7,10 +7,18 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private string Scenename;
     [SerializeField] private string Scenename2;
-    [SerializeField] private GameObject CreditsPanel;
-    [SerializeField] private GameObject ControlPanel;
-    [SerializeField] private GameObject MainMenuPanel;
-    [SerializeField] private GameObject BackButton;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     public void LoadScene1()
     {
         SceneManager.LoadScene(Scenename);
@@ -19,27 +27,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(Scenename2);
     }
+
     public void QuitGame()
     {
         Application.Quit();
     }
-    public void OpenCredits()
-    {
-        CreditsPanel.SetActive(true);
-        MainMenuPanel.SetActive(false);
-        BackButton.SetActive(true);
-    }
-    public void OpenControls()
-    {
-        ControlPanel.SetActive(true);
-        MainMenuPanel.SetActive(false);
-        BackButton.SetActive(true);
-    }
-    public void Close()
-    {
-        MainMenuPanel.SetActive(true);
-        CreditsPanel.SetActive(false);
-        ControlPanel.SetActive(false);
-        BackButton.SetActive(false);
-    }
+
+
 }
