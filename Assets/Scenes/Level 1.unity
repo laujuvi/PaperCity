@@ -7866,6 +7866,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: minEvidenceForPhase2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: minEvidenceForPhaseFinal
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: evidenceArray.Array.data[0]
       value: 
       objectReference: {fileID: 1918480313}
@@ -9782,6 +9790,10 @@ PrefabInstance:
       propertyPath: _playerInteract
       value: 
       objectReference: {fileID: 1631509814}
+    - target: {fileID: 4270585008762443742, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -15513,9 +15525,9 @@ MonoBehaviour:
   uIManager: {fileID: 2000642660}
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
-  minEvidence: 1
-  maxEvidence: 2
-  guiltyNPC: {fileID: 0}
+  minEvidence: 4
+  maxEvidence: 5
+  guiltyNPC: {fileID: 1918426441}
   intermediateMessage: Medio
   definitiveMessage: Final
   currentEvidence: 0
@@ -16041,6 +16053,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6694729836853263261, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
   m_PrefabInstance: {fileID: 3073228706586789426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1918426441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5159326142089966393, guid: 2375db0385b68be4d91ccedfb4da2e38, type: 3}
+  m_PrefabInstance: {fileID: 3501469562541207827}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1918426442 stripped
 Transform:
@@ -17689,11 +17706,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1773361662}
+  - {fileID: 1631509812}
   - {fileID: 1194024091}
   - {fileID: 1154247562}
   - {fileID: 5768585564871733965}
   - {fileID: 383727344}
   - {fileID: 930615094}
   - {fileID: 319068976}
-  - {fileID: 1631509812}
   - {fileID: 351151268}
