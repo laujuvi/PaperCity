@@ -13,17 +13,6 @@
                     },
                     "message": "¿Yo? ¿Asesinar a mi propio padre? Parece que no ha investigado bien, detective. Tal vez no debería haber apurado la investigación. Lo siento, pero yo no soy el culpable.",
                     "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "evidence":{
-                        "hasEvidence": true,
-                        "evidenceName": "Pickeable",
-                        "requiredMessage": "asdasd"
-
-                    },
-                    "message": "Congrats!",
-                    "emotion": "Talking"
                 }
             ]
         },
@@ -39,17 +28,6 @@
                         "requiredMessage": ""
                     },
                     "message": "Vaya... No ha investigado demasiado y aún así ya lo sabe. Supongo que, o fui muy descuidada, o usted es un gran detective. Así es, yo maté a Roger. Él comenzó a acostarse con su secretaria. Iba a dejarme, puede verlo en los papeles de divorcio. No podía soportarlo. Si no era mío, ¡no sería de nadie más!",
-                    "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "evidence":{
-                        "hasEvidence": true,
-                        "evidenceName": "Pickeable",
-                        "requiredMessage": "asdasd"
-
-                    },
-                    "message": "Congrats!",
                     "emotion": "Talking"
                 }
 	]
