@@ -19,7 +19,7 @@
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
-                        "requiredMessage": ""
+                        "requiredMessage": "¿Qué es esto?"
 
                     },
                     "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
