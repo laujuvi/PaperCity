@@ -115,6 +115,6 @@ public class PlayerController : MonoBehaviour
     private void UpdateAnimator()
     {
         bool isMoving = moveInput.x != 0 || moveInput.y != 0;
-        animator.SetFloat("velocity", characterController.velocity.magnitude);
+        if(animator != null) animator.SetFloat("velocity", characterController.velocity.magnitude);
     }
 }

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8930069029091163160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.719463
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.064
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.749
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_Name
+      value: divorcePapers
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8853835342930575733}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7226256880735225972}
+  m_SourcePrefab: {fileID: 100100000, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+--- !u!1 &8587400930909946185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+  m_PrefabInstance: {fileID: 8930069029091163160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8853835342930575733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587400930909946185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Papeles de divorcio
+  pickableText: "Unos papeles de divorcio... Parece que los rumores del matrimonio
+    eran ciertos. Solamente est\xE1n firmados por el se\xF1or Ackroyd, lo que indica
+    que su esposa o a\xFAn no sab\xEDa del asunto\u2026 o no quiso firmarlos. El
+    hecho de que est\xE9n en la cocina sugiere que no eran un secreto, es decir,
+    la cocina es uno de los lugares m\xE1s transitados de la casa, por lo que es
+    probable que incluso hayan estado discutiendo acerca de esto el d\xEDa anterior
+    a la muerte."
+  isFakeEvidence: 0
+--- !u!65 &7226256880735225972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587400930909946185}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0077490998, y: 0.009999998, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
