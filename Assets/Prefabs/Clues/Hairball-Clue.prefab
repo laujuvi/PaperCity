@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6585050096640302198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_Name
+      value: Hairball-Clue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6538137982529704415}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5795597049427362570}
+  m_SourcePrefab: {fileID: 100100000, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+--- !u!1 &6315073611139424551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
+  m_PrefabInstance: {fileID: 6585050096640302198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &6538137982529704415
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6315073611139424551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.008395063
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+--- !u!114 &5795597049427362570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6315073611139424551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Bola de pelo blanco
+  pickableText: "\"Hmmm... una bola de pelo blanco... definitivamente no es de Roger.
+    Tampoco de Bruce. La se\xF1ora Ackroyd es la \xFAnica gata blanca de la casa.
+    Claramente el pelo es suyo. Est\xE1 en una posici\xF3n bastante extra\xF1a, por
+    m\xE1s que ella tambi\xE9n duerma aqu\xED. Qu\xE9 extra\xF1o...\""
+  isFakeEvidence: 0

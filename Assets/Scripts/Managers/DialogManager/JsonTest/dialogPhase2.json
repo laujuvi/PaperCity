@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "NPC1",
+            "name": "MrAckroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -11,7 +11,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "Hello, player We are in phase 2, you need 1 pickeables for final phase",
+                    "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? Es cierto que mi padre y yo teníamos nuestras diferencias, pero jamás sería capaz de hacer algo así... Lo siento mucho detective, pero yo no soy el culpable...",
                     "emotion": "Talking"
                 },
                 {
@@ -26,7 +26,33 @@
                     "emotion": "Talking"
                 }
             ]
-        }
-       
+        },
+	{
+            "name": "SraAckroyd",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "No puedo creer que lo haya descubierto... Si... Yo asesiné a Roger... Toda mi vida comenzó a desmoronarse desde que empezó a acostarse con su nueva secretaria... Pensé que tal vez un nuevo hijo lo haría recapacitar, pero entonces llegó con los papeles de divorcio y supe que era el fin. Entonces decidí terminar todo con mis propias manos...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "asdasd"
+
+                    },
+                    "message": "Congrats!",
+                    "emotion": "Talking"
+                }
+	]
+     }  
     ]
 }
