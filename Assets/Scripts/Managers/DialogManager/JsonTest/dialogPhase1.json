@@ -24,6 +24,17 @@
                     },
                     "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
                     "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "Mejor vaya a investigar..."
+
+                    },
+                    "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
+                    "emotion": "Talking"
                 }
             ]
         },

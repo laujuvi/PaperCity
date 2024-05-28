@@ -9,7 +9,7 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI nameTextMeshPro;
     [SerializeField] GameObject bgDialog;
 
-    [SerializeField] float letterDelay = 0.05f;
+    [SerializeField] float letterDelay = 0.15f;
     [SerializeField] float hideDialogDelay = 1f;
 
     private bool isDisplayingMessage = false;
