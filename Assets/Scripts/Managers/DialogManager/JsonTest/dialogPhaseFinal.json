@@ -13,17 +13,6 @@
                     },
                     "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? Es cierto que mi padre y yo teníamos nuestras diferencias, pero jamás sería capaz de hacer algo así... Lo siento mucho detective, pero yo no soy el culpable...",
                     "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": ""
-
-                    },
-                    "message": "You are good at this!",
-                    "emotion": "Talking"
                 }
             ]
         },
@@ -39,17 +28,6 @@
                         "requiredMessage": ""
                     },
                     "message": "No puedo creer que lo haya descubierto... Si... Yo asesiné a Roger... Toda mi vida comenzó a desmoronarse desde que empezó a acostarse con su nueva secretaria... Pensé que tal vez un nuevo hijo lo haría recapacitar, pero entonces llegó con los papeles de divorcio y supe que era el fin. Entonces decidí terminar todo con mis propias manos...",
-                    "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": ""
-
-                    },
-                    "message": "You are good at this!",
                     "emotion": "Talking"
                 }
             ]

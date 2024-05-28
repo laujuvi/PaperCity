@@ -17,12 +17,12 @@
                 {
                     "talked": false,
                     "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": "¿Qué es esto?"
+                        "hasEvidence": true,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable..."
 
                     },
-                    "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
+                    "message": "",
                     "emotion": "Talking"
                 },
                 {
@@ -56,23 +56,12 @@
                 {
                     "talked": false,
                     "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "",
-                        "requiredMessage": ""
-
-                    },
-                    "message": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?",
-                    "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "evidence":{
                         "hasEvidence": true,
                         "evidenceName": "Pickeable",
-                        "requiredMessage": "I need Pickeable item"
+                        "requiredMessage": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?"
 
                     },
-                    "message": "Thank you!",
+                    "message": "",
                     "emotion": "Talking"
                 }
             ]

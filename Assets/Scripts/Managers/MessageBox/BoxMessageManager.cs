@@ -76,7 +76,8 @@ public class BoxMessageManager : MonoBehaviour
         //string hexColor = ColorUtility.ToHtmlStringRGB(color);
         //nameSpeaker = $" <#{hexColor}> {name}";
         nameTextMeshPro.color = color;
-        return $"[{emotion}] \"{message}\"";
+        //return $"[{emotion}] \"{message}\"";
+        return $" \"{message}\"";
     }
 
     public void CheckSkipDialog()
