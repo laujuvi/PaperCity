@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: Speek with Mr.Acroyd
-  pickableText: 
+  interactText: Speak with Mr.Acroyd
+  pickableText: hola
   isFakeEvidence: 0
 --- !u!65 &1958830878196335093
 BoxCollider:
