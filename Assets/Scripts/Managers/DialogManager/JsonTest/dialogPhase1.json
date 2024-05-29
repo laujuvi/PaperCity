@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "MrAckroyd",
+            "name": "BruceAckroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -73,6 +73,45 @@
 
                     },
                     "message": "Thank you!",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+{
+            "name": "JamesMoriarty",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Oh detective, esto es terrible, terrible. Tanta sangre. Un crimen tan atroz. Pobre Roger. Yo andaba por aquí cerca por si Layla... quiero decir la señorita Ackroyd necesitaba algo, la veía sumamente tribulada estos días. ¡No es que la siga ni nada parecido! Es simplemente que sé reconocer a una mujer preocupada... En fin, espero que encuentre y encarcele al responsable, detective. Estaré aquí por si Layla me necesita... quiero decir, la señorita Ackroyd.",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Estaré aquí cuidando a Layla...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "Key",
+                        "requiredMessage": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?"
+
+                    },
+                    "message": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime!",
                     "emotion": "Talking"
                 }
             ]
