@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bbb4920d4a0334c8e84a59d6b75950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: press e to open
+  interactText: press e to interact
   openAngle: -90
   openSpeed: 2
 --- !u!1 &4345745712207503165
