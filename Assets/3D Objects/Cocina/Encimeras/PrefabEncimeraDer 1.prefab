@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 6681845745549138134}
   - component: {fileID: 8491505835516337128}
   - component: {fileID: 5715794297338251893}
+  - component: {fileID: 3182637587506232053}
   m_Layer: 0
   m_Name: EncimeraDer 1
   m_TagString: Untagged
@@ -317,3 +318,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6513270650418701838, guid: cb1ff3131d18fe94b8446c944f0d7141, type: 3}
+--- !u!65 &3182637587506232053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949953892232128708}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.015642384, y: 0.0013756196, z: 0.020000001}
+  m_Center: {x: -0.0000000049440403, y: -0.00868586, z: 0.009981338}
