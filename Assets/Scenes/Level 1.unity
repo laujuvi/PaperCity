@@ -14605,7 +14605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1065061023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14679,40 +14679,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1640214471}
   lines:
-  - "Finalmente aqu\xED estoy nuevamente, en la casa de los Ackroyd. Aunque es la
-    primera vez que no sostengo un martini doble con una mano e intento no perder
-    el equilibrio con la otra."
-  - "Si hab\xEDa algo por lo que Roger era famoso en la ciudad, adem\xE1s de su creciente
-    fortuna, era por sus fiestas extravagantes. El \xFAnico rico que no emit\xEDa
-    invitaciones privadas para sus fiestas."
-  - "Todos siempre estaban invitados, lo cual le supuso ganar un gran n\xFAmero de
-    amigos\u2026"
-  - "Pero nadie se hace muchos amigos sin algunos enemigos\u2026"
-  - Y ahora Roger Ackroyd ha sido asesinado.
-  - "En la \xFAltima de sus fiestas conoc\xED a todos los que est\xE1n aqu\xED. Todos
-    los que estuvieron al momento de su muerte."
-  - "A Layla, su bella esposa, quien aparentemente no ha hecho m\xE1s que llorar
-    desde que me llam\xF3 anoche. La delatan unas oscuras y pesadas bolsas debajo
-    de sus ojos."
+  - "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
+    tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar su asesinato."
+  - "Roger Ackroyd es due\xF1o del puerto, por lo que se ha hecho de una gran fortuna,
+    una bella esposa y una maravilla arquitect\xF3nica como su mansi\xF3n. Nadie
+    consigue tantas cosas en la vida sin hacerse unos cuantos enemigos."
+  - "Y ahora aqu\xED estoy con los 3 sospechosos..."
+  - "Layla Ackroyd, su esposa, quien aparentemente no ha hecho m\xE1s que llorar
+    desde que me llam\xF3 anoche al reportar su asesinato. La delatan unas oscuras
+    y pesadas bolsas debajo de sus ojos."
   - "\xBFSer\xEDan ciertos los rumores del mal tiempo que atravesaba el matrimonio?
     \xBFPodr\xEDa haber llegado tan lejos como para asesinar a su esposo? Deber\xEDa
-    investigar antes de hacer ninguna acusaci\xF3n semejante\u2026 La se\xF1ora Ackroy
-    realmente est\xE1 muy sensible\u2026"
-  - "Luego tenemos a Bruce Ackroyd\u2026, \xBFc\xF3mo olvidarlo? "
-  - "el \xFAnico hijo del matrimonio, un fil\xE1ntropo que parti\xF3 a Suiza al cumplir
-    los 18 a\xF1os de edad. Curiosamente ha vuelto a la casa de los Ackroyd la misma
-    noche del asesinato de su padre. \xBFCasualidad o causalidad?"
-  - "Puede haber vuelto porque se qued\xF3 sin dinero\u2026 Puede haber vuelto porque
-    ven\xEDa a presentar a una nueva novia\u2026 Puede haber vuelto simplemente a
-    saludar\u2026 Mejor investigo antes de acusar a un hijo de asesinar a su padre\u2026"
+    investigar antes de hacer ninguna acusaci\xF3n semejante\u2026 La se\xF1ora Ackroyd
+    realmente est\xE1 muy sensible\u2026 O al menos lo aparenta\u2026"
+  - "Luego tenemos al hijo de Roger y Layla, Bruce Ackroyd\u2026, \xBFc\xF3mo olvidarlo?
+    un fil\xE1ntropo que parti\xF3 a Suiza al cumplir los 18 a\xF1os de edad. Curiosamente
+    ha vuelto a casa de sus padres la misma noche de la muerte de su padre."
   - "Y finalmente James Moriarty, el vecino de los Ackroyd. Un hombre que no puede
     ser m\xE1s diferente a Roger y que, sin embargo, han sido grandes amigos durante
     mucho tiempo. \xC9l tambi\xE9n ha estado aqu\xED la noche del asesinato."
-  - "Es el \xFAnico que no tiene motivo para estar aqu\xED."
-  - "Cualquiera de ellos podr\xEDa ser culpable del asesinato de Roger. Mejor me
-    pongo a investigar. Debe haber suficientes pistas para resolver el caso en esta
-    casa\u2026 O al menos eso espero\u2026"
+  - "Bien, ahora los hechos: Roger Ackroyd aparentemente estaba enga\xF1ando a su
+    esposa. Si bien son rumores, aquello podr\xEDa ser el m\xF3vil de Layla Ackroyd
+    para el asesinato. Al mismo tiempo, si esto es verdad, la herencia de Bruce Ackroyd
+    podr\xEDa peligrar, puesto que su padre probablemente deber\xEDa repartir su
+    dinero con alguien m\xE1s. Ah\xED tenemos el m\xF3vil del hijo. James Moriarty,
+    por su parte, no tiene m\xF3vil aparente."
+  - "Es momento de ponerme a investigar. Si consigo suficientes pistas, todo quedar\xE1
+    claro y podr\xE9 acusar a alguien del asesinato. Tal vez lo mejor sea comenzar
+    por la habitaci\xF3n de Roger."
   textSpeed: 0.05
+  len: {fileID: 532678003}
 --- !u!95 &1065061027
 Animator:
   serializedVersion: 5
@@ -22165,8 +22161,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 490370faad092d346ab567d927d13a33, type: 2}
-  m_sharedMaterial: {fileID: 2885996129773824959, guid: 490370faad092d346ab567d927d13a33, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22190,8 +22186,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

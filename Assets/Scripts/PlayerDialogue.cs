@@ -10,6 +10,8 @@ public class PlayerDialogue : MonoBehaviour
     public float textSpeed;
     private int index;
 
+    public GameObject len;
+
     public static bool isHavingDialogue;
 
     // Start is called before the first frame update
@@ -35,6 +37,12 @@ public class PlayerDialogue : MonoBehaviour
                 textComponent.text = lines[index];
             }
         }
+
+        if (gameObject.activeInHierarchy)
+        {
+            len.SetActive(false);   
+        }
+        else len.SetActive(true);
     }
 
     void StartDialogue()
