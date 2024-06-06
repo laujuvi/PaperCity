@@ -14709,6 +14709,7 @@ MonoBehaviour:
     por la habitaci\xF3n de Roger."
   textSpeed: 0.05
   len: {fileID: 532678003}
+  cluesCounter: {fileID: 1154247563}
 --- !u!95 &1065061027
 Animator:
   serializedVersion: 5
@@ -16148,6 +16149,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3137730810901870422, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3438033153605972248, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _playerInteract
       value: 
@@ -16387,6 +16392,11 @@ PrefabInstance:
       addedObject: {fileID: 532678004}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+--- !u!1 &1154247563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3137730810901870422, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159605765
 GameObject:
   m_ObjectHideFlags: 0

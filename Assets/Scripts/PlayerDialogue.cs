@@ -11,6 +11,7 @@ public class PlayerDialogue : MonoBehaviour
     private int index;
 
     public GameObject len;
+    public GameObject cluesCounter;
 
     public static bool isHavingDialogue;
 
@@ -40,9 +41,14 @@ public class PlayerDialogue : MonoBehaviour
 
         if (gameObject.activeInHierarchy)
         {
-            len.SetActive(false);   
+            len.SetActive(false);  
+            cluesCounter.SetActive(false);
         }
-        else len.SetActive(true);
+        else
+        {
+            len.SetActive(true);
+            cluesCounter.SetActive(true);
+        }
     }
 
     void StartDialogue()
