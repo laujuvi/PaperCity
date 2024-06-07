@@ -11,12 +11,12 @@ TagManager:
   - NPC
   - Water
   - UI
-  - Pickeable
-  - SceneObject
+  - 
+  - 
   - Player
   - Post Processing
-  - 
-  - 
+  - Clue
+  - Interactable
   - 
   - 
   - 
