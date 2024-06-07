@@ -4865,7 +4865,7 @@ PrefabInstance:
       objectReference: {fileID: 1631509815}
     - target: {fileID: 5148488280584472873, guid: 673f9eb3cf06f56438bc14ce98151fab, type: 3}
       propertyPath: m_Name
-      value: BruceAckroyd
+      value: Bruce Ackroyd
       objectReference: {fileID: 0}
     - target: {fileID: 5492362382402360211, guid: 673f9eb3cf06f56438bc14ce98151fab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15060,26 +15060,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 180517378225470435, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 180517378225470435, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 714180026005916842, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2094171432710704487, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
-    - target: {fileID: 3137730810901870422, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3438033153605972248, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _playerInteract
       value: 
@@ -15180,26 +15164,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
-    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_margin.x
-      value: -121.525085
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_margin.z
-      value: -112.177
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27452,7 +27416,7 @@ PrefabInstance:
       objectReference: {fileID: 1631509815}
     - target: {fileID: 4780955702981721032, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
       propertyPath: m_Name
-      value: JamesMoriarty
+      value: James Moriarty
       objectReference: {fileID: 0}
     - target: {fileID: 7269159743958273993, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
       propertyPath: interactText
@@ -27618,7 +27582,7 @@ PrefabInstance:
       objectReference: {fileID: 1631509815}
     - target: {fileID: 5159326142089966393, guid: 2375db0385b68be4d91ccedfb4da2e38, type: 3}
       propertyPath: m_Name
-      value: SraAckroyd
+      value: Sra. Layla Ackroyd
       objectReference: {fileID: 0}
     - target: {fileID: 5825769514720032012, guid: 2375db0385b68be4d91ccedfb4da2e38, type: 3}
       propertyPath: interactText

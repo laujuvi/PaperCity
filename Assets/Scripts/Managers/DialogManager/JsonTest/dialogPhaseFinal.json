@@ -1,7 +1,7 @@
 {
     "dialogues": [
         {
-            "name": "MrAckroyd",
+            "name": "Bruce Ackroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
 	        {
-            "name": "SraAckroyd",
+            "name": "Sra. Layla Ackroyd",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
             "messages": [
                 {
