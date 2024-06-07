@@ -69,7 +69,7 @@
                     "evidence":{
                         "hasEvidence": true,
                         "evidenceName": "Pickeable",
-                        "requiredMessage": "I need Pickeable item"
+                        "requiredMessage": "¿Qué más quiere?"
 
                     },
                     "message": "Thank you!",

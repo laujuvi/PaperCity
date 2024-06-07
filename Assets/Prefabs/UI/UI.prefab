@@ -882,12 +882,12 @@ GameObject:
   - component: {fileID: 8483275280256800748}
   - component: {fileID: 4043089442795028877}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Introduction Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7511976099611564525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -986,9 +986,15 @@ MonoBehaviour:
     podr\xEDa peligrar, puesto que su padre probablemente deber\xEDa repartir su
     dinero con alguien m\xE1s. Ah\xED tenemos el m\xF3vil del hijo. James Moriarty,
     por su parte, no tiene m\xF3vil aparente."
-  - "Es momento de ponerme a investigar. Si consigo suficientes pistas, todo quedar\xE1
-    claro y podr\xE9 acusar a alguien del asesinato. Tal vez lo mejor sea comenzar
-    por la habitaci\xF3n de Roger."
+  - "En cuanto a lo que el asesinato de Roger Ackroyd respecta, fue asesinado de
+    9 pu\xF1aladas con un cuchillo de cocina, lo cual indica que el asesino no era
+    un profesional y que actu\xF3 de manera impulsiva."
+  - "Pero adem\xE1s indica que el asesino no es muy fuerte, ya que necesit\xF3 muchas
+    pu\xF1aladas para asesinar a Roger. Alguien fuerte lo habr\xEDa asesinado de
+    solamente una o dos pu\xF1aldas. Estos datos, junto con las pistas que logre
+    encontrar, ser\xE1n todo lo que usar\xE9 para trabajar."
+  - "Es momento de ponerme a investigar. Tal vez deber\xEDa empezar por hablar con
+    los sospechosos."
   textSpeed: 0.05
   len: {fileID: 8918153864075436308}
   cluesCounter: {fileID: 3137730810901870422}
