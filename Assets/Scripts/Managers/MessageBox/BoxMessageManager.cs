@@ -17,6 +17,12 @@ public class BoxMessageManager : MonoBehaviour
     private bool interruptWait = false;
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     public bool IsDisplayingMessage()
     {
         return isDisplayingMessage;

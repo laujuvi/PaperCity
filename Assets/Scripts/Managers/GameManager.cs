@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
 
+    [SerializeField] private GameObject lenIcon;
+
     private void Start()
     {
         win.SetActive(false);
@@ -81,12 +83,14 @@ public class GameManager : MonoBehaviour
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
+            lenIcon.SetActive(false);
             win.SetActive(true);
             return;
         }
         else
         {
             Debug.Log("LOSE");
+            lenIcon.SetActive(false);
             lose.SetActive(true);
             return;
         }

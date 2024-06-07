@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class InGameMenu : MonoBehaviour
 {
     public GameObject menuUI;
+    public GameObject lenIcon;
 
     private bool isPaused = false;
 
@@ -28,12 +29,14 @@ public class InGameMenu : MonoBehaviour
     public void ResumeGame()
     {
         menuUI.SetActive(false);
+        lenIcon.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
         menuUI.SetActive(true);
+        lenIcon.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
