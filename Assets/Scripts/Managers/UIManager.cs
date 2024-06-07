@@ -13,14 +13,14 @@ public class UIManager : MonoBehaviour
     public void UpdateCurrentEvidence(int currentInt)
     {
         currentEvidence = currentInt;
-        cluesText.text = $"{defaultCluesText} {currentEvidence}/{totalEvidence}";
+        cluesText.text = $"{defaultCluesText} {currentEvidence}";
 
     }
 
     public void UpdateTotalEvidence(int totalInt)
     {
         totalEvidence = totalInt;
-        cluesText.text = $"{defaultCluesText} {currentEvidence}/{totalEvidence}";
+        cluesText.text = cluesText.text = $"{defaultCluesText} {currentEvidence}";
 
     }
 }
