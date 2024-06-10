@@ -882,12 +882,12 @@ GameObject:
   - component: {fileID: 8483275280256800748}
   - component: {fileID: 4043089442795028877}
   m_Layer: 5
-  m_Name: Introduction Pannel
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7511976099611564525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -962,7 +962,8 @@ MonoBehaviour:
   textComponent: {fileID: 3507734588896971654}
   lines:
   - "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
-    tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar su asesinato."
+    tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar el asesinato
+    de Roger."
   - "Roger Ackroyd es due\xF1o del puerto, por lo que se ha hecho de una gran fortuna,
     una bella esposa y una maravilla arquitect\xF3nica como su mansi\xF3n. Nadie
     consigue tantas cosas en la vida sin hacerse unos cuantos enemigos."
@@ -986,15 +987,9 @@ MonoBehaviour:
     podr\xEDa peligrar, puesto que su padre probablemente deber\xEDa repartir su
     dinero con alguien m\xE1s. Ah\xED tenemos el m\xF3vil del hijo. James Moriarty,
     por su parte, no tiene m\xF3vil aparente."
-  - "En cuanto a lo que el asesinato de Roger Ackroyd respecta, fue asesinado de
-    9 pu\xF1aladas con un cuchillo de cocina, lo cual indica que el asesino no era
-    un profesional y que actu\xF3 de manera impulsiva."
-  - "Pero adem\xE1s indica que el asesino no es muy fuerte, ya que necesit\xF3 muchas
-    pu\xF1aladas para asesinar a Roger. Alguien fuerte lo habr\xEDa asesinado de
-    solamente una o dos pu\xF1aldas. Estos datos, junto con las pistas que logre
-    encontrar, ser\xE1n todo lo que usar\xE9 para trabajar."
-  - "Es momento de ponerme a investigar. Tal vez deber\xEDa empezar por hablar con
-    los sospechosos."
+  - "Es momento de ponerme a investigar. Si consigo suficientes pistas, todo quedar\xE1
+    claro y podr\xE9 acusar a alguien del asesinato. Tal vez lo mejor sea comenzar
+    por hablar con los sospechosos."
   textSpeed: 0.05
   len: {fileID: 8918153864075436308}
   cluesCounter: {fileID: 3137730810901870422}
