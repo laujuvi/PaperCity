@@ -10725,10 +10725,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabMakeUP_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451993384129510761, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7560151424652576137, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a6d4a9af104274447ae21de3dab810ef, type: 2}
+    - target: {fileID: 8540526361851664000, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
