@@ -107,11 +107,11 @@
                     "talked": false,
                     "evidence":{
                         "hasEvidence": true,
-                        "evidenceName": "Key",
+                        "evidenceName": "JamesMoriartyKey",
                         "requiredMessage": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?"
 
                     },
-                    "message": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime!",
+                    "message": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime! ¿Pregunta cómo pude perderla? Ah... es realmente embarazoso, detective, pero el médico me ha dado unas pastillas para dormir que debo tomar de noche... ¡me dejan exhausto! ¡Y pensar que fui boxeador en mi juventud, no podría ni atrapar un caracol luego de esas pastillas! Supongo que estaba un poco atontado y... ¡las llaves deben haberse caído!",
                     "emotion": "Talking"
                 }
             ]
