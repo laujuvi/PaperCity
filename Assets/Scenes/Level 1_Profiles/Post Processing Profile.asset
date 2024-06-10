@@ -256,7 +256,7 @@ MonoBehaviour:
     value: 12
   tint:
     overrideState: 1
-    value: 4
+    value: 12
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -274,7 +274,7 @@ MonoBehaviour:
     value: 1.12
   contrast:
     overrideState: 1
-    value: 20
+    value: 49
   mixerRedOutRedIn:
     overrideState: 1
     value: 200

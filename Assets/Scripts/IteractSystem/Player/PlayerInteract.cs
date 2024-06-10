@@ -15,8 +15,8 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
 
-
     private int _currentLayerMask;
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -69,6 +69,7 @@ public class PlayerInteract : MonoBehaviour
 
             }
         }
+
         return InteractableObject;
         //return null;
     }

@@ -11971,6 +11971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920345170}
   - component: {fileID: 920345169}
+  - component: {fileID: 920345171}
   m_Layer: 9
   m_Name: Post Processing
   m_TagString: Untagged
@@ -12010,6 +12011,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &920345171
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920345168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f2bc59a1d0917242b1fb7a6435f12c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &924608537
 GameObject:
   m_ObjectHideFlags: 0
@@ -14761,18 +14783,10 @@ PrefabInstance:
       propertyPath: _playerInteract
       value: 
       objectReference: {fileID: 1631509814}
-    - target: {fileID: 3956200768263662036, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 311.9275
-      objectReference: {fileID: 0}
     - target: {fileID: 4456060725456562965, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
-    - target: {fileID: 4477749916719154330, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -93
-      objectReference: {fileID: 0}
     - target: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -14865,18 +14879,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
-    - target: {fileID: 8483275280256800748, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: lines.Array.data[0]
-      value: "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
-        tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar el
-        asesinato de Roger."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8483275280256800748, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: lines.Array.data[8]
-      value: "Es momento de ponerme a investigar. Si consigo suficientes pistas,
-        todo quedar\xE1 claro y podr\xE9 acusar a alguien del asesinato. Tal vez
-        lo mejor sea comenzar por hablar con los sospechosos."
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19875,7 +19877,7 @@ PrefabInstance:
       objectReference: {fileID: 1631509813}
     - target: {fileID: 6706717249794367922, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: _RaycastDistance
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6706717249794367922, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: _RaycastDistance_2
