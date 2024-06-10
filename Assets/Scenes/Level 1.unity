@@ -15164,6 +15164,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
+    - target: {fileID: 8483275280256800748, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
+        tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar el
+        asesinato de Roger."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483275280256800748, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: "Es momento de ponerme a investigar. Si consigo suficientes pistas,
+        todo quedar\xE1 claro y podr\xE9 acusar a alguien del asesinato. Tal vez
+        lo mejor sea comenzar por hablar con los sospechosos."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
