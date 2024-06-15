@@ -15,6 +15,7 @@ public class BoxMessageManager : MonoBehaviour
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
     private bool interruptWait = false;
+    private int maxMessageLength = 200; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
     private void Start()
@@ -34,8 +35,20 @@ public class BoxMessageManager : MonoBehaviour
 
     public void SendMessage(string name, Color color, string message, Emotions emotion)
     {
-        MessageData data = new MessageData(name, color, message, emotion);
-        messageQueue.Enqueue(data);
+        if (message.Length > maxMessageLength)
+        {
+            (string part1, string part2) = SplitMessage(message, maxMessageLength);
+            MessageData data1 = new MessageData(name, color, part1, emotion);
+            MessageData data2 = new MessageData(name, color, part2, emotion);
+
+            messageQueue.Enqueue(data1);
+            messageQueue.Enqueue(data2);
+        }
+        else
+        {
+            MessageData data = new MessageData(name, color, message, emotion);
+            messageQueue.Enqueue(data);
+        }
 
         if (!isDisplayingMessage)
         {
@@ -115,5 +128,17 @@ public class BoxMessageManager : MonoBehaviour
         hideDialogDelay = 1f;
         isSkippingDialog = false;
         interruptWait = false;
+    }
+
+    private (string, string) SplitMessage(string message, int maxLength)
+    {
+        int splitIndex = message.LastIndexOf(' ', maxLength);
+        if (splitIndex == -1)
+        {
+            splitIndex = maxLength;
+        }
+        string part1 = message.Substring(0, splitIndex).Trim();
+        string part2 = message.Substring(splitIndex).Trim();
+        return (part1, part2);
     }
 }
