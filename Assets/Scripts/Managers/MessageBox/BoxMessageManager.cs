@@ -15,7 +15,7 @@ public class BoxMessageManager : MonoBehaviour
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
     private bool interruptWait = false;
-    private int maxMessageLength = 200; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
+    private int maxMessageLength = 230; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
     private void Start()
@@ -35,19 +35,11 @@ public class BoxMessageManager : MonoBehaviour
 
     public void SendMessage(string name, Color color, string message, Emotions emotion)
     {
-        if (message.Length > maxMessageLength)
-        {
-            (string part1, string part2) = SplitMessage(message, maxMessageLength);
-            MessageData data1 = new MessageData(name, color, part1, emotion);
-            MessageData data2 = new MessageData(name, color, part2, emotion);
+        Queue<MessageData> splitMessages = SplitMessage(name, color, message, emotion, maxMessageLength);
 
-            messageQueue.Enqueue(data1);
-            messageQueue.Enqueue(data2);
-        }
-        else
+        foreach (var msgData in splitMessages)
         {
-            MessageData data = new MessageData(name, color, message, emotion);
-            messageQueue.Enqueue(data);
+            messageQueue.Enqueue(msgData);
         }
 
         if (!isDisplayingMessage)
@@ -130,15 +122,27 @@ public class BoxMessageManager : MonoBehaviour
         interruptWait = false;
     }
 
-    private (string, string) SplitMessage(string message, int maxLength)
+    private Queue<MessageData> SplitMessage(string name, Color color, string message, Emotions emotion, int maxLength)
     {
-        int splitIndex = message.LastIndexOf(' ', maxLength);
-        if (splitIndex == -1)
+        Queue<MessageData> messageParts = new Queue<MessageData>();
+
+        while (message.Length > maxLength)
         {
-            splitIndex = maxLength;
+            int splitIndex = message.LastIndexOf(' ', maxLength);
+            if (splitIndex == -1)
+            {
+                splitIndex = maxLength;
+            }
+            string part = message.Substring(0, splitIndex).Trim();
+            message = message.Substring(splitIndex).Trim();
+            messageParts.Enqueue(new MessageData(name, color, part, emotion));
         }
-        string part1 = message.Substring(0, splitIndex).Trim();
-        string part2 = message.Substring(splitIndex).Trim();
-        return (part1, part2);
+
+        if (message.Length > 0)
+        {
+            messageParts.Enqueue(new MessageData(name, color, message, emotion));
+        }
+
+        return messageParts;
     }
 }
