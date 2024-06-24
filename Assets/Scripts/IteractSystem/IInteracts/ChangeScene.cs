@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.UI;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class ChangeScene : MonoBehaviour, IInteractable
+{
+    [SerializeField] private int sceneToLoad;
+    [SerializeField] private string interactText;
+    private bool canChangeScene;
+
+    private void Start()
+    {
+        canChangeScene = false;
+    }
+    public string GetInteractText()
+    {
+        if (!canChangeScene)
+        {
+            interactText = "I need to grab my book first";
+        }
+        else
+        {
+            interactText = "press E to intyeract";
+        }
+        
+        return interactText;
+    }
+    
+    public void SetActiveScript(bool active)
+    {
+        canChangeScene = active;
+    }
+
+    public Transform GetTransform()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Interact()
+    {
+        if (canChangeScene)
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        
+    }
+
+}
