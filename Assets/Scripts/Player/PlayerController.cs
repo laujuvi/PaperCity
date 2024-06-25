@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     [Header("Animator")]
     public Animator animator;
 
+    [Header("NoteBook")]
+    [SerializeField] GameObject NoteBook;
+    public bool isOpen = false;
+
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
     Vector3 moveInput = Vector3.zero;
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour
         Crouch();
         LookUp();
         UpdateAnimator();
+        OpenNoteBook();
     }
     private void Move()
     {
@@ -116,5 +121,27 @@ public class PlayerController : MonoBehaviour
     {
         bool isMoving = moveInput.x != 0 || moveInput.y != 0;
         if(animator != null) animator.SetFloat("velocity", characterController.velocity.magnitude);
+    }
+
+    private void OpenNoteBook()
+    {
+    
+        if(isOpen == false)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                isOpen = true;
+                NoteBook.SetActive(true);
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                isOpen = false;
+                NoteBook.SetActive(false);
+            }
+        }
+    
     }
 }

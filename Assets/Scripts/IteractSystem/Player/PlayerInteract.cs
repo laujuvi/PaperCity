@@ -14,6 +14,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
+    [SerializeField] private ListManager _listManager;
 
     private int _currentLayerMask;
 
@@ -31,6 +32,7 @@ public class PlayerInteract : MonoBehaviour
                 {
                     interactable.Interact();
                 }
+                _listManager.AddText(interactable.ToString());
             }          
         }
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
