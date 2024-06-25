@@ -56,12 +56,14 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private int minEvidenceForPhaseFinal = 2;
     private int totalEvidence;
 
+
     private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
 
     private void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         gameManager = FindObjectOfType<GameManager>();
+        
 
         if (dialoguesPhase1Json != null && dialoguesPhase2Json != null && dialoguesPhaseFinalJson != null)
         {
@@ -188,6 +190,11 @@ public class DialogManager : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public Dictionary<string, bool> GetEvidenceList()
+    {
+        return evidenceStatus;
     }
 
     public int GetTotalEvidence()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TutorialInteract2 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
+    [SerializeField] private string ObjectName;
     public string GetInteractText()
     {
         return interactText;
