@@ -16,15 +16,16 @@ public class InGameMenu : MonoBehaviour
     }
     private void Update()
     {
-        Pause();
-    }
-    private void Pause()
-    {
         if (Input.GetKeyDown(KeyCode.Escape))
             if (isPaused)
+            {
                 ResumeGame();
-            else
+            }
+            else if (!isPaused)
+            {
                 PauseGame();
+            }
+                
     }
     public void ResumeGame()
     {
