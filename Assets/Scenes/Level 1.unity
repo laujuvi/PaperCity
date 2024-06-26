@@ -4617,8 +4617,8 @@ Transform:
   - {fileID: 1120009431}
   - {fileID: 2127866135}
   - {fileID: 1404351228}
-  - {fileID: 1164957703}
   - {fileID: 1910776192}
+  - {fileID: 2024619367}
   - {fileID: 898669371}
   - {fileID: 377958947108417601}
   m_Father: {fileID: 0}
@@ -21585,6 +21585,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5374114840956105827, guid: 3b029cfd5f7952f49b35b2fb16b5c92c, type: 3}
   m_PrefabInstance: {fileID: 1707562256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1718584789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6806858446551851782, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+  m_PrefabInstance: {fileID: 2032114876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719990177
 GameObject:
   m_ObjectHideFlags: 0
@@ -23804,6 +23809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7848d92dc6b128b4db7abfb79f1ac954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectController: {fileID: 0}
   boxMessageManager: {fileID: 2014397447}
   dialogManager: {fileID: 1119218544}
   uIManager: {fileID: 2000642660}
@@ -25062,6 +25068,52 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2024619366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024619367}
+  - component: {fileID: 2024619368}
+  m_Layer: 0
+  m_Name: CartasDeAmorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2024619367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024619366}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.8704834, y: -14.640511, z: 33.952866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1164957703}
+  m_Father: {fileID: 319068976}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024619368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024619366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca587044d2fde2469d6ee84e64a3812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToManage: {fileID: 1164957702}
 --- !u!1 &2028561376
 GameObject:
   m_ObjectHideFlags: 0
@@ -25179,6 +25231,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: clueIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: objectToActivate
+      value: 
+      objectReference: {fileID: 1164957702}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: delayBeforeDeactivation
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1912915680938643416, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -25266,7 +25330,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6806858446551851782, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089266025}
   m_SourcePrefab: {fileID: 100100000, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
 --- !u!4 &2032114877 stripped
 Transform:
@@ -26335,6 +26402,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1912915680938643416, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
   m_PrefabInstance: {fileID: 2032114876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089266025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718584789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6930f78baa2364e84c6dccd50c288a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 1718584789}
+  childObject: {fileID: 1164957702}
 --- !u!1 &2117292010
 GameObject:
   m_ObjectHideFlags: 0
@@ -27659,23 +27740,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 319068976}
+    m_TransformParent: {fileID: 2024619367}
     m_Modifications:
     - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Name
       value: CartasDeAmor
       objectReference: {fileID: 0}
+    - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.528
+      value: 20.398483
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.185
+      value: 14.511
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.617
+      value: -16.381
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalRotation.w
