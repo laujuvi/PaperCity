@@ -11,13 +11,4 @@ public class NoteBookPages : MonoBehaviour
     public List<string> textList = new List<string>();
     public int clueCount;
     public bool isFull = false;
-
-
-    private void Update()
-    {
-        if (clueCount >= 4)
-        {
-            isFull = true;
-        }
-    }
 }
