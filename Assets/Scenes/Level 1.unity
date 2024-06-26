@@ -4621,6 +4621,7 @@ Transform:
   - {fileID: 1910776192}
   - {fileID: 898669371}
   - {fileID: 377958947108417601}
+  - {fileID: 2070363016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319911679
@@ -24762,7 +24763,6 @@ Transform:
   - {fileID: 800669369}
   - {fileID: 565282043}
   - {fileID: 660337285}
-  - {fileID: 2070363016}
   - {fileID: 742676557}
   - {fileID: 1625081356}
   - {fileID: 1259535962}
@@ -25804,31 +25804,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2000866238}
+    m_TransformParent: {fileID: 319068976}
     m_Modifications:
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0127379
+      value: 1.2813998
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.32784736
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8657629
+      value: 1.4224331
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.611211
+      value: 17.999464
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.49230132
+      value: -1.185954
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.697598
+      value: -30.10109
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25921,7 +25921,7 @@ MonoBehaviour:
     la persona que hizo este agujero en el mueble no puede ser la misma que asesin\xF3
     a Roger. Este golpe fue hecho con mucha fuerza."
   isFakeEvidence: 0
-  description: 
+  description: "La persona que discuti\xF3 en la cocina ten\xEDa mucha fuerza."
 --- !u!65 &2070363019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27094,6 +27094,12 @@ PrefabInstance:
       propertyPath: description
       value: Uno de los Ackroyd buscaba mudarse...
       objectReference: {fileID: 0}
+    - target: {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
+      propertyPath: pickableText
+      value: "Un cat\xE1logo de monoambientes... \xBFPodr\xEDa ser que alguno de
+        los Ackroyd buscaba mudarse o simplemente se le cay\xF3 a alguien mientras
+        lavaban ropa?"
+      objectReference: {fileID: 0}
     - target: {fileID: 2579010373581435401, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
       propertyPath: m_Name
       value: catalogosdecasa
@@ -27160,32 +27166,40 @@ PrefabInstance:
       value: "El due\xF1o de estas pesas es alguien fuerte"
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.22
+      value: 8.952
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.96
+      value: 2.2564998
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.04
+      value: 2.367
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.68301284
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.70710677
+      value: -0.6830128
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.1830124
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.18301237
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27197,7 +27211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27976,6 +27990,11 @@ PrefabInstance:
       propertyPath: description
       value: "Roger quer\xEDa divorciarse de Layla"
       objectReference: {fileID: 0}
+    - target: {fileID: 8853835342930575733, guid: 839c576df60a42a419614c77220b61b2, type: 3}
+      propertyPath: pickableText
+      value: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
+        hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
+      objectReference: {fileID: 0}
     - target: {fileID: 8964207296017030131, guid: 839c576df60a42a419614c77220b61b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.719463
@@ -28052,6 +28071,11 @@ PrefabInstance:
     - target: {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
       propertyPath: description
       value: "Roger fue asesinado a 9 pu\xF1aladas, aunque muy d\xE9biles."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
+      propertyPath: pickableText
+      value: "La escena del crimen, Roger fue asesinado en su cama y no por un profesional.
+        Fue un crimen hecho con odio, pero no con demasiada premeditaci\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 8606000990021535454, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
       propertyPath: m_Name
