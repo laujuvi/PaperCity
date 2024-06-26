@@ -14,6 +14,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
+    private PlayerController _playerController;
     private DialogManager _dialogManager;
 
     private int _currentLayerMask;
@@ -21,26 +22,32 @@ public class PlayerInteract : MonoBehaviour
     private void Start()
     {
         _dialogManager = FindObjectOfType<DialogManager>();
+        _playerController = FindObjectOfType<PlayerController>();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (_playerController.isOpen == false)
         {
-            IInteractable interactable = GetInteractableObject();
-            if (interactable != null)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (_boxMessageManager.IsDisplayingMessage())
+                IInteractable interactable = GetInteractableObject();
+                if (interactable != null)
                 {
-                    _boxMessageManager.CheckSkipDialog();
-                } else
-                {
-                    interactable.Interact();
-                }     
-                
+                    if (_boxMessageManager.IsDisplayingMessage())
+                    {
+                        _boxMessageManager.CheckSkipDialog();
+                    }
+                    else
+                    {
+                        interactable.Interact();
+                    }
+
+                }
+
             }
-            
         }
+       
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance_2, Color.blue);
     }
