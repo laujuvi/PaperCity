@@ -33,7 +33,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
             if (!isFakeEvidence) { 
             dialogManager.SetEvidenceStatus(gameObject.name, true);
-            _listManager.AddText(gameObject.name + $"({description})");
+            _listManager.AddText(/*gameObject.name +*/ $"({description})");
             gameManager.CheckCurrentEvidence();
                 print("pick");
             gameObject.SetActive(false);
