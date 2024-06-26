@@ -14,9 +14,14 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
-    [SerializeField] private ListManager _listManager;
+    private DialogManager _dialogManager;
 
     private int _currentLayerMask;
+
+    private void Start()
+    {
+        _dialogManager = FindObjectOfType<DialogManager>();
+    }
 
     void Update()
     {
@@ -31,9 +36,10 @@ public class PlayerInteract : MonoBehaviour
                 } else
                 {
                     interactable.Interact();
-                }
-                _listManager.AddText(interactable.ToString());
-            }          
+                }     
+                
+            }
+            
         }
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance, Color.red);
         Debug.DrawRay(_RaycastPoint.transform.position, _RaycastPoint.transform.forward * _RaycastDistance_2, Color.blue);
@@ -50,9 +56,6 @@ public class PlayerInteract : MonoBehaviour
 
         IInteractable InteractableObject = null;
 
-        //hits = hits.OrderBy(h => h.distance).ToArray();
-        //hits_2 = hits_2.OrderBy(h => h.distance).ToArray();
-
         foreach (RaycastHit hit in hits)
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
@@ -61,7 +64,8 @@ public class PlayerInteract : MonoBehaviour
                 InteractableObject = interactable;
                 //return interactable;
                 _currentLayerMask = hit.collider.gameObject.layer;
-                //return InteractableObject;
+
+                
             }
         }
         foreach (RaycastHit hit_2 in hits_2)
@@ -70,7 +74,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 InteractableObject = interactable1;
                 _currentLayerMask = hit_2.collider.gameObject.layer;
-                //return InteractableObject;
+
             }
         }
 

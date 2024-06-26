@@ -9,15 +9,11 @@ public class ListManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI textoPistas;
     private List<string> textList = new List<string>();
     // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        UpdateUIText();
     }
 
     public void AddText(string newText)
