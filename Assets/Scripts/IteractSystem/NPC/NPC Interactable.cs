@@ -12,7 +12,10 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
     private GameManager gameManager;
+
+    [Header("ListManager")]
     private ListManager _listManager;
+    [SerializeField] private string clueName;
 
     public void Start()
     {
@@ -20,6 +23,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         dialogManager = FindObjectOfType<DialogManager>();
         gameManager = FindObjectOfType<GameManager>();
         _listManager = FindObjectOfType<ListManager>();
+        clueName = gameObject.name;
     }
     public void Interact()
     {
@@ -33,7 +37,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
             if (!isFakeEvidence) { 
             dialogManager.SetEvidenceStatus(gameObject.name, true);
-            _listManager.AddText(gameObject.name + $"({description})");
+            _listManager.AddText(clueName + $"({description})");
             gameManager.CheckCurrentEvidence();
                 print("pick");
             //gameObject.SetActive(false);
