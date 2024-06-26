@@ -15010,7 +15010,7 @@ PrefabInstance:
       objectReference: {fileID: 1859243080}
     - target: {fileID: 4523494399771547041, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188896476051099513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15124,6 +15124,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
+    - target: {fileID: 8757946543172492678, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27086,6 +27090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
+    - target: {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
+      propertyPath: description
+      value: Uno de los Ackroyd buscaba mudarse...
+      objectReference: {fileID: 0}
     - target: {fileID: 2579010373581435401, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
       propertyPath: m_Name
       value: catalogosdecasa
@@ -27146,6 +27154,10 @@ PrefabInstance:
     - target: {fileID: 1046526146615835529, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_Name
       value: Pesa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027114398811586937, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
+      propertyPath: description
+      value: "El due\xF1o de estas pesas es alguien fuerte"
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27341,6 +27353,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
+    - target: {fileID: 5795597049427362570, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
+      propertyPath: description
+      value: "Layla durmi\xF3 (o al menos se acost\xF3) junto a Roger la noche del
+        asesinato."
+      objectReference: {fileID: 0}
     - target: {fileID: 6315073611139424551, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_Name
       value: Hairball-Clue
@@ -27627,6 +27644,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3310289393427553071, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
+      propertyPath: description
+      value: Layla no amaba a James, aunque lo respetaba.
+      objectReference: {fileID: 0}
     - target: {fileID: 5888545069738618753, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: m_Name
       value: RegaloDeJames
@@ -27652,7 +27673,7 @@ MonoBehaviour:
   pickableText: "Hmmm... Una carta que deja claro que Bruce Ackroyd perder\xE1 su
     herencia... Esto puede haber sido motivo de una acalorada discusi\xF3n..."
   isFakeEvidence: 0
-  description: perderia herencia
+  description: Bruce Ackroyd iba a perder su herencia
 --- !u!1001 &4548127552093490656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27661,6 +27682,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
+    - target: {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: description
+      value: James siempre estuvo enamorado de Layla
+      objectReference: {fileID: 0}
     - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Name
       value: CartasDeAmor
@@ -27947,6 +27972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: divorcePapers
       objectReference: {fileID: 0}
+    - target: {fileID: 8853835342930575733, guid: 839c576df60a42a419614c77220b61b2, type: 3}
+      propertyPath: description
+      value: "Roger quer\xEDa divorciarse de Layla"
+      objectReference: {fileID: 0}
     - target: {fileID: 8964207296017030131, guid: 839c576df60a42a419614c77220b61b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.719463
@@ -28020,6 +28049,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -1.6873471e-11
       objectReference: {fileID: 0}
+    - target: {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
+      propertyPath: description
+      value: "Roger fue asesinado a 9 pu\xF1aladas, aunque muy d\xE9biles."
+      objectReference: {fileID: 0}
     - target: {fileID: 8606000990021535454, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
       propertyPath: m_Name
       value: outline
@@ -28077,6 +28110,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
+    - target: {fileID: 3091898112448559944, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
+      propertyPath: description
+      value: Layla esperaba un nuevo hijo
+      objectReference: {fileID: 0}
     - target: {fileID: 4878004960733843111, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3005371
