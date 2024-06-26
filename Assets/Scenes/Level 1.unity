@@ -4617,11 +4617,10 @@ Transform:
   - {fileID: 1120009431}
   - {fileID: 2127866135}
   - {fileID: 1404351228}
-  - {fileID: 1164957703}
   - {fileID: 1910776192}
+  - {fileID: 2024619367}
   - {fileID: 898669371}
   - {fileID: 377958947108417601}
-  - {fileID: 2070363016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319911679
@@ -7159,6 +7158,7 @@ MonoBehaviour:
     al asesino."
   isFakeEvidence: 1
   description: 
+  clueName: 
 --- !u!65 &513558301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10423,6 +10423,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6103465224779653718, guid: 0edd6c77599259c4b8b16e6ecfac87cd, type: 3}
   m_PrefabInstance: {fileID: 754853640}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &762190908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8203590035751362367, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+  m_PrefabInstance: {fileID: 1131595202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &762190912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762190908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de77a68c3682e94dbe60ef266a27889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoPista: {fileID: 1877906066}
+  textList: []
+  clueCount: 0
+  isFull: 0
 --- !u!1 &765853073
 GameObject:
   m_ObjectHideFlags: 0
@@ -10693,6 +10714,7 @@ MonoBehaviour:
     \xBFC\xF3mo culparlo?"
   isFakeEvidence: 1
   description: 
+  clueName: 
 --- !u!1 &792304583
 GameObject:
   m_ObjectHideFlags: 0
@@ -10798,6 +10820,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792304583}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &795529235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7056084503700638013, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+  m_PrefabInstance: {fileID: 1131595202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &795529239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795529235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de77a68c3682e94dbe60ef266a27889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoPista: {fileID: 1996433679}
+  textList: []
+  clueCount: 0
+  isFull: 0
 --- !u!1001 &797310509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11711,6 +11754,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872853851}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &873621347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2170405390690324126, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+  m_PrefabInstance: {fileID: 1131595202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &873903496
 GameObject:
   m_ObjectHideFlags: 0
@@ -14550,6 +14604,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: noteBook
       objectReference: {fileID: 0}
+    - target: {fileID: 2284617509567472137, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081574397716314363, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056084503700638013, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364531450909348790, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14631,13 +14697,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_fontSize
+      value: 37.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 37.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8203590035751362367, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 762190912}
+    - targetCorrespondingSourceObject: {fileID: 5081574397716314363, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1531271632}
+    - targetCorrespondingSourceObject: {fileID: 7056084503700638013, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 795529239}
   m_SourcePrefab: {fileID: 100100000, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
 --- !u!1 &1133099135
 GameObject:
@@ -15011,7 +15102,7 @@ PrefabInstance:
       objectReference: {fileID: 1859243080}
     - target: {fileID: 4523494399771547041, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5188896476051099513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15125,10 +15216,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
-    - target: {fileID: 8757946543172492678, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -19359,6 +19446,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7789897960447877554, guid: 39c977640668f8746a66309783bf9749, type: 3}
   m_PrefabInstance: {fileID: 1525366331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1531271628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5081574397716314363, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+  m_PrefabInstance: {fileID: 1131595202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1531271632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531271628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de77a68c3682e94dbe60ef266a27889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoPista: {fileID: 873621347}
+  textList: []
+  clueCount: 0
+  isFull: 0
 --- !u!1 &1544232161
 GameObject:
   m_ObjectHideFlags: 0
@@ -19651,11 +19759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1719222264948609781, guid: 68343ea55ec585045b73f26750df2532, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -828
+      value: -806
       objectReference: {fileID: 0}
     - target: {fileID: 1719222264948609781, guid: 68343ea55ec585045b73f26750df2532, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430.85
+      value: 462.12
       objectReference: {fileID: 0}
     - target: {fileID: 1719222264948609781, guid: 68343ea55ec585045b73f26750df2532, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21589,6 +21697,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5374114840956105827, guid: 3b029cfd5f7952f49b35b2fb16b5c92c, type: 3}
   m_PrefabInstance: {fileID: 1707562256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1718584789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6806858446551851782, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+  m_PrefabInstance: {fileID: 2032114876}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719990177
 GameObject:
@@ -23576,6 +23689,7 @@ MonoBehaviour:
     Debo encontrar al culpable"
   isFakeEvidence: 1
   description: 
+  clueName: 
 --- !u!1001 &1841337291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23809,6 +23923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7848d92dc6b128b4db7abfb79f1ac954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectController: {fileID: 0}
   boxMessageManager: {fileID: 2014397447}
   dialogManager: {fileID: 1119218544}
   uIManager: {fileID: 2000642660}
@@ -24708,6 +24823,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967544215}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1996433679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3601312335910138725, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+  m_PrefabInstance: {fileID: 1131595202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2000642660 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
@@ -24763,6 +24889,7 @@ Transform:
   - {fileID: 800669369}
   - {fileID: 565282043}
   - {fileID: 660337285}
+  - {fileID: 2070363016}
   - {fileID: 742676557}
   - {fileID: 1625081356}
   - {fileID: 1259535962}
@@ -25066,6 +25193,52 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2024619366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024619367}
+  - component: {fileID: 2024619368}
+  m_Layer: 0
+  m_Name: CartasDeAmorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2024619367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024619366}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.8704834, y: -14.640511, z: 33.952866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1164957703}
+  m_Father: {fileID: 319068976}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024619368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024619366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca587044d2fde2469d6ee84e64a3812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToManage: {fileID: 1164957702}
 --- !u!1 &2028561376
 GameObject:
   m_ObjectHideFlags: 0
@@ -25183,6 +25356,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: clueIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: objectToActivate
+      value: 
+      objectReference: {fileID: 1164957702}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: delayBeforeDeactivation
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1912915680938643416, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -25270,7 +25455,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6806858446551851782, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089266025}
   m_SourcePrefab: {fileID: 100100000, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
 --- !u!4 &2032114877 stripped
 Transform:
@@ -25804,31 +25992,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 319068976}
+    m_TransformParent: {fileID: 2000866238}
     m_Modifications:
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2813998
+      value: 1.0127379
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.32784736
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4224331
+      value: 0.8657629
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.999464
+      value: 12.611211
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.185954
+      value: -0.49230132
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.10109
+      value: -21.697598
       objectReference: {fileID: 0}
     - target: {fileID: 671271654596295929, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25921,7 +26109,8 @@ MonoBehaviour:
     la persona que hizo este agujero en el mueble no puede ser la misma que asesin\xF3
     a Roger. Este golpe fue hecho con mucha fuerza."
   isFakeEvidence: 0
-  description: "La persona que discuti\xF3 en la cocina ten\xEDa mucha fuerza."
+  description: 
+  clueName: 
 --- !u!65 &2070363019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26339,6 +26528,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1912915680938643416, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
   m_PrefabInstance: {fileID: 2032114876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089266025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718584789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6930f78baa2364e84c6dccd50c288a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentObject: {fileID: 1718584789}
+  childObject: {fileID: 1164957702}
 --- !u!1 &2117292010
 GameObject:
   m_ObjectHideFlags: 0
@@ -27090,16 +27293,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
-    - target: {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
-      propertyPath: description
-      value: Uno de los Ackroyd buscaba mudarse...
-      objectReference: {fileID: 0}
-    - target: {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
-      propertyPath: pickableText
-      value: "Un cat\xE1logo de monoambientes... \xBFPodr\xEDa ser que alguno de
-        los Ackroyd buscaba mudarse o simplemente se le cay\xF3 a alguien mientras
-        lavaban ropa?"
-      objectReference: {fileID: 0}
     - target: {fileID: 2579010373581435401, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
       propertyPath: m_Name
       value: catalogosdecasa
@@ -27161,45 +27354,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pesa
       objectReference: {fileID: 0}
-    - target: {fileID: 3027114398811586937, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
-      propertyPath: description
-      value: "El due\xF1o de estas pesas es alguien fuerte"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.952
+      value: 17.22
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2564998
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.367
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.68301284
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6830128
+      value: -0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.1830124
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.18301237
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27211,7 +27392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27367,11 +27548,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
-    - target: {fileID: 5795597049427362570, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
-      propertyPath: description
-      value: "Layla durmi\xF3 (o al menos se acost\xF3) junto a Roger la noche del
-        asesinato."
-      objectReference: {fileID: 0}
     - target: {fileID: 6315073611139424551, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_Name
       value: Hairball-Clue
@@ -27658,10 +27834,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3310289393427553071, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
-      propertyPath: description
-      value: Layla no amaba a James, aunque lo respetaba.
-      objectReference: {fileID: 0}
     - target: {fileID: 5888545069738618753, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: m_Name
       value: RegaloDeJames
@@ -27687,34 +27859,35 @@ MonoBehaviour:
   pickableText: "Hmmm... Una carta que deja claro que Bruce Ackroyd perder\xE1 su
     herencia... Esto puede haber sido motivo de una acalorada discusi\xF3n..."
   isFakeEvidence: 0
-  description: Bruce Ackroyd iba a perder su herencia
+  description: perderia herencia
+  clueName: 
 --- !u!1001 &4548127552093490656
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 319068976}
+    m_TransformParent: {fileID: 2024619367}
     m_Modifications:
-    - target: {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
-      propertyPath: description
-      value: James siempre estuvo enamorado de Layla
-      objectReference: {fileID: 0}
     - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Name
       value: CartasDeAmor
       objectReference: {fileID: 0}
+    - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.528
+      value: 20.398483
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.185
+      value: 14.511
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.617
+      value: -16.381
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27808,6 +27981,38 @@ PrefabInstance:
       propertyPath: textoPistas
       value: 
       objectReference: {fileID: 1877906066}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: pages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: pages.Array.data[0]
+      value: 
+      objectReference: {fileID: 762190908}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: pages.Array.data[1]
+      value: 
+      objectReference: {fileID: 1531271628}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: pages.Array.data[2]
+      value: 
+      objectReference: {fileID: 795529235}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: NoteBookPagesList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: NoteBookPagesList.Array.data[0]
+      value: 
+      objectReference: {fileID: 762190912}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: NoteBookPagesList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1531271632}
+    - target: {fileID: 8672576666060499557, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+      propertyPath: NoteBookPagesList.Array.data[2]
+      value: 
+      objectReference: {fileID: 795529239}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27986,15 +28191,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: divorcePapers
       objectReference: {fileID: 0}
-    - target: {fileID: 8853835342930575733, guid: 839c576df60a42a419614c77220b61b2, type: 3}
-      propertyPath: description
-      value: "Roger quer\xEDa divorciarse de Layla"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8853835342930575733, guid: 839c576df60a42a419614c77220b61b2, type: 3}
-      propertyPath: pickableText
-      value: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
-        hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
-      objectReference: {fileID: 0}
     - target: {fileID: 8964207296017030131, guid: 839c576df60a42a419614c77220b61b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.719463
@@ -28068,15 +28264,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -1.6873471e-11
       objectReference: {fileID: 0}
-    - target: {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
-      propertyPath: description
-      value: "Roger fue asesinado a 9 pu\xF1aladas, aunque muy d\xE9biles."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
-      propertyPath: pickableText
-      value: "La escena del crimen, Roger fue asesinado en su cama y no por un profesional.
-        Fue un crimen hecho con odio, pero no con demasiada premeditaci\xF3n."
-      objectReference: {fileID: 0}
     - target: {fileID: 8606000990021535454, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
       propertyPath: m_Name
       value: outline
@@ -28134,10 +28321,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
-    - target: {fileID: 3091898112448559944, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
-      propertyPath: description
-      value: Layla esperaba un nuevo hijo
-      objectReference: {fileID: 0}
     - target: {fileID: 4878004960733843111, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3005371
