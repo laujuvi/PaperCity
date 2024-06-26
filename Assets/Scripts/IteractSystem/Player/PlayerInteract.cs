@@ -50,6 +50,9 @@ public class PlayerInteract : MonoBehaviour
 
         IInteractable InteractableObject = null;
 
+        //hits = hits.OrderBy(h => h.distance).ToArray();
+        //hits_2 = hits_2.OrderBy(h => h.distance).ToArray();
+
         foreach (RaycastHit hit in hits)
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
@@ -58,8 +61,7 @@ public class PlayerInteract : MonoBehaviour
                 InteractableObject = interactable;
                 //return interactable;
                 _currentLayerMask = hit.collider.gameObject.layer;
-
-
+                //return InteractableObject;
             }
         }
         foreach (RaycastHit hit_2 in hits_2)
@@ -68,7 +70,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 InteractableObject = interactable1;
                 _currentLayerMask = hit_2.collider.gameObject.layer;
-
+                //return InteractableObject;
             }
         }
 

@@ -32,7 +32,8 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             dialogManager.SetEvidenceStatus(gameObject.name, true);
             gameManager.CheckCurrentEvidence();
                 print("pick");
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
             }
         }
     }

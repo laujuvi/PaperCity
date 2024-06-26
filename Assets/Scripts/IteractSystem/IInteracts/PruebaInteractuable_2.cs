@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PruebaInteractuable_2 : MonoBehaviour, IInteractable
 {
-    
+    public bool clueIn;
     public Transform closedPosition;
     public Transform openPosition;
     public float movementSpeed = 5f;
@@ -14,10 +14,14 @@ public class PruebaInteractuable_2 : MonoBehaviour, IInteractable
     private bool isMoving = false;
     private Vector3 targetPosition;
 
+    private GameObjectController objectActivator;
+    [SerializeField] private GameObject objectToActivate;
+    [SerializeField] private float delayBeforeDeactivation = 1f;
     void Start()
     {
         initialPosition = transform.position;
         targetPosition = closedPosition.position;
+        objectActivator = FindObjectOfType<GameObjectController>();
     }
 
     void Update()
@@ -46,6 +50,10 @@ public class PruebaInteractuable_2 : MonoBehaviour, IInteractable
             isMoving = true;
             targetPosition = openPosition.position;
         }
+        if (objectToActivate != null && objectActivator != null && clueIn)
+        {
+            objectActivator.ActivateObject();
+        }
     }
 
     public void CloseDrawer()
@@ -55,6 +63,15 @@ public class PruebaInteractuable_2 : MonoBehaviour, IInteractable
             isMoving = true;
             targetPosition = closedPosition.position;
         }
+        if (objectToActivate != null && objectActivator != null && clueIn)
+        {
+            DeactivateObjectWithDelay();
+        }
+    }
+    private IEnumerator DeactivateObjectWithDelay()
+    {
+        yield return new WaitForSeconds(delayBeforeDeactivation);
+        objectActivator.DeactivateObject();
     }
 
     public void ResetPosition()
