@@ -10,6 +10,7 @@ public class ListManager : MonoBehaviour
     [SerializeField] private int characterLimit  = 100;
     [SerializeField] private int maxCluesPerPage = 4;
     [SerializeField] private List<NoteBookPages> NoteBookPagesList = new List<NoteBookPages>();
+    [SerializeField] private AudioClip changePage;
     private PlayerController playerController;
 
     private int currentPage = 0;
@@ -27,6 +28,7 @@ public class ListManager : MonoBehaviour
             {
                 int previousPage = currentPage - 1;
                 int nextPage = currentPage + 1;
+                playerController.PlayAudio(changePage);
 
                 if (currentPage == NoteBookPagesList.Count - 1)
                 {
