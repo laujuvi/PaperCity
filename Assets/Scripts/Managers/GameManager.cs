@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObjectController gameObjectController;
     /* MANAGERS */
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
