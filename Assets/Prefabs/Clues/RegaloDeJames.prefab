@@ -127,6 +127,8 @@ MonoBehaviour:
     era no correspondido. Layla no amaba a James. Jam\xE1s habr\xEDa dejado a Roger
     por \xE9l. \xBFSabr\xEDa James eso?"
   isFakeEvidence: 0
+  description: 
+  clueName: James gift
 --- !u!1001 &2190338550563516274
 PrefabInstance:
   m_ObjectHideFlags: 0
