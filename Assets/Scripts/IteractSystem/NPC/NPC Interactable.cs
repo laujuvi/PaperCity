@@ -23,7 +23,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         dialogManager = FindObjectOfType<DialogManager>();
         gameManager = FindObjectOfType<GameManager>();
         _listManager = FindObjectOfType<ListManager>();
-        clueName = gameObject.name;
+        //clueName = gameObject.name;
     }
     public void Interact()
     {
