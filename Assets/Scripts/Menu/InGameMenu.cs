@@ -20,12 +20,13 @@ public class InGameMenu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
+                GameManager.Instance.HideCursor();
             }
             else if (!isPaused)
             {
                 PauseGame();
+                GameManager.Instance.ShowCursor();
             }
-                
     }
     public void ResumeGame()
     {

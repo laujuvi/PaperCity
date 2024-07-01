@@ -18,11 +18,11 @@ public class BoxMessageManager : MonoBehaviour
     private int maxMessageLength = 280; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    //private void Start()
+    //{
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
 
     public bool IsDisplayingMessage()
     {

@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
         lose.SetActive(false);
 
         uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
+        HideCursor();
     }
 
     private void Update()
@@ -65,7 +66,16 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    public void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    public void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void DisablePlayerInputs()
     {
         StartCoroutine(DisablePlayerInputsCoroutine());
