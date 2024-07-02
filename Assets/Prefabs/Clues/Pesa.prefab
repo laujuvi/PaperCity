@@ -72,6 +72,8 @@ MonoBehaviour:
     Si alguien puede levantarla, definitivamente es \xE9l. Siempre fue alguien muy
     fuerte..."
   isFakeEvidence: 0
+  description: 
+  clueName: Weight
 --- !u!1 &1459224021082176993
 GameObject:
   m_ObjectHideFlags: 0

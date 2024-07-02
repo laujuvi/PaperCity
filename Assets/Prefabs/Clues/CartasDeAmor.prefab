@@ -126,6 +126,8 @@ MonoBehaviour:
     bien es pronto para sacar conclusiones, la obsesi\xF3n de James es algo que no
     puedo pasar por alto."
   isFakeEvidence: 0
+  description: 
+  clueName: Love letter
 --- !u!1 &5571254928268134188
 GameObject:
   m_ObjectHideFlags: 0

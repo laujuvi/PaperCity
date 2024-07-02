@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7120137228676983723}
   - component: {fileID: 6533536963019067251}
   - component: {fileID: 8289177433488695564}
+  - component: {fileID: 6986212444764600959}
   m_Layer: 6
   m_Name: BruceAckroydLetter
   m_TagString: Untagged
@@ -105,3 +106,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.011077232, z: 0.019999998}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6986212444764600959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114534227246243178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Carta de Bruce Ackroyd a su pareja
+  pickableText: "Hmmm... Una carta que deja claro que Bruce Ackroyd perder\xE1 su
+    herencia... Esto puede haber sido motivo de una acalorada discusi\xF3n..."
+  isFakeEvidence: 0
+  description: He would lose the inheritance
+  clueName: Bruce Ackroyd letter

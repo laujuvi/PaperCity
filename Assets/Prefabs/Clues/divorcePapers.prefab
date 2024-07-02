@@ -93,6 +93,8 @@ MonoBehaviour:
     probable que incluso hayan estado discutiendo acerca de esto el d\xEDa anterior
     a la muerte."
   isFakeEvidence: 0
+  description: 
+  clueName: Divorce papers
 --- !u!65 &7226256880735225972
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -32,16 +32,12 @@ public class PlayerInteract : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 IInteractable interactable = GetInteractableObject();
+                if (_boxMessageManager.IsDisplayingMessage()) _boxMessageManager.CheckSkipDialog();
+                
                 if (interactable != null)
                 {
-                    if (_boxMessageManager.IsDisplayingMessage())
-                    {
-                        _boxMessageManager.CheckSkipDialog();
-                    }
-                    else
-                    {
-                        interactable.Interact();
-                    }
+                    if (!_boxMessageManager.IsDisplayingMessage()) interactable.Interact();
+                    
 
                 }
 

@@ -14,15 +14,15 @@ public class BoxMessageManager : MonoBehaviour
 
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
-    private bool interruptWait = false;
-    private int maxMessageLength = 230; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
+    private bool interruptWait = false; // Revisar si lo seguimos usando
+    private int maxMessageLength = 280; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    //private void Start()
+    //{
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
 
     public bool IsDisplayingMessage()
     {
@@ -56,6 +56,7 @@ public class BoxMessageManager : MonoBehaviour
         while (messageQueue.Count > 0)
         {
             MessageData data = messageQueue.Dequeue();
+            ResetSkippingTimers();
             string formattedMessage = FormatMessage(data.Name, data.Color, data.Message, data.Emotion);
 
             nameTextMeshPro.text = data.Name;
@@ -63,7 +64,7 @@ public class BoxMessageManager : MonoBehaviour
             foreach (char c in formattedMessage)
             {
                 textMeshPro.text += c;
-                yield return new WaitForSeconds(letterDelay);
+                if (!isSkippingDialog) yield return new WaitForSeconds(letterDelay);
             }
 
             float elapsedTime = 0f;
@@ -104,14 +105,13 @@ public class BoxMessageManager : MonoBehaviour
     private void SpeedUpDialog()
     {
         isSkippingDialog = true;
-        letterDelay = 0.01f;
-        hideDialogDelay = 100f;
+        letterDelay = 0f;
+        hideDialogDelay = 1000f;
     }
 
     private void SkipDialog()
     {
-        interruptWait = true;
-        isSkippingDialog = false;
+        hideDialogDelay = 0f;
     }
 
     private void ResetSkippingTimers()

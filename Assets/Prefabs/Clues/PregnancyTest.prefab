@@ -121,3 +121,5 @@ MonoBehaviour:
   pickableText: "Positivo... En caso de que esto sea propiedad de la se\xF1ora Ackroyd,
     Roger estaba a punto de ser padre por segunda vez."
   isFakeEvidence: 0
+  description: 
+  clueName: Pregnancy test

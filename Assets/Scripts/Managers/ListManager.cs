@@ -10,6 +10,7 @@ public class ListManager : MonoBehaviour
     [SerializeField] private int characterLimit  = 100;
     [SerializeField] private int maxCluesPerPage = 4;
     [SerializeField] private List<NoteBookPages> NoteBookPagesList = new List<NoteBookPages>();
+    [SerializeField] private AudioClip changePage;
     private PlayerController playerController;
 
     private int currentPage = 0;
@@ -25,37 +26,17 @@ public class ListManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                int previousPage = currentPage - 1;
-                int nextPage = currentPage + 1;
+                playerController.PlayAudio(changePage);
 
-                if (currentPage == NoteBookPagesList.Count - 1)
+                NoteBookPagesList[currentPage].gameObject.SetActive(false);
+
+                currentPage++;
+                if (currentPage >= NoteBookPagesList.Count)
                 {
-                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
-                    NoteBookPagesList[previousPage].gameObject.SetActive(true);
-                    currentPage--;
+                    currentPage = 0;
                 }
-                else if (currentPage == 0)
-                {
-                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
-                    NoteBookPagesList[nextPage].gameObject.SetActive(true);
-                    currentPage++;
-                }
-                
-                else
-                {
-                    if (NoteBookPagesList[currentPage].isFull)
-                    {
-                        NoteBookPagesList[currentPage].gameObject.SetActive(false);
-                        NoteBookPagesList[nextPage].gameObject.SetActive(true);
-                        currentPage++;
-                    }
-                    else
-                    {
-                        NoteBookPagesList[currentPage].gameObject.SetActive(false);
-                        NoteBookPagesList[previousPage].gameObject.SetActive(true);
-                        currentPage--;
-                    }
-                }
+
+                NoteBookPagesList[currentPage].gameObject.SetActive(true);
             }
         }
     }

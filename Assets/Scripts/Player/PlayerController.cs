@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject NoteBook;
     public bool isOpen = false;
 
+    private AudioManager audioManager; 
+
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
     Vector3 moveInput = Vector3.zero;
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        audioManager = AudioManager.instance;
     }
 
     private void Update()
@@ -143,5 +146,10 @@ public class PlayerController : MonoBehaviour
             }
         }
     
+    }
+
+    public void PlayAudio(AudioClip audioClip)
+    {
+        audioManager.PlayAudio(audioClip);
     }
 }

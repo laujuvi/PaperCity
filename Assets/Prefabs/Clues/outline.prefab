@@ -99,6 +99,8 @@ MonoBehaviour:
     le cost\xF3 mucha de la poca fuerza que ten\xEDa, ya que las primeras pu\xF1aladas
     fueron fuertes y las \xFAltimas cada vez m\xE1s d\xE9biles."
   isFakeEvidence: 0
+  description: 
+  clueName: Body outline
 --- !u!65 &235783146009478272
 BoxCollider:
   m_ObjectHideFlags: 0
