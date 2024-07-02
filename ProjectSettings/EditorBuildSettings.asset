@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/EscenasMenu/MainMenu.unity
     guid: 6412fe7e1b833a849a86e2a7700119d5
   - enabled: 1
+    path: Assets/Scenes/HabitacionDetective.unity
+    guid: cd37872fcfa844f43a3e432683a8cfe0
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 541a93143870a6f45b3bceaec2e6750a
   m_configObjects: {}
