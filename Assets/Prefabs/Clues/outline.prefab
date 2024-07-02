@@ -93,14 +93,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Roger Ackroyd
-  pickableText: "Roger... 9 pu\xF1aladas de diferente intensidad en diferentes zonas
-    del cuerpo. Esto indica que el asesino no ten\xEDa mucha fuerza, puesto que necesit\xF3
-    muchas pu\xF1aladas para matarlo definitivamente. Tambi\xE9n indica que el trabajo
-    le cost\xF3 mucha de la poca fuerza que ten\xEDa, ya que las primeras pu\xF1aladas
-    fueron fuertes y las \xFAltimas cada vez m\xE1s d\xE9biles."
+  pickableText: "La escena del crimen, Roger fue asesinado en su cama y no por un
+    profesional. Fue un crimen hecho con odio, pero no con demasiada premeditaci\xF3n."
   isFakeEvidence: 0
-  description: 
-  clueName: Body outline
+  description: Roger fue asesinado con un cuchillo de cocina
+  clueName: 
 --- !u!65 &235783146009478272
 BoxCollider:
   m_ObjectHideFlags: 0

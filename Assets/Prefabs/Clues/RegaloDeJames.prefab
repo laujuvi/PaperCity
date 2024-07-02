@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888545069738618753}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.939465, y: -0.87743694, z: 9.48881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -127,8 +127,8 @@ MonoBehaviour:
     era no correspondido. Layla no amaba a James. Jam\xE1s habr\xEDa dejado a Roger
     por \xE9l. \xBFSabr\xEDa James eso?"
   isFakeEvidence: 0
-  description: 
-  clueName: James gift
+  description: James amaba a Layla.
+  clueName: 
 --- !u!1001 &2190338550563516274
 PrefabInstance:
   m_ObjectHideFlags: 0
