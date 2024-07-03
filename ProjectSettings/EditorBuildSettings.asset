@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HabitacionDetective.unity
     guid: cd37872fcfa844f43a3e432683a8cfe0
   - enabled: 1
+    path: Assets/Scenes/Cinematic_test.unity
+    guid: f4ba2f04c3527ed4e9f360115a90f689
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 541a93143870a6f45b3bceaec2e6750a
   m_configObjects: {}
