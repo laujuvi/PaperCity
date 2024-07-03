@@ -76,10 +76,10 @@ public class PlayerController : MonoBehaviour
                 {
                     moveInput = transform.TransformDirection(moveInput) * walkSpeed;
                 }
-                if (Input.GetButtonDown("Jump"))
-                {
-                    moveInput.y = Mathf.Sqrt(jumpHeight * -2f * gravityScale);
-                }
+                //if (Input.GetButtonDown("Jump"))
+                //{
+                //    moveInput.y = Mathf.Sqrt(jumpHeight * -2f * gravityScale);
+                //}
             }
             moveInput.y += gravityScale * Time.deltaTime;
             characterController.Move(moveInput * Time.deltaTime);

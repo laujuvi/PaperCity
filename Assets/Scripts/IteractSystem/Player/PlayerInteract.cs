@@ -37,8 +37,6 @@ public class PlayerInteract : MonoBehaviour
                 if (interactable != null)
                 {
                     if (!_boxMessageManager.IsDisplayingMessage()) interactable.Interact();
-                    
-
                 }
 
             }
