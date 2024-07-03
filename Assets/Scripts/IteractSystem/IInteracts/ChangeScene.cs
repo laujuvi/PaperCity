@@ -10,6 +10,10 @@ public class ChangeScene : MonoBehaviour, IInteractable
     [SerializeField] private string interactText;
     private bool canChangeScene;
 
+    [Header("Cinematic")]
+    [SerializeField] private float changeSceneTime;
+    [SerializeField] private string sceneName;
+
     private void Start()
     {
         canChangeScene = false;
@@ -45,6 +49,15 @@ public class ChangeScene : MonoBehaviour, IInteractable
             SceneManager.LoadScene(sceneToLoad);
         }
         
+    }
+
+    private void Update()
+    {
+        changeSceneTime -= Time.deltaTime;
+        if (changeSceneTime < 0 ) 
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
 }
