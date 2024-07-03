@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.08
+      value: -1.3005371
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.23
+      value: -0.9574369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.04
+      value: -3.5510874
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7d5301d9ec98e8468248e75bdaf85d7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -121,5 +121,5 @@ MonoBehaviour:
   pickableText: "Positivo... En caso de que esto sea propiedad de la se\xF1ora Ackroyd,
     Roger estaba a punto de ser padre por segunda vez."
   isFakeEvidence: 0
-  description: 
-  clueName: Pregnancy test
+  description: Layla Ackroyd estaba embarazada.
+  clueName: 

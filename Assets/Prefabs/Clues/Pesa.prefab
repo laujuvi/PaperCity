@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046526146615835529}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 18.172464, y: -0.9624369, z: 1.1669121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -68,11 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Pesa de 45kg.
-  pickableText: "Una pesa de ejercicio perteneciente a Bruce Ackroyd, sumamente pesada.
-    Si alguien puede levantarla, definitivamente es \xE9l. Siempre fue alguien muy
-    fuerte..."
+  pickableText: Una pesa de ejercicio. Muy pesada. Dudo que yo pueda levantarla.
   isFakeEvidence: 0
-  description: 
+  description: Alguien de la casa es muy fuerte.
   clueName: Weight
 --- !u!1 &1459224021082176993
 GameObject:
@@ -100,13 +98,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459224021082176993}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000059604638, y: 0.00000017881392, z: 0.70710665, w: 0.70710695}
-  m_LocalPosition: {x: 0.61035347, y: 2.6548, z: 0.12428}
-  m_LocalScale: {x: 30, y: 5.511497, z: 4.442186}
+  m_LocalRotation: {x: -0.000000029802315, y: 0.00000029802317, z: 0.8120938, w: 0.5835271}
+  m_LocalPosition: {x: 0.6103525, y: 2.6547995, z: 0.12427974}
+  m_LocalScale: {x: 20, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8591288771272830397}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 108.602}
 --- !u!33 &2928535742117226750
 MeshFilter:
   m_ObjectHideFlags: 0

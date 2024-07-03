@@ -28,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114534227246243178}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6970951, y: -0.11856849, z: -0.11856847, w: 0.69709504}
+  m_LocalRotation: {x: -0.6970951, y: -0.11856822, z: -0.11856822, w: 0.6970951}
   m_LocalPosition: {x: -27.39, y: 1.52, z: 3.19}
-  m_LocalScale: {x: 52.738, y: 66.985, z: 3.9026082}
+  m_LocalScale: {x: 52.738003, y: 66.985, z: 3.9026082}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,12 +100,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.011077232, z: 0.019999998}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.029228462, y: 0.015371335, z: 0.08890175}
+  m_Center: {x: 0.0046142344, y: -0.002147053, z: 0.034450863}
 --- !u!114 &6986212444764600959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,8 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Carta de Bruce Ackroyd a su pareja
-  pickableText: "Hmmm... Una carta que deja claro que Bruce Ackroyd perder\xE1 su
-    herencia... Esto puede haber sido motivo de una acalorada discusi\xF3n..."
+  pickableText: "Una carta donde Bruce le explica a su amante que volver\xE1 a casa
+    para pelear por su herencia con su padre. Se ve que Bruce sali\xF3 tan apurado
+    que olvid\xF3 enviarla. Ahora sabemos qu\xE9 hac\xEDa aqu\xED..."
   isFakeEvidence: 0
-  description: He would lose the inheritance
-  clueName: Bruce Ackroyd letter
+  description: Bruce iba a perder su herencia en caso de que su padre huyera con
+    su amante.
+  clueName: 

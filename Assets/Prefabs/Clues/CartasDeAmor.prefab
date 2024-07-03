@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 7163376545113737222}
   - component: {fileID: 4617859777191574493}
   - component: {fileID: 1348837888932527104}
+  - component: {fileID: 1685064557983523774}
   m_Layer: 6
   m_Name: CartasDeAmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8702986977787307646
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2371626402124973768}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.58, y: 0.02, z: 17.230095}
   m_LocalScale: {x: 0.49384, y: 0.10308, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,14 +121,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Cartas de amor para Layla
-  pickableText: "Unas cartas muy comprometedoras hechas por James Moriarty. En un
-    pueblo tan peque\xF1o, todo se sabe, y todo el mundo sab\xEDa que James amaba
-    a Layla desde muy peque\xF1os. Aqu\xED mismo lo dice \"matar\xEDa por ti\". Si
-    bien es pronto para sacar conclusiones, la obsesi\xF3n de James es algo que no
-    puedo pasar por alto."
+  pickableText: "Cartas que James escribi\xF3 a lo largo de a\xF1os a Layla. \xC9l
+    siempre estuvo enamorado de ella. \"Si me enterara que ese hijo de puta tiene
+    una vida paralela con otra mujer, ser\xEDa capaz de matarlo con mis propias manos\".
+    No puedo pasar esto por alto."
   isFakeEvidence: 0
-  description: 
-  clueName: Love letter
+  description: "James estaba obsesionado con Layla. \xBFSer\xEDa un peligro para
+    Roger?"
+  clueName: 
+--- !u!114 &1685064557983523774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371626402124973768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27625de73f4a0342a5051d1ccec14fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  offset: {x: 0, y: 1, z: 0}
+  followSpeed: 5
 --- !u!1 &5571254928268134188
 GameObject:
   m_ObjectHideFlags: 0

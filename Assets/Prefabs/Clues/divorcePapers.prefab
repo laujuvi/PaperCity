@@ -85,16 +85,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Papeles de divorcio
-  pickableText: "Unos papeles de divorcio... Parece que los rumores del matrimonio
-    eran ciertos. Solamente est\xE1n firmados por el se\xF1or Ackroyd, lo que indica
-    que su esposa o a\xFAn no sab\xEDa del asunto\u2026 o no quiso firmarlos. El
-    hecho de que est\xE9n en la cocina sugiere que no eran un secreto, es decir,
-    la cocina es uno de los lugares m\xE1s transitados de la casa, por lo que es
-    probable que incluso hayan estado discutiendo acerca de esto el d\xEDa anterior
-    a la muerte."
+  pickableText: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
+    hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
   isFakeEvidence: 0
-  description: 
-  clueName: Divorce papers
+  description: "Roger quer\xEDa divorciarse de Layla."
+  clueName: 
 --- !u!65 &7226256880735225972
 BoxCollider:
   m_ObjectHideFlags: 0

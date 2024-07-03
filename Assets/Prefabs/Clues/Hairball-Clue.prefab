@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.81
+      value: -3.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.04
+      value: 6.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6644c8e675da4c449adf1703c41091b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -118,10 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Bola de pelo blanco
-  pickableText: "\"Hmmm... una bola de pelo blanco... definitivamente no es de Roger.
-    Tampoco de Bruce. La se\xF1ora Ackroyd es la \xFAnica gata blanca de la casa.
-    Claramente el pelo es suyo. Est\xE1 en una posici\xF3n bastante extra\xF1a, por
-    m\xE1s que ella tambi\xE9n duerma aqu\xED. Qu\xE9 extra\xF1o...\""
+  pickableText: "Una bola de pelo blanco... \xBFDe qui\xE9n ser\xE1?"
   isFakeEvidence: 0
-  description: 
+  description: Hay una bola de pelo blanco en la escena del crimen.
   clueName: Hairball
