@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject ControlPanel;
     [SerializeField] private GameObject MainMenuPanel;
     [SerializeField] private GameObject BackButton;
+    [SerializeField] private GameObject OptionButton;
     public void LoadScene1()
     {
         SceneManager.LoadScene(Scenename);
@@ -21,6 +22,12 @@ public class MainMenu : MonoBehaviour
     public void OpenCredits()
     {
         CreditsPanel.SetActive(true);
+        MainMenuPanel.SetActive(false);
+        BackButton.SetActive(true);
+    }
+    public void OpenOptions()
+    {
+        OptionButton.SetActive(true);
         MainMenuPanel.SetActive(false);
         BackButton.SetActive(true);
     }
@@ -36,5 +43,6 @@ public class MainMenu : MonoBehaviour
         CreditsPanel.SetActive(false);
         ControlPanel.SetActive(false);
         BackButton.SetActive(false);
+        OptionButton.SetActive(false);
     }
 }
