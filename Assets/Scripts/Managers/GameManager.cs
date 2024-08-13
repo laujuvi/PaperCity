@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject lenIcon;
 
+    public List<GameObject> npcInteracted = new List<GameObject>();
+
     public static GameManager Instance { get; private set; }
     private void Awake()
     {

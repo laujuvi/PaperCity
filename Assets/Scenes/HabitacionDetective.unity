@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1171,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398755376662377887, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066099484775522781, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: NoteBook
@@ -1193,6 +1193,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4614160732866735798, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
+      propertyPath: m_ShowToolkit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614160732866735798, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
+      propertyPath: volumeTrigger
+      value: 
+      objectReference: {fileID: 598515005}
     - target: {fileID: 5436298318634581636, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 767
@@ -1227,7 +1235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835376489291983460, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1281,6 +1289,11 @@ PrefabInstance:
 --- !u!1 &598515004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1398755376662377887, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
+  m_PrefabInstance: {fileID: 598515003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &598515005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 16347982354711075, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
   m_PrefabInstance: {fileID: 598515003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &601402780
@@ -1689,6 +1702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: 2
   interactText: 
+  changeSceneTime: 0
+  sceneName: 
 --- !u!224 &668813797 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}

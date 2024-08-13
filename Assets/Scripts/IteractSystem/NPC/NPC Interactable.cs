@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
@@ -32,6 +33,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
             Debug.Log("INTERACTUASTE");
+            if (!gameManager.npcInteracted.Contains(gameObject))
+            {
+                gameManager.npcInteracted.Add(gameObject);
+            }
+            
         } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {
             boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
