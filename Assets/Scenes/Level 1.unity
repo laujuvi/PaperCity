@@ -21810,6 +21810,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 190087012}
     - target: {fileID: 2066099484775522781, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
+      propertyPath: crouchHeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066099484775522781, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
+      propertyPath: lookUphHeight
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066099484775522781, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: rotationSensibility
       value: 300
       objectReference: {fileID: 0}
