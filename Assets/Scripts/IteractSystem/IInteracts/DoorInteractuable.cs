@@ -15,6 +15,8 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     private bool isClosing = false;
     private bool isClosed = true; // Inicialmente la puerta está cerrada
 
+    [SerializeField] private AudioManager audioManager;
+
     void Start()
     {
         closedRotation = transform.rotation; // Guarda la rotación inicial de la puerta
@@ -32,6 +34,8 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
                 transform.rotation = openRotation;
                 isOpening = false; // La puerta está completamente abierta
                 isClosed = false;
+
+                
             }
         }
         // Si la puerta se está cerrando, interpola la rotación hacia la rotación cerrada
@@ -80,6 +84,8 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
         {
             isOpening = true; 
             isClosing = false;
+
+            PlayDoorSound();
         }
     }
 
@@ -91,5 +97,10 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
             isClosing = true;
             isOpening = false;
         }
+    }
+
+    private void PlayDoorSound()
+    {
+        audioManager.PlaySFX(audioManager.doorOpening);
     }
 }
