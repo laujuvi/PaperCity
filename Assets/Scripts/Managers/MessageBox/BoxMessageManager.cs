@@ -60,12 +60,33 @@ public class BoxMessageManager : MonoBehaviour
             string formattedMessage = FormatMessage(data.Name, data.Color, data.Message, data.Emotion);
 
             nameTextMeshPro.text = data.Name;
-            textMeshPro.text = "";
-            foreach (char c in formattedMessage)
+            ////////////VIEJO////////////
+            //textMeshPro.text = "";
+            /////////////////////////////
+
+            ////////////NUEVO////////////
+            textMeshPro.text = formattedMessage;
+            textMeshPro.maxVisibleCharacters = 0;  // Inicia el texto oculto.
+            /////////////////////////////
+
+            ////////////VIEJO////////////
+            //foreach (char c in formattedMessage)
+            //{
+            //    textMeshPro.text += c;
+            //    if (!isSkippingDialog) yield return new WaitForSeconds(letterDelay);
+            //}
+            /////////////////////////////
+
+            ////////////NUEVO////////////
+            int totalCharacters = textMeshPro.text.Length;
+            int visibleCharacters = 0;
+            while (visibleCharacters < totalCharacters)
             {
-                textMeshPro.text += c;
+                visibleCharacters++;
+                textMeshPro.maxVisibleCharacters = visibleCharacters;
                 if (!isSkippingDialog) yield return new WaitForSeconds(letterDelay);
             }
+            /////////////////////////////
 
             float elapsedTime = 0f;
             while (elapsedTime < hideDialogDelay && !interruptWait)
