@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject NoteBook;
     public bool isOpen = false;
 
-    private AudioManager audioManager; 
+    [SerializeField] private AudioManager audioManager; 
 
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
             {
                 isOpen = true;
                 NoteBook.SetActive(true);
+                audioManager.PlaySFX(audioManager.notebookCheck);
             }
         }
         else

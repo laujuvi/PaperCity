@@ -307,3 +307,4 @@ MonoBehaviour:
   clueFound2: {fileID: 8300000, guid: 2b080f3d6aaea0d4c8e44f70733c6d71, type: 3}
   doorOpening: {fileID: 8300000, guid: 81bfde835c15b754f9f60a0dbe592ec4, type: 3}
   doorClosing: {fileID: 8300000, guid: a949867c25a7fe643944eba582d751b3, type: 3}
+  notebookCheck: {fileID: 8300000, guid: 79daf1d8115e6fe46ab8214070ac00a9, type: 3}
