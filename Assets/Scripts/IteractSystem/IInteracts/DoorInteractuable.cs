@@ -8,6 +8,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
 
     public float openAngle = 90f; // Ángulo de apertura de la puerta
     public float openSpeed = 2f; // Velocidad de apertura de la puerta
+    public float closeSpeed = 3f; // Velocidad de apertura de la puerta
 
     private Quaternion closedRotation; // Rotación de la puerta cerrada
     private Quaternion openRotation;
@@ -41,7 +42,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
         // Si la puerta se está cerrando, interpola la rotación hacia la rotación cerrada
         else if (isClosing)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, closedRotation, openSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, closedRotation, closeSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, closedRotation) < 0.1f)
             {
                 transform.rotation = closedRotation;
@@ -85,7 +86,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
             isOpening = true; 
             isClosing = false;
 
-            PlayDoorSound();
+            PlayOpeningDoorSound();
         }
     }
 
@@ -96,11 +97,18 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
         {
             isClosing = true;
             isOpening = false;
+
+            PlayClosingDoorSound();
         }
     }
 
-    private void PlayDoorSound()
+    private void PlayOpeningDoorSound()
     {
         audioManager.PlaySFX(audioManager.doorOpening);
+    }
+
+    private void PlayClosingDoorSound()
+    {
+        audioManager.PlaySFX(audioManager.doorClosing);
     }
 }

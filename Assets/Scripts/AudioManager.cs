@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip clueFound;
     public AudioClip clueFound2;
     public AudioClip doorOpening;
+    public AudioClip doorClosing;
 
     public void PlaySFX(AudioClip clip)
     {
