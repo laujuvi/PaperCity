@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -53,11 +50,11 @@ public class ChangeScene : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        changeSceneTime -= Time.deltaTime;
-        if (changeSceneTime < 0 ) 
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        //changeSceneTime -= Time.deltaTime;
+        //if (changeSceneTime < 0 ) 
+        //{
+        //    SceneManager.LoadScene(sceneName);
+        //}
     }
 
 }

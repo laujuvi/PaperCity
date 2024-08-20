@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -19,16 +16,20 @@ public class PlayerController : MonoBehaviour
     [Header("Rotation")]
     [SerializeField] private float rotationSensibility = 200;
 
-    [Header("Jump")]
-    [SerializeField] private float jumpHeight = 1.9f;
+    //[Header("Jump")]
+    //[SerializeField] private float jumpHeight = 1.9f;
 
     [Header("Crouch")]
     public float crouchHeight;
     public bool crouch;
+    [SerializeField] private bool isCrouch = false;
+    float currentCrouchHeigt = 1f;
 
     [Header("LookUp")]
     public float lookUphHeight;
     public bool lookUp;
+    [SerializeField] private bool isLookUp = false;
+    float currentLookUphHeight = 1f;
 
     [Header("Animator")]
     public Animator animator;
@@ -37,17 +38,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject NoteBook;
     public bool isOpen = false;
 
-    private AudioManager audioManager; 
+    [SerializeField] private AudioManager audioManager; 
 
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
     Vector3 moveInput = Vector3.zero;
     Vector3 rotationInput = Vector3.zero;
     CharacterController characterController;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        audioManager = AudioManager.instance;
+        //audioManager = AudioManager.instance;
     }
 
     private void Update()
@@ -101,21 +103,39 @@ public class PlayerController : MonoBehaviour
     }
     private void Crouch()
     {
+        if (isLookUp) return;
+
         if (!PlayerDialogue.isHavingDialogue)
         {
-            crouch = Input.GetKey(KeyCode.LeftControl);
+            crouch = Input.GetKeyDown(KeyCode.LeftControl);
 
-            float crouchLocalScaleY = crouch ? crouchHeight : 1f;
+            if (crouch)
+            {
+                isCrouch = !isCrouch;
+                currentCrouchHeigt = isCrouch ? crouchHeight : 1f;
+            }
+
+            float crouchLocalScaleY = currentCrouchHeigt;
             float newCrouchScaleY = Mathf.Lerp(transform.localScale.y, crouchLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newCrouchScaleY, 1);
+
         }
     }
     private void LookUp()
     {
+        if (isCrouch) return;
+
         if (!PlayerDialogue.isHavingDialogue)
         {
-            lookUp = Input.GetKey(KeyCode.V);
-            float targetLocalScaleY = lookUp ? lookUphHeight : 1f;
+            lookUp = Input.GetKeyDown(KeyCode.V);
+
+            if (lookUp)
+            {
+                isLookUp = !isLookUp;
+                currentLookUphHeight = isLookUp ? lookUphHeight : 1f;
+            }
+
+            float targetLocalScaleY = currentLookUphHeight;
             float newScaleY = Mathf.Lerp(transform.localScale.y, targetLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newScaleY, 1);
         }
@@ -135,6 +155,8 @@ public class PlayerController : MonoBehaviour
             {
                 isOpen = true;
                 NoteBook.SetActive(true);
+               
+                audioManager.PlaySFX(audioManager.notebookCheck);
             }
         }
         else
@@ -143,13 +165,14 @@ public class PlayerController : MonoBehaviour
             {
                 isOpen = false;
                 NoteBook.SetActive(false);
+                
+                audioManager.PlaySFX(audioManager.notebookClose);
             }
         }
-    
     }
 
     public void PlayAudio(AudioClip audioClip)
     {
-        audioManager.PlayAudio(audioClip);
+        //audioManager.PlayAudio(audioClip);
     }
 }

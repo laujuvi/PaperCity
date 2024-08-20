@@ -7,7 +7,7 @@ using TMPro;
 public class ListManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI textoPistas;
-    [SerializeField] private int characterLimit  = 100;
+    //[SerializeField] private int characterLimit  = 100;
     [SerializeField] private int maxCluesPerPage = 4;
     [SerializeField] private List<NoteBookPages> NoteBookPagesList = new List<NoteBookPages>();
     [SerializeField] private AudioClip changePage;
