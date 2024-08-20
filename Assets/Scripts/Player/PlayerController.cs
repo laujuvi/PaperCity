@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 7;
 
     [Header("Rotation")]
-    [SerializeField] private float rotationSensibility = 200;
+    [SerializeField] private float rotationSensibility;
 
     //[Header("Jump")]
     //[SerializeField] private float jumpHeight = 1.9f;
@@ -51,7 +51,17 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         //audioManager = AudioManager.instance;
     }
-
+    private void Start()
+    {
+        if (GameSettings.Instance == null || GameSettings.Instance.mouseSensitivity <= 100)
+        {
+            rotationSensibility = 400;
+        }
+        else
+        {
+            rotationSensibility = GameSettings.Instance.mouseSensitivity;
+        }
+    }
     private void Update()
     {
         Look();

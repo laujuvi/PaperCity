@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance { get; private set; }
-    public float mouseSensitivity {  get; private set; }
+    public float mouseSensitivity = 400f;
     public Slider sliderSensitivity;
     private void Awake()
     {
@@ -37,10 +37,5 @@ public class GameSettings : MonoBehaviour
     public void SaveSensitivity()
     {
         PlayerPrefs.SetFloat("CurrentSensitivity", mouseSensitivity);
-    }
-
-    private void Update()
-    {
-        Debug.Log("Valor actual de mouseSensitivity en Update: " + mouseSensitivity);
     }
 }
