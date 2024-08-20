@@ -166,7 +166,6 @@ public class PlayerController : MonoBehaviour
                 NoteBook.SetActive(false);
             }
         }
-    
     }
 
     public void PlayAudio(AudioClip audioClip)
