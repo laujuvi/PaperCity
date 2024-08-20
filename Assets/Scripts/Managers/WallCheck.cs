@@ -48,7 +48,7 @@ public class WallCheck : MonoBehaviour
         {
             if (gameManager.npcInteracted.Count < 3)
             {
-                boxMessageManager.SendMessage("", Color.white, "I should talk to the suspects first", Emotions.None);
+                boxMessageManager.SendMessage("", Color.white, "Debería hablar con los sospechosos antes de ponerme a investigar...", Emotions.None);
             }
         }
     }

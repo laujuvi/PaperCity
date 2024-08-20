@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] private float _InteractRange = 0.1f;
+    //[SerializeField] private float _InteractRange = 0.1f;
     [SerializeField] private GameObject _RaycastPoint;
     [SerializeField] private float _RaycastDistance;
     [SerializeField] private float _RaycastDistance_2;

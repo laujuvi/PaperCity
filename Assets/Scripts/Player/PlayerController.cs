@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     [Header("Rotation")]
     [SerializeField] private float rotationSensibility = 200;
 
-    [Header("Jump")]
-    [SerializeField] private float jumpHeight = 1.9f;
+    //[Header("Jump")]
+    //[SerializeField] private float jumpHeight = 1.9f;
 
     [Header("Crouch")]
     public float crouchHeight;
@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour
             {
                 isOpen = true;
                 NoteBook.SetActive(true);
+               
                 audioManager.PlaySFX(audioManager.notebookCheck);
             }
         }
@@ -164,6 +165,8 @@ public class PlayerController : MonoBehaviour
             {
                 isOpen = false;
                 NoteBook.SetActive(false);
+                
+                audioManager.PlaySFX(audioManager.notebookClose);
             }
         }
     }
