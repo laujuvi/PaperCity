@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance { get; private set; }
-    public float Sensitivity {  get; private set; } = 1.0f;
+    public float mouseSensitivity {  get; private set; }
+    public Slider sliderSensitivity;
     private void Awake()
     {
         if (Instance == null)
@@ -17,9 +19,28 @@ public class GameSettings : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        LoadSensitivity();
+        sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
     }
-    public void SetSensitivity(float sensitivity)
+    private void LoadSensitivity()
     {
-        Sensitivity = sensitivity;
+        mouseSensitivity = PlayerPrefs.GetFloat("CurrentSensitivity", 1f);
+        sliderSensitivity.value = mouseSensitivity;
+    }
+
+    private void UpdateSensitivity(float value)
+    {
+        mouseSensitivity = value;
+        SaveSensitivity();
+    }
+
+    public void SaveSensitivity()
+    {
+        PlayerPrefs.SetFloat("CurrentSensitivity", mouseSensitivity);
+    }
+
+    private void Update()
+    {
+        Debug.Log("Valor actual de mouseSensitivity en Update: " + mouseSensitivity);
     }
 }
