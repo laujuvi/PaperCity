@@ -42,9 +42,11 @@ public class ListManager : MonoBehaviour
                     NoteBookPagesList[currentPage].gameObject.SetActive(true);
                 }
 
-                if (NoteBookPagesList[currentPage].textList.Count <= maxCluesPerPage || NoteBookPagesList[currentPage] != NoteBookPagesList[0])
+                else if (NoteBookPagesList[currentPage].textList.Count <= maxCluesPerPage && NoteBookPagesList[currentPage] != NoteBookPagesList[0])
                 {
+                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
                     currentPage = 0;
+                    NoteBookPagesList[currentPage].gameObject.SetActive(true);
                 }
                 
             }
