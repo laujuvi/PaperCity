@@ -25,7 +25,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (_playerController.isOpen == false)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 IInteractable interactable = GetInteractableObject();
                 if (_boxMessageManager.IsDisplayingMessage()) _boxMessageManager.CheckSkipDialog();
