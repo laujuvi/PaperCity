@@ -129,13 +129,13 @@ public class GameManager : MonoBehaviour
         uIManager.UpdateCurrentEvidence(currentEvidence);
         if (currentEvidence >= maxEvidence)
         {
-            boxMessageManager.SendMessage("", Color.white, definitiveMessage, Emotions.None);
+            boxMessageManager.SendMessage("Detective", Color.white, definitiveMessage, Emotions.None);
             return;
         }
 
         if (currentEvidence >= minEvidence)
         {
-            boxMessageManager.SendMessage("", Color.white, intermediateMessage, Emotions.None);
+            boxMessageManager.SendMessage("Detective", Color.white, intermediateMessage, Emotions.None);
             return;
         }
     }
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (string line in lines)
         {
-            boxMessageManager.SendMessage("", Color.white, line, Emotions.None);
+            boxMessageManager.SendMessage("Detective", Color.white, line, Emotions.None);
         }
     }
 
