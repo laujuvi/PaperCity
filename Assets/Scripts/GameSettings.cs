@@ -18,14 +18,21 @@ public class GameSettings : MonoBehaviour
         else 
         {
             Destroy(gameObject);
+            return;
         }
         LoadSensitivity();
-        sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
+        if (sliderSensitivity != null)
+        {
+            sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
+        }
     }
     private void LoadSensitivity()
     {
         mouseSensitivity = PlayerPrefs.GetFloat("CurrentSensitivity", 1f);
-        sliderSensitivity.value = mouseSensitivity;
+        if (sliderSensitivity != null)
+        {
+            sliderSensitivity.value = mouseSensitivity;
+        }
     }
 
     private void UpdateSensitivity(float value)
@@ -37,5 +44,18 @@ public class GameSettings : MonoBehaviour
     public void SaveSensitivity()
     {
         PlayerPrefs.SetFloat("CurrentSensitivity", mouseSensitivity);
+    }
+    public void UpdateSensitivitySlider(Slider newSlider)
+    {
+        if (sliderSensitivity != null)
+        {
+            sliderSensitivity.onValueChanged.RemoveListener(UpdateSensitivity);
+        }
+
+        sliderSensitivity = newSlider;
+
+        sliderSensitivity.value = mouseSensitivity;
+
+        sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
     }
 }

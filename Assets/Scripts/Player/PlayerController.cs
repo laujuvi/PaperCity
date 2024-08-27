@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rotationSensibility = GameSettings.Instance.mouseSensitivity;
+            UpdateSensitivity();
         }
     }
     private void Update()
@@ -70,6 +70,14 @@ public class PlayerController : MonoBehaviour
         LookUp();
         UpdateAnimator();
         OpenNoteBook();
+    }
+    public void UpdateSensitivity()
+    {
+        rotationSensibility = GameSettings.Instance.mouseSensitivity;
+    }
+    private void OnEnable()
+    {
+        InGameMenu.OnSensitivityChanged += UpdateSensitivity;
     }
     private void Move()
     {
