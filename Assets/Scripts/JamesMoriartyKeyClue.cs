@@ -11,12 +11,11 @@ public class JamesMoriartyKeyClue : MonoBehaviour
     {
         goc2.AddObject("JamesMoriartyKey", jamesMoriartyKey);
     }
-    private void Update()
+    public void CheckCountDialog()
     {
-        if(npcInteractable.countDialog >= 3)
+        if (npcInteractable.countDialog >= 3)
         {
             goc2.ActivateObject("JamesMoriartyKey");
         }
     }
-
 }
