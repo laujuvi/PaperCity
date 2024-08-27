@@ -26,17 +26,29 @@ public class ListManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                playerController.PlayAudio(changePage);
 
-                NoteBookPagesList[currentPage].gameObject.SetActive(false);
-
-                currentPage++;
-                if (currentPage >= NoteBookPagesList.Count)
+                if(NoteBookPagesList[currentPage].textList.Count >= maxCluesPerPage)
                 {
-                    currentPage = 0;
+                    playerController.PlayAudio(changePage);
+
+                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
+
+                    currentPage++;
+                    if (currentPage >= NoteBookPagesList.Count)
+                    {
+                        currentPage = 0;
+                    }
+
+                    NoteBookPagesList[currentPage].gameObject.SetActive(true);
                 }
 
-                NoteBookPagesList[currentPage].gameObject.SetActive(true);
+                else if (NoteBookPagesList[currentPage].textList.Count <= maxCluesPerPage && NoteBookPagesList[currentPage] != NoteBookPagesList[0])
+                {
+                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
+                    currentPage = 0;
+                    NoteBookPagesList[currentPage].gameObject.SetActive(true);
+                }
+                
             }
         }
     }
