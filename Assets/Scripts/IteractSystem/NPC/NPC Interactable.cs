@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
+    public int countDialog;
     [SerializeField] private string interactText;
     [SerializeField] private string pickableText;
     [SerializeField] private bool isFakeEvidence;
@@ -35,6 +36,10 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         {
             gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
+            if(gameObject.name == "James Moriarty")
+            {
+                countDialog++;
+            }
             Debug.Log("INTERACTUASTE");
             if (!gameManager.npcInteracted.Contains(gameObject))
             {
