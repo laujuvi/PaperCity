@@ -40,7 +40,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             if(gameObject.name == "James Moriarty")
             {
                 countDialog++;
-                jamesMoriartyKeyClue.CheckCountDialog();
+                jamesMoriartyKeyClue.CheckCountDialog(countDialog);
             }
             Debug.Log("INTERACTUASTE");
             if (!gameManager.npcInteracted.Contains(gameObject))

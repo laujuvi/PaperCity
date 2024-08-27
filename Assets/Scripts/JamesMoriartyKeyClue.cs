@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class JamesMoriartyKeyClue : MonoBehaviour
 {
-    public NPCInteractable npcInteractable;
     public GameObjectControllerv2 goc2;
     public GameObject jamesMoriartyKey;
     private void Start()
     {
         goc2.AddObject("JamesMoriartyKey", jamesMoriartyKey);
     }
-    public void CheckCountDialog()
+    public void CheckCountDialog(int countDialog)
     {
-        if (npcInteractable.countDialog >= 3)
+        if (countDialog >= 3)
         {
             goc2.ActivateObject("JamesMoriartyKey");
         }
