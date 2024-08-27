@@ -3746,7 +3746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb3d4d9422efa546a12b79476601155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcInteractable: {fileID: 1181444907}
   goc2: {fileID: 223682521}
   jamesMoriartyKey: {fileID: 898669366}
 --- !u!114 &223682521
@@ -16617,7 +16616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7555041946444057019, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -17135,7 +17134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 793495159561977137, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.500061
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 793495159561977137, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18021,17 +18020,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4780955702981721032, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
   m_PrefabInstance: {fileID: 1801660256880356480}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1181444907 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7269159743958273993, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
-  m_PrefabInstance: {fileID: 1801660256880356480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181444905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1181444909
 MonoBehaviour:
   m_ObjectHideFlags: 0
