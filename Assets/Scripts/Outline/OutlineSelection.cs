@@ -26,12 +26,13 @@ public class OutlineSelection : MonoBehaviour
                 if (highlight.gameObject.GetComponent<Outline>() != null)
                 {
                     highlight.gameObject.GetComponent<Outline>().enabled = true;
+
                 }
                 else
                 {
                     Outline outline = highlight.gameObject.AddComponent<Outline>();
                     outline.enabled = true;
-                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.white;
+                    highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
                     highlight.gameObject.GetComponent<Outline>().OutlineWidth = 10.0f;
                 }
             }
@@ -42,7 +43,6 @@ public class OutlineSelection : MonoBehaviour
         }
 
         // Selection
-        // ================ Se puede activar si se precisa ================
         if (Input.GetMouseButtonDown(0))
         {
             if (highlight)
