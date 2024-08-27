@@ -72,6 +72,11 @@ public class InGameMenu : MonoBehaviour
     }
     public void GoToMenu()
     {
+        GameSettings existingGameSettings = FindObjectOfType<GameSettings>();
+        if(existingGameSettings != null)
+        {
+            Destroy(existingGameSettings.gameObject);
+        }
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
