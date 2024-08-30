@@ -29,7 +29,7 @@ public class InGameMenu : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(GameSettings.Instance.mouseSensitivity);
+        //Debug.Log(GameSettings.Instance.mouseSensitivity);
         if (Input.GetKeyDown(KeyCode.Escape))
             if (isPaused)
             {

@@ -57,7 +57,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
                 _listManager.AddText(clueName + $"({description})");
                 gameManager.CheckCurrentEvidence();
                 audioManager.PlaySFX(audioManager.clueFound);
-                print("pick");
                 //gameObject.SetActive(false);
                 Destroy(gameObject);
             }
