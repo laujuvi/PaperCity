@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour, IInteractable
 {
+    public JamesMoriartyKeyClue jamesMoriartyKeyClue;
+    public int countDialog;
     [SerializeField] private string interactText;
     [SerializeField] private string pickableText;
     [SerializeField] private bool isFakeEvidence;
@@ -13,7 +15,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
     private GameManager gameManager;
-
+    
     [Header("ListManager")]
     private ListManager _listManager;
     [SerializeField] private string clueName;
@@ -35,6 +37,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         {
             gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
+            if(gameObject.name == "James Moriarty")
+            {
+                countDialog++;
+                jamesMoriartyKeyClue.CheckCountDialog(countDialog);
+            }
             Debug.Log("INTERACTUASTE");
             if (!gameManager.npcInteracted.Contains(gameObject))
             {

@@ -3700,6 +3700,67 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.027645858, y: 0.021877874, z: 0.021008149}
   m_Center: {x: 0, y: -0.0008860141, z: 0.010485446}
+--- !u!1 &223682518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223682519}
+  - component: {fileID: 223682520}
+  - component: {fileID: 223682521}
+  m_Layer: 0
+  m_Name: JamesMoriartyKey
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223682519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223682518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 898669371}
+  m_Father: {fileID: 319068976}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223682520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223682518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb3d4d9422efa546a12b79476601155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcInteractable: {fileID: 1181444907}
+  goc2: {fileID: 223682521}
+  jamesMoriartyKey: {fileID: 898669366}
+--- !u!114 &223682521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223682518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff04f60a8e9e904690e9554e26bed84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &227716859
 GameObject:
   m_ObjectHideFlags: 0
@@ -4933,8 +4994,8 @@ Transform:
   - {fileID: 1404351228}
   - {fileID: 1910776192}
   - {fileID: 2024619367}
-  - {fileID: 898669371}
   - {fileID: 377958947108417601}
+  - {fileID: 223682519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319911679
@@ -7646,6 +7707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Retrato de gatos
   pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
     al asesino."
@@ -11672,6 +11735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Escritorio de Bruce Ackroyd
   pickableText: "Un buen escritorio, aunque definitivamente nunca fue usado para
     estudiar. A Bruce Ackroyd siempre le pareci\xF3 m\xE1s divertido salir de fiesta.
@@ -17951,6 +18016,35 @@ Transform:
   - {fileID: 453823416}
   m_Father: {fileID: 765853074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1181444905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4780955702981721032, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
+  m_PrefabInstance: {fileID: 1801660256880356480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1181444907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7269159743958273993, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
+  m_PrefabInstance: {fileID: 1801660256880356480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181444905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1181444909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181444905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1523c049ebe6c43af75eba5f1e8dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
 --- !u!1 &1188175937
 GameObject:
   m_ObjectHideFlags: 0
@@ -27075,6 +27169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Cuadro de Roger
   pickableText: "Mi parte c\xEDnica lo tratar\xEDa de egoc\xE9ntrico... Pero la verdad
     es que es un gran autorretrato de Roger Ackroyd. No puedo creer que haya muerto.
@@ -29866,6 +29962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Mueble golpeado
   pickableText: "Hmmm... Parece un golpe hecho por una mano fuerte. Alguien tuvo
     una discuci\xF3n acalorada en la cocina y ha golpeado el mueble. Dir\xEDa que
@@ -31186,11 +31284,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 319068976}
+    m_TransformParent: {fileID: 223682519}
     m_Modifications:
     - target: {fileID: 952779298959657592, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_Name
       value: JamesMoriartyKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 952779298959657592, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2861381270298968809, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: audioManager
@@ -31362,10 +31464,17 @@ PrefabInstance:
       propertyPath: interactText
       value: Hablar con James Moriarty
       objectReference: {fileID: 0}
+    - target: {fileID: 7269159743958273993, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
+      propertyPath: jamesMoriartyKeyClue
+      value: 
+      objectReference: {fileID: 223682520}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4780955702981721032, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1181444909}
   m_SourcePrefab: {fileID: 100100000, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
 --- !u!1001 &3073228706586789426
 PrefabInstance:
