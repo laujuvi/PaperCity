@@ -13875,8 +13875,8 @@ Transform:
   m_GameObject: {fileID: 1015193377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.371, y: -9.2196, z: -5.511592}
-  m_LocalScale: {x: 3.335184, y: 1.2275501, z: 0.3}
+  m_LocalPosition: {x: 4.3381, y: -9.2196, z: -5.511592}
+  m_LocalScale: {x: 3.269257, y: 1.2275501, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117331281}
@@ -21861,7 +21861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.52
+      value: -43.76
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21869,7 +21869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.56
+      value: 22.33
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25795,6 +25795,7 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
+  lines: []
   win: {fileID: 235556172}
   lose: {fileID: 562622674}
   lenIcon: {fileID: 532678003}
@@ -25813,6 +25814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuUI: {fileID: 559082358}
   lenIcon: {fileID: 532678003}
+  options: {fileID: 0}
+  mouseSensitivitySlider: {fileID: 0}
 --- !u!1 &1864601941
 GameObject:
   m_ObjectHideFlags: 0
@@ -29708,7 +29711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6694729836853263261, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.78
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 6694729836853263261, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29716,7 +29719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6694729836853263261, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.17
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6694729836853263261, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30310,7 +30313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862298640899541335, guid: 31375050a45aa4147b414772768f69cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33256304
+      value: 0.412
       objectReference: {fileID: 0}
     - target: {fileID: 6862298640899541335, guid: 31375050a45aa4147b414772768f69cc, type: 3}
       propertyPath: m_LocalPosition.z
