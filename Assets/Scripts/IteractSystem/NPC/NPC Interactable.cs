@@ -8,6 +8,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     public JamesMoriartyKeyClue jamesMoriartyKeyClue;
     public int countDialog;
     [SerializeField] private string interactText;
+    [SerializeField] private string pickablePJText = "";
     [SerializeField] private string pickableText;
     [SerializeField] private bool isFakeEvidence;
     [SerializeField] private string description;
@@ -50,7 +51,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             
         } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {
-            boxMessageManager.SendMessage("", Color.white, pickableText, Emotions.None);
+            boxMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.None);
             if (!isFakeEvidence)
             { 
                 dialogManager.SetEvidenceStatus(gameObject.name, true);
