@@ -18,11 +18,21 @@ public class LogManager : MonoBehaviour
 
     public void DisplayMessagesInUI(TextMeshProUGUI logText)
     {
-        logText.text = ""; 
+        logText.text = "";
+        string lastNPCTalking = "";
 
         foreach (var message in messageLog)
         {
+            if (lastNPCTalking == message.Name)
+            {
+                logText.text += $" {message.Message}";
+            }
+            else { 
             logText.text += $"{message.Name}: {message.Message}\n";
+            }
+
+            lastNPCTalking = message.Name;
+
         }
     }
 
