@@ -22,12 +22,13 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] float hideDialogDelay = 1f;
 
     [SerializeField] RawImage rawImage; // RawImage para mostrar la imagen.
+    [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
     [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
 
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
     private bool interruptWait = false; // Revisar si lo seguimos usando
-    private int maxMessageLength = 282; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
+    private int maxMessageLength = 381; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
     //private void Start()
@@ -191,6 +192,6 @@ public class BoxMessageManager : MonoBehaviour
                 return;
             }
         }
-        rawImage.gameObject.SetActive(false); // Si no se encuentra la imagen, ocultar el RawImage.
+        rawImage.texture = imageDefault;
     }
 }
