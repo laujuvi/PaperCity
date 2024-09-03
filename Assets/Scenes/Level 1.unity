@@ -3746,7 +3746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb3d4d9422efa546a12b79476601155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcInteractable: {fileID: 1181444907}
   goc2: {fileID: 223682521}
   jamesMoriartyKey: {fileID: 898669366}
 --- !u!114 &223682521
@@ -5200,6 +5199,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 673f9eb3cf06f56438bc14ce98151fab, type: 3}
+--- !u!1 &336002999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336003000}
+  - component: {fileID: 336003001}
+  m_Layer: 0
+  m_Name: InitialDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &336003000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336002999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1194024091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336003001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336002999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b9911ef50d13e46a0ffeb030e579d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxMessageManager: {fileID: 2014397447}
+  PJName: Detective
+  lines:
+  - "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
+    tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar el asesinato
+    de Roger."
+  - "Roger Ackroyd es due\xF1o del puerto, por lo que se ha hecho de una gran fortuna,
+    una bella esposa y una maravilla arquitect\xF3nica como su mansi\xF3n. Nadie
+    consigue tantas cosas en la vida sin hacerse unos cuantos enemigos."
+  - "Y ahora aqu\xED estoy con los 3 sospechosos..."
+  - "Layla Ackroyd, su esposa, quien aparentemente no ha hecho m\xE1s que llorar
+    desde que me llam\xF3 anoche al reportar su asesinato. La delatan unas oscuras
+    y pesadas bolsas debajo de sus ojos."
+  - "\xBFSer\xEDan ciertos los rumores del mal tiempo que atravesaba el matrimonio?
+    \xBFPodr\xEDa haber llegado tan lejos como para asesinar a su esposo? Deber\xEDa
+    investigar antes de hacer ninguna acusaci\xF3n semejante\u2026 La se\xF1ora Ackroyd
+    realmente est\xE1 muy sensible\u2026 O al menos lo aparenta\u2026"
+  - "Luego tenemos al hijo de Roger y Layla, Bruce Ackroyd\u2026, \xBFc\xF3mo olvidarlo?
+    un fil\xE1ntropo que parti\xF3 a Suiza al cumplir los 18 a\xF1os de edad. Curiosamente
+    ha vuelto a casa de sus padres la misma noche de la muerte de su padre."
+  - "Y finalmente James Moriarty, el vecino de los Ackroyd. Un hombre que no puede
+    ser m\xE1s diferente a Roger y que, sin embargo, han sido grandes amigos durante
+    mucho tiempo. \xC9l tambi\xE9n ha estado aqu\xED la noche del asesinato."
+  - "Bien, ahora los hechos: Roger Ackroyd aparentemente estaba enga\xF1ando a su
+    esposa. Si bien son rumores, aquello podr\xEDa ser el m\xF3vil de Layla Ackroyd
+    para el asesinato. Al mismo tiempo, si esto es verdad, la herencia de Bruce Ackroyd
+    podr\xEDa peligrar, puesto que su padre probablemente deber\xEDa repartir su
+    dinero con alguien m\xE1s. Ah\xED tenemos el m\xF3vil del hijo. James Moriarty,
+    por su parte, no tiene m\xF3vil aparente."
+  - "Es momento de ponerme a investigar. Si consigo suficientes pistas, todo quedar\xE1
+    claro y podr\xE9 acusar a alguien del asesinato. Tal vez lo mejor sea comenzar
+    por hablar con los sospechosos."
 --- !u!1 &351151267
 GameObject:
   m_ObjectHideFlags: 0
@@ -18021,17 +18096,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4780955702981721032, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
   m_PrefabInstance: {fileID: 1801660256880356480}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1181444907 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7269159743958273993, guid: 789c4245eca67754ebabd59e97ec72b7, type: 3}
-  m_PrefabInstance: {fileID: 1801660256880356480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181444905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1181444909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18183,6 +18247,7 @@ Transform:
   - {fileID: 415735782}
   - {fileID: 577139964}
   - {fileID: 1867747140}
+  - {fileID: 336003000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1211578995
@@ -27427,36 +27492,6 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
-  lines:
-  - "Aqu\xED estoy nuevamente en la casa de los Ackroyd. Sab\xEDa que volver\xEDa
-    tarde o temprano, pero nunca pens\xE9 que lo har\xEDa para investigar el asesinato
-    de Roger."
-  - "Roger Ackroyd es due\xF1o del puerto, por lo que se ha hecho de una gran fortuna,
-    una bella esposa y una maravilla arquitect\xF3nica como su mansi\xF3n. Nadie
-    consigue tantas cosas en la vida sin hacerse unos cuantos enemigos."
-  - "Y ahora aqu\xED estoy con los 3 sospechosos..."
-  - "Layla Ackroyd, su esposa, quien aparentemente no ha hecho m\xE1s que llorar
-    desde que me llam\xF3 anoche al reportar su asesinato. La delatan unas oscuras
-    y pesadas bolsas debajo de sus ojos."
-  - "\xBFSer\xEDan ciertos los rumores del mal tiempo que atravesaba el matrimonio?
-    \xBFPodr\xEDa haber llegado tan lejos como para asesinar a su esposo? Deber\xEDa
-    investigar antes de hacer ninguna acusaci\xF3n semejante\u2026 La se\xF1ora Ackroyd
-    realmente est\xE1 muy sensible\u2026 O al menos lo aparenta\u2026"
-  - "Luego tenemos al hijo de Roger y Layla, Bruce Ackroyd\u2026, \xBFc\xF3mo olvidarlo?
-    un fil\xE1ntropo que parti\xF3 a Suiza al cumplir los 18 a\xF1os de edad. Curiosamente
-    ha vuelto a casa de sus padres la misma noche de la muerte de su padre."
-  - "Y finalmente James Moriarty, el vecino de los Ackroyd. Un hombre que no puede
-    ser m\xE1s diferente a Roger y que, sin embargo, han sido grandes amigos durante
-    mucho tiempo. \xC9l tambi\xE9n ha estado aqu\xED la noche del asesinato."
-  - "Bien, ahora los hechos: Roger Ackroyd aparentemente estaba enga\xF1ando a su
-    esposa. Si bien son rumores, aquello podr\xEDa ser el m\xF3vil de Layla Ackroyd
-    para el asesinato. Al mismo tiempo, si esto es verdad, la herencia de Bruce Ackroyd
-    podr\xEDa peligrar, puesto que su padre probablemente deber\xEDa repartir su
-    dinero con alguien m\xE1s. Ah\xED tenemos el m\xF3vil del hijo. James Moriarty,
-    por su parte, no tiene m\xF3vil aparente."
-  - "Es momento de ponerme a investigar. Si consigo suficientes pistas, todo quedar\xE1
-    claro y podr\xE9 acusar a alguien del asesinato. Tal vez lo mejor sea comenzar
-    por hablar con los sospechosos."
   win: {fileID: 235556172}
   lose: {fileID: 562622674}
   lenIcon: {fileID: 532678003}
