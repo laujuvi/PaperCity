@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
     private bool isNPCTalking = false;
     private string lastNPCName;
 
-    /* INITIAL DIALOGS */
-    [SerializeField] string[] lines;
-
-
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
 
@@ -52,8 +48,6 @@ public class GameManager : MonoBehaviour
 
         uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
         HideCursor();
-
-        StartDialogue();
 
     }
 
@@ -143,14 +137,6 @@ public class GameManager : MonoBehaviour
     {
         lastNPCName = NPCName;
         isNPCTalking = true;
-    }
-
-    void StartDialogue()
-    {
-        foreach (string line in lines)
-        {
-            boxMessageManager.SendMessage("Detective", Color.white, line, Emotions.None);
-        }
     }
 
 }
