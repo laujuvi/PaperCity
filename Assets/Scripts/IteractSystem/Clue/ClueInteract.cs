@@ -7,6 +7,7 @@ using UnityEngine;
 public class ClueInteract : BasicClueInteract
 {
     [SerializeField] private string description;
+    [SerializeField] private string clueName;
     private DialogManager dialogManager;
     private GameManager gameManager;
 

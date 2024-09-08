@@ -5,8 +5,9 @@ using UnityEngine;
 public class BasicClueInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
-    [SerializeField] public string pickableText;
     [SerializeField] public string pickablePJText = "";
+    [SerializeField] public string pickableText;
+    
 
     private BoxMessageManager boxClueMessageManager;
 
