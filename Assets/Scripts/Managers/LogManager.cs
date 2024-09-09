@@ -14,30 +14,21 @@ public class LogManager : MonoBehaviour
         DisplayMessagesInUI();
     }
 
-    public List<MessageData> GetMessages()
-    {
-        return messageLog;
-    }
-
     public void DisplayMessagesInUI()
     {
-        logText.text = "asdasdasdasd";
-        string lastNPCTalking = "";
+        logText.text = "";
 
-        foreach (var message in messageLog)
+        // Recorremos los mensajes en orden inverso
+        for (int i = messageLog.Count - 1; i >= 0; i--)
         {
-            if (lastNPCTalking == message.Name)
-            {
-                logText.text += $" {message.Message}";
-            }
-            else { 
-            logText.text += $"{message.Name}: {message.Message}\n";
-            }
+            var message = messageLog[i];
 
-            lastNPCTalking = message.Name;
+            string colorHex = ColorUtility.ToHtmlStringRGB(message.Color);
 
+            logText.text += $"<color=#{colorHex}>{message.Name}</color>: {message.Message}\n";
         }
     }
+
 
     public void ClearLog()
     {
