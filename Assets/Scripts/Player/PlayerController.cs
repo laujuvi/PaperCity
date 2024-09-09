@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject NoteBook;
     public bool isBookOpen = false;
 
-    [Header("NoteBook")]
-    //[SerializeField] GameObject NoteBook; para el log
+    [Header("Log")]
+    [SerializeField] GameObject logObject;
     public bool isLogOpen = false;
 
     [SerializeField] private AudioManager audioManager; 
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         LookUp();
         UpdateAnimator();
         OpenNoteBook();
+        OpenLogView();
     }
     public void UpdateSensitivity()
     {
@@ -201,10 +202,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L)) {
             isLogOpen = !isLogOpen;
 
-            if (isLogOpen) { 
-            } else
-            {
+            if (isLogOpen) {
+                GameManager.Instance.ShowCursor();
+                logObject.SetActive(true);
+            }
 
+            if (!isLogOpen) {
+                GameManager.Instance.HideCursor();
+                logObject.SetActive(false);
             }
 
         }
