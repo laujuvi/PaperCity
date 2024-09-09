@@ -7535,7 +7535,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Retrato de gatos
+  pickablePJText: 
   pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
     al asesino."
   isFakeEvidence: 1
@@ -11357,7 +11360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Escritorio de Bruce Ackroyd
+  pickablePJText: 
   pickableText: "Un buen escritorio, aunque definitivamente nunca fue usado para
     estudiar. A Bruce Ackroyd siempre le pareci\xF3 m\xE1s divertido salir de fiesta.
     \xBFC\xF3mo culparlo?"
@@ -22038,50 +22044,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1632237982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1632237984}
-  - component: {fileID: 1632237983}
-  m_Layer: 0
-  m_Name: OutlineSelection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1632237983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632237982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2c7c6310bcb474abee38e0d626eedc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1632237984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632237982}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638437251
 GameObject:
   m_ObjectHideFlags: 0
@@ -25539,7 +25501,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Cuadro de Roger
+  pickablePJText: 
   pickableText: "Mi parte c\xEDnica lo tratar\xEDa de egoc\xE9ntrico... Pero la verdad
     es que es un gran autorretrato de Roger Ackroyd. No puedo creer que haya muerto.
     Debo encontrar al culpable"
@@ -25795,7 +25760,6 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
-  lines: []
   win: {fileID: 235556172}
   lose: {fileID: 562622674}
   lenIcon: {fileID: 532678003}
@@ -28096,7 +28060,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Mueble golpeado
+  pickablePJText: 
   pickableText: "Hmmm... Parece un golpe hecho por una mano fuerte. Alguien tuvo
     una discuci\xF3n acalorada en la cocina y ha golpeado el mueble. Dir\xEDa que
     la persona que hizo este agujero en el mueble no puede ser la misma que asesin\xF3
@@ -30222,6 +30189,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 168fb446cafb3d943bcbef633c40c21c, type: 3}
+--- !u!1001 &5624520576476084884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 569984666039565337, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_Name
+      value: OutlineManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655712754622718571, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da7828b80853d5e4bb8dd2bc6175c94d, type: 3}
 --- !u!1001 &5768585564871733965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30633,7 +30657,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1773361662}
-  - {fileID: 1632237984}
+  - {fileID: 5624520576476084884}
   - {fileID: 1631509812}
   - {fileID: 1194024091}
   - {fileID: 1154247562}
