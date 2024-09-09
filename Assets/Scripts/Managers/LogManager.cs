@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class LogManager : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI logText;
+
     private List<MessageData> messageLog = new List<MessageData>();
 
     public void AddMessage(MessageData message)
     {
         messageLog.Add(message);
+        DisplayMessagesInUI();
     }
 
     public List<MessageData> GetMessages()
@@ -16,9 +19,9 @@ public class LogManager : MonoBehaviour
         return messageLog;
     }
 
-    public void DisplayMessagesInUI(TextMeshProUGUI logText)
+    public void DisplayMessagesInUI()
     {
-        logText.text = "";
+        logText.text = "asdasdasdasd";
         string lastNPCTalking = "";
 
         foreach (var message in messageLog)

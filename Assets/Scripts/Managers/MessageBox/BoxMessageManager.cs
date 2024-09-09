@@ -15,8 +15,7 @@ public class ImageData
 public class BoxMessageManager : MonoBehaviour
 {
     /* MANAGER */
-    [SerializeField] LogManager logManager; // opcional
-
+    [SerializeField] private LogManager logManager; // opcional
 
     [SerializeField] TextMeshProUGUI textMeshPro;
     [SerializeField] TextMeshProUGUI nameTextMeshPro;
@@ -60,7 +59,7 @@ public class BoxMessageManager : MonoBehaviour
         foreach (var msgData in splitMessages)
         {
             messageQueue.Enqueue(msgData);
-            if (logManager) logManager.AddMessage(msgData);
+            if (logManager != null) logManager.AddMessage(msgData);
         }
 
         if (!isDisplayingMessage)
