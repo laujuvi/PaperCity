@@ -23,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Update()
     {
-        if (_playerController.isOpen == false)
+        if (_playerController.isBookOpen == false)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {

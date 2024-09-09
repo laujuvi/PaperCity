@@ -22,7 +22,7 @@ public class ListManager : MonoBehaviour
 
     void Update()
     {
-        if (playerController.isOpen)
+        if (playerController.isBookOpen)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
