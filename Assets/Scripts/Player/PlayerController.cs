@@ -36,7 +36,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("NoteBook")]
     [SerializeField] GameObject NoteBook;
-    public bool isOpen = false;
+    public bool isBookOpen = false;
+
+    [Header("Log")]
+    [SerializeField] GameObject logObject;
+    public bool isLogOpen = false;
 
     [SerializeField] private AudioManager audioManager; 
 
@@ -70,6 +74,7 @@ public class PlayerController : MonoBehaviour
         LookUp();
         UpdateAnimator();
         OpenNoteBook();
+        OpenLogView();
     }
     public void UpdateSensitivity()
     {
@@ -166,12 +171,13 @@ public class PlayerController : MonoBehaviour
 
     private void OpenNoteBook()
     {
-    
-        if(isOpen == false)
+        if (isLogOpen) return;
+
+        if(isBookOpen == false)
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                isOpen = true;
+                isBookOpen = true;
                 NoteBook.SetActive(true);
                
                 audioManager.PlaySFX(audioManager.notebookCheck);
@@ -181,12 +187,33 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                isOpen = false;
+                isBookOpen = false;
                 NoteBook.SetActive(false);
                 
                 audioManager.PlaySFX(audioManager.notebookClose);
             }
         }
+    }
+
+    private void OpenLogView()
+    {
+        if (isBookOpen) return;
+
+        if (Input.GetKeyDown(KeyCode.L)) {
+            isLogOpen = !isLogOpen;
+
+            if (isLogOpen) {
+                GameManager.Instance.ShowCursor();
+                logObject.SetActive(true);
+            }
+
+            if (!isLogOpen) {
+                GameManager.Instance.HideCursor();
+                logObject.SetActive(false);
+            }
+
+        }
+
     }
 
     public void PlayAudio(AudioClip audioClip)
