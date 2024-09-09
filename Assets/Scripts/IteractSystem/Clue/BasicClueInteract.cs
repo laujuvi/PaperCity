@@ -28,9 +28,9 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
     public virtual void Interact()
     {
         if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
-        {
-           boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.None);
-           Destroy(gameObject);
+        {         
+           boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
+        
         }
    
     }

@@ -17,7 +17,9 @@ public class ClueInteract : BasicClueInteract
     [Header("Audio Source")]
     [SerializeField] private AudioManager audioManager;
 
+
     private BoxMessageManager boxClueMessageManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,7 @@ public class ClueInteract : BasicClueInteract
 
     public override void Interact()
     {
+
         boxClueMessageManager.SendMessage(base.pickablePJText, Color.white, base.pickableText, Emotions.None);
         dialogManager.SetEvidenceStatus(gameObject.name, true);
         _listManager.AddText($"({description})");
