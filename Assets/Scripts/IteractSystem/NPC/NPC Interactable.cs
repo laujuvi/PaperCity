@@ -38,7 +38,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         {
             gameManager.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
-            if(gameObject.name == "James Moriarty")
+            if (gameObject.name == "James Moriarty")
             {
                 countDialog++;
                 jamesMoriartyKeyClue.CheckCountDialog(countDialog);
@@ -48,21 +48,21 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             {
                 gameManager.npcInteracted.Add(gameObject);
             }
-            
-        } else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
-        {
-            boxMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.None);
-            if (!isFakeEvidence)
-            { 
-                dialogManager.SetEvidenceStatus(gameObject.name, true);
-                _listManager.AddText(clueName + $"({description})");
-                gameManager.CheckCurrentEvidence();
-                audioManager.PlaySFX(audioManager.clueFound);
-                print("pick");
-                //gameObject.SetActive(false);
-                Destroy(gameObject);
-            }
         }
+        //} else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
+        //{
+        //    boxMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.None);
+        //    if (!isFakeEvidence)
+        //    { 
+        //        dialogManager.SetEvidenceStatus(gameObject.name, true);
+        //        _listManager.AddText(clueName + $"({description})");
+        //        gameManager.CheckCurrentEvidence();
+        //        audioManager.PlaySFX(audioManager.clueFound);
+        //        print("pick");
+        //        //gameObject.SetActive(false);
+        //        Destroy(gameObject);
+        //    }
+        //}
     }
 
     public string GetInteractText()
