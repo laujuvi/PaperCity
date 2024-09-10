@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5977728875338865325}
   - component: {fileID: 7163376545113737222}
   - component: {fileID: 4617859777191574493}
-  - component: {fileID: 1348837888932527104}
   - component: {fileID: 1685064557983523774}
+  - component: {fileID: 292631392992777522}
   m_Layer: 6
   m_Name: CartasDeAmor
   m_TagString: Untagged
@@ -108,27 +108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2734315, y: 1, z: 0.6202965}
   m_Center: {x: -0.09452135, y: 0, z: 0.0016803741}
---- !u!114 &1348837888932527104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2371626402124973768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Cartas de amor para Layla
-  pickableText: "Cartas que James escribi\xF3 a lo largo de a\xF1os a Layla. \xC9l
-    siempre estuvo enamorado de ella. \"Si me enterara que ese hijo de puta tiene
-    una vida paralela con otra mujer, ser\xEDa capaz de matarlo con mis propias manos\".
-    No puedo pasar esto por alto."
-  isFakeEvidence: 0
-  description: "James estaba obsesionado con Layla. \xBFSer\xEDa un peligro para
-    Roger?"
-  clueName: 
 --- !u!114 &1685064557983523774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +123,28 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 1, z: 0}
   followSpeed: 5
+--- !u!114 &292631392992777522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371626402124973768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Cartas de amor para Layla
+  pickablePJText: Detective
+  pickableText: "Cartas que James escribi\xF3 a lo largo de a\xF1os a Layla. \xC9l
+    siempre estuvo enamorado de ella. \"Si me enterara que ese hijo de puta tiene
+    una vida paralela con otra mujer, ser\xEDa capaz de matarlo con mis propias manos\".
+    No puedo pasar esto por alto."
+  description: "James estaba obsesionado con Layla. \xBFSer\xEDa un peligro para
+    Roger?"
+  clueName: 
+  audioManager: {fileID: 0}
 --- !u!1 &5571254928268134188
 GameObject:
   m_ObjectHideFlags: 0

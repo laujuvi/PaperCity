@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1542380029371260604}
   - component: {fileID: 951252961525795234}
   - component: {fileID: 7427814776000886031}
-  - component: {fileID: 3310289393427553071}
+  - component: {fileID: -997932674080630769}
   m_Layer: 6
   m_Name: RegaloDeJames
   m_TagString: Untagged
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.81008244, z: 0.8100815}
   m_Center: {x: 0, y: 0.39742017, z: -0.0035171509}
---- !u!114 &3310289393427553071
+--- !u!114 &-997932674080630769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,19 +116,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5888545069738618753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Regalo de James
+  pickablePJText: Detective
   pickableText: "Pobre James... \xE9ste es un regalo que le hizo a Layla, olvidado
     aqu\xED en esta habitaci\xF3n. Aunque tambi\xE9n comprendo a Layla, ella realmente
     estaba enamorada de Roger y no querr\xEDa herirlo llevando a su habitaci\xF3n
     un regalo que le hizo otro hombre. Esto me deja en claro que el amor de James
     era no correspondido. Layla no amaba a James. Jam\xE1s habr\xEDa dejado a Roger
     por \xE9l. \xBFSabr\xEDa James eso?"
-  isFakeEvidence: 0
   description: James amaba a Layla.
   clueName: 
+  audioManager: {fileID: 0}
 --- !u!1001 &2190338550563516274
 PrefabInstance:
   m_ObjectHideFlags: 0

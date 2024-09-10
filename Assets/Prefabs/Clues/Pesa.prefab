@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8591288771272830397}
   - component: {fileID: 5779112763846614092}
-  - component: {fileID: 3027114398811586937}
+  - component: {fileID: 5639676970350506096}
   m_Layer: 6
   m_Name: Pesa
   m_TagString: Untagged
@@ -55,7 +55,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.40102768, y: 0.9171715, z: 0.39203757}
   m_Center: {x: 0.6199951, y: 2.6583118, z: 0.120354086}
---- !u!114 &3027114398811586937
+--- !u!114 &5639676970350506096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,14 +64,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1046526146615835529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Pesa de 45kg.
+  pickablePJText: Detective
   pickableText: Una pesa de ejercicio. Muy pesada. Dudo que yo pueda levantarla.
-  isFakeEvidence: 0
   description: Alguien de la casa es muy fuerte.
-  clueName: Weight
+  clueName: 
+  audioManager: {fileID: 0}
 --- !u!1 &1459224021082176993
 GameObject:
   m_ObjectHideFlags: 0

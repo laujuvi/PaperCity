@@ -62,34 +62,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8853835342930575733}
+      addedObject: {fileID: 7226256880735225972}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7226256880735225972}
+      addedObject: {fileID: 3514156454767728363}
   m_SourcePrefab: {fileID: 100100000, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
 --- !u!1 &8587400930909946185 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
   m_PrefabInstance: {fileID: 8930069029091163160}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8853835342930575733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8587400930909946185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Papeles de divorcio
-  pickableText: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
-    hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
-  isFakeEvidence: 0
-  description: "Roger quer\xEDa divorciarse de Layla."
-  clueName: 
 --- !u!65 &7226256880735225972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111,3 +93,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0077490998, y: 0.009999998, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3514156454767728363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587400930909946185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Papeles de divorcio
+  pickablePJText: Detective
+  pickableText: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
+    hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
+  description: "Roger quer\xEDa divorciarse de Layla."
+  clueName: 
+  audioManager: {fileID: 0}

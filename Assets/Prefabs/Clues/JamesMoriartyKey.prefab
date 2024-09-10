@@ -118,10 +118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: "Llave de la sala de pel\xEDculas"
+  pickablePJText: 
   pickableText: "James es el due\xF1o del \xFAnico cine de la ciudad. No conozco
     persona que ame m\xE1s su trabajo que \xE9l. \xBFC\xF3mo puede ser que las haya
     perdido? Mejor se las devuelvo r\xE1pido."
   isFakeEvidence: 1
   description: "James dej\xF3 caer su llave..."
   clueName: 
+  audioManager: {fileID: 0}
