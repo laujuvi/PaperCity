@@ -7505,10 +7505,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 491428465}
+      addedObject: {fileID: 491428464}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 491428464}
+      addedObject: {fileID: 491428465}
   m_SourcePrefab: {fileID: 100100000, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
 --- !u!4 &491428462 stripped
 Transform:
@@ -7550,19 +7550,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 491428463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
   interactText: Papeles de divorcio
-  pickablePJText: 
+  pickablePJText: Detective
   pickableText: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
     hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
-  isFakeEvidence: 0
   description: "Roger quer\xEDa divorciarse de Layla."
   clueName: 
-  audioManager: {fileID: 1867747139}
+  audioManager: {fileID: 0}
 --- !u!1 &495338049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8108,7 +8105,7 @@ PrefabInstance:
       addedObject: {fileID: 513558301}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 513558300}
+      addedObject: {fileID: 513558302}
   m_SourcePrefab: {fileID: 100100000, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
 --- !u!4 &513558298 stripped
 Transform:
@@ -8120,28 +8117,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
   m_PrefabInstance: {fileID: 513558297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &513558300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513558299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: Retrato de gatos
-  pickablePJText: 
-  pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
-    al asesino."
-  isFakeEvidence: 1
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!65 &513558301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8163,6 +8138,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.057696544, y: 0.006564915, z: 0.07574824}
   m_Center: {x: -0.000000118888806, y: -0.0024371704, z: 0.0090258345}
+--- !u!114 &513558302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513558299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1747b4e546cc8444d8254e15d37eb69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Retrato de gatos
+  pickablePJText: Detective
+  pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
+    al asesino."
 --- !u!1 &517082620
 GameObject:
   m_ObjectHideFlags: 0
@@ -9765,29 +9756,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bb36c9532d5bc1d4b88636de10c5bc25, type: 3}
   m_PrefabInstance: {fileID: 1300922165}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &613010602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613010600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: Revistas inmobiliarias
-  pickablePJText: 
-  pickableText: "Un cat\xE1logo de departamentos... \xBFPodr\xEDa ser que alguno
-    de los Ackroyd buscaba mudarse o simplemente se le cay\xF3 a alguien mientras
-    lavaban ropa?"
-  isFakeEvidence: 0
-  description: "Alguien estaba buscando un lugar para vivir. \xBFRoger o Layla?"
-  clueName: 
-  audioManager: {fileID: 1867747139}
 --- !u!65 &613010603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9809,6 +9777,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &613010604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613010600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Revistas inmobiliarias
+  pickablePJText: Detective
+  pickableText: "Un cat\xE1logo de departamentos... \xBFPodr\xEDa ser que alguno
+    de los Ackroyd buscaba mudarse o simplemente se le cay\xF3 a alguien mientras
+    lavaban ropa?"
+  description: "Alguien estaba buscando un lugar para vivir. \xBFRoger o Layla?"
+  clueName: 
+  audioManager: {fileID: 1867747139}
 --- !u!1 &614451378
 GameObject:
   m_ObjectHideFlags: 0
@@ -11552,10 +11540,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 715876519}
+      addedObject: {fileID: 715876518}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 715876518}
+      addedObject: {fileID: 715876519}
   m_SourcePrefab: {fileID: 100100000, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
 --- !u!4 &715876516 stripped
 Transform:
@@ -11597,19 +11585,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 715876517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
   interactText: Roger Ackroyd
-  pickablePJText: 
+  pickablePJText: Detective
   pickableText: "La escena del crimen, Roger fue asesinado en su cama y no por un
     profesional. Fue un crimen hecho con odio, pero no con demasiada premeditaci\xF3n."
-  isFakeEvidence: 0
   description: Roger fue asesinado con un cuchillo de cocina
   clueName: 
-  audioManager: {fileID: 1867747139}
+  audioManager: {fileID: 0}
 --- !u!1001 &717006143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12515,44 +12500,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 792176923}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
 --- !u!4 &792176921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3562106169647864254, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
   m_PrefabInstance: {fileID: 792176920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &792176922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
-  m_PrefabInstance: {fileID: 792176920}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &792176923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792176922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: Escritorio de Bruce Ackroyd
-  pickablePJText: 
-  pickableText: "Un buen escritorio, aunque definitivamente nunca fue usado para
-    estudiar. A Bruce Ackroyd siempre le pareci\xF3 m\xE1s divertido salir de fiesta.
-    \xBFC\xF3mo culparlo?"
-  isFakeEvidence: 1
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!1 &792304583
 GameObject:
   m_ObjectHideFlags: 0
@@ -15532,130 +15486,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &996868509
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 996868514}
-  - component: {fileID: 996868513}
-  - component: {fileID: 996868512}
-  - component: {fileID: 996868511}
-  - component: {fileID: 996868510}
-  m_Layer: 6
-  m_Name: ClueName
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &996868510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996868509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: agarrar cubo
-  pickableText: lo lograste
-  pickablePJText: jjjjjjj
-  boxClueMessageManager: {fileID: 0}
-  description: aaaaaa
-  audioManager: {fileID: 1867747139}
---- !u!65 &996868511
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996868509}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &996868512
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996868509}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &996868513
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996868509}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &996868514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996868509}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.36922, y: 1.444, z: 8.171}
-  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1005105261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20946,7 +20776,7 @@ PrefabInstance:
       addedObject: {fileID: 613010603}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb36c9532d5bc1d4b88636de10c5bc25, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 613010602}
+      addedObject: {fileID: 613010604}
   m_SourcePrefab: {fileID: 100100000, guid: bb36c9532d5bc1d4b88636de10c5bc25, type: 3}
 --- !u!1 &1316401626
 GameObject:
@@ -23210,128 +23040,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491102853}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1507966734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1507966739}
-  - component: {fileID: 1507966738}
-  - component: {fileID: 1507966737}
-  - component: {fileID: 1507966736}
-  - component: {fileID: 1507966735}
-  m_Layer: 6
-  m_Name: Cube (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1507966735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507966734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1747b4e546cc8444d8254e15d37eb69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: agarrar cubo
-  pickableText: no lo lograste
-  pickablePJText: aaaaaa
-  boxClueMessageManager: {fileID: 0}
---- !u!65 &1507966736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507966734}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1507966737
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507966734}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 740a1ed447a820649bb6fc7460196cbc, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1507966738
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507966734}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1507966739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507966734}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.243, y: 1.444, z: 8.171}
-  m_LocalScale: {x: 0.69, y: 0.69, z: 0.69}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518402628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8595796170600873144, guid: 140317485256a0944ba78c74bc3ddc86, type: 3}
@@ -28091,10 +27799,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2121dc3826c0c0547aee74de62004e1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1839046470}
+      addedObject: {fileID: 1839046469}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2121dc3826c0c0547aee74de62004e1c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1839046469}
+      addedObject: {fileID: 1839046470}
   m_SourcePrefab: {fileID: 100100000, guid: 2121dc3826c0c0547aee74de62004e1c, type: 3}
 --- !u!4 &1839046467 stripped
 Transform:
@@ -28136,20 +27844,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839046468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Script: {fileID: 11500000, guid: 1747b4e546cc8444d8254e15d37eb69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
   interactText: Cuadro de Roger
-  pickablePJText: 
+  pickablePJText: Detective
   pickableText: "Mi parte c\xEDnica lo tratar\xEDa de egoc\xE9ntrico... Pero la verdad
     es que es un gran autorretrato de Roger Ackroyd. No puedo creer que haya muerto.
     Debo encontrar al culpable"
-  isFakeEvidence: 1
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!1001 &1841337291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32306,6 +32008,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319068976}
     m_Modifications:
+    - target: {fileID: -4980753365384945936, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
     - target: {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
       propertyPath: audioManager
       value: 
@@ -33652,5 +33358,3 @@ SceneRoots:
   - {fileID: 2060170837}
   - {fileID: 7935773214886374585}
   - {fileID: 1323876809}
-  - {fileID: 996868514}
-  - {fileID: 1507966739}

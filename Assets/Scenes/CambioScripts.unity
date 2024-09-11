@@ -7758,7 +7758,7 @@ PrefabInstance:
       addedObject: {fileID: 513558301}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 513558300}
+      addedObject: {fileID: 513558302}
   m_SourcePrefab: {fileID: 100100000, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
 --- !u!4 &513558298 stripped
 Transform:
@@ -7770,28 +7770,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 251d2c46a2ec84b4f905fe20928fb098, type: 3}
   m_PrefabInstance: {fileID: 513558297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &513558300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513558299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: Retrato de gatos
-  pickablePJText: 
-  pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
-    al asesino."
-  isFakeEvidence: 1
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!65 &513558301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7813,6 +7791,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.057696544, y: 0.051349092, z: 0.07574824}
   m_Center: {x: -0.000000118888806, y: -0.024829276, z: 0.0090258345}
+--- !u!114 &513558302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513558299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1747b4e546cc8444d8254e15d37eb69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: Retrato de gatos
+  pickablePJText: Detective
+  pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
+    al asesino."
 --- !u!1 &517082620
 GameObject:
   m_ObjectHideFlags: 0
@@ -11907,6 +11901,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7080461890089981466, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
+      propertyPath: interactText
+      value: Escritorio de Bruce Ackroyd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080461890089981466, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
+      propertyPath: pickableText
+      value: "Un buen escritorio, aunque definitivamente nunca fue usado para estudiar.
+        A Bruce Ackroyd siempre le pareci\xF3 m\xE1s divertido salir de fiesta. \xBFC\xF3mo
+        culparlo?"
+      objectReference: {fileID: 0}
     - target: {fileID: 7560151424652576137, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -11918,44 +11922,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 792176923}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
 --- !u!4 &792176921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3562106169647864254, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
   m_PrefabInstance: {fileID: 792176920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &792176922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
-  m_PrefabInstance: {fileID: 792176920}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &792176923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792176922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: Escritorio de Bruce Ackroyd
-  pickablePJText: 
-  pickableText: "Un buen escritorio, aunque definitivamente nunca fue usado para
-    estudiar. A Bruce Ackroyd siempre le pareci\xF3 m\xE1s divertido salir de fiesta.
-    \xBFC\xF3mo culparlo?"
-  isFakeEvidence: 1
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!1 &792304583
 GameObject:
   m_ObjectHideFlags: 0
@@ -31385,8 +31358,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -4866159670466753733, guid: a11530ad5c6dfa54e92f4f7ff61785cf, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -31454,8 +31426,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3027114398811586937, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -31751,8 +31722,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5795597049427362570, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -32009,8 +31979,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: RegaloDeJames
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3310289393427553071, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -32026,11 +31995,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024619367}
     m_Modifications:
-    - target: {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+    - target: {fileID: 0}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}
-    - target: {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+    - target: {fileID: 0}
       propertyPath: pickablePJText
       value: Detective
       objectReference: {fileID: 0}
@@ -32083,7 +32052,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -32382,8 +32351,7 @@ PrefabInstance:
       propertyPath: pickablePJText
       value: Detective
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6986212444764600959, guid: 31375050a45aa4147b414772768f69cc, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -32456,7 +32424,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8587400930909946185, guid: 839c576df60a42a419614c77220b61b2, type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 1098347183}
   m_SourcePrefab: {fileID: 100100000, guid: 839c576df60a42a419614c77220b61b2, type: 3}
 --- !u!1001 &7623556881691300466
@@ -32519,8 +32487,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6330186536040828688, guid: 1ee78f6d6f6f0a1469dec3fa19c7445b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -32588,8 +32555,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PregnancyTest
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3091898112448559944, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
