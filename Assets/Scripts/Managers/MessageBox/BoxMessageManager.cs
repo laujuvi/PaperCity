@@ -25,6 +25,7 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] float hideDialogDelay = 1f;
 
     [SerializeField] RawImage rawImage; // RawImage para mostrar la imagen.
+    [SerializeField] RawImage lenIcon; //para ocultar esto
     [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
     [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
 
@@ -72,6 +73,7 @@ public class BoxMessageManager : MonoBehaviour
     private IEnumerator DisplayMessage()
     {
         isDisplayingMessage = true;
+        lenIcon.gameObject.SetActive(false);
 
         while (messageQueue.Count > 0)
         {
@@ -122,6 +124,7 @@ public class BoxMessageManager : MonoBehaviour
         isDisplayingMessage = false;
         ResetSkippingTimers();
         bgDialog.SetActive(false);
+        lenIcon.gameObject.SetActive(true);
     }
 
     private string FormatMessage(string name, Color color, string message, Emotions emotion)
