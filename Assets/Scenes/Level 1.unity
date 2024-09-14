@@ -18016,7 +18016,7 @@ PrefabInstance:
       objectReference: {fileID: 1859243080}
     - target: {fileID: 3137730810901870422, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3438033153605972248, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _playerInteract
