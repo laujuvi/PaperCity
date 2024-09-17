@@ -17,10 +17,8 @@ public class ClueInteract : BasicClueInteract
     [Header("Audio Source")]
     [SerializeField] private AudioManager audioManager;
 
-
     private BoxMessageManager boxClueMessageManager2;
 
-    // Start is called before the first frame update
     void Start()
     {
         dialogManager = FindObjectOfType<DialogManager>();
@@ -30,12 +28,6 @@ public class ClueInteract : BasicClueInteract
         boxClueMessageManager2 = FindObjectOfType<BoxMessageManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public override void Interact()
     {
 
@@ -43,7 +35,8 @@ public class ClueInteract : BasicClueInteract
         dialogManager.SetEvidenceStatus(gameObject.name, true);
         _listManager.AddText($"({description})");
         gameManager.CheckCurrentEvidence();
-        audioManager.PlaySFX(audioManager.clueFound);
+        //audioManager.PlaySFX(audioManager.clueFound);
+        AudioManager.instance.PlaySoundFX(AudioManager.instance.clueFound, transform, 1f);
         print("pick");
         //gameObject.SetActive(false);
         Destroy(gameObject);

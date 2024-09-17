@@ -180,7 +180,8 @@ public class PlayerController : MonoBehaviour
                 isBookOpen = true;
                 NoteBook.SetActive(true);
                
-                audioManager.PlaySFX(audioManager.notebookCheck);
+                //audioManager.PlaySFX(audioManager.notebookCheck);
+                AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookCheck, transform, 1f);
             }
         }
         else
@@ -190,7 +191,8 @@ public class PlayerController : MonoBehaviour
                 isBookOpen = false;
                 NoteBook.SetActive(false);
                 
-                audioManager.PlaySFX(audioManager.notebookClose);
+                //audioManager.PlaySFX(audioManager.notebookClose);
+                AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookClose, transform, 1f);
             }
         }
     }
