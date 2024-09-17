@@ -43,8 +43,8 @@ public class AudioManager : MonoBehaviour
 
         audioSource.Play();
 
-        float clipLenght = audioSource.clip.length;
+        float clipLength = audioSource.clip.length;
 
-        Destroy(audioSource.gameObject);
+        Destroy(audioSource.gameObject, clipLength);
     }
 }
