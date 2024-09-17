@@ -6273,8 +6273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 854.9, y: -90.000015}
-  m_SizeDelta: {x: -1749.8, y: -430.00003}
+  m_AnchoredPosition: {x: 755, y: -145}
+  m_SizeDelta: {x: -1550, y: -430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403481788
 MonoBehaviour:
@@ -20843,6 +20843,7 @@ PrefabInstance:
     - {fileID: 4270585008762443742, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     - {fileID: 3637428853993425879, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     - {fileID: 3697463392133806556, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+    - {fileID: 1566012876270846559, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       insertIndex: 2
