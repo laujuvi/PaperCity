@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject logObject;
     public bool isLogOpen = false;
 
-    [SerializeField] private AudioManager audioManager; 
+    //[SerializeField] private AudioManager audioManager; 
 
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
