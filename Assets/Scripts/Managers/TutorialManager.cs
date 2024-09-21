@@ -15,8 +15,8 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;   
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;   
         StartCoroutine(ChangeText(0, "Finaly back in this old office"));
         StartCoroutine(ChangeText(4, "Press (A-S-D-W) to move"));
         StartCoroutine(ChangeText(8, "Press (Ctrl) to Crouch"));
