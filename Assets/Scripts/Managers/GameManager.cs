@@ -78,6 +78,15 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    public void DisablePlayerController()
+    {
+        _playerController.enabled = false;
+    }
+    public void EnablePlayerController()
+    {
+        _playerController.enabled = true;
+    }
     public void DisablePlayerInputs()
     {
         StartCoroutine(DisablePlayerInputsCoroutine());
@@ -85,8 +94,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator DisablePlayerInputsCoroutine()
     {
-        //_playerInteract.enabled = false;
-        _playerController.enabled = false;
+        DisablePlayerController();
 
         yield return new WaitUntil(() => boxMessageManager.IsDisplayingMessage());
 
@@ -95,8 +103,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        //_playerInteract.enabled = true;
-        _playerController.enabled = true;
+        EnablePlayerController();
     }
 
     public void CheckGuiltyNPC()
