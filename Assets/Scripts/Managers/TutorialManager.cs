@@ -10,7 +10,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tutorialText;    
     [SerializeField] private GameObject interactable;
     [SerializeField] private ChangeScene door;
-    [SerializeField] private GameObject Libreta;
+    [SerializeField] private TutorialInteract2 Libreta;
     
     // Start is called before the first frame update
     void Start()
@@ -24,19 +24,16 @@ public class TutorialManager : MonoBehaviour
         StartCoroutine(ChangeText(16, "Press (Shift) to Run"));
         StartCoroutine(ChangeText(18, "Press (L) to open Log Menu"));
         StartCoroutine(ChangeText(20, "Press (Left Click) to interact with objects"));
+
+        Libreta.OnInteractableActivated += HandleLibretaActivated;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HandleLibretaActivated()
     {
-        if(interactable.activeSelf == false)
-        {
-            Libreta.SetActive(true);
-            StartCoroutine(ChangeText(0, "Press (R) to open the Notebook"));
-            StartCoroutine(ChangeText(2, "now let's go solve some cases"));
-            door.SetActiveScript(true);
-        }
-       
+        Libreta.gameObject.SetActive(true);
+        StartCoroutine(ChangeText(0, "Press (R) to open the Notebook"));
+        StartCoroutine(ChangeText(2, "now let's go solve some cases"));
+        door.SetActiveScript(true);
     }
 
     private IEnumerator ChangeText(int time, string text)
