@@ -109,7 +109,7 @@ namespace AmplifyShaderEditor
 		GUIStyle m_linkStyle = null;
 
 		private ChangeLogInfo m_changeLog;
-		private bool m_infoDownloaded = false;
+		//private bool m_infoDownloaded = false;
 		private string m_newVersion = string.Empty;
 
 		private void OnEnable()
