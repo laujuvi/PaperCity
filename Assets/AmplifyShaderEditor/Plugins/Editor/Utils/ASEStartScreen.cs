@@ -109,7 +109,7 @@ namespace AmplifyShaderEditor
 		GUIStyle m_linkStyle = null;
 
 		private ChangeLogInfo m_changeLog;
-		private bool m_infoDownloaded = false;
+		//private bool m_infoDownloaded = false;
 		private string m_newVersion = string.Empty;
 
 		private void OnEnable()
@@ -186,26 +186,26 @@ namespace AmplifyShaderEditor
 
 		public void OnGUI()
 		{
-			if( !m_infoDownloaded )
-			{
-				m_infoDownloaded = true;
+			//if( !m_infoDownloaded )
+			//{
+			//	m_infoDownloaded = true;
 
-				StartBackgroundTask( StartRequest( ChangelogURL, () =>
-				{
-					var temp = ChangeLogInfo.CreateFromJSON( www.downloadHandler.text );
-					if( temp != null && temp.Version >= m_changeLog.Version )
-					{
-						m_changeLog = temp;
-					}
-					// improve this later
-					int major = m_changeLog.Version / 10000;
-					int minor = ( m_changeLog.Version / 1000 ) - major * 10;
-					int release = ( m_changeLog.Version / 100 ) - major * 100 - minor * 10;
-					int revision = ( ( m_changeLog.Version / 10 ) - major * 1000 - minor * 100 - release * 10 ) + ( m_changeLog.Version - major * 10000 - minor * 1000 - release * 100 );
-					m_newVersion = major + "." + minor + "." + release + "r" + revision;
-					Repaint();
-				} ) );
-			}
+			//	StartBackgroundTask( StartRequest( ChangelogURL, () =>
+			//	{
+			//		var temp = ChangeLogInfo.CreateFromJSON( www.downloadHandler.text );
+			//		if( temp != null && temp.Version >= m_changeLog.Version )
+			//		{
+			//			m_changeLog = temp;
+			//		}
+			//		// improve this later
+			//		int major = m_changeLog.Version / 10000;
+			//		int minor = ( m_changeLog.Version / 1000 ) - major * 10;
+			//		int release = ( m_changeLog.Version / 100 ) - major * 100 - minor * 10;
+			//		int revision = ( ( m_changeLog.Version / 10 ) - major * 1000 - minor * 100 - release * 10 ) + ( m_changeLog.Version - major * 10000 - minor * 1000 - release * 100 );
+			//		m_newVersion = major + "." + minor + "." + release + "r" + revision;
+			//		Repaint();
+			//	} ) );
+			//}
 
 			if( m_buttonStyle == null )
 			{
