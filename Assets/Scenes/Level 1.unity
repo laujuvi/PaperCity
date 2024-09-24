@@ -9519,6 +9519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logText: {fileID: 404480288}
+  logObject: {fileID: 1852437870}
+  isLogOpen: 0
 --- !u!1 &633141318
 GameObject:
   m_ObjectHideFlags: 0
