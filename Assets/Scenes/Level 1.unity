@@ -4348,6 +4348,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &235556178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235556172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 991
 --- !u!1 &237238091
 GameObject:
   m_ObjectHideFlags: 0
@@ -17980,7 +17997,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 72649887939171019, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 153631654785870012, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -18955,6 +18972,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 72649887939171019, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       insertIndex: -1
       addedObject: {fileID: 235556173}
+    - targetCorrespondingSourceObject: {fileID: 72649887939171019, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 235556178}
     - targetCorrespondingSourceObject: {fileID: 7730366484377889692, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       insertIndex: -1
       addedObject: {fileID: 562622679}
