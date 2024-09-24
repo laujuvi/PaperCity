@@ -2439,7 +2439,8 @@ MonoBehaviour:
   tutorialText: {fileID: 334920629}
   interactable: {fileID: 6294488535939444631}
   door: {fileID: 668003804}
-  Libreta: {fileID: 868711426}
+  Libreta: {fileID: 6294488535939444637}
+  LibretaUI: {fileID: 868711426}
 --- !u!4 &948903712
 Transform:
   m_ObjectHideFlags: 0

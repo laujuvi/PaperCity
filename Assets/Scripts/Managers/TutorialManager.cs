@@ -11,6 +11,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject interactable;
     [SerializeField] private ChangeScene door;
     [SerializeField] private TutorialInteract2 Libreta;
+    [SerializeField] private GameObject LibretaUI;
     
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,8 @@ public class TutorialManager : MonoBehaviour
 
     private void HandleLibretaActivated()
     {
-        Libreta.gameObject.SetActive(true);
+        LibretaUI.gameObject.SetActive(true);
+        StopAllCoroutines();
         StartCoroutine(ChangeText(0, "Press (R) to open the Notebook"));
         StartCoroutine(ChangeText(2, "now let's go solve some cases"));
         door.SetActiveScript(true);
