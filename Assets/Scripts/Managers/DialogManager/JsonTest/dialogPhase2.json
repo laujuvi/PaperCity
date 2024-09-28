@@ -6,6 +6,7 @@
             "messages": [
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -22,6 +23,7 @@
             "messages": [
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -38,6 +40,7 @@
             "messages": [
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",

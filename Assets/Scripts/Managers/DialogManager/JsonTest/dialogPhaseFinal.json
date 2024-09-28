@@ -6,6 +6,7 @@
             "messages": [
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -22,6 +23,7 @@
             "messages": [
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -31,7 +33,24 @@
                     "emotion": "Talking"
                 }
             ]
-        }
+        },
+        {
+                "name": "James Moriarty",
+                "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+                "messages": [
+                    {
+                        "talked": false,
+                        "isLoopingMessage" : true,
+                        "evidence":{
+                            "hasEvidence": false,
+                            "evidenceName": "",
+                            "requiredMessage": ""
+                        },
+                        "message": "",
+                        "emotion": "Talking"
+                    }
+        ]
+         }   
        
     ]
 }
