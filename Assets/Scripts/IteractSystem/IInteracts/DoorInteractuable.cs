@@ -104,11 +104,13 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
 
     private void PlayOpeningDoorSound()
     {
-        audioManager.PlaySFX(audioManager.doorOpening);
+        //audioManager.PlaySFX(audioManager.doorOpening);
+        AudioManager.instance.PlaySoundFX(AudioManager.instance.doorOpening, transform, 1f);
     }
 
     private void PlayClosingDoorSound()
     {
-        audioManager.PlaySFX(audioManager.doorClosing);
+        //audioManager.PlaySFX(audioManager.doorClosing);
+        AudioManager.instance.PlaySoundFX(AudioManager.instance.doorClosing, transform, 1f);
     }
 }
