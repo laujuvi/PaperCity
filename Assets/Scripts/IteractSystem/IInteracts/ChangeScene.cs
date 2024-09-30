@@ -23,7 +23,7 @@ public class ChangeScene : MonoBehaviour, IInteractable
         }
         else
         {
-            interactText = "press E to intyeract";
+            interactText = "press Left Click to intyeract";
         }
         
         return interactText;

@@ -38,11 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject NoteBook;
     public bool isBookOpen = false;
 
-    [Header("Log")]
-    [SerializeField] GameObject logObject;
-    public bool isLogOpen = false;
-
-    //[SerializeField] private AudioManager audioManager; 
+    [SerializeField] private AudioManager audioManager; 
 
     [SerializeField] private float smooth = 4f;
     private float cameraVerticalAngle;
@@ -74,7 +70,6 @@ public class PlayerController : MonoBehaviour
         LookUp();
         UpdateAnimator();
         OpenNoteBook();
-        OpenLogView();
     }
     public void UpdateSensitivity()
     {
@@ -171,8 +166,6 @@ public class PlayerController : MonoBehaviour
 
     private void OpenNoteBook()
     {
-        if (isLogOpen) return;
-
         if(isBookOpen == false)
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -180,8 +173,7 @@ public class PlayerController : MonoBehaviour
                 isBookOpen = true;
                 NoteBook.SetActive(true);
                
-                //audioManager.PlaySFX(audioManager.notebookCheck);
-                AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookCheck, transform, 1f);
+                audioManager.PlaySFX(audioManager.notebookCheck);
             }
         }
         else
@@ -191,31 +183,9 @@ public class PlayerController : MonoBehaviour
                 isBookOpen = false;
                 NoteBook.SetActive(false);
                 
-                //audioManager.PlaySFX(audioManager.notebookClose);
-                AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookClose, transform, 1f);
+                audioManager.PlaySFX(audioManager.notebookClose);
             }
         }
-    }
-
-    private void OpenLogView()
-    {
-        if (isBookOpen) return;
-
-        if (Input.GetKeyDown(KeyCode.L)) {
-            isLogOpen = !isLogOpen;
-
-            if (isLogOpen) {
-                GameManager.Instance.ShowCursor();
-                logObject.SetActive(true);
-            }
-
-            if (!isLogOpen) {
-                GameManager.Instance.HideCursor();
-                logObject.SetActive(false);
-            }
-
-        }
-
     }
 
     public void PlayAudio(AudioClip audioClip)

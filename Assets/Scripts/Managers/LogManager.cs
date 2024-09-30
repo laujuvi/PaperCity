@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class LogManager : MonoBehaviour
 {
+
+    [Header("Log UI")]
     [SerializeField] TextMeshProUGUI logText;
 
+    [Header("Log Object")]
+    [SerializeField] GameObject logObject;
+    public bool isLogOpen = false;
+
     private List<MessageData> messageLog = new List<MessageData>();
+
+    private void Update()
+    {
+        OpenLogView();
+    }
 
     public void AddMessage(MessageData message)
     {
@@ -33,5 +44,29 @@ public class LogManager : MonoBehaviour
     public void ClearLog()
     {
         messageLog.Clear();
+    }
+
+    private void OpenLogView()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            isLogOpen = !isLogOpen;
+
+            if (isLogOpen)
+            {
+                GameManager.Instance.ShowCursor();
+                GameManager.Instance.DisablePlayerController();
+                logObject.SetActive(true);
+            }
+
+            if (!isLogOpen)
+            {
+                GameManager.Instance.HideCursor();
+                GameManager.Instance.EnablePlayerController();
+                logObject.SetActive(false);
+            }
+
+        }
+
     }
 }
