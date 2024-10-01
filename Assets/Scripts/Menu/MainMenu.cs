@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Slider sliderSensivity;
+
     [SerializeField] private string Scenename;
     [SerializeField] private GameObject CreditsPanel;
     [SerializeField] private GameObject ControlPanel;
     [SerializeField] private GameObject MainMenuPanel;
     [SerializeField] private GameObject BackButton;
     [SerializeField] private GameObject OptionButton;
+    private void Start()
+    {
+        GameSettings.Instance.UpdateSensitivitySlider(sliderSensivity);
+    }
     public void LoadScene1()
     {
         SceneManager.LoadScene(Scenename);
