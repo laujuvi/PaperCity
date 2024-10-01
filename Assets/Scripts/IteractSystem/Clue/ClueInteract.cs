@@ -32,7 +32,7 @@ public class ClueInteract : BasicClueInteract
     {
 
         boxClueMessageManager2.SendMessage(base.pickablePJText, Color.white, base.pickableText, Emotions.None);    
-        dialogManager.SetEvidenceStatus(gameObject.name, true);
+        dialogManager.SetEvidenceStatus(gameObject.name, true); // Pongo en true para avisar que el player recogio la evidencia
         _listManager.AddText($"({description})");
         gameManager.CheckCurrentEvidence();
         //audioManager.PlaySFX(audioManager.clueFound);
