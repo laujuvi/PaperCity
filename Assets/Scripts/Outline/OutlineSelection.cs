@@ -42,28 +42,28 @@ public class OutlineSelection : MonoBehaviour
             }
         }
 
-        // Selection
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (highlight)
-            {
-                if (selection != null)
-                {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
-                }
-                selection = raycastHit.transform;
-                selection.gameObject.GetComponent<Outline>().enabled = true;
-                highlight = null;
-            }
-            else
-            {
-                if (selection)
-                {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
-                    selection = null;
-                }
-            }
-        }
+        //// Selection
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (highlight)
+        //    {
+        //        if (selection != null)
+        //        {
+        //            selection.gameObject.GetComponent<Outline>().enabled = false;
+        //        }
+        //        selection = raycastHit.transform;
+        //        selection.gameObject.GetComponent<Outline>().enabled = true;
+        //        highlight = null;
+        //    }
+        //    else
+        //    {
+        //        if (selection)
+        //        {
+        //            selection.gameObject.GetComponent<Outline>().enabled = false;
+        //            selection = null;
+        //        }
+        //    }
+        //}
     }
 
 }

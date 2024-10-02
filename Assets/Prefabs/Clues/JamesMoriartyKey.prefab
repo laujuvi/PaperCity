@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7932202780110110765}
   - component: {fileID: 6352135555373500785}
   - component: {fileID: 2861381270298968809}
+  - component: {fileID: 3116835066870344958}
   m_Layer: 6
   m_Name: JamesMoriartyKey
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +130,21 @@ MonoBehaviour:
   description: "James dej\xF3 caer su llave..."
   clueName: 
   audioManager: {fileID: 0}
+--- !u!114 &3116835066870344958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952779298959657592}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

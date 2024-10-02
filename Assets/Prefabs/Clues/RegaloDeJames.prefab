@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 951252961525795234}
   - component: {fileID: 7427814776000886031}
   - component: {fileID: -997932674080630769}
+  - component: {fileID: 4819994164251730948}
   m_Layer: 6
   m_Name: RegaloDeJames
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,24 @@ MonoBehaviour:
   description: James amaba a Layla.
   clueName: 
   audioManager: {fileID: 0}
+--- !u!114 &4819994164251730948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888545069738618753}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2190338550563516274
 PrefabInstance:
   m_ObjectHideFlags: 0
