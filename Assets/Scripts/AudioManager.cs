@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance;
+
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource sfxAudioSource;
+    [SerializeField] private AudioSource soundFX;
+
+    //[SerializeField] private AudioSource sfxAudioSource;
 
     [Header("Clips")]
     [Header("Clues")]
@@ -18,8 +22,29 @@ public class AudioManager : MonoBehaviour
     public AudioClip notebookCheck;
     public AudioClip notebookClose;
 
-    public void PlaySFX(AudioClip clip)
+    private void Awake()
     {
-        sfxAudioSource.PlayOneShot(clip);
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+    //public void PlaySFX(AudioClip clip)
+    //{
+    //    sfxAudioSource.PlayOneShot(clip);
+    //}
+    public void PlaySoundFX(AudioClip audioClip, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(soundFX, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = audioClip;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float clipLength = audioSource.clip.length;
+
+        Destroy(audioSource.gameObject, clipLength);
     }
 }

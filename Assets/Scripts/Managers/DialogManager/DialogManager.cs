@@ -14,6 +14,7 @@ public class EvidenceData
 public class DialogMessage
 {
     public bool talked;
+    public bool isLoopingMessage;
     public EvidenceData evidence;
     public string message;
     public string emotion;
@@ -106,6 +107,15 @@ public class DialogManager : MonoBehaviour
             {
                 if (!message.talked)
                 {
+
+                    if (message.isLoopingMessage)
+                    {
+                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                        gameManager.SetNPCName(dialog.name);
+                        return;
+                    }
+                    
+                    // Si no tiene evidencia que buscar muestro el msj normalmente
                     if (!message.evidence.hasEvidence)
                     {
                         boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
@@ -113,30 +123,39 @@ public class DialogManager : MonoBehaviour
                         gameManager.SetNPCName(dialog.name);
                         return;
                     }
-                    else
+
+                    // Si hay evidencia pruebo ver que exista en el array de pistas que tengo en DialogManager
+                    if (message.evidence.hasEvidence)
                     {
                         foreach (GameObject evidenceObject in evidenceArray)
                         {
-                            if (evidenceObject.name == message.evidence.evidenceName && GetEvidenceStatus(evidenceObject.name) )
+                            if (evidenceObject.name == message.evidence.evidenceName)
                             {
-                                boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                                message.talked = true;
+                                if (GetEvidenceStatus(evidenceObject.name))
+                                {
+                                    // Si encuentra la evidencia toma el mensaje como leido y lee el contenido de message
+                                    boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                                    message.talked = true;
+                                    gameManager.SetNPCName(dialog.name);
+                                    return;
+                                }
+                                // Si no encuentra la evidencia no toma el mensaje como leido y lee el contenido de requireMessage
+                                boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
                                 gameManager.SetNPCName(dialog.name);
                                 return;
                             }
-                        }
 
-                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                        gameManager.SetNPCName(dialog.name);
-                        // El objeto no existe en evidenceArray o no esta en true
-                        Debug.LogWarning("No se encontró la evidencia: " + message.evidence.evidenceName);
+                            // El objeto no existe en evidenceArray o no esta en true
+                            Debug.LogWarning("La evidencia del JSON con el nombre '" + message.evidence.evidenceName + "' no se encontro en evidenceArray de DialogManager");
+                            return;
+                        }
                     }
                 }
 
             }
         }
 
-        Debug.LogWarning("Dialog not found or all messages require evidence.");
+        Debug.LogWarning("Dialogo no encontrado, chequea que el ultimo mensage del JSON contenga 'isLoopingMessage' : true ");
     }
 
     private DialogData FindDialogByName(string name, DialoguesWrapper jsonDialogues)
