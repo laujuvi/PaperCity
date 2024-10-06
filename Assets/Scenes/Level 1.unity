@@ -5614,6 +5614,7 @@ Transform:
   - {fileID: 36731346}
   - {fileID: 1918426442}
   - {fileID: 1707360094}
+  - {fileID: 1494392382}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358511974
@@ -23329,6 +23330,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491102853}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1494392381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6210850199217829074, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+  m_PrefabInstance: {fileID: 8566492666644119683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1494392382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+  m_PrefabInstance: {fileID: 8566492666644119683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494392383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494392381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
+  interactText: Hablar con Victor Howard
+  pickablePJText: 
+  pickableText: 
+  isFakeEvidence: 0
+  description: 
+  clueName: 
+  audioManager: {fileID: 0}
+--- !u!114 &1494392384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494392381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3521c4c142922c4f942b4c181ace515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objective: {fileID: 1631509815}
+  _range: 5.3
+--- !u!54 &1494392385
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494392381}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1518402628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8595796170600873144, guid: 140317485256a0944ba78c74bc3ddc86, type: 3}
@@ -33240,6 +33313,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6f904ec9f446604a921812c3a236c97, type: 3}
+--- !u!1001 &8566492666644119683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 351151268}
+    m_Modifications:
+    - target: {fileID: 6210850199217829074, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_Name
+      value: Victor Howard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048582092498274160, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6210850199217829074, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494392385}
+    - targetCorrespondingSourceObject: {fileID: 6210850199217829074, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494392384}
+    - targetCorrespondingSourceObject: {fileID: 6210850199217829074, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1494392383}
+  m_SourcePrefab: {fileID: 100100000, guid: 4293d6d8612b548479c7c8251f85d765, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
