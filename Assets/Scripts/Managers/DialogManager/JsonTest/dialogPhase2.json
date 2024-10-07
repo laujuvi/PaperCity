@@ -33,7 +33,23 @@
                     "emotion": "Talking"
                 }
 	]
-     },
+     },	{
+        "name": "Victor Howard",
+        "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+        "messages": [
+            {
+                "talked": false,
+                "isLoopingMessage" : true,
+                "evidence":{
+                    "hasEvidence": false,
+                    "evidenceName": "",
+                    "requiredMessage": ""
+                },
+                "message": "Vaya... No ha investigado demasiado y aún así ya lo sabe. Supongo que, o fui muy descuidada, o usted es un gran detective. Así es, yo maté a Roger. Él comenzó a acostarse con su secretaria. Iba a dejarme, puede verlo en los papeles de divorcio. No podía soportarlo. Si no era mío, ¡no sería de nadie más!",
+                "emotion": "Talking"
+            }
+]
+ },
 	{
             "name": "James Moriarty",
             "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
