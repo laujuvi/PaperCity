@@ -135,6 +135,7 @@
                 },
                 {
                     "talked": false,
+                    "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "Pickeable",
@@ -146,14 +147,14 @@
                 },
                 {
                     "talked": false,
-                    "isLoopingMessage" : true,
+                    "isLoopingMessage" : false,
                     "evidence":{
-                        "hasEvidence": false,
-                        "evidenceName": "MuebleConGolpe",
-                        "requiredMessage": "Mejor vaya a investigar..."
+                        "hasEvidence": true,
+                        "evidenceName": "Reloj dorado",
+                        "requiredMessage": "..."
 
                     },
-                    "message": "...",
+                    "message": "¿Disculpe? ¿Qué dice? Si, yo soy V, quien le hizo ése regalo a Roger, ¿pero qué tiene de extraño? ¿No puede un viejo amigo regalar algo de vez en cuando?",
                     "emotion": "Talking"
                 }
             ]
