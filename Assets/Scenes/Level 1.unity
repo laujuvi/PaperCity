@@ -7768,15 +7768,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.753
+      value: 20.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.095
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -34.7709
+      value: -6.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba20a7df6d26cea47b395fc6df4f5287, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33400,9 +33400,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tarjeta de otro abogado
       objectReference: {fileID: 0}
+    - target: {fileID: 1047926064018296634, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
+    - target: {fileID: 1047926064018296634, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
+      propertyPath: interactText
+      value: Tarjeta de Leopold Zimmerman
+      objectReference: {fileID: 0}
     - target: {fileID: 5814532510719412461, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.81751
+      value: -39.79
       objectReference: {fileID: 0}
     - target: {fileID: 5814532510719412461, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33410,7 +33418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5814532510719412461, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.98443
+      value: 10.77
       objectReference: {fileID: 0}
     - target: {fileID: 5814532510719412461, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
       propertyPath: m_LocalRotation.w

@@ -120,10 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Tarjeta de Leopold Zimmerman
   pickablePJText: Detective
-  pickableText: Tarjeta de Leopold Zimmerman
-  description: "\"Leopold Zimmerman, abogado especializado en divorcios y deudas\"...
+  pickableText: "\"Leopold Zimmerman, abogado especializado en divorcios y deudas\"...
     Hmmm... Parece ser de Roger... \xBFPodr\xEDa ser que la relaci\xF3n profesional
     de Victor y Roger no estuviera en sus mejores momentos? \xBFPorqu\xE9 buscar\xEDa
     un nuevo abogado?"
+  description: 
   clueName: Alguien en la familia Ackroyd buscaba un nuevo abogado.
   audioManager: {fileID: 0}

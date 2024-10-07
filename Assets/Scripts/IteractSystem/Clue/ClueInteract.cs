@@ -30,7 +30,6 @@ public class ClueInteract : BasicClueInteract
 
     public override void Interact()
     {
-
         boxClueMessageManager2.SendMessage(base.pickablePJText, Color.white, base.pickableText, Emotions.None);    
         dialogManager.SetEvidenceStatus(gameObject.name, true); // Pongo en true para avisar que el player recogio la evidencia
         _listManager.AddText($"({description})");
@@ -40,6 +39,5 @@ public class ClueInteract : BasicClueInteract
         print("pick");
         //gameObject.SetActive(false);
         Destroy(gameObject);
-        
     }
 }
