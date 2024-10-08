@@ -111,10 +111,10 @@
                     "evidence":{
                         "hasEvidence": true,
                         "evidenceName": "JamesMoriartyKey",
-                        "requiredMessage": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?"
+                        "requiredMessage": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime! ¿Pregunta cómo pude perderla? Ah... es realmente embarazoso, detective, pero el médico me ha dado unas pastillas para dormir que debo tomar de noche... ¡me dejan exhausto! ¡Y pensar que fui boxeador en mi juventud, no podría ni atrapar un caracol luego de esas pastillas! Supongo que estaba un poco atontado y... ¡las llaves deben haberse caído!"
 
                     },
-                    "message": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime! ¿Pregunta cómo pude perderla? Ah... es realmente embarazoso, detective, pero el médico me ha dado unas pastillas para dormir que debo tomar de noche... ¡me dejan exhausto! ¡Y pensar que fui boxeador en mi juventud, no podría ni atrapar un caracol luego de esas pastillas! Supongo que estaba un poco atontado y... ¡las llaves deben haberse caído!",
+                    "message": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?",
                     "emotion": "Talking"
                 }
             ]
@@ -135,7 +135,7 @@
                 },
                 {
                     "talked": false,
-                    "isLoopingMessage" : true,
+                    "isLoopingMessage" : false,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "Pickeable",
@@ -151,7 +151,7 @@
                     "evidence":{
                         "hasEvidence": true,
                         "evidenceName": "Reloj dorado",
-                        "requiredMessage": "..."
+                        "requiredMessage": "¿El nombre de la amante de Roger? Ah... usted es de esos a los que les gusta poner el dedo en la llaga... Era... ¿Catherine? ¿Camille? No lo recuerdo bien.."
 
                     },
                     "message": "¿Disculpe? ¿Qué dice? Si, yo soy V, quien le hizo ése regalo a Roger, ¿pero qué tiene de extraño? ¿No puede un viejo amigo regalar algo de vez en cuando?",

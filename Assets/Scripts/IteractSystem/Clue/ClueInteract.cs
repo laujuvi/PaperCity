@@ -37,7 +37,12 @@ public class ClueInteract : BasicClueInteract
         //audioManager.PlaySFX(audioManager.clueFound);
         AudioManager.instance.PlaySoundFX(AudioManager.instance.clueFound, transform, 1f);
         print("pick");
-        //gameObject.SetActive(false);
-        Destroy(gameObject);
+
+        //acá hay un problema, porque si destruimos
+        //la evidencia el dialogue manager
+        //pierde la referencia
+
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }
