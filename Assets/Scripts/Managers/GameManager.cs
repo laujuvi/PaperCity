@@ -5,15 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     /* MANAGERS */
+    [Header("MANAGERS")]
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
 
-    /* WAIT */
+    /* PLAYER */
+    [Header("PLAYER")]
     public PlayerInteract _playerInteract;
     public PlayerController _playerController;
 
+    /* EVIDENCE */
+    [Header("EVIDENCE")]
+    [SerializeField] private GameObject[] evidenceArray;
+
     /* EVIDENCE MONITORING */
+    [Header("EVIDENCE MONITORING")]
     [SerializeField] private int minEvidence = 1;
     [SerializeField] private int maxEvidence = 2;
     [SerializeField] private GameObject guiltyNPC;
@@ -22,16 +29,17 @@ public class GameManager : MonoBehaviour
     public int currentEvidence = 0;
     public int totalEvidence = 0;
 
-    /* NPC IMFO */
-    private bool isNPCTalking = false;
-    private string lastNPCName;
-
+    /* UI */
+    [Header("UI")]
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
-
     [SerializeField] private GameObject lenIcon;
 
     public List<GameObject> npcInteracted = new List<GameObject>();
+
+    /* NPC INFO */
+    private bool isNPCTalking = false;
+    private string lastNPCName;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -48,6 +56,9 @@ public class GameManager : MonoBehaviour
 
         uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
         HideCursor();
+
+        dialogManager.SetMinEvidenceForPhase2(minEvidence);
+        dialogManager.SetMinEvidenceForPhaseFinal(maxEvidence);
 
     }
 
