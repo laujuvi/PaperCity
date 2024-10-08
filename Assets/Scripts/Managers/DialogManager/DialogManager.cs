@@ -53,8 +53,8 @@ public class DialogManager : MonoBehaviour
 
     /*EVIDENCE*/
     [SerializeField] private GameObject[] evidenceArray;
-    [SerializeField] private int minEvidenceForPhase2 = 1;
-    [SerializeField] private int minEvidenceForPhaseFinal = 2;
+    private int minEvidenceForPhase2 = 1;
+    private int minEvidenceForPhaseFinal = 2;
     private int totalEvidence;
 
 
@@ -219,5 +219,15 @@ public class DialogManager : MonoBehaviour
     public int GetTotalEvidence()
     {
         return totalEvidence;
+    }
+
+    public void SetMinEvidenceForPhase2(int value)
+    {
+        minEvidenceForPhase2 = value;
+    }
+
+    public void SetMinEvidenceForPhaseFinal(int value)
+    {
+        minEvidenceForPhaseFinal = value;
     }
 }
