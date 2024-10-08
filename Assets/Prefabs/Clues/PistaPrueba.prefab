@@ -45,10 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: Pista prueba
+  pickablePJText: 
   pickableText: "Hmmm... Una carta que deja claro que Bruce Ackroyd perder\xE1 su
     herencia... Esto puede haber sido motivo de una acalorada discusi\xF3n..."
   isFakeEvidence: 0
+  description: 
+  clueName: 
+  audioManager: {fileID: 0}
 --- !u!1 &3807033309302061030
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +68,7 @@ GameObject:
   - component: {fileID: 6584752715198054160}
   m_Layer: 6
   m_Name: PistaPrueba
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
