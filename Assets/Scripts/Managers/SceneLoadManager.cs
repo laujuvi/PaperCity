@@ -1,13 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class SceneLoadManager : MonoBehaviour
 {
+    public static SceneLoadManager Instance { get; private set; }
+
     [SerializeField] private float transitionTime = 1f;
     private Animator animator;
-
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -16,15 +31,7 @@ public class SceneLoadManager : MonoBehaviour
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if(nextSceneIndex != 4)
-        {
-            StartCoroutine(SceneLoad(nextSceneIndex));
-        }
-        else
-        {
-            StartCoroutine(SceneLoad(0));
-        }
-        
+        StartCoroutine (SceneLoad(nextSceneIndex));
     }
     public IEnumerator SceneLoad(int sceneIndex)
     {

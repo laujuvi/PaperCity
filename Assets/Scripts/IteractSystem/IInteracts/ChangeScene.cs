@@ -3,10 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour, IInteractable
 {
-    [SerializeField] private SceneLoadManager sceneLoadManager;
     [SerializeField] private int sceneToLoad;
     [SerializeField] private string interactText;
-    [SerializeField] private bool canChangeScene;
+    private bool canChangeScene;
 
     [Header("Cinematic")]
     [SerializeField] private float changeSceneTime;
@@ -44,19 +43,18 @@ public class ChangeScene : MonoBehaviour, IInteractable
     {
         if (canChangeScene)
         {
-            //SceneManager.LoadScene(sceneToLoad);
-            sceneLoadManager.LoadNextScene();
+            SceneManager.LoadScene(sceneToLoad);
         }
+        
     }
+
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            changeSceneTime -= Time.deltaTime;
-            if (changeSceneTime <= 0)
-            {
-                sceneLoadManager.LoadNextScene();
-            }
-        }
+        //changeSceneTime -= Time.deltaTime;
+        //if (changeSceneTime < 0 ) 
+        //{
+        //    SceneManager.LoadScene(sceneName);
+        //}
     }
+
 }
