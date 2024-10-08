@@ -16,6 +16,7 @@ public class InGameMenu : MonoBehaviour
     public delegate void SensitivityChangedHandler();
     public static event SensitivityChangedHandler OnSensitivityChanged;
 
+    [SerializeField] private SceneLoadManager sceneLoadManager;
     private bool isPaused = false;
     private void Start()
     {
@@ -78,7 +79,7 @@ public class InGameMenu : MonoBehaviour
             Destroy(existingGameSettings.gameObject);
         }
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        sceneLoadManager.LoadNextScene();
     }
     public void QuitGame()
     {
