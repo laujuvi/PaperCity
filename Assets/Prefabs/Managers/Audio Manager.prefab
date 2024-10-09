@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606e84422f3148d45a649f355231605c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFX: {fileID: 0}
+  soundFX: {fileID: 190538458815671687}
   clueFound: {fileID: 8300000, guid: 46e8a476a352ddb449d295705bf40fb9, type: 3}
   clueFound2: {fileID: 8300000, guid: 2b080f3d6aaea0d4c8e44f70733c6d71, type: 3}
   doorOpening: {fileID: 8300000, guid: 81bfde835c15b754f9f60a0dbe592ec4, type: 3}
