@@ -22,9 +22,8 @@ public class GameManager : MonoBehaviour
     /* EVIDENCE MONITORING */
     [Header("EVIDENCE MONITORING")]
     [SerializeField] private int minEvidence = 1;
-    [SerializeField] private int maxEvidence = 2;
-    [SerializeField] private GameObject guiltyNPC;
     [SerializeField] private string intermediateMessage;
+    [SerializeField] private int maxEvidence = 2;
     [SerializeField] private string definitiveMessage;
     public int currentEvidence = 0;
     public int totalEvidence = 0;
@@ -35,6 +34,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject lose;
     [SerializeField] private GameObject lenIcon;
 
+    /* NPC */
+    [Header("NPC")]
+    [SerializeField] private GameObject guiltyNPC;
     public List<GameObject> npcInteracted = new List<GameObject>();
 
     /* NPC INFO */
@@ -59,6 +61,9 @@ public class GameManager : MonoBehaviour
 
         dialogManager.SetMinEvidenceForPhase2(minEvidence);
         dialogManager.SetMinEvidenceForPhaseFinal(maxEvidence);
+        dialogManager.SetEvidenceArray(evidenceArray);
+
+        maxEvidence = evidenceArray.Length;
 
     }
 
