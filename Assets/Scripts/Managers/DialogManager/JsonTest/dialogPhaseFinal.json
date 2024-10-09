@@ -35,6 +35,23 @@
             ]
         },
         {
+            "name": "Victor Howar",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "¿Cómo osa culparme del asesinato de Roger? ¿Ha visto usted toda la evidencia siquiera? Patético... realmente patético...",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+        {
                 "name": "James Moriarty",
                 "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
                 "messages": [

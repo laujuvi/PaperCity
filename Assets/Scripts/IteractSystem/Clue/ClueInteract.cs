@@ -30,7 +30,6 @@ public class ClueInteract : BasicClueInteract
 
     public override void Interact()
     {
-
         boxClueMessageManager2.SendMessage(base.pickablePJText, Color.white, base.pickableText, Emotions.None);    
         dialogManager.SetEvidenceStatus(gameObject.name, true); // Pongo en true para avisar que el player recogio la evidencia
         _listManager.AddText($"({description})");
@@ -38,8 +37,12 @@ public class ClueInteract : BasicClueInteract
         //audioManager.PlaySFX(audioManager.clueFound);
         AudioManager.instance.PlaySoundFX(AudioManager.instance.clueFound, transform, 1f);
         print("pick");
-        //gameObject.SetActive(false);
-        Destroy(gameObject);
-        
+
+        //acá hay un problema, porque si destruimos
+        //la evidencia el dialogue manager
+        //pierde la referencia
+
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }

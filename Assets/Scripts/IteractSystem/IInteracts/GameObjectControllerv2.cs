@@ -10,6 +10,7 @@ public class GameObjectControllerv2 : MonoBehaviour
     {
         if (!objectsToManage.ContainsKey(identifier))
         {
+            
             objectsToManage.Add(identifier, obj);
         }
     }
@@ -17,9 +18,11 @@ public class GameObjectControllerv2 : MonoBehaviour
     {
         if (objectsToManage.ContainsKey(identifier))
         {
+            print("a ver");
             objectsToManage[identifier].SetActive(true);
         }
     }
+
     public void DeactivateObject(string identifier)
     {
         if (objectsToManage.ContainsKey(identifier))

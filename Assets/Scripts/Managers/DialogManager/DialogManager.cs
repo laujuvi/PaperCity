@@ -137,11 +137,11 @@ public class DialogManager : MonoBehaviour
                                 gameManager.SetNPCName(dialog.name);
                                 return;
                             }
-
-                            // El objeto no existe en evidenceArray o no esta en true
-                            Debug.LogWarning("La evidencia del JSON con el nombre '" + message.evidence.evidenceName + "' no se encontro en evidenceArray de DialogManager");
-                            return;
                         }
+
+                        // El objeto no existe en evidenceArray o no esta en true
+                        Debug.LogWarning("La evidencia del JSON con el nombre '" + message.evidence.evidenceName + "' no se encontro en evidenceArray de DialogManager");
+                        return;
                     }
                 }
 
