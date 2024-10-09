@@ -28131,12 +28131,23 @@ MonoBehaviour:
   uIManager: {fileID: 2000642660}
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
+  evidenceArray:
+  - {fileID: 1918480313}
+  - {fileID: 715876517}
+  - {fileID: 491428463}
+  - {fileID: 613010600}
+  - {fileID: 2127866130}
+  - {fileID: 1041764196710329083}
+  - {fileID: 1404351227}
+  - {fileID: 1164957702}
+  - {fileID: 1910776187}
+  - {fileID: 2070363017}
+  - {fileID: 898669366}
   minEvidence: 7
-  maxEvidence: 10
-  guiltyNPC: {fileID: 1918426441}
   intermediateMessage: "Creo que ya tengo suficientes pistas para acusar a alguien
     y ver si mi instinto detectivesco sigue intacto... O podr\xEDa asegurarme y seguir
     buscando un poco m\xE1s..."
+  maxEvidence: 10
   definitiveMessage: "Bien. No creo que haya m\xE1s pistas. Esto debe bastarme para
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
@@ -28144,6 +28155,7 @@ MonoBehaviour:
   win: {fileID: 235556172}
   lose: {fileID: 562622674}
   lenIcon: {fileID: 532678003}
+  guiltyNPC: {fileID: 1918426441}
   npcInteracted: []
 --- !u!114 &1859243080
 MonoBehaviour:
