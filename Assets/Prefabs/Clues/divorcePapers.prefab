@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -66,6 +70,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3514156454767728363}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2912811645664925442}
   m_SourcePrefab: {fileID: 100100000, guid: bfb2e69463310934ba464e884b5ba8b6, type: 3}
 --- !u!1 &8587400930909946185 stripped
 GameObject:
@@ -112,3 +119,21 @@ MonoBehaviour:
   description: "Roger quer\xEDa divorciarse de Layla."
   clueName: 
   audioManager: {fileID: 0}
+--- !u!114 &2912811645664925442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587400930909946185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

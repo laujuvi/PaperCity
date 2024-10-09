@@ -12,14 +12,15 @@ GameObject:
   - component: {fileID: 6119781192393261501}
   - component: {fileID: 7932202780110110765}
   - component: {fileID: 6352135555373500785}
-  - component: {fileID: 3711861816761378470}
+  - component: {fileID: 2861381270298968809}
+  - component: {fileID: 3116835066870344958}
   m_Layer: 6
   m_Name: JamesMoriartyKey
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8751486604780128704
 Transform:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.6077168}
   m_Center: {x: 0, y: 0, z: 0.30385834}
---- !u!114 &3711861816761378470
+--- !u!114 &2861381270298968809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,16 +116,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 952779298959657592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
   interactText: "Llave de la sala de pel\xEDculas"
-  pickablePJText: Detective
+  pickablePJText: 
   pickableText: "James es el due\xF1o del \xFAnico cine de la ciudad. No conozco
     persona que ame m\xE1s su trabajo que \xE9l. \xBFC\xF3mo puede ser que las haya
     perdido? Mejor se las devuelvo r\xE1pido."
-  description: 
+  isFakeEvidence: 1
+  description: "James dej\xF3 caer su llave..."
   clueName: 
   audioManager: {fileID: 0}
-  isMoriartyKey: 1
-  controller: {fileID: 0}
+--- !u!114 &3116835066870344958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952779298959657592}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

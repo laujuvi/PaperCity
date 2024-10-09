@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8591288771272830397}
   - component: {fileID: 5779112763846614092}
   - component: {fileID: 5639676970350506096}
+  - component: {fileID: 1119691397330873906}
   m_Layer: 6
   m_Name: Pesa
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,6 +74,24 @@ MonoBehaviour:
   description: Alguien de la casa es muy fuerte.
   clueName: 
   audioManager: {fileID: 0}
+--- !u!114 &1119691397330873906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046526146615835529}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1459224021082176993
 GameObject:
   m_ObjectHideFlags: 0
