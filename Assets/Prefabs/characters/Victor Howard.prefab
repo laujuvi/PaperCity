@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &952779298959657592
+--- !u!1 &6210850199217829074
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8751486604780128704}
-  - component: {fileID: 6119781192393261501}
-  - component: {fileID: 7932202780110110765}
-  - component: {fileID: 6352135555373500785}
-  - component: {fileID: 3711861816761378470}
-  m_Layer: 6
-  m_Name: JamesMoriartyKey
+  - component: {fileID: 7048582092498274160}
+  - component: {fileID: 3286877377856211082}
+  - component: {fileID: 1341798256435208899}
+  - component: {fileID: 8392783363516746077}
+  m_Layer: 3
+  m_Name: Victor Howard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8751486604780128704
+  m_IsActive: 1
+--- !u!4 &7048582092498274160
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
+  m_GameObject: {fileID: 6210850199217829074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7594643, y: -0.52443695, z: -2.616087}
-  m_LocalScale: {x: 0.34086, y: 0.1, z: 0.14503}
+  m_LocalPosition: {x: 0, y: -1.94, z: -3.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6119781192393261501
+--- !u!33 &3286877377856211082
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
+  m_GameObject: {fileID: 6210850199217829074}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7932202780110110765
+--- !u!23 &1341798256435208899
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
+  m_GameObject: {fileID: 6210850199217829074}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6352135555373500785
+--- !u!65 &8392783363516746077
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
+  m_GameObject: {fileID: 6210850199217829074}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -104,27 +103,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1.6077168}
-  m_Center: {x: 0, y: 0, z: 0.30385834}
---- !u!114 &3711861816761378470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: "Llave de la sala de pel\xEDculas"
-  pickablePJText: Detective
-  pickableText: "James es el due\xF1o del \xFAnico cine de la ciudad. No conozco
-    persona que ame m\xE1s su trabajo que \xE9l. \xBFC\xF3mo puede ser que las haya
-    perdido? Mejor se las devuelvo r\xE1pido."
-  description: 
-  clueName: 
-  audioManager: {fileID: 0}
-  isMoriartyKey: 1
-  controller: {fileID: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
