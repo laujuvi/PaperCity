@@ -32,7 +32,7 @@ public class BoxMessageManager : MonoBehaviour
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
     private bool interruptWait = false; // Revisar si lo seguimos usando
-    private int maxMessageLength = 381; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
+    private int maxMessageLength = 280; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
     //private void Start()
