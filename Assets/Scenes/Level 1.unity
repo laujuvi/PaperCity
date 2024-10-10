@@ -11064,8 +11064,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Roger Ackroyd
   pickablePJText: Detective
-  pickableText: "La escena del crimen, Roger fue asesinado en su cama y no por un
-    profesional. Fue un crimen hecho con odio, pero no con demasiada premeditaci\xF3n."
+  pickableText: "La escena del crimen. Roger fue asesinado en su estudio de 9 pu\xF1aladas
+    y no por un profesional. Fue un crimen hecho con odio, pero no con demasiada
+    premeditaci\xF3n."
   description: Roger fue asesinado con un cuchillo de cocina
   clueName: 
   audioManager: {fileID: 0}
@@ -29941,6 +29942,10 @@ PrefabInstance:
     - target: {fileID: 6315073611139424551, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_Name
       value: Hairball-Clue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315073611139424551, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6315073611139424551, guid: 54c99a8a253c4b942a0ee292f7a21085, type: 3}
       propertyPath: m_TagString
