@@ -56,6 +56,7 @@
                 },
                 {
                     "talked": false,
+ 	 "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -63,18 +64,6 @@
 
                     },
                     "message": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?",
-                    "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "isLoopingMessage" : true,
-                    "evidence":{
-                        "hasEvidence": true,
-                        "evidenceName": "Pickeable",
-                        "requiredMessage": "I need Pickeable item"
-
-                    },
-                    "message": "Thank you!",
                     "emotion": "Talking"
                 }
             ]
