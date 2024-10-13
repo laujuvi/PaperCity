@@ -56,6 +56,7 @@
                 },
                 {
                     "talked": false,
+ 	 "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
@@ -63,18 +64,6 @@
 
                     },
                     "message": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?",
-                    "emotion": "Talking"
-                },
-                {
-                    "talked": false,
-                    "isLoopingMessage" : true,
-                    "evidence":{
-                        "hasEvidence": true,
-                        "evidenceName": "Pickeable",
-                        "requiredMessage": "I need Pickeable item"
-
-                    },
-                    "message": "Thank you!",
                     "emotion": "Talking"
                 }
             ]
@@ -91,7 +80,18 @@
                         "requiredMessage": ""
 
                     },
-                    "message": "Oh detective, esto es terrible, terrible. Tanta sangre. Un crimen atroz. Pobre Roger. Yo andaba por aquí cerca por si Layla... quiero decir la señorita Ackroyd necesitaba algo, como sabrá, siempre fuimos grandes amigos y últimamente la veía sumamente tribulada estos días. ¡No es que la siga ni nada parecido! Es simplemente que sé reconocer a una mujer preocupada... Probablemente tenga que ver con la infidelidad de Roger. ¿Puede usted creerlo? ¿Serle infiel a una mujer así? En fin, espero que encuentre y encarcele al responsable, detective. Estaré aquí por si Layla me necesita... quiero decir, la señorita Ackroyd.",
+                    "message": "Este es un crimen atroz. Pobre Roger. Yo andaba por aquí por si Layla necesitaba algo. Siempre fuimos grandes amigos y últimamente la veía sumamente tribulada. Verá, detective, sé reconocer a una mujer preocupada...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Tal vez la pesadumbre de Layla tenga que ver con la infidelidad de Roger. ¿Puede usted creerlo? ¿Serle infiel a una mujer así? En fin, espero que encuentre al responsable, detective...",
                     "emotion": "Talking"
                 },
                 {
