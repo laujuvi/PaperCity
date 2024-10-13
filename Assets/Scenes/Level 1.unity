@@ -5321,6 +5321,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 726989142277599708, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+      propertyPath: lenIcon
+      value: 
+      objectReference: {fileID: 532678003}
+    - target: {fileID: 726989142277599708, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
       propertyPath: npcs.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5360,6 +5364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ======GUILTY ROOM======
       objectReference: {fileID: 0}
+    - target: {fileID: 1684786121344587674, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+      propertyPath: lenIcon
+      value: 
+      objectReference: {fileID: 532678003}
     - target: {fileID: 1684786121344587674, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
       propertyPath: npcs.Array.size
       value: 3

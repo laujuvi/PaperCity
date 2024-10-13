@@ -1,19 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using UnityEditor;
 using UnityEngine;
 
 public class GuiltyRoom : MonoBehaviour, IInteractable
 {
+
+    /* Guilty Room Sttings */
+    [Header ("GuiltyRoom Settings\n")] 
+
     [SerializeField] private string interactText;
     [SerializeField] private List<NPCInteractable> npcs = new List<NPCInteractable>();
     [SerializeField] private List<Transform> tpPoints = new List<Transform>();
     [SerializeField] private Transform playerTransform;
     [SerializeField] private int minClue = 10;
-    [SerializeField] private GameObject GuiltyRoomUIPanel;
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private GameObject playerController;
     [SerializeField] private CharacterController characterController;
+
+    [Header ("GuiltyRoom UI Settings\n")]
+
+    [SerializeField] private GameObject GuiltyRoomUIPanel;
+    private bool isPaused;
+    public GameObject lenIcon;
 
     private void Start()
     {
@@ -25,6 +35,7 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
         {
             GuiltyRoomUIPanel.SetActive(true);
             GameManager.Instance.ShowCursor();
+            PauseGame();
         }
         else 
         {
@@ -48,12 +59,27 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
         }
         GuiltyRoomUIPanel.gameObject.SetActive(false);  
         GameManager.Instance.HideCursor();
+        ResumeGame();
     }
 
     public void No()
     {
         GuiltyRoomUIPanel.gameObject.SetActive(false);
         GameManager.Instance.HideCursor();
+        ResumeGame();
+    }
+
+    public void ResumeGame()
+    {
+        lenIcon.SetActive(true);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+    public void PauseGame()
+    {
+        lenIcon.SetActive(false);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
     public string GetInteractText()
