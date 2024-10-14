@@ -12216,13 +12216,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2810295946927877721, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182637587506232053, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 3182637587506232053, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Size.y
-      value: 0.0011907904
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3182637587506232053, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Size.z
-      value: 0.0019466608
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3182637587506232053, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Center.x
@@ -12234,11 +12242,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182637587506232053, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Center.z
-      value: 0.016841954
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3246906088793835145, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246906088793835145, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Name
