@@ -122,8 +122,7 @@ MonoBehaviour:
   pickablePJText: Detective
   pickableText: "El testamento de Roger. Aqu\xED nombra a \"Christina\", su secretaria
     y posible amante. Esto es extra\xF1o, le deja muy poco a su esposa y a su hijo.
-    Una decisi\xF3n un poco impulsiva... Tal vez podr\xEDa hablar con el abogado
-    de esto..."
+    Una decisi\xF3n un poco impulsiva..."
   description: "El testamento de Roger podr\xEDa haber hecho enojar a mucha gente."
   clueName: Testamento de Roger
   audioManager: {fileID: 0}

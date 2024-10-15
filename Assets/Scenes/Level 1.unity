@@ -3337,6 +3337,12 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}
+    - target: {fileID: 500486923357060894, guid: b2b395acb44cf9b4a866084c17503ccf, type: 3}
+      propertyPath: pickableText
+      value: "El testamento de Roger. Aqu\xED nombra a \"Christina\", su secretaria
+        y posible amante. Esto es extra\xF1o, le deja muy poco a su esposa y a su
+        hijo. Una decisi\xF3n un poco impulsiva..."
+      objectReference: {fileID: 0}
     - target: {fileID: 511611854743582533, guid: b2b395acb44cf9b4a866084c17503ccf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2446632
