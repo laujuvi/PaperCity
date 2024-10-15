@@ -65,11 +65,13 @@ public class InGameMenu : MonoBehaviour
     {
         menuUI.SetActive(false);
         options.SetActive(true);
+        print("options");
     }
     public void GoBackToMenu()
     {
         menuUI.SetActive(true);
         options.SetActive(false);
+        print("menu");
     }
     public void GoToMenu()
     {
@@ -84,5 +86,6 @@ public class InGameMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+        print("quit");
     }
 }
