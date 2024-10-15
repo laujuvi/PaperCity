@@ -118,10 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Testamento de Roger
   pickablePJText: Detective
-  pickableText: "El testamento de Roger. Una persona con tanto dinero debe haberlo
-    hecho hace bastante, sin embargo, aqu\xED nombra a \"Christina\", su secretaria
+  pickableText: "El testamento de Roger. Aqu\xED nombra a \"Christina\", su secretaria
     y posible amante. Esto es extra\xF1o, le deja muy poco a su esposa y a su hijo.
     Una decisi\xF3n un poco impulsiva... Tal vez podr\xEDa hablar con el abogado
     de esto..."
