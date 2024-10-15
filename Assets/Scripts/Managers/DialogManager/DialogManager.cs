@@ -52,11 +52,10 @@ public class DialogManager : MonoBehaviour
     private DialoguesWrapper dialoguesPhaseFinalWrapper;
 
     /*EVIDENCE*/
-    [SerializeField] private GameObject[] evidenceArray;
-    [SerializeField] private int minEvidenceForPhase2 = 1;
-    [SerializeField] private int minEvidenceForPhaseFinal = 2;
+    private GameObject[] evidenceArray;
+    private int minEvidenceForPhase2 = 1;
+    private int minEvidenceForPhaseFinal = 2;
     private int totalEvidence;
-
 
     private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
 
@@ -75,12 +74,6 @@ public class DialogManager : MonoBehaviour
             Debug.LogError("Dialogues JSON not assigned.");
         }
 
-        // Agregar los objetos al diccionario evidenceStatus
-        foreach (GameObject evidenceObject in evidenceArray)
-        {
-            evidenceStatus.Add(evidenceObject.name, false);
-            totalEvidence++;
-        }
     }
 
     private void LoadDialoguesFromJson()
@@ -219,5 +212,26 @@ public class DialogManager : MonoBehaviour
     public int GetTotalEvidence()
     {
         return totalEvidence;
+    }
+
+    public void SetMinEvidenceForPhase2(int value)
+    {
+        minEvidenceForPhase2 = value;
+    }
+
+    public void SetMinEvidenceForPhaseFinal(int value)
+    {
+        minEvidenceForPhaseFinal = value;
+    }
+    public void SetEvidenceArray(GameObject[] evidences)
+    {
+        evidenceArray = evidences;
+
+        // Agregar los objetos al diccionario evidenceStatus
+        foreach (GameObject evidenceObject in evidenceArray)
+        {
+            evidenceStatus.Add(evidenceObject.name, false);
+            totalEvidence++;
+        }
     }
 }
