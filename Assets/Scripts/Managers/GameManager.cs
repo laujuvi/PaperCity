@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
         dialogManager.SetEvidenceArray(evidenceArray);
 
         maxEvidence = evidenceArray.Length;
-
     }
 
     private void Update()
