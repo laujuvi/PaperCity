@@ -1,60 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using UnityEditor;
 using UnityEngine;
 
 public class GuiltyRoom : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
-    [SerializeField] private List<NPCInteractable> npcs = new List<NPCInteractable>();
-    [SerializeField] private List<Transform> tpPoints = new List<Transform>();
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private int minClue = 10;
-    [SerializeField] private GameObject GuiltyRoomUIPanel;
-    [SerializeField] private BoxMessageManager boxMessageManager;
-    [SerializeField] private GameObject playerController;
-    [SerializeField] private CharacterController characterController;
-
+    [SerializeField] private GuiltyRoomManager guiltyRoomManager;
     private void Start()
     {
-        boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
+        guiltyRoomManager = FindObjectOfType<GuiltyRoomManager>();
     }
     public void Interact()
     {
-        if (GameManager.Instance.currentEvidence >= minClue)
+        if (GameManager.Instance.currentEvidence >= guiltyRoomManager.minClue)
         {
-            GuiltyRoomUIPanel.SetActive(true);
+            guiltyRoomManager.GuiltyRoomUIPanel.SetActive(true);
             GameManager.Instance.ShowCursor();
+            guiltyRoomManager.PauseGame();
         }
         else 
         {
-            boxMessageManager.SendMessage("Detective", Color.white, "I still need more clues", Emotions.None);
+            guiltyRoomManager.boxMessageManager.SendMessage("Detective", Color.white, "I still need more clues", Emotions.None);
         }
    
     }
 
-    public void Yes()
-    {
-        if (playerController != null)
-        {
-            characterController.enabled = false;
-            playerController.gameObject.transform.position = playerTransform.position;
-            characterController.enabled = true;
-        }
-
-        for (int i = 0; i < npcs.Count; i++)
-        {
-            npcs[i].transform.position = tpPoints[i].transform.position;
-        }
-        GuiltyRoomUIPanel.gameObject.SetActive(false);  
-        GameManager.Instance.HideCursor();
-    }
-
-    public void No()
-    {
-        GuiltyRoomUIPanel.gameObject.SetActive(false);
-        GameManager.Instance.HideCursor();
-    }
+   
 
     public string GetInteractText()
     {
