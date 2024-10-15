@@ -33,7 +33,7 @@ public class GuiltyRoomManager : MonoBehaviour
     {
         
     }
-    public void Yes()
+    public void GoToGuiltyRoomYes()
     {
         if (playerController != null)
         {
@@ -51,7 +51,7 @@ public class GuiltyRoomManager : MonoBehaviour
         ResumeGame();
     }
 
-    public void No()
+    public void GoToGuiltyRoomNo()
     {
         GuiltyRoomUIPanel.gameObject.SetActive(false);
         GameManager.Instance.HideCursor();
