@@ -895,6 +895,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5814532510719412461, guid: e47401a0f1152c24bb07a969fc403a6f, type: 3}
   m_PrefabInstance: {fileID: 1297301787}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &54877235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5736284267512382483, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+  m_PrefabInstance: {fileID: 365883423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &54877239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54877235}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &55676764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,7 +5798,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5736284267512382483, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 54877239}
+    - targetCorrespondingSourceObject: {fileID: 5873306303143404524, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109300191}
   m_SourcePrefab: {fileID: 100100000, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
 --- !u!4 &365883424 stripped
 Transform:
@@ -24900,6 +24929,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 532678003}
     - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
+      propertyPath: minClue
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
       propertyPath: npcs.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -26815,7 +26848,7 @@ MonoBehaviour:
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
   isPlayerInGuiltyRoom: 0
-  exitHouseMessage: Deberia salir de la casa para ir al cuarto de sospechosos.
+  exitHouseMessage: Anda a la salida
   evidenceArray:
   - {fileID: 1918480313}
   - {fileID: 715876517}
@@ -26845,7 +26878,8 @@ MonoBehaviour:
   lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
   npcInteracted: []
-  isNPCTalking: 0
+  leftExitDoor: {fileID: 54877235}
+  rightExitDoor: {fileID: 2109300187}
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29481,6 +29515,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725dc21d3ffb9ee40881c018409711ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2109300187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5873306303143404524, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+  m_PrefabInstance: {fileID: 365883423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2109300191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109300187}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2117292010
 GameObject:
   m_ObjectHideFlags: 0
