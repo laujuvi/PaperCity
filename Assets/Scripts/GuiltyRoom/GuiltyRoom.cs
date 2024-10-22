@@ -16,6 +16,7 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
     {
         if (GameManager.Instance.currentEvidence >= guiltyRoomManager.minClue)
         {
+            GameManager.Instance.isPlayerInGuiltyRoom = true;
             guiltyRoomManager.GuiltyRoomUIPanel.SetActive(true);
             GameManager.Instance.ShowCursor();
             guiltyRoomManager.PauseGame();

@@ -14,7 +14,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
-    private GameManager gameManager;
     
     [Header("ListManager")]
     private ListManager _listManager;
@@ -27,7 +26,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         dialogManager = FindObjectOfType<DialogManager>();
-        gameManager = FindObjectOfType<GameManager>();
         _listManager = FindObjectOfType<ListManager>();
         //clueName = gameObject.name;
     }
@@ -35,7 +33,11 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("NPC"))
         {
-            gameManager.DisablePlayerInputs();
+            if (!GameManager.Instance.isPlayerInGuiltyRoom && GameManager.Instance.currentEvidence >= GameManager.Instance.minEvidence) {
+                GameManager.Instance.isNPCTalking = true;
+                return;
+            } 
+            GameManager.Instance.DisablePlayerInputs();
             dialogManager.DisplayDialog(gameObject.name);
             if (gameObject.name == "James Moriarty")
             {
@@ -43,9 +45,9 @@ public class NPCInteractable : MonoBehaviour, IInteractable
                 jamesMoriartyKeyClue.CheckCountDialog(countDialog);
             }
             Debug.Log("INTERACTUASTE");
-            if (!gameManager.npcInteracted.Contains(gameObject))
+            if (!GameManager.Instance.npcInteracted.Contains(gameObject))
             {
-                gameManager.npcInteracted.Add(gameObject);
+                GameManager.Instance.npcInteracted.Add(gameObject);
             }
         }
         //} else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
