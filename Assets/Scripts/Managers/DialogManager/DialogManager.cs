@@ -62,8 +62,7 @@ public class DialogManager : MonoBehaviour
     private void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
-        gameManager = FindObjectOfType<GameManager>();
-        
+        gameManager = GameManager.Instance;
 
         if (dialoguesPhase1Json != null && dialoguesPhase2Json != null && dialoguesPhaseFinalJson != null)
         {
