@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7795,10 +7795,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7956919756574189296, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90ffdc7a34b2e184c8d8c8153f692c5e, type: 2}
+    - target: {fileID: -3347090507751969436, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85b7f7e4238933847b3238fdd551d65b, type: 2}
+    - target: {fileID: -1206874426333947015, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e754c974ad6d1c9439efb48f0b21cd3a, type: 2}
+    - target: {fileID: 102619987078012708, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85b7f7e4238933847b3238fdd551d65b, type: 2}
     - target: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_Name
       value: Breathing Idle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4695988177486085469, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90ffdc7a34b2e184c8d8c8153f692c5e, type: 2}
+    - target: {fileID: 5433269313094510252, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a41da3bedfc6c204b8322c7e3e9e59d9, type: 2}
+    - target: {fileID: 8743813690021804245, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85b7f7e4238933847b3238fdd551d65b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

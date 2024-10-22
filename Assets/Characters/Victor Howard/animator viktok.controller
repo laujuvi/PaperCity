@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 1d24681df64885240924d28000ff336f, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 1d24681df64885240924d28000ff336f, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -82,7 +82,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AnimatorControlerSRA_Acroyd
+  m_Name: animator viktok
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -112,7 +112,7 @@ AnimatorStateMachine:
     m_Position: {x: 260, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8749589996725271284}
-    m_Position: {x: 250, y: 180, z: 0}
+    m_Position: {x: 270, y: 180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
