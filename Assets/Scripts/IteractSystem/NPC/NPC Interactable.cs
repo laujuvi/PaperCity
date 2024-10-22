@@ -33,8 +33,9 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("NPC"))
         {
+            // Antes de avanzar con el dialogo se fija si no deberia mostrarse el mensaje de ir a la sala de interrogatorio
             if (!GameManager.Instance.isPlayerInGuiltyRoom && GameManager.Instance.currentEvidence >= GameManager.Instance.minEvidence) {
-                GameManager.Instance.isNPCTalking = true;
+                GameManager.Instance.CheckPlayerSituation();
                 return;
             } 
             GameManager.Instance.DisablePlayerInputs();
