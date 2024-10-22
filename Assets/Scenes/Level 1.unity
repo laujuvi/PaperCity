@@ -26814,6 +26814,8 @@ MonoBehaviour:
   uIManager: {fileID: 2000642660}
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
+  isPlayerInGuiltyRoom: 0
+  exitHouseMessage: Deberia salir de la casa para ir al cuarto de sospechosos.
   evidenceArray:
   - {fileID: 1918480313}
   - {fileID: 715876517}
@@ -26843,6 +26845,7 @@ MonoBehaviour:
   lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
   npcInteracted: []
+  isNPCTalking: 0
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
