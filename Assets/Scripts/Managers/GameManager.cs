@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [Header("PLAYER")]
     public PlayerInteract _playerInteract;
     public PlayerController _playerController;
+    public bool isPlayerInGuiltyRoom = false;
+    [SerializeField] private string exitHouseMessage;
 
     /* EVIDENCE */
     [Header("EVIDENCE")]
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     /* EVIDENCE MONITORING */
     [Header("EVIDENCE MONITORING")]
-    [SerializeField] private int minEvidence = 1;
+    [SerializeField] public int minEvidence = 1;
     [SerializeField] private string intermediateMessage;
     [SerializeField] private int maxEvidence = 2;
     [SerializeField] private string definitiveMessage;
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> npcInteracted = new List<GameObject>();
 
     /* NPC INFO */
-    private bool isNPCTalking = false;
+    public bool isNPCTalking = false;
     private string lastNPCName;
 
     public static GameManager Instance { get; private set; }
@@ -75,6 +77,13 @@ public class GameManager : MonoBehaviour
                 isNPCTalking = false;
                 return;
             }
+
+            if (!isPlayerInGuiltyRoom) { 
+                boxMessageManager.SendMessage("Detective", Color.white, exitHouseMessage, Emotions.None);
+                isNPCTalking = false;
+                return;
+            }
+
 
             if (!boxMessageManager.IsDisplayingMessage())
             {
