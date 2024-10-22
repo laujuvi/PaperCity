@@ -42,8 +42,12 @@ public class GameManager : MonoBehaviour
     public List<GameObject> npcInteracted = new List<GameObject>();
 
     /* NPC INFO */
-    public bool isNPCTalking = false;
     private string lastNPCName;
+
+    /* PUERTAS */
+    [Header("EXIT DOORS")]
+    [SerializeField] private GameObject leftExitDoor;
+    [SerializeField] private GameObject rightExitDoor;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -66,31 +70,6 @@ public class GameManager : MonoBehaviour
         dialogManager.SetEvidenceArray(evidenceArray);
 
         maxEvidence = evidenceArray.Length;
-    }
-
-    private void Update()
-    {
-        if (isNPCTalking)
-        {
-            if (currentEvidence < minEvidence)
-            {
-                isNPCTalking = false;
-                return;
-            }
-
-            if (!isPlayerInGuiltyRoom) { 
-                boxMessageManager.SendMessage("Detective", Color.white, exitHouseMessage, Emotions.None);
-                isNPCTalking = false;
-                return;
-            }
-
-
-            if (!boxMessageManager.IsDisplayingMessage())
-            {
-                CheckGuiltyNPC();
-                isNPCTalking = false;
-            }
-        }
     }
     public void HideCursor()
     {
@@ -167,7 +146,37 @@ public class GameManager : MonoBehaviour
     public void SetNPCName(string NPCName)
     {
         lastNPCName = NPCName;
-        isNPCTalking = true;
+        CheckPlayerSituation();
+    }
+
+    // Chequea el estado del juego para saber si tiene que seguir buscando pistas o ya puede acusar
+    public void CheckPlayerSituation()
+    {
+        // Si todavia no tiene el minimo de pistas no hace nada
+        if (currentEvidence < minEvidence)
+        {
+            return;
+        }
+
+        // Si ya tiene el minimo de pistas pero no esta en la sala de acusacion entonces avisa que tiene que salir de la casa
+        if (!isPlayerInGuiltyRoom)
+        {
+            boxMessageManager.SendMessage("Detective", Color.white, exitHouseMessage, Emotions.None);
+            enableDisableOutlineDoors(true);
+            return;
+        }
+
+        // Si ya esta listo para acusar se busca al culpable
+        if (!boxMessageManager.IsDisplayingMessage())
+        {
+            CheckGuiltyNPC();
+        }
+    }
+
+    public void enableDisableOutlineDoors(bool state)
+    {
+        leftExitDoor.gameObject.GetComponent<Outline>().enabled = state;
+        rightExitDoor.gameObject.GetComponent<Outline>().enabled = state;
     }
 
 }
