@@ -161,4 +161,9 @@ public class GameManager : MonoBehaviour
         isNPCTalking = true;
     }
 
+    public int GetMinEvidence()
+    {
+        return minEvidence;
+    }
+
 }

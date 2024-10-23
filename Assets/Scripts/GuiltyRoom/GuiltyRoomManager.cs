@@ -15,7 +15,7 @@ public class GuiltyRoomManager : MonoBehaviour
     [SerializeField] private GameObject playerController;
     [SerializeField] private CharacterController characterController;
     [SerializeField] public BoxMessageManager boxMessageManager;
-    [SerializeField] public int minClue = 10;
+    [SerializeField] public int minClue;
 
     [Header("GuiltyRoom UI Settings\n")]
 
@@ -26,6 +26,7 @@ public class GuiltyRoomManager : MonoBehaviour
     void Start()
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
+        minClue = GameManager.Instance.GetMinEvidence();
     }
 
     // Update is called once per frame
