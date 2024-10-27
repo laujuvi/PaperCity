@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -894,42 +894,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 45978129496896010, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 161258466648549141, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 793322454429571162, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 793322454429571162, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1965444154487279352, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2700262537977044686, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3438033153605972248, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _playerInteract
       value: 
       objectReference: {fileID: 1781193059}
-    - target: {fileID: 4062590803733643594, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
@@ -969,10 +937,6 @@ PrefabInstance:
     - target: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5795464523618858731, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6050622800925407181, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_Name
@@ -2054,6 +2018,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1624038204045514190, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717958784052133425, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3966601407847142831, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
       propertyPath: m_Name
       value: Audio Manager
@@ -4040,7 +4012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b304b78676a530b418432120d0bcc782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: Grab Book
+  interactText: Libreta detectivesca
   ObjectName: 
 --- !u!1 &6935952043259570177
 GameObject:
@@ -4074,16 +4046,25 @@ MonoBehaviour:
   boxMessageManager: {fileID: 127049848}
   PJName: Detective
   lines:
-  - Finaly back in this old office
-  - Press (A-S-D-W) to move
-  - Press (Ctrl) to Crouch
-  - 'Press (V) to look up '
-  - Press (Shift) to Run
-  - Press (L) to open Log Menu
-  - Press (Left Click) to interact with objects
+  - "Hac\xEDa mucho no recib\xEDa una llamada telef\xF3nica..."
+  - Parece que es hora de volver a jugar al detective.
+  - "Pero, \xBFrecuerdo realmente c\xF3mo era esto?"
+  - Creo que puedo moverme con W A S D...
+  - "Si una pista est\xE1 muy debajo de mi campo de visi\xF3n creo que puedo agacharme
+    con CTRL..."
+  - "...pero si est\xE1 muy arriba deber\xEDa poder ponerme en puntas de pie con
+    V"
+  - "Si tuviera que huir de un tiroteo (dios no lo permita) podr\xEDa correr con
+    SHIFT."
+  - "Mi memoria maltrecha por a\xF1os de abuso de alcohol ya no es lo que era...
+    Si no recuerdo alguna conclusi\xF3n deber\xEDa poder acceder al registro de conversaciones
+    con L."
+  - "Y si encuentro una pista deber\xEDa poder interactuar con ella con el CLICK
+    IZQUIERDO."
+  - "Bien, no puedo salir sin mi libreta. Deber\xEDa estar en mi escritorio."
   lines2:
-  - Press (R) to open the Notebook
-  - Now let's go solve some cases
+  - Con R puedo abrir mi novela detectivesca y repasar mis notas.
+  - "Bien... Hora de salir de aqu\xED. Vamos a resolver algunos casos."
 --- !u!1001 &8394775289968108837
 PrefabInstance:
   m_ObjectHideFlags: 0
