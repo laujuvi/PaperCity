@@ -7753,7 +7753,7 @@ MonoBehaviour:
   miniClue: {fileID: 1245932220}
   description: "Roger quer\xEDa divorciarse de Layla."
   clueName: 
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1867747139}
 --- !u!1 &495338049
 GameObject:
   m_ObjectHideFlags: 0
@@ -11648,15 +11648,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.27
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.202
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.26
+      value: -18.73
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67a212a5ece908740bda43d4a7de3e76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11758,13 +11758,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Roger Ackroyd
   pickablePJText: Detective
-  pickableText: "La escena del crimen. Roger fue asesinado en su estudio de 9 pu\xF1aladas
-    y no por un profesional. Fue un crimen hecho con odio, pero no con demasiada
-    premeditaci\xF3n."
+  pickableText: "La escena del crimen. Roger fue asesinado en el living de su hogar.
+    9 pu\xF1aladas y no por un profesional. Fue un crimen hecho con odio, pero no
+    con demasiada premeditaci\xF3n."
   miniClue: {fileID: 576411446}
   description: Roger fue asesinado con un cuchillo de cocina
   clueName: 
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1867747139}
 --- !u!1001 &717006143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31570,6 +31570,10 @@ PrefabInstance:
       propertyPath: miniClue
       value: 
       objectReference: {fileID: 1570395339}
+    - target: {fileID: 5639676970350506096, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
     - target: {fileID: 8591288771272830397, guid: 8cc1977b560d0d4459e1dae666ef55e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.053
@@ -32211,6 +32215,10 @@ PrefabInstance:
       propertyPath: miniClue
       value: 
       objectReference: {fileID: 966193083}
+    - target: {fileID: -997932674080630769, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
     - target: {fileID: 3029519308356619813, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.939465
@@ -32609,6 +32617,10 @@ PrefabInstance:
       propertyPath: miniClue
       value: 
       objectReference: {fileID: 6190393104711457065}
+    - target: {fileID: 5540515787708321561, guid: 31375050a45aa4147b414772768f69cc, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
     - target: {fileID: 6862298640899541335, guid: 31375050a45aa4147b414772768f69cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.389465
@@ -32825,6 +32837,10 @@ PrefabInstance:
       propertyPath: miniClue
       value: 
       objectReference: {fileID: 551104458}
+    - target: {fileID: 2933051222292680348, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
     - target: {fileID: 3091898112448559944, guid: e94d1eb414baaca4889b6a842daadbfa, type: 3}
       propertyPath: audioManager
       value: 
