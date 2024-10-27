@@ -3907,6 +3907,69 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &228072835 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+  m_PrefabInstance: {fileID: 1328340965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &228072836
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228072832}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.7280396
+  m_Height: 14.014626
+  m_Direction: 1
+  m_Center: {x: -0.51169926, y: 6.5073137, z: 0.716339}
+--- !u!114 &228072837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228072832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jamesMoriartyKeyClue: {fileID: 0}
+  countDialog: 0
+  interactText: Hablar con Victor Howard
+  pickablePJText: 
+  pickableText: 
+  isFakeEvidence: 0
+  description: 
+  clueName: 
+  audioManager: {fileID: 0}
+--- !u!114 &228072838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228072832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3521c4c142922c4f942b4c181ace515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objective: {fileID: 1631509815}
+  _range: 5.3
 --- !u!1 &229261093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5573,6 +5636,7 @@ Transform:
   - {fileID: 36731346}
   - {fileID: 1918426442}
   - {fileID: 1707360094}
+  - {fileID: 228072835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358511974
@@ -17783,6 +17847,22 @@ PrefabInstance:
       propertyPath: logManager
       value: 
       objectReference: {fileID: 623633071}
+    - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: imageList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: imageList.Array.data[4].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 2e4c4ac8a5b77dd409cd699947d0c7fd, type: 3}
+    - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: imageList.Array.data[4].emotion
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: imageList.Array.data[4].imageName
+      value: Victor Howard
+      objectReference: {fileID: 0}
     - target: {fileID: 1517828472184765461, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -20992,11 +21072,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 351151268}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.19567
+      value: 0.19566998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalScale.y
@@ -21004,19 +21084,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.19567
+      value: 0.19566998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.587
+      value: 1.5884628
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.000008583069
+      value: -2.3869457
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.625725
+      value: 1.6230936
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21060,7 +21140,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 85b7f7e4238933847b3238fdd551d65b, type: 2}
     - target: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_Name
-      value: Breathing Idle (1)
+      value: Victor Howard
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4695988177486085469, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21077,6 +21161,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
       insertIndex: -1
       addedObject: {fileID: 228072834}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228072838}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228072837}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228072836}
   m_SourcePrefab: {fileID: 100100000, guid: 18fcecb84bfcc3046973582f26921200, type: 3}
 --- !u!1 &1328421319
 GameObject:
@@ -25798,7 +25891,7 @@ PrefabInstance:
       objectReference: {fileID: 532678003}
     - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
       propertyPath: npcs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
       propertyPath: playerTransform
@@ -25827,7 +25920,7 @@ PrefabInstance:
     - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
       propertyPath: npcs.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 228072837}
     - target: {fileID: 7906350124116477825, guid: e5892f4bb698e024c9e997bcc0a6d9ce, type: 3}
       propertyPath: characterController
       value: 
@@ -32790,4 +32883,3 @@ SceneRoots:
   - {fileID: 7935773214886374585}
   - {fileID: 1323876809}
   - {fileID: 365883423}
-  - {fileID: 1328340965}
