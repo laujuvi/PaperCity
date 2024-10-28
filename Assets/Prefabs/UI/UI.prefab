@@ -243,7 +243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2815100376199939357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7012,6 +7012,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7447857802545928678}
     m_Modifications:
+    - target: {fileID: 996025240266244798, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
+      propertyPath: m_text
+      value: R
+      objectReference: {fileID: 0}
     - target: {fileID: 1265361531600383871, guid: 3f019d608ca5a644c845603c148bd3a5, type: 3}
       propertyPath: m_Color.b
       value: 0.41202384
@@ -8139,7 +8143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6745484521751152735, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7447931836018193459, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -8203,7 +8207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351915095880142539, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 8351915095880142539, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_LocalScale.x
@@ -8251,7 +8255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8351915095880142539, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8351915095880142539, guid: b499c6e584c13d342b36f00e2df68e2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

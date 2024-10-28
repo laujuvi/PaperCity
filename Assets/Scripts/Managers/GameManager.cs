@@ -179,4 +179,9 @@ public class GameManager : MonoBehaviour
         rightExitDoor.gameObject.GetComponent<Outline>().enabled = state;
     }
 
+    public int GetMinEvidence()
+    {
+        return minEvidence;
+    }
+
 }

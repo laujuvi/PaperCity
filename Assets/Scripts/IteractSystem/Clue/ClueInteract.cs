@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ClueInteract : BasicClueInteract
 {
+    [SerializeField] private BasicClueInteract miniClue;
     [SerializeField] private string description;
     [SerializeField] private string clueName;
     private DialogManager dialogManager;
@@ -41,7 +42,7 @@ public class ClueInteract : BasicClueInteract
         //acá hay un problema, porque si destruimos
         //la evidencia el dialogue manager
         //pierde la referencia
-
+        miniClue.gameObject.SetActive(true);
         gameObject.SetActive(false);
         //Destroy(gameObject);
     }
