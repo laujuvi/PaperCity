@@ -76,7 +76,7 @@ public class InGameMenu : MonoBehaviour
     public void GoToMenu()
     {
         GameSettings existingGameSettings = FindObjectOfType<GameSettings>();
-        if(existingGameSettings != null)
+        if (existingGameSettings != null)
         {
             Destroy(existingGameSettings.gameObject);
         }
