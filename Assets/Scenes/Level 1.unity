@@ -18061,9 +18061,21 @@ PrefabInstance:
       value: GuiltyRoomManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1329560800796255218, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_text
+      value: Sra. Layla Ackroyd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329560800796255218, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_fontSize
+      value: 52.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329560800796255218, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
+    - target: {fileID: 1329560800796255218, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1329560800796255218, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -18290,7 +18302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016898392915219804, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4062590803733643594, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
