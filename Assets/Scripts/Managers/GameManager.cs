@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject leftExitDoor;
     [SerializeField] private GameObject rightExitDoor;
 
+    private bool isGuiltyCheck = false;
+
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -70,6 +72,17 @@ public class GameManager : MonoBehaviour
         dialogManager.SetEvidenceArray(evidenceArray);
 
         maxEvidence = evidenceArray.Length;
+    }
+
+    private void Update()
+    {
+        if (isGuiltyCheck) {
+            if (!boxMessageManager.IsDisplayingMessage()) {
+                CheckGuiltyNPC();
+                isGuiltyCheck = false;
+            }
+                
+        }
     }
     public void HideCursor()
     {
@@ -167,6 +180,8 @@ public class GameManager : MonoBehaviour
             enableDisableOutlineDoors(true);
             return;
         }
+
+        isGuiltyCheck = true;
 
         // Si ya esta listo para acusar se busca al culpable
         if (!boxMessageManager.IsDisplayingMessage())
