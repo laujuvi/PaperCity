@@ -37,6 +37,10 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource audioSource = Instantiate(soundFX, spawnTransform.position, Quaternion.identity);
 
+        if (!audioSource.enabled)
+        {
+            audioSource.enabled = true;
+        }
         audioSource.clip = audioClip;
 
         audioSource.volume = volume;
