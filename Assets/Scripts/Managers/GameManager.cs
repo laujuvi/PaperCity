@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckGuiltyNPC()
     {
+        Debug.Log("Checking guilty NPC. GuiltyNPC: " + guiltyNPC.name + " - LastNPCName: " + lastNPCName);
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour
     }
     public void SetNPCName(string NPCName)
     {
+        Debug.Log("Setting NPC name to: " + NPCName);
         lastNPCName = NPCName;
         CheckPlayerSituation();
     }
