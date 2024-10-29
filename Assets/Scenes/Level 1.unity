@@ -28543,7 +28543,7 @@ MonoBehaviour:
   - {fileID: 1967471918}
   - {fileID: 47834572}
   - {fileID: 1022318189}
-  minEvidence: 0
+  minEvidence: 7
   intermediateMessage: "Creo que ya tengo suficientes pistas para acusar a alguien
     y ver si mi instinto detectivesco sigue intacto... O podr\xEDa asegurarme y seguir
     buscando un poco m\xE1s..."
