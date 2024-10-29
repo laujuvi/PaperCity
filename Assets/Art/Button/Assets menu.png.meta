@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Assets menu_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 695
+        width: 782
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4273c9b3b7e504c89a0f74cc9497b6
+      internalID: 1166520843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets menu_5
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 478
+        width: 503
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505791da030ae0f438672bbe8f44e620
+      internalID: -191464482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets menu_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 251
+        width: 502
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e42da56fe3525c4f9c303e89dcb3259
+      internalID: 1089174905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Assets menu_0: -1580901572
+      Assets menu_1: 1166520843
+      Assets menu_10: -1710789829
+      Assets menu_11: 1357271827
+      Assets menu_2: 565500224
+      Assets menu_3: -384237157
+      Assets menu_4: 405617077
+      Assets menu_5: -191464482
+      Assets menu_6: 69559885
+      Assets menu_7: -1548882380
+      Assets menu_8: -84082174
+      Assets menu_9: 1089174905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
