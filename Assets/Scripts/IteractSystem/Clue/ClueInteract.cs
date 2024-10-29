@@ -42,8 +42,7 @@ public class ClueInteract : BasicClueInteract
         //acá hay un problema, porque si destruimos
         //la evidencia el dialogue manager
         //pierde la referencia
-        miniClue.gameObject.SetActive(true);
         gameObject.SetActive(false);
-        //Destroy(gameObject);
+        miniClue.gameObject.SetActive(true);
     }
 }

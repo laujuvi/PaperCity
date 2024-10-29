@@ -3788,7 +3788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &223682519
 Transform:
   m_ObjectHideFlags: 0
@@ -3801,8 +3801,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 898669371}
+  m_Children: []
   m_Father: {fileID: 319068976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &223682520
@@ -5096,8 +5095,10 @@ Transform:
   - {fileID: 2127866135}
   - {fileID: 1404351228}
   - {fileID: 1910776192}
+  - {fileID: 1164957703}
   - {fileID: 2024619367}
   - {fileID: 377958947108417601}
+  - {fileID: 898669371}
   - {fileID: 223682519}
   - {fileID: 1967471919}
   - {fileID: 47834573}
@@ -18205,7 +18206,7 @@ PrefabInstance:
       objectReference: {fileID: 1631509814}
     - target: {fileID: 3531596325594805741, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3644353293378202260, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_text
@@ -29610,7 +29611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2024619367
 Transform:
   m_ObjectHideFlags: 0
@@ -29623,8 +29624,7 @@ Transform:
   m_LocalPosition: {x: -5.8704834, y: -14.640511, z: 33.952866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1164957703}
+  m_Children: []
   m_Father: {fileID: 319068976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2024619368
@@ -31852,7 +31852,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 223682519}
+    m_TransformParent: {fileID: 319068976}
     m_Modifications:
     - target: {fileID: 952779298959657592, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_Name
@@ -31860,7 +31860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 952779298959657592, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2861381270298968809, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: audioManager
@@ -32570,7 +32570,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2024619367}
+    m_TransformParent: {fileID: 319068976}
     m_Modifications:
     - target: {fileID: 1348837888932527104, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: audioManager
@@ -32587,6 +32587,10 @@ PrefabInstance:
     - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Name
       value: CartasDeAmor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2371626402124973768, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_TagString
@@ -32606,15 +32610,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.398483
+      value: 14.528
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.511
+      value: -0.12951088
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.381
+      value: 17.571865
       objectReference: {fileID: 0}
     - target: {fileID: 8702986977787307646, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_LocalRotation.w
