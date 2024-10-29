@@ -130,6 +130,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("WIN");
             lenIcon.SetActive(false);
             win.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             return;
         }
         else
@@ -137,6 +139,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("LOSE");
             lenIcon.SetActive(false);
             lose.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; 
+            Cursor.visible = true;
             return;
         }
     }
