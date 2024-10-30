@@ -8,7 +8,6 @@ public class ClueInteract : BasicClueInteract
 {
     [SerializeField] private BasicClueInteract miniClue;
     [SerializeField] private string description;
-    [SerializeField] private string clueName;
     private DialogManager dialogManager;
     private GameManager gameManager;
 
