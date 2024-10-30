@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
 
         if (!PlayerDialogue.isHavingDialogue)
         {
-            lookUp = Input.GetKeyDown(KeyCode.V);
+            lookUp = Input.GetKeyDown(KeyCode.Space);
 
             if (lookUp)
             {

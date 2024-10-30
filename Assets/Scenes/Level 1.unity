@@ -14934,6 +14934,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8556619668267535421, guid: 3d5c32203435d0e4e8e1934dc09c1f39, type: 3}
+      propertyPath: interactText
+      value: Interact
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
