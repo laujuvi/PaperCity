@@ -50,6 +50,26 @@ public class ListManager : MonoBehaviour
                 }
                 
             }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                if (NoteBookPagesList[currentPage].textList.Count >= maxCluesPerPage)
+                {
+                    playerController.PlayAudio(changePage);
+
+                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
+
+                    currentPage--;
+                    if (currentPage < 0)
+                    {
+                        currentPage = NoteBookPagesList.Count - 1;
+                    }
+
+                    NoteBookPagesList[currentPage].gameObject.SetActive(true);
+                }
+
+            }
         }
     }
 
