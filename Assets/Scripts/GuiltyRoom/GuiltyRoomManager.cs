@@ -41,6 +41,8 @@ public class GuiltyRoomManager : MonoBehaviour
             characterController.enabled = false;
             playerController.gameObject.transform.position = playerTransform.position;
             characterController.enabled = true;
+            GameManager.Instance.isPlayerInGuiltyRoom = true;
+            GameManager.Instance.enableDisableOutlineDoors(false);
         }
 
         for (int i = 0; i < npcs.Count; i++)
