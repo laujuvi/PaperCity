@@ -12,7 +12,7 @@
                         "evidenceName": "",
                         "requiredMessage": ""
                     },
-                    "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? Es cierto que mi padre y yo teníamos nuestras diferencias, pero jamás sería capaz de hacer algo así... Lo siento mucho detective, pero yo no soy el culpable...",
+                    "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? ¿Ha visto toda la evidencia? Lo siento mucho detective, pero yo no soy el culpable...",
                     "emotion": "Talking"
                 }
             ]
@@ -46,7 +46,7 @@
                   "evidenceName": "",
                   "requiredMessage": ""
                 },
-                "message": "Yo no fui",
+                "message": "Hmmm... no me equivocaba con usted... desde el momento que lo vi me di cuenta de que no era más que un aficionado mediocre. Yo no soy el culpable, detective. Déjele el trabajo a alguien más capaz que usted.",
                 "emotion": "Talking"
               }
             ]
@@ -63,7 +63,7 @@
                             "evidenceName": "",
                             "requiredMessage": ""
                         },
-                        "message": "Yo no fui",
+                        "message": "¿¡Pero cómo se le ocurre!? Vaya... parece que años de abuso de ron y ginebra han hecho lo suyo con usted... ¡Culparme del asesinato de Roger! ¡Yo no soy el culpable, detective!",
                         "emotion": "Talking"
                     }
         ]
