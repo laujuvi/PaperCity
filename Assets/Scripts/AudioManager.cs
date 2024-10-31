@@ -21,6 +21,11 @@ public class AudioManager : MonoBehaviour
     [Header("Notebook")]
     public AudioClip notebookCheck;
     public AudioClip notebookClose;
+    
+    [Header("Defeat / Victory sounds")]
+    public AudioClip victorySound;
+    public AudioClip defeatSound;
+
 
     private void Awake()
     {
@@ -29,10 +34,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
     }
-    //public void PlaySFX(AudioClip clip)
-    //{
-    //    sfxAudioSource.PlayOneShot(clip);
-    //}
+
     public void PlaySoundFX(AudioClip audioClip, Transform spawnTransform, float volume)
     {
         AudioSource audioSource = Instantiate(soundFX, spawnTransform.position, Quaternion.identity);
@@ -41,6 +43,7 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.enabled = true;
         }
+
         audioSource.clip = audioClip;
 
         audioSource.volume = volume;

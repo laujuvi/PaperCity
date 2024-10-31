@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,13 +12,11 @@ public class UIManager : MonoBehaviour
     {
         currentEvidence = currentInt;
         cluesText.text = $"{defaultCluesText} {currentEvidence}";
-
     }
 
     public void UpdateTotalEvidence(int totalInt)
     {
         totalEvidence = totalInt;
         cluesText.text = cluesText.text = $"{defaultCluesText} {currentEvidence}";
-
     }
 }

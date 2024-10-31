@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject leftExitDoor;
     [SerializeField] private GameObject rightExitDoor;
 
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private AudioSource musicSc;
+
     private bool isGuiltyCheck = false;
 
     public static GameManager Instance { get; private set; }
@@ -130,6 +133,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("WIN");
             lenIcon.SetActive(false);
             win.SetActive(true);
+            audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
+            musicSc.Stop();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             return;
@@ -139,6 +144,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("LOSE");
             lenIcon.SetActive(false);
             lose.SetActive(true);
+            audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
+            musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 
             Cursor.visible = true;
             return;

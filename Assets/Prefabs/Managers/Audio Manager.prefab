@@ -302,10 +302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606e84422f3148d45a649f355231605c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFX: {fileID: 190538458815671687}
+  soundFX: {fileID: 7448474399324893966, guid: 9a9b4f52d44e29842a2032b6fe70c4a8, type: 3}
   clueFound: {fileID: 8300000, guid: 46e8a476a352ddb449d295705bf40fb9, type: 3}
   clueFound2: {fileID: 8300000, guid: 2b080f3d6aaea0d4c8e44f70733c6d71, type: 3}
   doorOpening: {fileID: 8300000, guid: 81bfde835c15b754f9f60a0dbe592ec4, type: 3}
   doorClosing: {fileID: 8300000, guid: a949867c25a7fe643944eba582d751b3, type: 3}
   notebookCheck: {fileID: 8300000, guid: d80b1b4f0e7f7c34695316063b85a032, type: 3}
   notebookClose: {fileID: 8300000, guid: 4c25052ef0e570544a2e7b9c371629a1, type: 3}
+  victorySound: {fileID: 8300000, guid: b37ec9dbcb27d9d4ea4c17af510c8acc, type: 3}
+  defeatSound: {fileID: 8300000, guid: 62a8a2dd2b8be4b42922146675fe3724, type: 3}

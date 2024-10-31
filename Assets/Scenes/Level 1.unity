@@ -18129,6 +18129,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2478726839920357398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 3438033153605972248, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _playerInteract
       value: 
@@ -18201,6 +18205,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
+    - target: {fileID: 7082724478264870537, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.8060303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7858258307367495052, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -28107,6 +28139,8 @@ MonoBehaviour:
   npcInteracted: []
   leftExitDoor: {fileID: 54877235}
   rightExitDoor: {fileID: 2109300187}
+  audioManager: {fileID: 1867747139}
+  musicSc: {fileID: 2002252284}
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29110,6 +29144,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000009, y: 0.021824958, z: 0.022199601}
   m_Center: {x: 0, y: -0.0009124771, z: 0.0010997981}
+--- !u!82 &2002252284 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8019375657781731714, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
+  m_PrefabInstance: {fileID: 1400958475223960626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2007036762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31761,10 +31800,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 4613555149276717108, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
-      propertyPath: soundFX
-      value: 
-      objectReference: {fileID: 7448474399324893966, guid: 9a9b4f52d44e29842a2032b6fe70c4a8, type: 3}
     - target: {fileID: 8251324202604017755, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2135532
