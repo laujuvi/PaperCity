@@ -15,6 +15,7 @@ public class RadioInteract : MonoBehaviour, IInteractable
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = radioMusic[0];
+        audioSource.Play();
     }
 
     public void PlayAudio(AudioClip audioClip)
@@ -36,7 +37,9 @@ public class RadioInteract : MonoBehaviour, IInteractable
     {
         if (isRadioON)
         {
-            audioSource.clip = radioMusic[Random.Range(0, radioMusic.Count)];               
+            print("lol");
+            audioSource.clip = radioMusic[Random.Range(0, radioMusic.Count)];     
+            PlayAudio(audioSource.clip);
         }
     }
 
