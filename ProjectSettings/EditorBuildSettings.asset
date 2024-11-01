@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EscenasMenu/MainMenu.unity
     guid: 6412fe7e1b833a849a86e2a7700119d5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HabitacionDetective.unity
     guid: cd37872fcfa844f43a3e432683a8cfe0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cinematic_test.unity
     guid: f4ba2f04c3527ed4e9f360115a90f689
   - enabled: 1
