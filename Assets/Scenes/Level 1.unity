@@ -13497,7 +13497,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35445,7 +35446,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MuebleConGolpe
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3271498274599014237, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3810421199226173314, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
@@ -35766,6 +35768,14 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}
+    - target: {fileID: -997932674080630769, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
+      propertyPath: pickableText
+      value: "Pobre James... \xE9ste es un regalo que le hizo a Layla, olvidado aqu\xED
+        en esta habitaci\xF3n. Aunque tambi\xE9n comprendo a Layla, ella realmente
+        estaba enamorada de Roger y no querr\xEDa herirlo llevando a su habitaci\xF3n
+        un regalo de otro hombre. Esto me deja en claro que el amor de James era
+        no correspondido.\""
+      objectReference: {fileID: 0}
     - target: {fileID: 3029519308356619813, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.939465
