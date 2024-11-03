@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class RadioInteract : MonoBehaviour, IInteractable
 {
     [SerializeField] public List<AudioClip> radioMusic = new List<AudioClip>();
     [SerializeField] private string interactText;
+    private int currentSong = 0;
     private AudioSource audioSource;
     public bool isRadioON = false;
 
@@ -38,8 +40,16 @@ public class RadioInteract : MonoBehaviour, IInteractable
         if (isRadioON)
         {
             print("lol");
-            audioSource.clip = radioMusic[Random.Range(0, radioMusic.Count)];     
-            PlayAudio(audioSource.clip);
+            currentSong++;
+            if (currentSong <= radioMusic.Count - 1)
+            {
+                audioSource.clip = radioMusic[currentSong];
+                PlayAudio(audioSource.clip);
+            }
+            else 
+            {
+                currentSong = 0;
+            }
         }
     }
 
@@ -48,10 +58,7 @@ public class RadioInteract : MonoBehaviour, IInteractable
         if (!isRadioON)
         {
             audioSource.Pause();
-        }
-       
-
-      
+        }      
     }
 
     public string GetInteractText()
