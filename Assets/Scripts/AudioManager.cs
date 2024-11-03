@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     [Header("Clues")]
     public AudioClip clueFound;
     public AudioClip clueFound2;
+    public AudioClip no;
 
     [Header("Doors")]
     public AudioClip doorOpening;
