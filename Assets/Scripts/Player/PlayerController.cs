@@ -184,4 +184,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    public void PlayAudio(AudioClip audioClip)
+    {
+        //audioManager.PlayAudio(audioClip);
+    }
 }
