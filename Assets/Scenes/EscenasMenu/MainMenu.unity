@@ -1003,8 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97c65cf02cbc484a9c7e417b2148b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 400
   sliderSensitivity: {fileID: 1162405074}
+  settingsFilePath: 
 --- !u!4 &766789660
 Transform:
   m_ObjectHideFlags: 0
