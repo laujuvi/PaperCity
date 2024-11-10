@@ -57,7 +57,7 @@ public class ChangeScene : MonoBehaviour, IInteractable
             {
                 sceneLoadManager.LoadNextScene();
             }
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 sceneLoadManager.LoadNextScene();
             }
