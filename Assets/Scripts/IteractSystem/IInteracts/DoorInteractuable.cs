@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     private bool isClosed = true; // Inicialmente la puerta está cerrada
 
     [SerializeField] private AudioManager audioManager;
+
+    public event Action OnDoorOpening;
 
     void Start()
     {
@@ -83,6 +86,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     {
         if(!isOpening && isClosed)
         {
+            OnDoorOpening?.Invoke();
             isOpening = true; 
             isClosing = false;
 
