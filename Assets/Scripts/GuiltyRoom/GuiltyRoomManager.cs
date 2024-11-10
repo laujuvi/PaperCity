@@ -64,12 +64,14 @@ public class GuiltyRoomManager : MonoBehaviour
     public void ResumeGame()
     {
         lenIcon.SetActive(true);
+        GameManager.Instance.EnablePlayerController();
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
         lenIcon.SetActive(false);
+        GameManager.Instance.DisablePlayerController();
         Time.timeScale = 0f;
         isPaused = true;
     }
