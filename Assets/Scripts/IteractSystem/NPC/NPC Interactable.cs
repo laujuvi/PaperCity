@@ -27,7 +27,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         dialogManager = FindObjectOfType<DialogManager>();
         _listManager = FindObjectOfType<ListManager>();
-        //clueName = gameObject.name;
     }
     public void Interact()
     {
@@ -51,20 +50,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
                 GameManager.Instance.npcInteracted.Add(gameObject);
             }
         }
-        //} else if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
-        //{
-        //    boxMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.None);
-        //    if (!isFakeEvidence)
-        //    { 
-        //        dialogManager.SetEvidenceStatus(gameObject.name, true);
-        //        _listManager.AddText(clueName + $"({description})");
-        //        gameManager.CheckCurrentEvidence();
-        //        audioManager.PlaySFX(audioManager.clueFound);
-        //        print("pick");
-        //        //gameObject.SetActive(false);
-        //        Destroy(gameObject);
-        //    }
-        //}
     }
 
     public string GetInteractText()
@@ -77,9 +62,9 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         return transform;
     }
 
-    public bool GetisFakeEvidence()
+    public void changeGuiltyText()
     {
-        return isFakeEvidence;
+        interactText = interactText.Replace("Hablar con ", "Acusar a ");
     }
 
 }
