@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6119781192393261501}
   - component: {fileID: 7932202780110110765}
   - component: {fileID: 6352135555373500785}
-  - component: {fileID: 2861381270298968809}
   - component: {fileID: 3116835066870344958}
+  - component: {fileID: 7719349228642429959}
   m_Layer: 6
   m_Name: JamesMoriartyKey
   m_TagString: Selectable
@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 1.7594643, y: -0.52443695, z: -2.616087}
   m_LocalScale: {x: 0.34086, y: 0.1, z: 0.14503}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2342563570150412868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6119781192393261501
@@ -107,29 +108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.6077168}
   m_Center: {x: 0, y: 0, z: 0.30385834}
---- !u!114 &2861381270298968809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952779298959657592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0bc1846a2338174ab78e2e4d29dc548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jamesMoriartyKeyClue: {fileID: 0}
-  countDialog: 0
-  interactText: "Llave de la sala de pel\xEDculas"
-  pickablePJText: 
-  pickableText: "James es el due\xF1o del \xFAnico cine de la ciudad. No conozco
-    persona que ame m\xE1s su trabajo que \xE9l. \xBFC\xF3mo puede ser que las haya
-    perdido? Mejor se las devuelvo r\xE1pido."
-  isFakeEvidence: 1
-  description: "James dej\xF3 caer su llave..."
-  clueName: 
-  audioManager: {fileID: 0}
 --- !u!114 &3116835066870344958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,3 +126,97 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &7719349228642429959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952779298959657592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactText: "Llave de la sala de pel\xEDculas"
+  pickablePJText: Detective
+  pickableText: "James es el due\xF1o del \xFAnico cine de la ciudad. No conozco
+    persona que ame m\xE1s su trabajo que \xE9l. \xBFC\xF3mo puede ser que las haya
+    perdido? Mejor se las devuelvo r\xE1pido."
+  miniClue: {fileID: 0}
+  description: "James dej\xF3 caer su llave..."
+  audioManager: {fileID: 0}
+--- !u!1001 &2812722657033418159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8751486604780128704}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14668779
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3792318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07177737
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08999944
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03653954
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+      propertyPath: m_Name
+      value: llave de victor howard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+--- !u!4 &2342563570150412868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea5df9e74d121c1438a4b8bc3c870a43, type: 3}
+  m_PrefabInstance: {fileID: 2812722657033418159}
+  m_PrefabAsset: {fileID: 0}
