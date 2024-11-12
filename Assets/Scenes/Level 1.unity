@@ -13379,6 +13379,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3379364233608525595, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
   m_PrefabInstance: {fileID: 742676556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &752950609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4744233091278108681, guid: 3adfdffd8f75ce9418d04f7701ce7841, type: 3}
+  m_PrefabInstance: {fileID: 742301665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1747b4e546cc8444d8254e15d37eb69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &754575998
 GameObject:
   m_ObjectHideFlags: 0
@@ -35110,17 +35121,29 @@ PrefabInstance:
       propertyPath: pickablePJText
       value: Detective
       objectReference: {fileID: 0}
+    - target: {fileID: 7719349228642429959, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
+      propertyPath: miniClue
+      value: 
+      objectReference: {fileID: 752950609}
+    - target: {fileID: 7719349228642429959, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1867747139}
+    - target: {fileID: 7932202780110110765, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8751486604780128704, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7594643
+      value: 1.539
       objectReference: {fileID: 0}
     - target: {fileID: 8751486604780128704, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52443695
+      value: -1.063
       objectReference: {fileID: 0}
     - target: {fileID: 8751486604780128704, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.616087
+      value: -2.7527
       objectReference: {fileID: 0}
     - target: {fileID: 8751486604780128704, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35150,7 +35173,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2861381270298968809, guid: f593c0eabcf1d1a4db87d2352fcf26f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
