@@ -165,7 +165,6 @@ public class DialogManager : MonoBehaviour
 
     public void SetEvidenceStatus(string evidenceName, bool status)
     {
-        Debug.Log("Recibido");
         if (evidenceStatus.ContainsKey(evidenceName))
         {
             evidenceStatus[evidenceName] = status;
