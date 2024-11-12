@@ -15,6 +15,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     private bool isOpening = false;
     private bool isClosing = false;
     private bool isClosed = true; // Inicialmente la puerta está cerrada
+    [SerializeField] private bool isLocked = false;
 
     [SerializeField] private AudioManager audioManager;
 
@@ -56,6 +57,9 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     // Método para interactuar con la puerta
     public void Interact()
     {
+        if(isLocked)
+            return;
+
         if (isClosed)
         {
             OpenDoor();
@@ -69,7 +73,7 @@ public class PruebaInteractuable : MonoBehaviour, IInteractable
     // Método para obtener el texto de interacción
     public string GetInteractText()
     {
-        return interactText;
+        return isLocked ? "Cerrado" : interactText;
     }
 
     // Método para obtener el transform
