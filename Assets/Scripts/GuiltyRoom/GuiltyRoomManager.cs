@@ -48,6 +48,7 @@ public class GuiltyRoomManager : MonoBehaviour
         for (int i = 0; i < npcs.Count; i++)
         {
             npcs[i].transform.position = tpPoints[i].transform.position;
+            npcs[i].changeGuiltyText();
         }
         GuiltyRoomUIPanel.gameObject.SetActive(false);
         GameManager.Instance.HideCursor();

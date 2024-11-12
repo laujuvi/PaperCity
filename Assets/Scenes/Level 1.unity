@@ -6929,6 +6929,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2778853301774575460, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 435742545}
     - targetCorrespondingSourceObject: {fileID: 5736284267512382483, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
       insertIndex: -1
       addedObject: {fileID: 54877239}
@@ -7750,6 +7753,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428417764}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &435742540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2778853301774575460, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+  m_PrefabInstance: {fileID: 365883423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &435742544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7099946444508136762, guid: c9647a96c38ca6a4b9687ee1b1682079, type: 3}
+  m_PrefabInstance: {fileID: 365883423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435742540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bbb4920d4a0334c8e84a59d6b75950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &435742545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435742540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f00e2bac6a6cb44ea9476267c2ef8e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 435742544}
+  boxMessageManager: {fileID: 2139294260}
+  doorMessage: "En cuanto cruce esta puerta, deber\xE9 acusar a uno de los sospechosos.
+    Debo pensar bien a qui\xE9n voy a se\xF1alar."
 --- !u!1001 &442126247
 PrefabInstance:
   m_ObjectHideFlags: 0
