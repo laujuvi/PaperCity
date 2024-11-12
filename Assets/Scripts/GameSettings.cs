@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.IO;
 
+[Serializable]
+public class SettingsData
+{
+    public float mouseSensitivity = 400f;
+}
 public class GameSettings : MonoBehaviour
 {
     public static GameSettings Instance { get; private set; }
+
+    [Header("Sensibilidad")]
     public float mouseSensitivity = 400f;
     public Slider sliderSensitivity;
+
+    [SerializeField] string settingsFilePath;
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,15 +32,32 @@ public class GameSettings : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        settingsFilePath = Path.Combine(Application.persistentDataPath, "game_settings.json");
+
         LoadSensitivity();
         if (sliderSensitivity != null)
         {
+            sliderSensitivity.value = mouseSensitivity;
             sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
         }
     }
     private void LoadSensitivity()
     {
-        mouseSensitivity = PlayerPrefs.GetFloat("CurrentSensitivity", 1f);
+        if(File.Exists(settingsFilePath))
+        {
+            string json = File.ReadAllText(settingsFilePath);
+            SettingsData settingsData = JsonUtility.FromJson<SettingsData>(json);
+            mouseSensitivity = settingsData.mouseSensitivity;
+            Debug.Log("Sensibilidad cargada desde el json");
+        }
+        else
+        {
+            mouseSensitivity = 400f;
+            SaveSensitivity();
+            Debug.Log("Archivo json no encontrado, creando archivo con valores por defecto");
+        }
+
         if (sliderSensitivity != null)
         {
             sliderSensitivity.value = mouseSensitivity;
@@ -43,7 +72,14 @@ public class GameSettings : MonoBehaviour
 
     public void SaveSensitivity()
     {
-        PlayerPrefs.SetFloat("CurrentSensitivity", mouseSensitivity);
+        SettingsData settingsData = new SettingsData
+        {
+            mouseSensitivity = mouseSensitivity
+        };
+
+        string json = JsonUtility.ToJson(settingsData, true);
+        File.WriteAllText(settingsFilePath, json);
+        Debug.Log("Archivo Guardado");
     }
     public void UpdateSensitivitySlider(Slider newSlider)
     {

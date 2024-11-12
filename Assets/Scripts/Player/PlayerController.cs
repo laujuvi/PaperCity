@@ -53,14 +53,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        if (GameSettings.Instance == null || GameSettings.Instance.mouseSensitivity <= 100)
-        {
-            rotationSensibility = 400;
-        }
-        else
-        {
-            UpdateSensitivity();
-        }
+        UpdateSensitivity();
     }
     private void Update()
     {
@@ -109,8 +102,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!PlayerDialogue.isHavingDialogue)
         {
-            rotationInput.x = Input.GetAxis("Mouse X") * rotationSensibility * Time.deltaTime;
-            rotationInput.y = Input.GetAxis("Mouse Y") * rotationSensibility * Time.deltaTime;
+            float sensitivity = GameSettings.Instance != null ? GameSettings.Instance.mouseSensitivity : rotationSensibility;
+
+            rotationInput.x = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+            rotationInput.y = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
             cameraVerticalAngle += rotationInput.y;
             cameraVerticalAngle = Mathf.Clamp(cameraVerticalAngle, -70, 70);
@@ -189,7 +184,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
     public void PlayAudio(AudioClip audioClip)
     {
         //audioManager.PlayAudio(audioClip);
