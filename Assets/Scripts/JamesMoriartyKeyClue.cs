@@ -8,6 +8,7 @@ public class JamesMoriartyKeyClue : MonoBehaviour
     private void Start()
     {
         goc2.AddObject("JamesMoriartyKey", jamesMoriartyKey);
+        goc2.DeactivateObject("JamesMoriartyKey");
     }
     
     public void CheckCountDialog(int countDialog)
