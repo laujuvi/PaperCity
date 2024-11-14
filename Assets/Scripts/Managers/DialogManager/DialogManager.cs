@@ -99,20 +99,25 @@ public class DialogManager : MonoBehaviour
             {
                 if (!message.talked)
                 {
+                    // Instancio variables que puedo usar en diferentes if
+                    var parsedEmotion = (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion);
+                    string messageToSend = message.message;
+                    string messageEvidenceToSend = message.evidence.requiredMessage;
+
+                    //Le aviso al manager quien esta hablando
+                    gameManager.SetNPCName(dialog.name);
 
                     if (message.isLoopingMessage)
                     {
-                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                        gameManager.SetNPCName(dialog.name);
+                        boxMessageManager.SendMessage(dialog.name, dialog.color, messageToSend, parsedEmotion);
                         return;
                     }
                     
                     // Si no tiene evidencia que buscar muestro el msj normalmente
                     if (!message.evidence.hasEvidence)
                     {
-                        boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                        boxMessageManager.SendMessage(dialog.name, dialog.color, messageToSend, parsedEmotion);
                         message.talked = true;
-                        gameManager.SetNPCName(dialog.name);
                         return;
                     }
 
@@ -126,14 +131,12 @@ public class DialogManager : MonoBehaviour
                                 if (GetEvidenceStatus(evidenceObject.name))
                                 {
                                     // Si encuentra la evidencia toma el mensaje como leido y lee el contenido de message
-                                    boxMessageManager.SendMessage(dialog.name, dialog.color, message.message, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
+                                    boxMessageManager.SendMessage(dialog.name, dialog.color, messageToSend, parsedEmotion);
                                     message.talked = true;
-                                    gameManager.SetNPCName(dialog.name);
                                     return;
                                 }
                                 // Si no encuentra la evidencia no toma el mensaje como leido y lee el contenido de requireMessage
-                                boxMessageManager.SendMessage(dialog.name, dialog.color, message.evidence.requiredMessage, (Emotions)System.Enum.Parse(typeof(Emotions), message.emotion));
-                                gameManager.SetNPCName(dialog.name);
+                                boxMessageManager.SendMessage(dialog.name, dialog.color, messageEvidenceToSend, parsedEmotion);
                                 return;
                             }
                         }
