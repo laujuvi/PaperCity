@@ -7,8 +7,6 @@ public class GuiltyRoomManager : MonoBehaviour
 
     /* Guilty Room Sttings */
     [Header("GuiltyRoom Settings\n")]
-
-
     [SerializeField] private List<NPCInteractable> npcs = new List<NPCInteractable>();
     [SerializeField] private List<Transform> tpPoints = new List<Transform>();
     [SerializeField] private Transform playerTransform;
@@ -18,7 +16,6 @@ public class GuiltyRoomManager : MonoBehaviour
     [SerializeField] public int minClue;
 
     [Header("GuiltyRoom UI Settings\n")]
-
     [SerializeField] public GameObject GuiltyRoomUIPanel;
     private bool isPaused;
     public GameObject lenIcon;
@@ -27,12 +24,6 @@ public class GuiltyRoomManager : MonoBehaviour
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
         minClue = GameManager.Instance.GetMinEvidence();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void GoToGuiltyRoomYes()
     {
