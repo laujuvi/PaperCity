@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
     [Header("Rotation")]
     [SerializeField] private float rotationSensibility;
 
-    //[Header("Jump")]
-    //[SerializeField] private float jumpHeight = 1.9f;
-
     [Header("Crouch")]
     public float crouchHeight;
     public bool crouch;
@@ -49,7 +46,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        //audioManager = AudioManager.instance;
     }
     private void Start()
     {
@@ -89,10 +85,7 @@ public class PlayerController : MonoBehaviour
                 {
                     moveInput = transform.TransformDirection(moveInput) * walkSpeed;
                 }
-                //if (Input.GetButtonDown("Jump"))
-                //{
-                //    moveInput.y = Mathf.Sqrt(jumpHeight * -2f * gravityScale);
-                //}
+
             }
             moveInput.y += gravityScale * Time.deltaTime;
             characterController.Move(moveInput * Time.deltaTime);
