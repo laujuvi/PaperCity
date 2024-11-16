@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1538,8 +1538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -107.67798, y: 40.11212}
+  m_SizeDelta: {x: 184.6442, y: 55.0549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907771507
 MonoBehaviour:
@@ -1561,7 +1561,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Enter to skip
+  m_text: 'Presiona Clic Izquierdo
+
+    para saltar intro'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1588,10 +1590,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
+  m_fontSize: 23.5
   m_fontSizeBase: 46
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

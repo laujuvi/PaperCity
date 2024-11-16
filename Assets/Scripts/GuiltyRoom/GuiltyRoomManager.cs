@@ -48,6 +48,7 @@ public class GuiltyRoomManager : MonoBehaviour
         for (int i = 0; i < npcs.Count; i++)
         {
             npcs[i].transform.position = tpPoints[i].transform.position;
+            npcs[i].changeGuiltyText();
         }
         GuiltyRoomUIPanel.gameObject.SetActive(false);
         GameManager.Instance.HideCursor();
@@ -64,12 +65,14 @@ public class GuiltyRoomManager : MonoBehaviour
     public void ResumeGame()
     {
         lenIcon.SetActive(true);
+        GameManager.Instance.EnablePlayerController();
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
         lenIcon.SetActive(false);
+        GameManager.Instance.DisablePlayerController();
         Time.timeScale = 0f;
         isPaused = true;
     }
