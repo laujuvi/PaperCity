@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0f8e235c2a17041499c869e3e58b176c, type: 2}
     - target: {fileID: 919132149155446097, guid: a79071c31bcae714ca635f8e75247e57, type: 3}
       propertyPath: m_Name
-      value: ModeladoCama2
+      value: prefabModeladoCama
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
