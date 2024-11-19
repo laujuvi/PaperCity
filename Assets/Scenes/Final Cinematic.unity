@@ -209,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 81.3
+  m_fontSizeBase: 81.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -332,8 +332,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "De m\xE1s est\xE1 decir que a ninguno de sus allegados fue indiferente
-    al rumor..."
+  m_text: De mas esta decir que ninguno de sus allegados fue indiferente a dicho
+    rumor... pues a todos los afectaba de diferentes maneras...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -360,8 +360,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 65.7
+  m_fontSizeBase: 65.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -548,12 +548,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73df89301c9c7ea439c4d4f3cb1a6f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoadManager: {fileID: 0}
+  sceneLoadManager: {fileID: 1631024846}
   sceneToLoad: 0
   interactText: 
   canChangeScene: 0
-  changeSceneTime: 0
-  sceneName: 
+  changeSceneTime: 100
+  sceneName: Level 1
 --- !u!4 &490710908
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -812,7 +812,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1154,8 +1154,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Y finalmente, James Moriarty, amigo \xEDntimo de Bruce, a pesar de que
-    no podr\xEDan ser m\xE1s diferentes..."
+  m_text: Y finalmente, James Moriarty, amigo intimo de Bruce, a pesar de que no
+    podrian ser mas diferentes...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1164,8 +1164,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278227967
+  m_fontColor: {r: 1, g: 0.5757654, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1182,8 +1182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 852.60645, z: 0, w: 0}
+  m_margin: {x: 0, y: 719.7737, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1305,8 +1305,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "No conozco personalmente a Victor Howard... pero entiendo c\xF3mo lleg\xF3
-    a ser abogado personal de Roger..."
+  m_text: No conozco personalmente a Victor Howard... pero al ver sus trajes entiendo
+    que Roger lo eligiera como su abogado...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1315,8 +1315,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294963456
+  m_fontColor: {r: 0, g: 0.9470029, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1333,8 +1333,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 793.2883, z: 0, w: 0}
+  m_margin: {x: 0, y: 701.5705, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1466,8 +1466,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278248959
+  m_fontColor: {r: 1, g: 0.897473, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1484,8 +1484,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Se rumoreaba que el magnate estaba enga\xF1ando a su esposa con su secretaria. "
+  m_text: 'Se rumoreaba que el magnate estaba teniendo una aventura con su secretaria... '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1634,8 +1634,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFTenemos el m\xF3vil de Bruce...?"
+  m_text: Tenemos el motivo de Bruce...?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -2170,8 +2170,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283236096
+  m_fontColor: {r: 0, g: 1, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2188,8 +2188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 115.7
+  m_fontSizeBase: 115.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2321,8 +2321,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278227967
+  m_fontColor: {r: 1, g: 0.5764706, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2650,8 +2650,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFQue uno de sus clientes est\xE9 tomando decisiones err\xE1ticas como
-    escaparse con su amante podr\xEDa ser motivo de una consulta a deshoras?"
+  m_text: "\xBFQue uno de sus clientes este tomando decisiones erraticas como escaparse
+    con su amante podria ser motivo de una \"consulta a deshoras\"?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -2660,8 +2660,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294963456
+  m_fontColor: {r: 0, g: 0.94509804, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2678,8 +2678,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 80.8
+  m_fontSizeBase: 80.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 852.60645, z: 0, w: 0}
+  m_margin: {x: 0, y: 694.4723, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2743,6 +2743,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &1631024846 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7430233440796547978, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
+  m_PrefabInstance: {fileID: 498268211}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c710edd53234048a36ee658b2b9cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660561956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2783,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1051429a6d12ef141ba7cb847eff6100, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2906,7 +2917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 101}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752877926
@@ -2929,8 +2940,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Layla Ackroyd, esposa de Roger, no tiene porqu\xE9 explicar qu\xE9 hac\xEDa
-    en su casa a la hora del asesinato..."
+  m_text: Layla Ackroyd, esposa de Roger, no tiene que dar explicaciones sobre que
+    hacia en su casa a la hora del asesinato...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -2939,8 +2950,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278252543
+  m_fontColor: {r: 1, g: 0.95350957, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2957,8 +2968,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3080,7 +3091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Uno de ellos es el asesino...
+  m_text: Pero solo uno de ellos es el asesino...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3107,8 +3118,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3301,7 +3312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 96}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894510410
@@ -3324,8 +3335,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bruce Acrkoyd... el \xFAnico hijo del matrimonio... no me extra\xF1ar\xEDa
-    que haya vuelto a ver qu\xE9 iba a suceder con su herencia..."
+  m_text: Bruce Acrkoyd... el unico hijo del matrimonio... no seria raro que haya
+    vuelto a ver que iba a ser de su herencia...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3334,8 +3345,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283236096
+  m_fontColor: {r: 0, g: 1, b: 0.2962141, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3352,8 +3363,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3529,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1971855247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3640,7 +3651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 58}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998640403
@@ -3663,8 +3674,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ni sus mujeres, ni sus yates son baratos. Un estilo de vida as\xED nunca
-    dura mucho..."
+  m_text: Ni sus mujeres, ni sus yates son baratos. Un estilo de vida como el suyo
+    nunca dura mucho...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3673,8 +3684,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283236096
+  m_fontColor: {r: 0, g: 1, b: 0.29803923, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3691,8 +3702,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 92.2
+  m_fontSizeBase: 92.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3814,8 +3825,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En los bares que yo sol\xEDa frecuentar, se dec\xEDa que siempre estuvo
-    enamorado de Layla."
+  m_text: En los bares que yo frecuento, aun se dice que James siempre estuvo enamorado
+    de Layla.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3824,8 +3835,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278227967
+  m_fontColor: {r: 1, g: 0.5764706, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
