@@ -10,7 +10,6 @@ public class InitialDialog : MonoBehaviour
     [SerializeField] string PJName;
     [SerializeField] string[] lines;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartDialogue();

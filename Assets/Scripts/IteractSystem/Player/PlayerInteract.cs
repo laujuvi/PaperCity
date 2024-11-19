@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    //[SerializeField] private float _InteractRange = 0.1f;
     [SerializeField] private GameObject _RaycastPoint;
     [SerializeField] private float _RaycastDistance;
     [SerializeField] private float _RaycastDistance_2;
@@ -59,7 +58,6 @@ public class PlayerInteract : MonoBehaviour
             {
                
                 InteractableObject = interactable;
-                //return interactable;
                 _currentLayerMask = hit.collider.gameObject.layer;
 
                 
@@ -76,6 +74,5 @@ public class PlayerInteract : MonoBehaviour
         }
 
         return InteractableObject;
-        //return null;
     }
 }

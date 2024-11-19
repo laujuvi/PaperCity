@@ -15,39 +15,35 @@ public class ImageData
 public class BoxMessageManager : MonoBehaviour
 {
     /* MANAGER */
-    [SerializeField] private LogManager logManager; // opcional
+    [Header("LogManager(opcional)")]
+    [SerializeField] private LogManager logManager; // Opcional, en caso de que se quiera usar el Log se puede setear
 
-    [SerializeField] TextMeshProUGUI textMeshPro;
-    [SerializeField] TextMeshProUGUI nameTextMeshPro;
-    [SerializeField] GameObject bgDialog;
-
+    [Header("Parametros\n")]
     [SerializeField] float letterDelay = 0.15f;
-    [SerializeField] float hideDialogDelay = 1f;
-
-    [SerializeField] RawImage rawImage; // RawImage para mostrar la imagen.
-    [SerializeField] RawImage lenIcon; //para ocultar esto
-    [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
-    [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
-
+    [SerializeField] float hideDialogDelay = 1f; 
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
-    private bool interruptWait = false; // Revisar si lo seguimos usando
     private int maxMessageLength = 290; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
-    //private void Start()
-    //{
-    //    Cursor.lockState = CursorLockMode.Locked;
-    //    Cursor.visible = false;
-    //}
+    [Header("UI\n")]
+
+    [Header("Textos")]
+    [SerializeField] TextMeshProUGUI textMeshPro;
+    [SerializeField] TextMeshProUGUI nameTextMeshPro;
+
+    [Header("Cuadro de dialogo")]
+    [SerializeField] GameObject bgDialog;
+
+    [Header("Imagenes")]
+    [SerializeField] RawImage lenIcon; //para ocultar esto
+    [SerializeField] RawImage pjImage; // RawImage para mostrar la imagen del personaje.
+    [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
+    [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
 
     public bool IsDisplayingMessage()
     {
         return isDisplayingMessage;
-    }
-    public bool IsSkippingDialog()
-    {
-        return isSkippingDialog;
     }
 
     public void SendMessage(string name, Color color, string message, Emotions emotion)
@@ -79,27 +75,13 @@ public class BoxMessageManager : MonoBehaviour
         {
             MessageData data = messageQueue.Dequeue();
             ResetSkippingTimers();
-            string formattedMessage = FormatMessage(data.Name, data.Color, data.Message, data.Emotion);
+            //Seteo el mensaje
+            FormatMessage(data.Message, data.Emotion);
+            // Seteo el nombre
+            FormatName(data.Name, data.Color);
 
-            nameTextMeshPro.text = data.Name;
-            ////////////VIEJO////////////
-            //textMeshPro.text = "";
-            /////////////////////////////
-
-            ////////////NUEVO////////////
-            textMeshPro.text = formattedMessage;
             textMeshPro.maxVisibleCharacters = 0;  // Inicia el texto oculto.
-            /////////////////////////////
 
-            ////////////VIEJO////////////
-            //foreach (char c in formattedMessage)
-            //{
-            //    textMeshPro.text += c;
-            //    if (!isSkippingDialog) yield return new WaitForSeconds(letterDelay);
-            //}
-            /////////////////////////////
-
-            ////////////NUEVO////////////
             int totalCharacters = textMeshPro.text.Length;
             int visibleCharacters = 0;
             while (visibleCharacters < totalCharacters)
@@ -108,10 +90,9 @@ public class BoxMessageManager : MonoBehaviour
                 textMeshPro.maxVisibleCharacters = visibleCharacters;
                 if (!isSkippingDialog) yield return new WaitForSeconds(letterDelay);
             }
-            /////////////////////////////
 
             float elapsedTime = 0f;
-            while (elapsedTime < hideDialogDelay && !interruptWait)
+            while (elapsedTime < hideDialogDelay)
             {
                 yield return null;
                 elapsedTime += Time.deltaTime;
@@ -127,13 +108,14 @@ public class BoxMessageManager : MonoBehaviour
         lenIcon.gameObject.SetActive(true);
     }
 
-    private string FormatMessage(string name, Color color, string message, Emotions emotion)
+    private void FormatMessage(string message, Emotions emotion)
     {
-        //string hexColor = ColorUtility.ToHtmlStringRGB(color);
-        //nameSpeaker = $" <#{hexColor}> {name}";
+        textMeshPro.text = message;
+    }
+    private void FormatName(string name, Color color)
+    {
         nameTextMeshPro.color = color;
-        //return $"[{emotion}] \"{message}\"";
-        return $" \"{message}\"";
+        nameTextMeshPro.text = name;
     }
 
     public void CheckSkipDialog()
@@ -163,25 +145,32 @@ public class BoxMessageManager : MonoBehaviour
         letterDelay = 0.05f;
         hideDialogDelay = 1f;
         isSkippingDialog = false;
-        interruptWait = false;
     }
 
     private Queue<MessageData> SplitMessage(string name, Color color, string message, Emotions emotion, int maxLength)
     {
+        // Inicializo una nueva queue
         Queue<MessageData> messageParts = new Queue<MessageData>();
 
+        // Mientras la longitud del mensaje sea mayor que maxLength sigo dividiendo el mensaje
         while (message.Length > maxLength)
         {
+            // Busco el ultimo espacio dentro del limite de caracteres
             int splitIndex = message.LastIndexOf(' ', maxLength);
+            // Si no se encuentro un espacio pongo splitIndex como maxLength.
             if (splitIndex == -1)
             {
                 splitIndex = maxLength;
             }
+            // Elimino espacios al inicio y al final y me quedo con el mensage que procese
             string part = message.Substring(0, splitIndex).Trim();
+            // Elimino el fragmento recien procesado del mensaje original
             message = message.Substring(splitIndex).Trim();
+            // Me meto en la queue el mensaje procesado
             messageParts.Enqueue(new MessageData(name, color, part, emotion));
         }
 
+        // Si me quedo un mensaje mas chico que el limite lo mando a la queue tambien
         if (message.Length > 0)
         {
             messageParts.Enqueue(new MessageData(name, color, message, emotion));
@@ -189,16 +178,18 @@ public class BoxMessageManager : MonoBehaviour
 
         return messageParts;
     }
+
+    // Busca los personajes seteados en el editor para ver que foto poner en el dialogo
     private void SetImage(string imageName)
     {
         foreach (var imageData in imageList)
         {
             if (imageData.imageName == imageName)
             {
-                rawImage.texture = imageData.image;
+                pjImage.texture = imageData.image;
                 return;
             }
         }
-        rawImage.texture = imageDefault;
+        pjImage.texture = imageDefault;
     }
 }
