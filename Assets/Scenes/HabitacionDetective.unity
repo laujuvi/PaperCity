@@ -913,6 +913,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToOptions
       objectReference: {fileID: 0}
+    - target: {fileID: 598805934241748756, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_text
+      value: 'Pistas halladas:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 598805934241748756, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 598805934241748756, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 598805934241748756, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 598805934241748756, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 615982617696576183, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -973,6 +993,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 2097041501644068048, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2478726839920357398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 2946748668693483522, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1012,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 4456060725456562965, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477749916719154330, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -176
       objectReference: {fileID: 0}
     - target: {fileID: 4750961293496659042, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1101,6 +1133,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -91.90497
       objectReference: {fileID: 0}
+    - target: {fileID: 7082724478264870537, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.8060303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263404579731321398, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7463923209861320366, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1112,6 +1172,10 @@ PrefabInstance:
     - target: {fileID: 7463923209861320366, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464460146575593222, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_text
+      value: Interactuar
       objectReference: {fileID: 0}
     - target: {fileID: 7858258307367495052, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2314,6 +2378,10 @@ PrefabInstance:
       propertyPath: soundFX
       value: 
       objectReference: {fileID: 7448474399324893966, guid: 9a9b4f52d44e29842a2032b6fe70c4a8, type: 3}
+    - target: {fileID: 8019375657781731714, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bd6997d07d5b8344923a987bcb8ac9b, type: 3}
     - target: {fileID: 8019375657781731714, guid: 04eb41be16d2c3d49860abd83b0feffb, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -4355,7 +4423,7 @@ MonoBehaviour:
     IZQUIERDO."
   - "Bien, no puedo salir sin mi libreta. Deber\xEDa estar en mi escritorio."
   lines2:
-  - Con R puedo abrir mi novela detectivesca y repasar mis notas.
+  - Con R puedo abrir mi libreta detectivesca y repasar mis notas.
   - "Bien... Hora de salir de aqu\xED. Vamos a resolver algunos casos."
 --- !u!1001 &8394775289968108837
 PrefabInstance:

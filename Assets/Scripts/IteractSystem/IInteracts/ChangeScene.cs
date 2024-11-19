@@ -20,11 +20,11 @@ public class ChangeScene : MonoBehaviour, IInteractable
     {
         if (!canChangeScene)
         {
-            interactText = "I need to grab my book first";
+            interactText = "No puedo irme sin mi libreta detectivesca.";
         }
         else
         {
-            interactText = "press Left Click to intyeract";
+            interactText = "Comenzar a investigar.";
         }
         
         return interactText;
