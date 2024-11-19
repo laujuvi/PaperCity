@@ -181,8 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cuatro sospechosos con cuatro diferentes motivos fueron encontrados en
-    la escena del crimen...
+  m_text: Cuatro sospechosos con cuatro motivos diferentes para el asesinato fueron
+    encontrados en la escena del crimen...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -552,7 +552,7 @@ MonoBehaviour:
   sceneToLoad: 0
   interactText: 
   canChangeScene: 0
-  changeSceneTime: 100
+  changeSceneTime: 115
   sceneName: Level 1
 --- !u!4 &490710908
 Transform:
@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Y finalmente, James Moriarty, amigo intimo de Bruce, a pesar de que no
-    podrian ser mas diferentes...
+    podrian ser personas mas diferentes...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1305,8 +1305,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No conozco personalmente a Victor Howard... pero al ver sus trajes entiendo
-    que Roger lo eligiera como su abogado...
+  m_text: No conozco personalmente a Victor Howard... pero al ver sus trajes caros
+    entiendo que Roger lo eligiera como su abogado...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -1456,8 +1456,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pero claro que a ella no le hizo ninguna gracia enterarse los rumores que
-    circundaban su matrimonio...
+  m_text: Pero claro que a ella no le hizo ninguna gracia enterarse sobre los rumores
+    que circundaban su matrimonio...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Las circunstancias de su muerte no pueden ser m\xE1s peculiares..."
+  m_text: Las circunstancias de su muerte no pueden ser mas peculiares...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -2311,7 +2311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFHabr\xE1 visto en la infidelidad de Roger una oportunidad para borrarlo
+  m_text: "\xBFHabra visto en la infidelidad de Roger una oportunidad para borrarlo
     del mapa y quedarse con su mujer de una vez por todas?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3091,7 +3091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pero solo uno de ellos es el asesino...
+  m_text: Pero solo uno de ellos es el artifice...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
   m_sharedMaterial: {fileID: 1669299580077536207, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
@@ -3446,7 +3446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1904153545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3540,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971855247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3674,7 +3674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ni sus mujeres, ni sus yates son baratos. Un estilo de vida como el suyo
+  m_text: Ni sus mujeres ni sus fiestas son baratas. Un estilo de vida como el suyo
     nunca dura mucho...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a64f7a5fb9110b444a8facb499725b75, type: 2}
