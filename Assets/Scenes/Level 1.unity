@@ -51275,9 +51275,19 @@ PrefabInstance:
       value: InitialDialog
       objectReference: {fileID: 0}
     - target: {fileID: 5466868452792923685, guid: 461bd497fae8ead4f89e1a85fc44526f, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5466868452792923685, guid: 461bd497fae8ead4f89e1a85fc44526f, type: 3}
       propertyPath: boxMessageManager
       value: 
       objectReference: {fileID: 2139294260}
+    - target: {fileID: 5466868452792923685, guid: 461bd497fae8ead4f89e1a85fc44526f, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Es momento de ponerme a investigar. Si consigo suficientes pistas,
+        todo quedar\xE1 claro y podr\xE9 acusar a alguien del asesinato. Tal vez
+        lo mejor sea comenzar por hablar con los sospechosos y la escena del crimen."
+      objectReference: {fileID: 0}
     - target: {fileID: 8095724119998070643, guid: 461bd497fae8ead4f89e1a85fc44526f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
