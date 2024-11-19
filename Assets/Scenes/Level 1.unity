@@ -35693,7 +35693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1550521711}
-  childObject: {fileID: 0}
+  childObject: {fileID: 1164957702}
 --- !u!1001 &1551388034
 PrefabInstance:
   m_ObjectHideFlags: 0
