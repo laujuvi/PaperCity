@@ -1,54 +1,75 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class OutlineSelection : MonoBehaviour
 {
+    [SerializeField] private GameObject _RaycastPoint; // Shared Raycast Point
+    [SerializeField] private float _RaycastDistance;
+    [SerializeField] private float _RaycastDistance_2;
+    [SerializeField] private LayerMask interactableLayerMask_1;
+    [SerializeField] private LayerMask interactableLayerMask_2;
+
     private Transform highlight;
-    private Transform selection;
-    private RaycastHit raycastHit;
-
-    public float interactDistance = 4f;
-
-    public Transform player;
 
     void Update()
     {
-      
+        // Disable previous highlight outline
         if (highlight != null)
         {
             highlight.gameObject.GetComponent<Outline>().enabled = false;
             highlight = null;
         }
 
-       
-        Ray ray = new Ray(player.position, player.forward);
+        // Get the closest interactable object for highlighting
+        Transform closestHighlight = GetClosestHighlightObject();
 
-        if (Physics.Raycast(ray, out raycastHit, interactDistance))
+        if (closestHighlight != null)
         {
-            highlight = raycastHit.transform;
-
-            if (highlight.CompareTag("Selectable") && highlight != selection)
+            Outline outline = closestHighlight.GetComponent<Outline>();
+            if (outline == null)
             {
-                Outline outline = highlight.gameObject.GetComponent<Outline>();
-                if (outline != null)
-                {
-                    outline.enabled = true;
-                }
-                else
-                {
-                    outline = highlight.gameObject.AddComponent<Outline>();
-                    outline.enabled = true;
-                    outline.OutlineColor = Color.magenta;
-                    outline.OutlineWidth = 10.0f;
-                }
+                outline = closestHighlight.gameObject.AddComponent<Outline>();
+                outline.OutlineColor = Color.magenta;
+                outline.OutlineWidth = 10.0f;
             }
-            else
-            {
-                highlight = null;
-            }
+            outline.enabled = true;
+            highlight = closestHighlight;
         }
     }
 
+    private Transform GetClosestHighlightObject()
+    {
+        Ray ray = new Ray(_RaycastPoint.transform.position, _RaycastPoint.transform.forward);
+        Ray ray_2 = new Ray(_RaycastPoint.transform.position, _RaycastPoint.transform.forward);
+
+        // Collect all potential objects
+        RaycastHit[] hits = Physics.RaycastAll(ray, _RaycastDistance, interactableLayerMask_1);
+        RaycastHit[] hits_2 = Physics.RaycastAll(ray_2, _RaycastDistance_2, interactableLayerMask_2);
+
+        Transform closestObject = null;
+        float closestDistance = float.MaxValue;
+
+        // Check both raycasts
+        foreach (RaycastHit hit in hits)
+        {
+            float distance = Vector3.Distance(_RaycastPoint.transform.position, hit.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestObject = hit.transform;
+            }
+        }
+
+        foreach (RaycastHit hit_2 in hits_2)
+        {
+            float distance = Vector3.Distance(_RaycastPoint.transform.position, hit_2.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestObject = hit_2.transform;
+            }
+        }
+
+        return closestObject;
+    }
 }
