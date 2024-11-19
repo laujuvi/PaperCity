@@ -75,11 +75,11 @@ public class BoxMessageManager : MonoBehaviour
         {
             MessageData data = messageQueue.Dequeue();
             ResetSkippingTimers();
-            string formattedMessage = FormatMessage(data.Name, data.Color, data.Message, data.Emotion);
+            //Seteo el mensaje
+            FormatMessage(data.Message, data.Emotion);
+            // Seteo el nombre
+            FormatName(data.Name, data.Color);
 
-            nameTextMeshPro.text = data.Name;
-
-            textMeshPro.text = formattedMessage;
             textMeshPro.maxVisibleCharacters = 0;  // Inicia el texto oculto.
 
             int totalCharacters = textMeshPro.text.Length;
@@ -108,10 +108,14 @@ public class BoxMessageManager : MonoBehaviour
         lenIcon.gameObject.SetActive(true);
     }
 
-    private string FormatMessage(string name, Color color, string message, Emotions emotion)
+    private void FormatMessage(string message, Emotions emotion)
+    {
+        textMeshPro.text = message;
+    }
+    private void FormatName(string name, Color color)
     {
         nameTextMeshPro.color = color;
-        return $" \"{message}\"";
+        nameTextMeshPro.text = name;
     }
 
     public void CheckSkipDialog()
