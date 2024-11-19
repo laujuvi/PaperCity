@@ -11,6 +11,7 @@ public class InGameMenu : MonoBehaviour
     public GameObject menuUI;
     public GameObject lenIcon;
     public GameObject options;
+    public GameObject controls;
     public Slider mouseSensitivitySlider;
 
     public delegate void SensitivityChangedHandler();
@@ -71,7 +72,13 @@ public class InGameMenu : MonoBehaviour
     {
         menuUI.SetActive(true);
         options.SetActive(false);
+        controls.SetActive(false);
         print("menu");
+    }
+    public void GoToControls()
+    {
+        controls.SetActive(true);
+        menuUI.SetActive(false);
     }
     public void GoToMenu()
     {
