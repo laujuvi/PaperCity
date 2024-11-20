@@ -7,7 +7,6 @@ public class ShowOpenDoorMessage : MonoBehaviour
     [SerializeField] private PruebaInteractuable door;
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private string doorMessage;
-    private bool isMessageBoxOpen = false;
     void Start()
     {
         if (door != null)
