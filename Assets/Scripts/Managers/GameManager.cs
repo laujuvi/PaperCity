@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
+    [SerializeField] private ScoreScreenManager scoreScreen;
     [SerializeField] private GameObject lenIcon;
 
     /* NPC */
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource musicSc;
 
     private bool isGuiltyCheck = false;
+    private bool playerHasAcused = false;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -127,29 +129,30 @@ public class GameManager : MonoBehaviour
 
     public void CheckGuiltyNPC()
     {
+        //Meto este validador para que no pase nada si el player spamea el clic una vez que le tiro la pantalla final.
+        if (playerHasAcused) return;
         Debug.Log("Checking guilty NPC. GuiltyNPC: " + guiltyNPC.name + " - LastNPCName: " + lastNPCName);
+        lenIcon.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
-            lenIcon.SetActive(false);
             win.SetActive(true);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
-            musicSc.Stop();
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            return;
         }
         else
         {
             Debug.Log("LOSE");
-            lenIcon.SetActive(false);
             lose.SetActive(true);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
-            musicSc.Stop();
-            Cursor.lockState = CursorLockMode.None; 
-            Cursor.visible = true;
-            return;
         }
+        musicSc.Stop();
+
+        playerHasAcused = true;
+        StartCoroutine(GoToScoreScreen());
+
     }
 
     public void CheckCurrentEvidence()
@@ -193,12 +196,6 @@ public class GameManager : MonoBehaviour
         }
 
         isGuiltyCheck = true;
-
-        // Si ya esta listo para acusar se busca al culpable
-        if (!boxMessageManager.IsDisplayingMessage())
-        {
-            CheckGuiltyNPC();
-        }
     }
 
     public void enableDisableOutlineDoors(bool state)
@@ -210,6 +207,20 @@ public class GameManager : MonoBehaviour
     public int GetMinEvidence()
     {
         return minEvidence;
+    }
+
+    private IEnumerator GoToScoreScreen()
+    {
+        yield return new WaitForSeconds(3f); // Espera 3 segundos
+        win.SetActive(false);
+        lose.SetActive(false);
+
+        scoreScreen.SetTotalClues(maxEvidence);
+        scoreScreen.SetCluesObtained(currentEvidence);
+        scoreScreen.UpdateScorePanel();
+
+        scoreScreen.gameObject.SetActive(true);
+
     }
 
 }
