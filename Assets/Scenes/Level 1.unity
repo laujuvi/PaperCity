@@ -10166,6 +10166,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &406200533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1382855213318554006, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+  m_PrefabInstance: {fileID: 3100969699760934354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &413879914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12385,6 +12396,17 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &492318029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 473038455054132941, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+  m_PrefabInstance: {fileID: 3100969699760934354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &493451445
 GameObject:
   m_ObjectHideFlags: 0
@@ -28150,6 +28172,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1574569301489968083, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+    - {fileID: 6896930691181669965, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+    - {fileID: 510905744678437719, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5427854199681845513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       insertIndex: 4
@@ -37329,6 +37353,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77c514256d693e844b65d5771f60fdd7, type: 3}
   m_PrefabInstance: {fileID: 1616636816}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1619908042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+  m_PrefabInstance: {fileID: 3100969699760934354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8374b7c8e90f1f4f88823c8eb3c0a99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1624297523
 GameObject:
   m_ObjectHideFlags: 0
@@ -45325,6 +45360,7 @@ MonoBehaviour:
   totalEvidence: 0
   win: {fileID: 235556172}
   lose: {fileID: 562622674}
+  scoreScreen: {fileID: 1619908042}
   lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
   npcInteracted: []
@@ -51854,6 +51890,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2000642661}
     m_Modifications:
+    - target: {fileID: 1382855213318554006, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_text
+      value: Encontraste un total de X pistas de Y.
+      objectReference: {fileID: 0}
     - target: {fileID: 3849488555284321424, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -51938,9 +51978,45 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: totalCluesText
+      value: 
+      objectReference: {fileID: 406200533}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessageText
+      value: 
+      objectReference: {fileID: 492318029}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.data[0]
+      value: Mensanje de 1 estrella
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.data[1]
+      value: Mensaje de 2 estrellas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.data[2]
+      value: Mensaje de 3 estrellas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.data[3]
+      value: Mensaje de 4 estrellas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.data[4]
+      value: Mensaje de 5 estrellas
+      objectReference: {fileID: 0}
     - target: {fileID: 7720582033949670696, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: m_Name
       value: ScoreScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7720582033949670696, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
