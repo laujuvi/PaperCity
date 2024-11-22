@@ -1428,6 +1428,7 @@ MonoBehaviour:
   menuUI: {fileID: 1286344738}
   lenIcon: {fileID: 646635851}
   options: {fileID: 657494472}
+  controls: {fileID: 0}
   mouseSensitivitySlider: {fileID: 554372600}
   sceneLoadManager: {fileID: 0}
 --- !u!1001 &596996660
@@ -4409,19 +4410,20 @@ MonoBehaviour:
   - "Hac\xEDa mucho no recib\xEDa una llamada telef\xF3nica..."
   - Parece que es hora de volver a jugar al detective.
   - "Pero, \xBFrecuerdo realmente c\xF3mo era esto?"
-  - Creo que puedo moverme con W A S D...
+  - Creo que puedo moverme con <color="red">W A S D...
   - "Si una pista est\xE1 muy debajo de mi campo de visi\xF3n creo que puedo agacharme
-    con CTRL..."
+    con <color=\"red\">CTRL..."
   - "...pero si est\xE1 muy arriba deber\xEDa poder ponerme en puntas de pie con
-    V"
+    <color=\"red\">V"
   - "Si tuviera que huir de un tiroteo (dios no lo permita) podr\xEDa correr con
-    SHIFT."
+    <color=\"red\">SHIFT."
   - "Mi memoria maltrecha por a\xF1os de abuso de alcohol ya no es lo que era...
     Si no recuerdo alguna conclusi\xF3n deber\xEDa poder acceder al registro de conversaciones
-    con L."
-  - "Y si encuentro una pista deber\xEDa poder interactuar con ella con el CLICK
+    con <color=\"red\">L."
+  - "Y si encuentro una pista deber\xEDa poder interactuar con ella con el <color=\"red\">CLICK
     IZQUIERDO."
-  - "Bien, no puedo salir sin mi libreta. Deber\xEDa estar en mi escritorio."
+  - "Bien, no puedo salir sin <color=\"orange\">mi libreta</color>. Deber\xEDa estar
+    en <color=\"red\">mi escritorio."
   lines2:
   - Con R puedo abrir mi libreta detectivesca y repasar mis notas.
   - "Bien... Hora de salir de aqu\xED. Vamos a resolver algunos casos."
