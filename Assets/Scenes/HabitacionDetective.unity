@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -740,11 +740,11 @@ Transform:
   m_GameObject: {fileID: 410958070}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8801117, y: -1.616, z: 18.912573}
+  m_LocalPosition: {x: -26.674, y: -1.2525877, z: 22.6299}
   m_LocalScale: {x: 8.4527855, y: -2.4281, z: 10.471559}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1942281454}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &436172201 stripped
 MonoBehaviour:
@@ -905,6 +905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 161258466648549141, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 499194063722116983, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1428,6 +1432,7 @@ MonoBehaviour:
   menuUI: {fileID: 1286344738}
   lenIcon: {fileID: 646635851}
   options: {fileID: 657494472}
+  controls: {fileID: 0}
   mouseSensitivitySlider: {fileID: 554372600}
   sceneLoadManager: {fileID: 0}
 --- !u!1001 &596996660
@@ -3930,7 +3935,6 @@ Transform:
   - {fileID: 3714428101168921866}
   - {fileID: 668003801}
   - {fileID: 626582523}
-  - {fileID: 410958074}
   - {fileID: 1536211511}
   - {fileID: 1402762916}
   - {fileID: 493151531}
@@ -4354,6 +4358,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1505407071773535397, guid: 0256117dfe29a214eb19242b6e8a3f25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6294488535939444637}
+    - targetCorrespondingSourceObject: {fileID: 1505407071773535397, guid: 0256117dfe29a214eb19242b6e8a3f25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6294488535939444642}
   m_SourcePrefab: {fileID: 100100000, guid: 0256117dfe29a214eb19242b6e8a3f25, type: 3}
 --- !u!1 &6294488535939444631 stripped
 GameObject:
@@ -4374,6 +4381,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Libreta detectivesca
   ObjectName: 
+  notebookIcon: {fileID: 602992185}
+--- !u!114 &6294488535939444642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294488535939444631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db0c78fa967ba04887629933ef0e2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6935952043259570177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,6 +4520,7 @@ SceneRoots:
   - {fileID: 948903712}
   - {fileID: 6294488535939444630}
   - {fileID: 1942281454}
+  - {fileID: 410958074}
   - {fileID: 3198549636153733973}
   - {fileID: 1309316206}
   - {fileID: 1565306037}

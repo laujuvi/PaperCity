@@ -9,9 +9,13 @@ public class TutorialInteract2 : MonoBehaviour, IInteractable
     [SerializeField] private string ObjectName;
 
     public event Action OnInteractableActivated;
+
+    public GameObject notebookIcon;
+
     public string GetInteractText()
     {
         return interactText;
+        notebookIcon.SetActive(true);
     }
 
     public Transform GetTransform()
@@ -24,17 +28,5 @@ public class TutorialInteract2 : MonoBehaviour, IInteractable
         gameObject.SetActive(false);
 
         OnInteractableActivated?.Invoke();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

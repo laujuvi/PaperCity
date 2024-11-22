@@ -69,14 +69,16 @@ public class GameManager : MonoBehaviour
         win.SetActive(false);
         lose.SetActive(false);
 
-        uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
+        if (uIManager != null && dialogManager != null)
+        {
+            uIManager.UpdateTotalEvidence(dialogManager.GetTotalEvidence());
+
+            dialogManager.SetMinEvidenceForPhase2(minEvidence);
+            dialogManager.SetMinEvidenceForPhaseFinal(maxEvidence);
+            dialogManager.SetEvidenceArray(evidenceArray);
+            maxEvidence = evidenceArray.Length;
+        }
         HideCursor();
-
-        dialogManager.SetMinEvidenceForPhase2(minEvidence);
-        dialogManager.SetMinEvidenceForPhaseFinal(maxEvidence);
-        dialogManager.SetEvidenceArray(evidenceArray);
-
-        maxEvidence = evidenceArray.Length;
     }
 
     private void Update()
