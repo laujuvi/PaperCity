@@ -70,6 +70,8 @@ MonoBehaviour:
   interactText: press E to interact
   openAngle: 90
   openSpeed: 2
+  closeSpeed: 3
+  audioManager: {fileID: 0}
 --- !u!1 &6473291032155424584
 GameObject:
   m_ObjectHideFlags: 0

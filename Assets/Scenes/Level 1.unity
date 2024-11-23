@@ -4214,9 +4214,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1943111827}
     m_Modifications:
+    - target: {fileID: 294755224092143921, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2510027704092529030, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_Name
       value: PrefabEncimeraIzq (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510027704092529030, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3379364233608525595, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -4269,6 +4277,14 @@ PrefabInstance:
     - target: {fileID: 3379364233608525595, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585458422166297469, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410364514995064070, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7898530821764585404, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7175,6 +7191,14 @@ PrefabInstance:
     - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Name
       value: PrefabPuerta (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167534078898837047, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380058468467660414, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: audioManager
@@ -17903,9 +17927,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2810295946927877721, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246906088793835145, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Name
       value: PrefabEncimeraDer 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5949953892232128708, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8437332233357220170, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_LocalScale.x
@@ -20233,6 +20273,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cb1ff3131d18fe94b8446c944f0d7141, type: 3}
       propertyPath: m_Name
       value: EncimeraDer 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb1ff3131d18fe94b8446c944f0d7141, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23478,6 +23522,14 @@ PrefabInstance:
     - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Name
       value: PrefabPuerta (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7167534078898837047, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380058468467660414, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: openAngle
@@ -37756,7 +37808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5436298318634581636, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6706717249794367922, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: _RaycastPoint
@@ -37788,7 +37840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.229
+      value: -26.6
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37796,7 +37848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.406
+      value: 11.79
       objectReference: {fileID: 0}
     - target: {fileID: 8307456181129438541, guid: 1fbd1f6e91c48304bb7d05de33f35e8d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39163,8 +39215,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -51724,6 +51775,18 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}
+    - target: {fileID: 1826564312076774062, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
+      propertyPath: m_Size.z
+      value: 1.3463346
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826564312076774062, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
+      propertyPath: m_Center.x
+      value: -0.28585327
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826564312076774062, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.17316733
+      objectReference: {fileID: 0}
     - target: {fileID: 1826564312076774062, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
       propertyPath: m_IsTrigger
       value: 0

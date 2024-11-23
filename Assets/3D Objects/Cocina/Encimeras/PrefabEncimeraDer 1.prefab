@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 8491505835516337128}
   - component: {fileID: 5715794297338251893}
   - component: {fileID: 3182637587506232053}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EncimeraDer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
