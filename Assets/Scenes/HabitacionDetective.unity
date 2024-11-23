@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4546,7 +4546,9 @@ MonoBehaviour:
   - "Bien, no puedo salir sin <color=\"orange\">mi libreta</color>. Deber\xEDa estar
     en <color=\"red\">mi escritorio."
   lines2:
-  - Con R puedo abrir mi libreta detectivesca y repasar mis notas.
+  - Con <color="red">R</color> puedo abrir mi libreta detectivesca y repasar mis
+    notas.
+  - "Con <color=\"red\">Q</color> puedo pasar de hoja para ver m\xE1s anotaciones."
   - "Bien... Hora de salir de aqu\xED. Vamos a resolver algunos casos."
 --- !u!1001 &8394775289968108837
 PrefabInstance:
