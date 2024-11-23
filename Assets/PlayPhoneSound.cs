@@ -1,13 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayPhoneSound : MonoBehaviour
 {
     [Header("Sound Settings")]
-    [SerializeField] private AudioClip soundToPlay; // El clip de audio que quieres reproducir.
+    [SerializeField] private AudioClip phoneRingSound; // El clip de audio que quieres reproducir.
+    [SerializeField] private AudioClip otherButtonsSound; // El clip de audio que quieres reproducir.
 
     public Button button; // Referencia al botón.
     public AudioSource music;
+    public List<Button> buttons;
 
     private void Awake()
     {
@@ -23,15 +26,20 @@ public class PlayPhoneSound : MonoBehaviour
         {
             button.onClick.AddListener(PlaySound);
         }
+
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].onClick.AddListener(PlayOtherSounds);
+        }
     }
 
     private void PlaySound()
     {
         if (AudioManager.instance != null)
         {
-            if (soundToPlay != null)
+            if (phoneRingSound != null)
             {
-                AudioManager.instance.PlaySoundFX(soundToPlay, transform, 1f);
+                AudioManager.instance.PlaySoundFX(phoneRingSound, transform, 1f);
                 music.Stop();
             }
             else
@@ -42,6 +50,17 @@ public class PlayPhoneSound : MonoBehaviour
         else
         {
             Debug.LogError("No se encontró un AudioManager en la escena. Asegúrate de que esté configurado correctamente.");
+        }
+    }
+
+    private void PlayOtherSounds()
+    {
+        if (AudioManager.instance != null)
+        {
+            if (otherButtonsSound != null)
+            {
+                AudioManager.instance.PlaySoundFX(otherButtonsSound, transform, 2f);
+            }
         }
     }
 }

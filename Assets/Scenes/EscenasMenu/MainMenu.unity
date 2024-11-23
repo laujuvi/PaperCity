@@ -698,9 +698,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72a23c37d7373b44b65498dfdd60218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundToPlay: {fileID: 8300000, guid: 9ab5d13dab32d0547a01757aa75ed70d, type: 3}
+  phoneRingSound: {fileID: 8300000, guid: 9ab5d13dab32d0547a01757aa75ed70d, type: 3}
+  otherButtonsSound: {fileID: 8300000, guid: 019b4c1acbe5a4648b10c6b68524dbd3, type: 3}
   button: {fileID: 271059625}
   music: {fileID: 1917083021}
+  buttons:
+  - {fileID: 862044084}
+  - {fileID: 177660619}
+  - {fileID: 1065621711}
+  - {fileID: 1007229132}
+  - {fileID: 118118642}
 --- !u!4 &279470719
 Transform:
   m_ObjectHideFlags: 0
