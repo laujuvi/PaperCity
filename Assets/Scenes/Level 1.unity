@@ -19634,7 +19634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189741957220057860, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4891472756631463735, guid: f610aef22b68dfe4aad96d708cffbd8e, type: 3}
       propertyPath: m_Size.y
@@ -52388,16 +52388,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 966193083}
     - target: {fileID: -997932674080630769, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
+      propertyPath: description
+      value: "James amaba a Layla. \xBFPero ella a \xE9l...?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -997932674080630769, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}
     - target: {fileID: -997932674080630769, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: pickableText
-      value: "Pobre James... \xE9ste es un regalo que le hizo a Layla, olvidado aqu\xED
-        en esta habitaci\xF3n. Aunque tambi\xE9n comprendo a Layla, ella realmente
-        estaba enamorada de Roger y no querr\xEDa herirlo llevando a su habitaci\xF3n
-        un regalo de otro hombre. Esto me deja en claro que el amor de James era
-        no correspondido.\""
+      value: "\xC9ste es un regalo que James le hizo a Layla, olvidado aqu\xED en
+        el dep\xF3sito. Aunque lo comprendo, Layla no habr\xEDa querido incomodar
+        a Roger."
       objectReference: {fileID: 0}
     - target: {fileID: 3029519308356619813, guid: 31f2e564047a59c43aac21f0f45102a5, type: 3}
       propertyPath: m_LocalPosition.x
