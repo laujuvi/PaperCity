@@ -1248,6 +1248,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2127412945}
     m_Modifications:
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 8402520018663591492, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -3893,6 +3897,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4285,6 +4293,10 @@ PrefabInstance:
     - target: {fileID: 7410364514995064070, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: interactText
+      value: Abrir
       objectReference: {fileID: 0}
     - target: {fileID: 7898530821764585404, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
       propertyPath: m_LocalScale.x
@@ -7194,7 +7206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7167534078898837047, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Layer
@@ -12130,6 +12142,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1631273388}
     m_Modifications:
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 8402520018663591492, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -17943,6 +17959,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5682459587458014486, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 5949953892232128708, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -23525,7 +23545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482424461218133024, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7167534078898837047, guid: a3a6ae0adfeba474b8513c30fc6b8057, type: 3}
       propertyPath: m_Layer
@@ -23786,8 +23806,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 2.2278705}
+  m_Center: {x: 0, y: 0, z: -0.613935}
 --- !u!23 &961320061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26523,6 +26543,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26854,6 +26878,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1453682223}
     m_Modifications:
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 8402520018663591492, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -28678,6 +28706,10 @@ PrefabInstance:
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682459587458014486, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: interactText
+      value: Abrir
       objectReference: {fileID: 0}
     - target: {fileID: 5949953892232128708, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
@@ -36345,6 +36377,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: objectToActivate
       value: 
       objectReference: {fileID: 0}
@@ -36891,6 +36927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2127412945}
     m_Modifications:
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 8402520018663591492, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -39215,6 +39255,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7582725937995688532, guid: 9756cd3f0fee2c64c82f4274c4d6fe0e, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39421,6 +39465,10 @@ PrefabInstance:
     - target: {fileID: 4345745712207503165, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682459587458014486, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
+      propertyPath: interactText
+      value: Abrir
       objectReference: {fileID: 0}
     - target: {fileID: 5949953892232128708, guid: 4f2572060e35c80428707960d87d75c7, type: 3}
       propertyPath: m_Layer
@@ -50145,6 +50193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1453682223}
     m_Modifications:
+    - target: {fileID: 1809674126054229069, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
+      propertyPath: interactText
+      value: Abrir
+      objectReference: {fileID: 0}
     - target: {fileID: 8402520018663591492, guid: 4c4a2557d8eac854b936bfb1b99d3f90, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
