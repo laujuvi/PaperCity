@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2929543807660130354
 Transform:
   m_ObjectHideFlags: 0
@@ -41,7 +41,7 @@ AudioSource:
   m_GameObject: {fileID: 1624038204045514190}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 669e14b09d3ecf442a08ab958f3f91f7, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d84ed2c1702dec048b4f4315e30273aa, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6042867949782574475
 Transform:
   m_ObjectHideFlags: 0
@@ -169,8 +169,8 @@ AudioSource:
   m_GameObject: {fileID: 1717958784052133425}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 669e14b09d3ecf442a08ab958f3f91f7, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b42496e278a49a94a9bda667ecdc4fc4, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d84ed2c1702dec048b4f4315e30273aa, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8bd6997d07d5b8344923a987bcb8ac9b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 0.9
@@ -312,3 +312,4 @@ MonoBehaviour:
   notebookClose: {fileID: 8300000, guid: 4c25052ef0e570544a2e7b9c371629a1, type: 3}
   victorySound: {fileID: 8300000, guid: b37ec9dbcb27d9d4ea4c17af510c8acc, type: 3}
   defeatSound: {fileID: 8300000, guid: 62a8a2dd2b8be4b42922146675fe3724, type: 3}
+  phoneRing: {fileID: 8300000, guid: 78fdff81c03913b48afd09bb14079874, type: 3}

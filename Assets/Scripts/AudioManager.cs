@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip victorySound;
     public AudioClip defeatSound;
 
+    public AudioClip phoneRing;
 
     private void Awake()
     {
