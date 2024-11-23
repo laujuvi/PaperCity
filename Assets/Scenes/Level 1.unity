@@ -52559,16 +52559,32 @@ PrefabInstance:
       value: Selectable
       objectReference: {fileID: 0}
     - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_Size.x
+      value: 3.481272
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Size.y
-      value: 2.3193684
+      value: 5.0157847
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_Size.z
+      value: 0.94128036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_Center.x
+      value: 0.11649616
       objectReference: {fileID: 0}
     - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_Center.y
-      value: 0.65968347
+      value: 2.0078917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
+      propertyPath: m_Center.z
+      value: -0.15881157
       objectReference: {fileID: 0}
     - target: {fileID: 4617859777191574493, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5571254928268134188, guid: b49019ce103a0df4fbede8af06c10eba, type: 3}
       propertyPath: m_TagString
