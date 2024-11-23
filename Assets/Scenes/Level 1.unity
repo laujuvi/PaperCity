@@ -51721,6 +51721,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 761333728}
     - target: {fileID: 183212121188303889, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
+      propertyPath: description
+      value: "<color=\"orange\">Alguien fuerte </color>tuvo una discusi\xF3n en la
+        cocina."
+      objectReference: {fileID: 0}
+    - target: {fileID: 183212121188303889, guid: c42584c09f6c0664195c27682e6cf38a, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1867747139}

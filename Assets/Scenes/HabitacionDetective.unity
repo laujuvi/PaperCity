@@ -2735,31 +2735,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.23
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36341238
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.709
+      value: 20.87
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70723015
+      value: 0.691514
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.70698345
+      value: -0.69127274
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000009611248
+      value: -0.14821458
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000009909271
+      value: -0.1482663
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2771,7 +2771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2037718233772375778, guid: 2cef6130568028442947792e3cd29baf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -24.203
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4299,6 +4299,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1505407071773535397, guid: 0256117dfe29a214eb19242b6e8a3f25, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
+      objectReference: {fileID: 0}
     - target: {fileID: 2283210034296682015, guid: 0256117dfe29a214eb19242b6e8a3f25, type: 3}
       propertyPath: m_LocalScale.x
       value: 20.500015
@@ -4429,19 +4433,20 @@ MonoBehaviour:
   - "Hac\xEDa mucho no recib\xEDa una llamada telef\xF3nica..."
   - Parece que es hora de volver a jugar al detective.
   - "Pero, \xBFrecuerdo realmente c\xF3mo era esto?"
-  - Creo que puedo moverme con W A S D...
+  - Creo que puedo moverme con <color="red">W A S D...
   - "Si una pista est\xE1 muy debajo de mi campo de visi\xF3n creo que puedo agacharme
-    con CTRL..."
+    con <color=\"red\">CTRL..."
   - "...pero si est\xE1 muy arriba deber\xEDa poder ponerme en puntas de pie con
-    V"
+    <color=\"red\">V"
   - "Si tuviera que huir de un tiroteo (dios no lo permita) podr\xEDa correr con
-    SHIFT."
+    <color=\"red\">SHIFT."
   - "Mi memoria maltrecha por a\xF1os de abuso de alcohol ya no es lo que era...
     Si no recuerdo alguna conclusi\xF3n deber\xEDa poder acceder al registro de conversaciones
-    con L."
-  - "Y si encuentro una pista deber\xEDa poder interactuar con ella con el CLICK
+    con <color=\"red\">L."
+  - "Y si encuentro una pista deber\xEDa poder interactuar con ella con el <color=\"red\">CLICK
     IZQUIERDO."
-  - "Bien, no puedo salir sin mi libreta. Deber\xEDa estar en mi escritorio."
+  - "Bien, no puedo salir sin <color=\"orange\">mi libreta</color>. Deber\xEDa estar
+    en <color=\"red\">mi escritorio."
   lines2:
   - Con R puedo abrir mi libreta detectivesca y repasar mis notas.
   - "Bien... Hora de salir de aqu\xED. Vamos a resolver algunos casos."
