@@ -57,7 +57,10 @@ public class DialogManager : MonoBehaviour
     private int minEvidenceForPhaseFinal = 2;
     private int totalEvidence;
 
+    public event Action OnLoopDialog;
+    public string currentNPCName;
     private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
+    public bool isDialoguesPhase1 = true;
 
     private void Start()
     {
@@ -89,7 +92,10 @@ public class DialogManager : MonoBehaviour
     {
         int totalCurrentEvidence = GetTrueEvidenceCount();
 
-        if (totalCurrentEvidence >= minEvidenceForPhase2 && totalCurrentEvidence < minEvidenceForPhaseFinal) currentDialoguesWrapper = dialoguesPhase2Wrapper;
+        if (totalCurrentEvidence >= minEvidenceForPhase2 && totalCurrentEvidence < minEvidenceForPhaseFinal) {
+            currentDialoguesWrapper = dialoguesPhase2Wrapper;
+            isDialoguesPhase1 = false;
+        } 
         if (totalCurrentEvidence >= minEvidenceForPhaseFinal) currentDialoguesWrapper = dialoguesPhaseFinalWrapper;
         DialogData dialog = FindDialogByName(name, currentDialoguesWrapper);
 
@@ -110,6 +116,8 @@ public class DialogManager : MonoBehaviour
                     if (message.isLoopingMessage)
                     {
                         boxMessageManager.SendMessage(dialog.name, dialog.color, messageToSend, parsedEmotion);
+                        currentNPCName = dialog.name;
+                        OnLoopDialog?.Invoke();
                         return;
                     }
                     
