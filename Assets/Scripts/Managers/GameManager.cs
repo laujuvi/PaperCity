@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
     [SerializeField] private ScoreScreenManager scoreScreen;
+    [SerializeField] private GameObject preScoreScreen;
     [SerializeField] private GameObject lenIcon;
 
     /* NPC */
@@ -139,12 +140,14 @@ public class GameManager : MonoBehaviour
         lenIcon.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        playerHasAcused = true;
 
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
             win.SetActive(true);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
+            StartCoroutine(GoToScoreScreen());
         }
         else
         {
@@ -154,8 +157,6 @@ public class GameManager : MonoBehaviour
         }
         musicSc.Stop();
 
-        playerHasAcused = true;
-        StartCoroutine(GoToScoreScreen());
 
     }
 
@@ -218,6 +219,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f); // Espera 3 segundos
         win.SetActive(false);
         lose.SetActive(false);
+        preScoreScreen.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+        preScoreScreen.SetActive(false);
 
         //Hago que el collector junte la data seteada
         dataCollector.SetAllData();

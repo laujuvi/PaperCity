@@ -17,8 +17,6 @@ public class ScoreData
 
 public class ScoreScreenManager : MonoBehaviour
 {
-    [Header("Panel")]
-    [SerializeField] GameObject panelScore;
 
     [Header("Imagenes")]
     [SerializeField] RawImage imagePersonaje;
@@ -98,6 +96,7 @@ public class ScoreScreenManager : MonoBehaviour
         //OSADO
         if (cluesObtained == minClues) return profileType  = ProfileType.Osado.ToString();
 
+        // ENTUSIASTA
         return profileType = ProfileType.Entusiasta.ToString();
     }
 }
