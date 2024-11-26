@@ -23,7 +23,7 @@ public class WallCheck : MonoBehaviour
 
     private void wallChecker()
     {
-        if(gameManager.npcInteracted.Count >= 3)
+        if(gameManager.npcInteracted.Count >= GameManager.Instance.totalNPCs)
         {
             gameObject.SetActive(false);
         }
@@ -46,7 +46,7 @@ public class WallCheck : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            if (gameManager.npcInteracted.Count < 4)
+            if (gameManager.npcInteracted.Count < GameManager.Instance.totalNPCs)
             {
                 boxMessageManager.SendMessage("Detective", Color.white, "Debería hablar con los sospechosos antes de ponerme a investigar...", Emotions.None);
             }
