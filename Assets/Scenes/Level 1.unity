@@ -6403,6 +6403,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265189803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &267748180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267748181}
+  - component: {fileID: 267748182}
+  m_Layer: 0
+  m_Name: DataCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267748181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267748180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1194024091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267748182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267748180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be56e75c57f7d8a45b2e7b526953f757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogManager: {fileID: 1119218544}
 --- !u!1 &268345374
 GameObject:
   m_ObjectHideFlags: 0
@@ -29203,6 +29248,7 @@ Transform:
   - {fileID: 1090449292}
   - {fileID: 1760056964}
   - {fileID: 1696839235}
+  - {fileID: 267748181}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201881028
@@ -45447,6 +45493,7 @@ MonoBehaviour:
   boxMessageManager: {fileID: 2139294260}
   dialogManager: {fileID: 1119218544}
   uIManager: {fileID: 2000642660}
+  dataCollector: {fileID: 267748182}
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
   isPlayerInGuiltyRoom: 0
@@ -45482,6 +45529,7 @@ MonoBehaviour:
   scoreScreen: {fileID: 1619908042}
   lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
+  totalNPCs: 4
   npcInteracted: []
   leftExitDoor: {fileID: 54877235}
   rightExitDoor: {fileID: 2109300187}
@@ -47572,6 +47620,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4957510550617909972, guid: 1b4c57d892a190d488bc5467a43318ef, type: 3}
   m_PrefabInstance: {fileID: 1960405858}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962770466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6809613243806934634, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+  m_PrefabInstance: {fileID: 3100969699760934354}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967471918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4727012152725860910, guid: b2b395acb44cf9b4a866084c17503ccf, type: 3}
@@ -52038,6 +52097,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Encontraste un total de X pistas de Y.
       objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_text
+      value: Perfil detectivesco
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontSize
+      value: 85.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 85.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2471362899565049195, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3849488555284321424, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -52122,6 +52209,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1859243080}
+    - target: {fileID: 4400932738640758908, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400932738640758908, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -870
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400932738640758908, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400932738640758908, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 305
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: imagePersonaje
+      value: 
+      objectReference: {fileID: 1962770466}
     - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: totalCluesText
       value: 
@@ -52131,8 +52238,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 492318029}
     - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
-      propertyPath: resultMessages.Array.size
+      propertyPath: profileList.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: resultMessages.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: resultMessages.Array.data[0]
@@ -52154,6 +52265,146 @@ PrefabInstance:
       propertyPath: resultMessages.Array.data[4]
       value: Mensaje de 5 estrellas
       objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].text
+      value: "\u201CEmprendiste recientemente tu carrera como detective de casos
+        violentos y, a pesar de contar con algunos \xE9xitos modestos bajo la manga,
+        tus colegas no te tienen mucha f\xE9 y aquello te molesta. Sabes que tienes
+        mucho que aprender a\xFAn pero no te desanimas pues conf\xE1is en tu potencial
+        y sabes que cada caso que asumas ser\xE1 una oportunidad para mejorar tu
+        m\xE9todo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].text
+      value: "Conf\xEDas en tu criterio. Eres un detective decidido, incluso algo
+        soberbio, podr\xEDan decir tus colegas en la estaci\xF3n. Pero sabes que
+        no son m\xE1s que palabras vac\xEDas, pues a la hora de la verdad, cuando
+        a los dem\xE1s le han comido la lengua los ratones, te llaman a t\xED, pues
+        tu instinto no suele fallar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 36fdeac45a3e3624e962f46759e5a737, type: 3}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 36fdeac45a3e3624e962f46759e5a737, type: 3}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[2].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 36fdeac45a3e3624e962f46759e5a737, type: 3}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[3].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 36fdeac45a3e3624e962f46759e5a737, type: 3}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[4].image
+      value: 
+      objectReference: {fileID: 2800000, guid: 36fdeac45a3e3624e962f46759e5a737, type: 3}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].tittle
+      value: Entusiasta
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].tittle
+      value: Osado
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].commentText
+      value: Has resuelto el caso sin encontrar todas las pistas y sin hablar demasiado
+        con los sospechosos involucrados.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].profileText
+      value: "Emprendiste recientemente tu carrera como detective de casos violentos
+        y, a pesar de contar con algunos \xE9xitos modestos bajo la manga, tus colegas
+        no te tienen mucha f\xE9 y aquello te molesta. Sabes que tienes mucho que
+        aprender a\xFAn pero no te desanimas pues conf\xEDas en tu potencial y sabes
+        que cada caso que asumas ser\xE1 una oportunidad para mejorar tu m\xE9todo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].commentText
+      value: "Has resuelto el crimen con la m\xEDnima cantidad de pistas necesarias."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].profileText
+      value: "Conf\xEDas en tu criterio. Eres un detective decidido, incluso algo
+        soberbio, podr\xEDan decir tus colegas en la estaci\xF3n. Pero sabes que
+        no son m\xE1s que palabras vac\xEDas, pues a la hora de la verdad, cuando
+        a los dem\xE1s le han comido la lengua los ratones, te llaman a t\xED, pues
+        tu instinto no suele fallar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[2].profileText
+      value: "No dejas nada al azar. Conf\xEDas en los hechos que el exhaustivo ejercicio
+        de tus c\xE9lulas grises deja en evidencia m\xE1s que en las palabras alborotadas
+        de las v\xEDctimas o sospechosos involucrados en tus casos, pues sabes que
+        todos mienten y que la memoria no es confiable, pero las huellas de los criminales,
+        que rara vez escapan a tus narices, s\xED lo son."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[3].profileText
+      value: "Para un detective como t\xFA la clave est\xE1 en las palabras y la
+        psicolog\xEDa de los involucrados. Puedes ver entre l\xEDneas y sacar la
+        verdad de los sospechosos, por m\xE1s que tengas que utilizar m\xE9todos
+        poco ortodoxos pues ning\xFAn crimen puede resolverse sin hurgar en el oscuro
+        inconsciente del culpable."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[4].profileText
+      value: "No conf\xEDas demasiado en m\xE9todos convencionales, ni en tu memoria
+        o en instinto detectivesco, pues sabes que todo genio puede degradarse con
+        el tiempo. Te aseguras de dar todo lo que tienes en cada caso y eso, a pesar
+        de ser visto con un poco de desd\xE9n por los idiotas de tu compa\xF1eros
+        de la estaci\xF3n, sabes que es lo que siempre te ha llevado a la victoria,
+        y si fuera por t\xED, nunca cambiar\xEDas tus m\xE9todos, los cuales suelen
+        renovarse caso a caso, dependiendo de las circunstancias."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].profileTitle
+      value: Entusiasta
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].profileTitle
+      value: Osado
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[2].profileTitle
+      value: Meticuloso
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[3].profileTitle
+      value: "Psicol\xF3gico"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[4].profileTitle
+      value: Implacable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[0].profileComment
+      value: Has resuelto el caso sin encontrar todas las pistas y sin hablar demasiado
+        con los sospechosos involucrados.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[1].profileComment
+      value: "Has resuelto el crimen con la m\xEDnima cantidad de pistas necesarias."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[2].profileComment
+      value: "Has resuelto el crimen encontrando todas las pistas que hab\xEDa en
+        la casa. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[3].profileComment
+      value: "Has resuelto el crimen con la m\xEDnima cantidad de pistas requeridas
+        y has hablado con todos los sospechosos hasta el hartazgo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5970917684298886412, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: profileList.Array.data[4].profileComment
+      value: "Has encontrado todas las pistas y adem\xE1s has hablado con todos los
+        sospechosos hasta el hartazgo. "
+      objectReference: {fileID: 0}
     - target: {fileID: 7720582033949670696, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: m_Name
       value: ScoreScreen
@@ -52161,6 +52412,18 @@ PrefabInstance:
     - target: {fileID: 7720582033949670696, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862706826143749722, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862706826143749722, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862706826143749722, guid: 1681f27bd646b234eb53318e3ef170dc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2924528
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
