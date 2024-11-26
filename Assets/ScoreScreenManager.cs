@@ -4,65 +4,100 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum ProfileType { Entusiasta, Osado, Meticuloso, Psicológico, Implacable };
+
+[System.Serializable]
+public class ScoreData
+{
+    public string profileTitle;
+    public string profileText;
+    public string profileComment;
+    public Texture image;
+}
+
 public class ScoreScreenManager : MonoBehaviour
 {
     [Header("Panel")]
     [SerializeField] GameObject panelScore;
 
     [Header("Imagenes")]
-    [SerializeField] Texture scoreStarImage; 
+    [SerializeField] RawImage imagePersonaje;
 
     [Header("Textos")]
-    [SerializeField] TextMeshProUGUI totalCluesText;
-    [SerializeField] TextMeshProUGUI resultMessageText;
-    [SerializeField] string[] resultMessages;
+    [SerializeField] TextMeshProUGUI profileTitleText;
+    [SerializeField] TextMeshProUGUI profileText;
+    [SerializeField] TextMeshProUGUI profileCommentText;
 
-    private float totalClues;
-    private float cluesObtained;
-    private int totalStars;
+    [Header("Perfiles")]
+    [SerializeField] List<ScoreData> profileList;
+
+    private int cluesObtained;
+    private int minClues;
+    private int maxClues;
+    private bool hasTalkedAllNPCs;
+
+    private string profileType;
 
 
-    public void SetTotalClues (int total)
+    private void UpdateProfileText(string title, string content , string comment )
     {
-        totalClues = total;
-    }
-    public void SetCluesObtained(int obtained)
-    {
-        cluesObtained = obtained;
+        profileTitleText.SetText(title);
+        profileText.SetText(content);
+        profileCommentText.SetText(comment);
     }
 
-    private void SetTotalCluesText()
+    private void UpdateProfileImage(Texture texture)
     {
-        totalCluesText.SetText($"Encontraste {cluesObtained} pistas de {totalClues}.");
+        imagePersonaje.texture = texture;
     }
 
-    private void SetResultMessageText()
-    {
-        resultMessageText.SetText(resultMessages[totalStars-1]);
-    }
     public void UpdateScorePanel()
     {
-        CalculateTotalScoreStarImage();
-        SetTotalCluesText();
-        SetResultMessageText();
+        CheckMessageShowing();
+        SelectProfileToShow();
+    }
 
-        for (int i = 0; i < totalStars; i++)
+    public void SetScoreValues(DataCollected dataCollected)
+    {
+        maxClues = dataCollected.maxClues;
+        minClues = dataCollected.minClues;
+        cluesObtained = dataCollected.cluesObtained;
+        hasTalkedAllNPCs = dataCollected.hasTalkedAllNPCs;
+    }
+
+    private void SelectProfileToShow()
+    {
+        foreach (var profile in profileList)
         {
-            GameObject newStarObj = new GameObject($"Star_{i + 1}");
-            newStarObj.transform.SetParent(panelScore.transform, false); 
-
-            RawImage newStar = newStarObj.AddComponent<RawImage>();
-            newStar.texture = scoreStarImage;
+            if (profile.profileTitle == profileType)
+            {
+                UpdateProfileText(profile.profileTitle, profile.profileText, profile.profileComment);
+                UpdateProfileImage(profile.image);
+            }
         }
     }
-    private void CalculateTotalScoreStarImage()
-    {
-        float percentage = (cluesObtained / totalClues) * 100f;
 
-        // Calcula las estrellas redondeando hacia abajo y asegurando un rango de 1 a 5
-        // Se divide por 20 porque queremos que el total de estrellas no supere las 5, entonces sabiendo que percentage<=100
-        // el resultado va a estar siempre dentro del rango de 1 a 5
-        totalStars = Mathf.Clamp(Mathf.CeilToInt(percentage / 20f), 1, 5);
+    private string CheckMessageShowing() {
 
+        if (hasTalkedAllNPCs)
+        {
+            // Este caso no fue contemplado
+            //if (cluesObtained < maxClues && cluesObtained > minClues) return;
+
+            // IMPLACABLE
+            if (cluesObtained == maxClues) return profileType = ProfileType.Implacable.ToString();
+
+            //PSICOLOGICO
+            if (cluesObtained == minClues) return profileType = ProfileType.Psicológico.ToString();
+
+        }
+
+        // METICULOSO
+        if (cluesObtained == maxClues) return profileType  = ProfileType.Meticuloso.ToString();
+
+        //OSADO
+        if (cluesObtained == minClues) return profileType  = ProfileType.Osado.ToString();
+
+        return profileType = ProfileType.Entusiasta.ToString();
     }
 }
