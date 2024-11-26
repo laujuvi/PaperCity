@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
+    [SerializeField] private DataCollector dataCollector;
 
     /* PLAYER */
     [Header("PLAYER")]
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     [Header("EVIDENCE MONITORING")]
     [SerializeField] public int minEvidence = 1;
     [SerializeField] private string intermediateMessage;
-    [SerializeField] private int maxEvidence = 2;
+    [SerializeField] public int maxEvidence = 2;
     [SerializeField] private string definitiveMessage;
     public int currentEvidence = 0;
     public int totalEvidence = 0;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     /* NPC */
     [Header("NPC")]
     [SerializeField] private GameObject guiltyNPC;
+    [SerializeField] public int totalNPCs; // Este entero se usa para validar cuantos npcs hay en la escena.
     public List<GameObject> npcInteracted = new List<GameObject>();
 
     /* NPC INFO */
@@ -217,8 +219,13 @@ public class GameManager : MonoBehaviour
         win.SetActive(false);
         lose.SetActive(false);
 
-        scoreScreen.SetTotalClues(maxEvidence);
-        scoreScreen.SetCluesObtained(currentEvidence);
+        //Hago que el collector junte la data seteada
+        dataCollector.SetAllData();
+
+        // Le paso esa data al score
+        scoreScreen.SetScoreValues(dataCollector.GetAllData());
+
+        // Llamo al score para que renderice la data que le pase
         scoreScreen.UpdateScorePanel();
 
         scoreScreen.gameObject.SetActive(true);
