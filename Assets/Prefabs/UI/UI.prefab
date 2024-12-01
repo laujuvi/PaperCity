@@ -6428,9 +6428,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4670045875317772662, guid: e4f80069ccf93874e809fdd9347bfee4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6916507646233811331}
-    - targetCorrespondingSourceObject: {fileID: 4670045875317772662, guid: e4f80069ccf93874e809fdd9347bfee4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 7181019614559974022}
     - targetCorrespondingSourceObject: {fileID: 4670045875317772662, guid: e4f80069ccf93874e809fdd9347bfee4, type: 3}
       insertIndex: -1
@@ -6449,23 +6446,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4670045875317772662, guid: e4f80069ccf93874e809fdd9347bfee4, type: 3}
   m_PrefabInstance: {fileID: 8200375279747540123}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6916507646233811331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531596325594805741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 991
 --- !u!223 &7181019614559974022
 Canvas:
   m_ObjectHideFlags: 0
