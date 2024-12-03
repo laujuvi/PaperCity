@@ -1,19 +1,17 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OutlineSelection : MonoBehaviour
 {
     [SerializeField] private GameObject _RaycastPoint; // Shared Raycast Point
-    [SerializeField] private float _RaycastDistance;
-    [SerializeField] private float _RaycastDistance_2;
-    [SerializeField] private LayerMask interactableLayerMask_1;
-    [SerializeField] private LayerMask interactableLayerMask_2;
+    [SerializeField] private float _RaycastDistance; // Maximum raycast distance
+    [SerializeField] private LayerMask interactableLayerMask_1; // Layers for interactable objects
+    [SerializeField] private LayerMask blockingLayers; // Layers that block the raycast
 
-    private Transform highlight;
+    private Transform highlight; // Currently highlighted object
 
     void Update()
     {
-        // Disable previous highlight outline
+        // Disable the previous highlight outline
         if (highlight != null)
         {
             highlight.gameObject.GetComponent<Outline>().enabled = false;
@@ -30,7 +28,7 @@ public class OutlineSelection : MonoBehaviour
             {
                 outline = closestHighlight.gameObject.AddComponent<Outline>();
                 outline.OutlineColor = Color.magenta;
-                outline.OutlineWidth = 10.0f;
+                outline.OutlineWidth = 2f;
             }
             outline.enabled = true;
             highlight = closestHighlight;
@@ -40,36 +38,17 @@ public class OutlineSelection : MonoBehaviour
     private Transform GetClosestHighlightObject()
     {
         Ray ray = new Ray(_RaycastPoint.transform.position, _RaycastPoint.transform.forward);
-        Ray ray_2 = new Ray(_RaycastPoint.transform.position, _RaycastPoint.transform.forward);
 
-        // Collect all potential objects
-        RaycastHit[] hits = Physics.RaycastAll(ray, _RaycastDistance, interactableLayerMask_1);
-        RaycastHit[] hits_2 = Physics.RaycastAll(ray_2, _RaycastDistance_2, interactableLayerMask_2);
-
-        Transform closestObject = null;
-        float closestDistance = float.MaxValue;
-
-        // Check both raycasts
-        foreach (RaycastHit hit in hits)
+        // Perform a raycast and stop at blocking objects
+        if (Physics.Raycast(ray, out RaycastHit hit, _RaycastDistance, blockingLayers | interactableLayerMask_1))
         {
-            float distance = Vector3.Distance(_RaycastPoint.transform.position, hit.transform.position);
-            if (distance < closestDistance)
+            // Check if the hit object is on the interactable layer
+            if (((1 << hit.transform.gameObject.layer) & interactableLayerMask_1) != 0)
             {
-                closestDistance = distance;
-                closestObject = hit.transform;
+                return hit.transform;
             }
         }
 
-        foreach (RaycastHit hit_2 in hits_2)
-        {
-            float distance = Vector3.Distance(_RaycastPoint.transform.position, hit_2.transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestObject = hit_2.transform;
-            }
-        }
-
-        return closestObject;
+        return null;
     }
 }
