@@ -23,7 +23,7 @@ public class ListManager : MonoBehaviour
     {
         if (playerController.isBookOpen)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
 
                 if(NoteBookPagesList[currentPage].textList.Count >= maxCluesPerPage)
@@ -39,9 +39,7 @@ public class ListManager : MonoBehaviour
                     }
 
                     NoteBookPagesList[currentPage].gameObject.SetActive(true);
-                }
-
-                else if (NoteBookPagesList[currentPage].textList.Count <= maxCluesPerPage && NoteBookPagesList[currentPage] != NoteBookPagesList[0])
+                } else if (NoteBookPagesList[currentPage] != NoteBookPagesList[0])
                 {
                     NoteBookPagesList[currentPage].gameObject.SetActive(false);
                     currentPage = 0;
@@ -50,7 +48,7 @@ public class ListManager : MonoBehaviour
                 
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
 
                 if (NoteBookPagesList[currentPage].textList.Count >= maxCluesPerPage)
@@ -62,9 +60,21 @@ public class ListManager : MonoBehaviour
                     currentPage--;
                     if (currentPage < 0)
                     {
+
                         currentPage = NoteBookPagesList.Count - 1;
+
+                        // si la pagina esta vacia paso a otra pagina
+                        if (NoteBookPagesList[currentPage].textList.Count == 0)
+                        {
+                            currentPage -= 1; 
+                        }
                     }
 
+                    NoteBookPagesList[currentPage].gameObject.SetActive(true);
+                } else if (NoteBookPagesList[currentPage] != NoteBookPagesList[0])
+                {
+                    NoteBookPagesList[currentPage].gameObject.SetActive(false);
+                    currentPage -= 1;
                     NoteBookPagesList[currentPage].gameObject.SetActive(true);
                 }
 
