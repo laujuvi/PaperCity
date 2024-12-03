@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private AudioSource musicSc;
 
+    public bool isNoteBookPickedUp = true;
     private bool isGuiltyCheck = false;
     private bool playerHasAcused = false;
 

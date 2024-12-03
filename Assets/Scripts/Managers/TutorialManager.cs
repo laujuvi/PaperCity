@@ -21,14 +21,30 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.HideCursor();
+        GameManager.Instance.isNoteBookPickedUp = false;
         TIDialog = FindObjectOfType<TutorialInitialDialog>();
         Libreta.OnInteractableActivated += HandleLibretaActivated;
     }
 
+    private void Update()
+    {
+        NotebookStatusCheck();
+    }
+
+    private void NotebookStatusCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LibretaUI.gameObject.SetActive(LibretaUI2.activeSelf);
+        }
+    }
+
     private void HandleLibretaActivated()
     {
+        Debug.Log("libreta handeada");
+        GameManager.Instance.isNoteBookPickedUp = true;
         LibretaUI.gameObject.SetActive(true);
-        LibretaUI2.gameObject.SetActive(true);
+        //LibretaUI2.gameObject.SetActive(true);
         TIDialog.SecondDialogue();
         door.SetActiveScript(true);
     }

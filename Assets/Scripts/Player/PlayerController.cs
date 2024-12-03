@@ -154,6 +154,8 @@ public class PlayerController : MonoBehaviour
 
     private void OpenNoteBook()
     {
+        if (!GameManager.Instance.isNoteBookPickedUp) return;
+
         if(isBookOpen == false)
         {
             if (Input.GetKeyDown(KeyCode.R))
