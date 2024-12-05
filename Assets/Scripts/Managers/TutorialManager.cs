@@ -20,7 +20,8 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.HideCursor();
+        //GameManager.Instance.HideCursor();
+        CursorManager.HideCursor();
         GameManager.Instance.isNoteBookPickedUp = false;
         TIDialog = FindObjectOfType<TutorialInitialDialog>();
         Libreta.OnInteractableActivated += HandleLibretaActivated;

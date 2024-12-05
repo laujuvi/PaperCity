@@ -31,17 +31,18 @@ public class InGameMenu : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(GameSettings.Instance.mouseSensitivity);
         if (Input.GetKeyDown(KeyCode.Escape))
             if (isPaused)
             {
                 ResumeGame();
-                GameManager.Instance.HideCursor();
+                //GameManager.Instance.HideCursor();
+                CursorManager.HideCursor();
             }
-            else if (!isPaused)
+            else
             {
                 PauseGame();
-                GameManager.Instance.ShowCursor();
+                //GameManager.Instance.ShowCursor();
+                CursorManager.ShowCursor();
             }
     }
     private void OnSliderValueChanged()

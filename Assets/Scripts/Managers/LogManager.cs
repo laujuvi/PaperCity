@@ -54,14 +54,16 @@ public class LogManager : MonoBehaviour
 
             if (isLogOpen)
             {
-                GameManager.Instance.ShowCursor();
+                //GameManager.Instance.ShowCursor();
+                CursorManager.ShowCursor();
                 GameManager.Instance.DisablePlayerController();
                 logObject.SetActive(true);
             }
 
             if (!isLogOpen)
             {
-                GameManager.Instance.HideCursor();
+                //GameManager.Instance.HideCursor();
+                CursorManager.HideCursor();
                 GameManager.Instance.EnablePlayerController();
                 logObject.SetActive(false);
             }

@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour
             dialogManager.SetEvidenceArray(evidenceArray);
             maxEvidence = evidenceArray.Length;
         }
-        HideCursor();
+        CursorManager.HideCursor();
+        //HideCursor();
     }
 
     private void Update()
@@ -95,16 +96,16 @@ public class GameManager : MonoBehaviour
                 
         }
     }
-    public void HideCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-    public void ShowCursor()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
+    //public void HideCursor()
+    //{
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
+    //public void ShowCursor()
+    //{
+    //    Cursor.lockState = CursorLockMode.None;
+    //    Cursor.visible = true;
+    //}
 
     public void DisablePlayerController()
     {

@@ -42,14 +42,16 @@ public class GuiltyRoomManager : MonoBehaviour
             npcs[i].changeGuiltyText();
         }
         GuiltyRoomUIPanel.gameObject.SetActive(false);
-        GameManager.Instance.HideCursor();
+        //GameManager.Instance.HideCursor();
+        CursorManager.HideCursor();
         ResumeGame();
     }
 
     public void GoToGuiltyRoomNo()
     {
         GuiltyRoomUIPanel.gameObject.SetActive(false);
-        GameManager.Instance.HideCursor();
+        //GameManager.Instance.HideCursor();
+        CursorManager.HideCursor();
         ResumeGame();
     }
 
