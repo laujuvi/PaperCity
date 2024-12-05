@@ -1,0 +1,73 @@
+{
+    "dialogues": [
+        {
+            "name": "Bruce Ackroyd",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "¿Yo? ¿Culpable de la muerte de mi padre? ¿Está usted loco? ¿Ha visto toda la evidencia? Lo siento mucho detective, pero yo no soy el culpable...",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+	        {
+            "name": "Sra. Layla Ackroyd",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "No puedo creer que lo haya descubierto... Si... Yo asesiné a Roger... Toda mi vida comenzó a desmoronarse desde que empezó a acostarse con su nueva secretaria... Pensé que tal vez un nuevo hijo lo haría recapacitar, pero entonces llegó con los papeles de divorcio y supe que era el fin. Entonces decidí terminar todo con mis propias manos...",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+        {
+            "name": "Victor Howard",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+              {
+                "talked": false,
+                "isLoopingMessage": true,
+                "evidence": {
+                  "hasEvidence": false,
+                  "evidenceName": "",
+                  "requiredMessage": ""
+                },
+                "message": "Hmmm... no me equivocaba con usted... desde el momento que lo vi me di cuenta de que no era más que un aficionado mediocre. Yo no soy el culpable, detective. Déjele el trabajo a alguien más capaz que usted.",
+                "emotion": "Talking"
+              }
+            ]
+        },
+        {
+                "name": "James Moriarty",
+                "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+                "messages": [
+                    {
+                        "talked": false,
+                        "isLoopingMessage" : true,
+                        "evidence":{
+                            "hasEvidence": false,
+                            "evidenceName": "",
+                            "requiredMessage": ""
+                        },
+                        "message": "¿¡Pero cómo se le ocurre!? Vaya... parece que años de abuso de ron y ginebra han hecho lo suyo con usted... ¡Culparme del asesinato de Roger! ¡Yo no soy el culpable, detective!",
+                        "emotion": "Talking"
+                    }
+        ]
+         }   
+       
+    ]
+}
