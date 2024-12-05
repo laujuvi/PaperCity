@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -54,6 +55,12 @@ public class GameManager : MonoBehaviour
 
     private bool isGuiltyCheck = false;
 
+    [Header("Analytics")]
+    private int gameplayTime = 0; 
+    private float DeltaTime = 0;    
+    private bool rightSuspect = false;
+    public int openNoteBook = 0;
+
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -79,9 +86,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        DeltaTime += Time.deltaTime;
+        gameplayTime += ((int)DeltaTime);
         if (isGuiltyCheck) {
             if (!boxMessageManager.IsDisplayingMessage()) {
                 CheckGuiltyNPC();
+                SentEvents(gameplayTime);
                 isGuiltyCheck = false;
             }
                 
@@ -133,6 +143,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("WIN");
             lenIcon.SetActive(false);
             win.SetActive(true);
+            SentEndLevelEvents(true, lastNPCName);
+            SentOpenNoteBookEvents(openNoteBook);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None;
@@ -144,6 +156,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("LOSE");
             lenIcon.SetActive(false);
             lose.SetActive(true);
+            SentEndLevelEvents(false, lastNPCName);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 
@@ -212,4 +225,35 @@ public class GameManager : MonoBehaviour
         return minEvidence;
     }
 
+    public void SentEvents(int gamplayTime)
+    {
+        GameplayTime btnEvt = new GameplayTime
+        {
+            gameplay_Time = gamplayTime,
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+    
+    public void SentEndLevelEvents(bool correctSuspectRate, string suspectID)
+    {
+        CorrectSuspectRate btnEvt = new CorrectSuspectRate
+        {
+            correct_Suspect_Rate = correctSuspectRate,
+
+            suspect_ID = suspectID
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+
+    public void SentOpenNoteBookEvents(int TimesPlayeropenNotebook)
+    {
+        Open_Notebook btnEvt = new Open_Notebook
+        {
+            open_NoteBook = TimesPlayeropenNotebook,
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
 }

@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("References")]
     public Camera playerCamera;
+    private GameManager gameManager;
 
     [Header("General")]
     [SerializeField] private float gravityScale = -20f;
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         UpdateSensitivity();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
     private void Update()
     {
@@ -167,7 +169,7 @@ public class PlayerController : MonoBehaviour
             {
                 isBookOpen = true;
                 NoteBook.SetActive(true);
-
+                gameManager.openNoteBook++;
                 //audioManager.PlaySFX(audioManager.notebookCheck);
                 AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookCheck, transform, 1f);
             }
