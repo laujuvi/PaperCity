@@ -54,7 +54,7 @@ public class JSONValidator : MonoBehaviour
                     continue;
                 }
 
-                // Si "isLoopingMessage" no fue seteado lo dejo en null
+                // Si "isLoopingMessage" no fue seteado lo dejo en false
                 if (message["isLoopingMessage"] == null)
                 {
                     message["isLoopingMessage"] = false;
