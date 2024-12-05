@@ -1,0 +1,187 @@
+{
+    "dialogues": [
+        {
+            "name": "Bruce Ackroyd",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "Es cierto que mi padre no era un gran hombre, pero definitivamente no merecía esto... Espero que encuentre al culpable pronto, detective...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "Pickeable",
+                        "requiredMessage": "¿Qué es esto?"
+
+                    },
+                    "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "MuebleConGolpe",
+                        "requiredMessage": "Mejor vaya a investigar..."
+
+                    },
+                    "message": "Estoy seguro de que habrá suficientes pistas en la casa para que puedas encontrar al culpable...",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+        {
+            "name": "Sra. Layla Ackroyd",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Mi Roger... Ya no está... Aún no puedo creerlo... Espero que encuentre pronto a quien haya hecho esto, detective...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+ 	                "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "¿No deberías ponerte a buscar pistas? ¿No es eso lo que hace un detective?",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+	{
+            "name": "James Moriarty",
+            "color": {"r": 1.0, "g": 1.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Este es un crimen atroz. Pobre Roger. Yo andaba por aquí por si Layla necesitaba algo. Siempre fuimos grandes amigos y últimamente la veía sumamente tribulada. Verá, detective, sé reconocer a una mujer preocupada...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Tal vez la pesadumbre de Layla tenga que ver con la infidelidad de Roger. ¿Puede usted creerlo? ¿Serle infiel a una mujer así? En fin, espero que encuentre al responsable, detective...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Estaré aquí cuidando a Layla...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "JamesMoriartyKey",
+                        "requiredMessage": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?"
+
+                    },
+                    "message": "¡Es por esto que dicen que usted es el mejor detective de la ciudad! Claro que no hay muchos, ¡pero no deje que eso lo desanime! ¿Pregunta cómo pude perderla? Ah... es realmente embarazoso, detective, pero el médico me ha dado unas pastillas para dormir que debo tomar de noche... ¡me dejan exhausto! ¡Y pensar que fui boxeador en mi juventud, no podría ni atrapar un caracol luego de esas pastillas! Supongo que estaba un poco atontado y... ¡las llaves deben haberse caído!",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "JamesMoriartyKey",
+                        "requiredMessage": "Por cierto, detective, ya que aparentemente insiste en entablar una conversación conmigo... He perdido la llave de la sala de películas. Sin ella, la gente no puede asistir al cine. Si llega a encontrarla, por favor, ¿podría devolvérmela?"
+
+                    },
+                    "message": "Gracias por la llave. ¿Ha hecho avances en el caso?",
+                    "emotion": "Talking"
+                }
+            ]
+        },
+	{
+            "name": "Victor Howard",
+            "color": {"r": 1.0, "g": 0.0, "b": 0.0, "a": 1.0},
+            "messages": [
+                {
+                    "talked": false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+                    },
+                    "message": "Ah... creo que no nos conocíamos... usted debe ser el gran detective del que tanto se habla. Victor Howard, a sus servicios. Abogado personal de Roger. O bueno, solía serlo. Esto es terrible.",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : false,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "Mi relación con Roger es bastante longeva. Comencé a prestarle servicios en cuanto me gradué. Roger y yo hemos sido inseparables... Al menos hasta que comenzó a ver a esa mujer... Ni siquiera recuerdo su nombre... Tan impropio de él... Tan inadecuado...",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : false,
+                    "evidence":{
+                        "hasEvidence": true,
+                        "evidenceName": "Reloj dorado",
+                        "requiredMessage": "¿El nombre de la amante de Roger? Ah... usted es de esos a los que les gusta poner el dedo en la llaga... Era... ¿Catherine? ¿Camille? No lo recuerdo bien..."
+
+                    },
+                    "message": "¿Disculpe? ¿Qué dice? Si, yo soy V, quien le hizo ése regalo a Roger, ¿pero qué tiene de extraño? ¿No puede un viejo amigo regalar algo de vez en cuando?",
+                    "emotion": "Talking"
+                },
+                {
+                    "talked": false,
+                    "isLoopingMessage" : true,
+                    "evidence":{
+                        "hasEvidence": false,
+                        "evidenceName": "",
+                        "requiredMessage": ""
+
+                    },
+                    "message": "¿Disculpe? ¿Qué dice? Si, yo soy V, quien le hizo ése regalo a Roger, ¿pero qué tiene de extraño? ¿No puede un viejo amigo regalar algo de vez en cuando?",
+                    "emotion": "Talking"
+                }
+            ]
+        }
+    ]
+}
