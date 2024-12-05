@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: SO_dialogPhase1
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguesData
+  dialogues:
+  - name: Bruce Ackroyd
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Es cierto que mi padre no era un gran hombre, pero definitivamente
+        no merec\xEDa esto... Espero que encuentre al culpable pronto, detective..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: Pickeable
+        requiredMessage: "\xBFQu\xE9 es esto?"
+      message: "Estoy seguro de que habr\xE1 suficientes pistas en la casa para que
+        puedas encontrar al culpable..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: MuebleConGolpe
+        requiredMessage: Mejor vaya a investigar...
+      message: "Estoy seguro de que habr\xE1 suficientes pistas en la casa para que
+        puedas encontrar al culpable..."
+      emotion: Talking
+  - name: Sra. Layla Ackroyd
+    color: {r: 1, g: 1, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Mi Roger... Ya no est\xE1... A\xFAn no puedo creerlo... Espero que
+        encuentre pronto a quien haya hecho esto, detective..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "\xBFNo deber\xEDas ponerte a buscar pistas? \xBFNo es eso lo que
+        hace un detective?"
+      emotion: Talking
+  - name: James Moriarty
+    color: {r: 1, g: 1, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Este es un crimen atroz. Pobre Roger. Yo andaba por aqu\xED por si
+        Layla necesitaba algo. Siempre fuimos grandes amigos y \xFAltimamente la
+        ve\xEDa sumamente tribulada. Ver\xE1, detective, s\xE9 reconocer a una mujer
+        preocupada..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Tal vez la pesadumbre de Layla tenga que ver con la infidelidad de
+        Roger. \xBFPuede usted creerlo? \xBFSerle infiel a una mujer as\xED? En fin,
+        espero que encuentre al responsable, detective..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Estar\xE9 aqu\xED cuidando a Layla..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 1
+        evidenceName: JamesMoriartyKey
+        requiredMessage: "Por cierto, detective, ya que aparentemente insiste en
+          entablar una conversaci\xF3n conmigo... He perdido la llave de la sala
+          de pel\xEDculas. Sin ella, la gente no puede asistir al cine. Si llega
+          a encontrarla, por favor, \xBFpodr\xEDa devolv\xE9rmela?"
+      message: "\xA1Es por esto que dicen que usted es el mejor detective de la ciudad!
+        Claro que no hay muchos, \xA1pero no deje que eso lo desanime! \xBFPregunta
+        c\xF3mo pude perderla? Ah... es realmente embarazoso, detective, pero el
+        m\xE9dico me ha dado unas pastillas para dormir que debo tomar de noche...
+        \xA1me dejan exhausto! \xA1Y pensar que fui boxeador en mi juventud, no podr\xEDa
+        ni atrapar un caracol luego de esas pastillas! Supongo que estaba un poco
+        atontado y... \xA1las llaves deben haberse ca\xEDdo!"
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 1
+        evidenceName: JamesMoriartyKey
+        requiredMessage: "Por cierto, detective, ya que aparentemente insiste en
+          entablar una conversaci\xF3n conmigo... He perdido la llave de la sala
+          de pel\xEDculas. Sin ella, la gente no puede asistir al cine. Si llega
+          a encontrarla, por favor, \xBFpodr\xEDa devolv\xE9rmela?"
+      message: "Gracias por la llave. \xBFHa hecho avances en el caso?"
+      emotion: Talking
+  - name: Victor Howard
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Ah... creo que no nos conoc\xEDamos... usted debe ser el gran detective
+        del que tanto se habla. Victor Howard, a sus servicios. Abogado personal
+        de Roger. O bueno, sol\xEDa serlo. Esto es terrible."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Mi relaci\xF3n con Roger es bastante longeva. Comenc\xE9 a prestarle
+        servicios en cuanto me gradu\xE9. Roger y yo hemos sido inseparables... Al
+        menos hasta que comenz\xF3 a ver a esa mujer... Ni siquiera recuerdo su nombre...
+        Tan impropio de \xE9l... Tan inadecuado..."
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 0
+      evidence:
+        hasEvidence: 1
+        evidenceName: Reloj dorado
+        requiredMessage: "\xBFEl nombre de la amante de Roger? Ah... usted es de
+          esos a los que les gusta poner el dedo en la llaga... Era... \xBFCatherine?
+          \xBFCamille? No lo recuerdo bien..."
+      message: "\xBFDisculpe? \xBFQu\xE9 dice? Si, yo soy V, quien le hizo \xE9se
+        regalo a Roger, \xBFpero qu\xE9 tiene de extra\xF1o? \xBFNo puede un viejo
+        amigo regalar algo de vez en cuando?"
+      emotion: Talking
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "\xBFDisculpe? \xBFQu\xE9 dice? Si, yo soy V, quien le hizo \xE9se
+        regalo a Roger, \xBFpero qu\xE9 tiene de extra\xF1o? \xBFNo puede un viejo
+        amigo regalar algo de vez en cuando?"
+      emotion: Talking
