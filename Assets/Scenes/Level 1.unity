@@ -23634,6 +23634,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
+      propertyPath: dialoguesPhase1Json
+      value: 
+      objectReference: {fileID: 4900000, guid: 650509565fb2ac841aad13ece2fb72bc, type: 3}
+    - target: {fileID: 3868581349284830184, guid: 38994e52d20a1194e8799f3dcbd2e5f0, type: 3}
       propertyPath: minEvidenceForPhase2
       value: 6
       objectReference: {fileID: 0}
@@ -46411,6 +46415,7 @@ MonoBehaviour:
   rightExitDoor: {fileID: 2109300187}
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
+  isNoteBookPickedUp: 1
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
