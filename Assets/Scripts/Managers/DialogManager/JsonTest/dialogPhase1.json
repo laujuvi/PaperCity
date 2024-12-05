@@ -56,7 +56,7 @@
                 },
                 {
                     "talked": false,
- 	 "isLoopingMessage" : true,
+ 	                "isLoopingMessage" : true,
                     "evidence":{
                         "hasEvidence": false,
                         "evidenceName": "",
