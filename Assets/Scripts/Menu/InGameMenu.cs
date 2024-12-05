@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
 
 public class InGameMenu : MonoBehaviour
 {
@@ -17,13 +12,14 @@ public class InGameMenu : MonoBehaviour
     public delegate void SensitivityChangedHandler();
     public static event SensitivityChangedHandler OnSensitivityChanged;
 
-    [SerializeField] private SceneLoadManager sceneLoadManager;
+    [SerializeField] GameSettings gameSettings;
+    [SerializeField] SceneLoadManager sceneLoadManager;
     private bool isPaused = false;
     private void Start()
     {
-        if(GameSettings.Instance != null)
+        if(gameSettings != null)
         {
-            GameSettings.Instance.UpdateSensitivitySlider(mouseSensitivitySlider);
+            gameSettings.UpdateSensitivitySlider(mouseSensitivitySlider);
 
             mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
         }
@@ -35,13 +31,11 @@ public class InGameMenu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
-                //GameManager.Instance.HideCursor();
                 CursorManager.HideCursor();
             }
             else
             {
                 PauseGame();
-                //GameManager.Instance.ShowCursor();
                 CursorManager.ShowCursor();
             }
     }
@@ -83,10 +77,9 @@ public class InGameMenu : MonoBehaviour
     }
     public void GoToMenu()
     {
-        GameSettings existingGameSettings = FindObjectOfType<GameSettings>();
-        if (existingGameSettings != null)
+        if (gameSettings != null)
         {
-            Destroy(existingGameSettings.gameObject);
+            Destroy(gameSettings.gameObject);
         }
         Time.timeScale = 1f;
         sceneLoadManager.LoadNextScene();
