@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class OutlineSelection : MonoBehaviour
 {
-    [SerializeField] private GameObject _RaycastPoint; // Shared Raycast Point
-    [SerializeField] private float _RaycastDistance; // Maximum raycast distance
-    [SerializeField] private LayerMask interactableLayerMask_1; // Layers for interactable objects
-    [SerializeField] private LayerMask blockingLayers; // Layers that block the raycast
+    [SerializeField] private GameObject _RaycastPoint;
+    [SerializeField] private float _RaycastDistance;
+    [SerializeField] private LayerMask interactableLayerMask_1;
+    [SerializeField] private LayerMask blockingLayers;
 
-    private Transform highlight; // Currently highlighted object
+    private Transform highlight;
 
     void Update()
     {
