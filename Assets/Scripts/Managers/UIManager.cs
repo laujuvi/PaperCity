@@ -18,6 +18,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject GuiltyRoomUIPanel;
     [SerializeField] GameObject logObject;
     [SerializeField] GameObject _containerGameObject;
+    [SerializeField] GameObject win;
+    [SerializeField] GameObject lose;
+    [SerializeField] GameObject preScoreScreen;
 
     [Header("References UI")]
     [SerializeField] SceneLoadManager sceneLoadManager;
@@ -74,11 +77,32 @@ public class UIManager : MonoBehaviour
             logObject.SetActive(isVisible);
         }
     }
+    public void SetWinScreenVisibility(bool isVisible)
+    {
+        if (win != null)
+        {
+            win.SetActive(isVisible);
+        }
+    }
+    public void SetLoseScreenVisibility(bool isVisible)
+    {
+        if (lose != null)
+        {
+            lose.SetActive(isVisible);
+        }
+    }
     public void SetContainerGameobjectVisibility(bool isVisible)
     {
         if (_containerGameObject != null)
         {
             _containerGameObject.SetActive(isVisible);
+        }
+    }
+    public void SetPreScoreScreenVisibility(bool isVisible)
+    {
+        if (preScoreScreen != null)
+        {
+            preScoreScreen.SetActive(isVisible);
         }
     }
     public int GetMinClue()

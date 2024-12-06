@@ -28776,6 +28776,14 @@ PrefabInstance:
       value: 0.38679248
       objectReference: {fileID: 0}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 235556172}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lose
+      value: 
+      objectReference: {fileID: 562622674}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: menuUI
       value: 
       objectReference: {fileID: 559082358}
@@ -28796,6 +28804,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1852437870}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: preScoreScreen
+      value: 
+      objectReference: {fileID: 1713275133}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: sceneLoadManager
       value: 
       objectReference: {fileID: 1676841817}
@@ -28807,6 +28819,10 @@ PrefabInstance:
       propertyPath: guiltyRoomManager
       value: 
       objectReference: {fileID: 1760056965}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: _containerGameObject
+      value: 
+      objectReference: {fileID: 1154247564}
     - target: {fileID: 977856265702328708, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -29103,6 +29119,11 @@ PrefabInstance:
 --- !u!1 &1154247563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4748422752323050353, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1154247564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 714180026005916842, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
   m_PrefabInstance: {fileID: 1154247562}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1154247566 stripped
@@ -46432,11 +46453,7 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
-  win: {fileID: 235556172}
-  lose: {fileID: 562622674}
   scoreScreen: {fileID: 1619908042}
-  preScoreScreen: {fileID: 1713275133}
-  lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
   totalNPCs: 4
   npcInteracted: []
@@ -46445,6 +46462,7 @@ MonoBehaviour:
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
   isNoteBookPickedUp: 1
+  uiManager: {fileID: 0}
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
