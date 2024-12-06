@@ -12,7 +12,6 @@ public class InGameMenu : MonoBehaviour
 
     [SerializeField] UIManager uiManager;
     [SerializeField] GameSettings gameSettings;
-    [SerializeField] SceneLoadManager sceneLoadManager;
     private void Start()
     {
         if(gameSettings != null)
@@ -22,7 +21,6 @@ public class InGameMenu : MonoBehaviour
             mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
         }
         uiManager.SetMenuUIVisibility(false);
-        //menuUI.SetActive(false);
     }
     private void Update()
     {
@@ -44,44 +42,33 @@ public class InGameMenu : MonoBehaviour
     }
     public void ResumeGame()
     {
-        //menuUI.SetActive(false);
         uiManager.SetMenuUIVisibility(false);
         uiManager.SetLenIconVisibility(true);
-        //lenIcon.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
-        //menuUI.SetActive(true);
         uiManager.SetMenuUIVisibility(true);
         uiManager.SetLenIconVisibility(false);
-        //lenIcon.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
     public void GoToOptions()
     {
-        //menuUI.SetActive(false);
         uiManager.SetMenuUIVisibility(false);
         uiManager.SetOptionsVisibility(true);
-        //options.SetActive(true);
     }
     public void GoBackToMenu()
     {
-        //menuUI.SetActive(true);
         uiManager.SetMenuUIVisibility(true);
         uiManager.SetOptionsVisibility(false);
-        //options.SetActive(false);
         uiManager.SetControlsVisibility(false);
-        //controls.SetActive(false);
     }
     public void GoToControls()
     {
-        //controls.SetActive(true);
         uiManager.SetControlsVisibility(true);
         uiManager.SetMenuUIVisibility(false);
-        //menuUI.SetActive(false);
     }
     public void GoToMenu()
     {
@@ -90,7 +77,7 @@ public class InGameMenu : MonoBehaviour
             Destroy(gameSettings.gameObject);
         }
         Time.timeScale = 1f;
-        sceneLoadManager.LoadNextScene();
+        uiManager.LoadNextScene();
     }
     public void QuitGame()
     {

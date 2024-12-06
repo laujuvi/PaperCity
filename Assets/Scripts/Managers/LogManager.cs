@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LogManager : MonoBehaviour
 {
-
     [Header("Log UI")]
     [SerializeField] TextMeshProUGUI logText;
 
@@ -13,18 +12,20 @@ public class LogManager : MonoBehaviour
     public bool isLogOpen = false;
 
     private List<MessageData> messageLog = new List<MessageData>();
-
+    [SerializeField] UIManager uiManager;
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
     private void Update()
     {
         OpenLogView();
     }
-
     public void AddMessage(MessageData message)
     {
         messageLog.Add(message);
         DisplayMessagesInUI();
     }
-
     public void DisplayMessagesInUI()
     {
         logText.text = "";
@@ -39,13 +40,10 @@ public class LogManager : MonoBehaviour
             logText.text += $"<color=#{colorHex}>{message.Name}</color>: {message.Message}\n";
         }
     }
-
-
     public void ClearLog()
     {
         messageLog.Clear();
     }
-
     private void OpenLogView()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -54,21 +52,16 @@ public class LogManager : MonoBehaviour
 
             if (isLogOpen)
             {
-                //GameManager.Instance.ShowCursor();
                 CursorManager.ShowCursor();
                 GameManager.Instance.DisablePlayerController();
-                logObject.SetActive(true);
+                uiManager.SetLogObjectVisibility(true);
             }
-
             if (!isLogOpen)
             {
-                //GameManager.Instance.HideCursor();
                 CursorManager.HideCursor();
                 GameManager.Instance.EnablePlayerController();
-                logObject.SetActive(false);
+                uiManager.SetLogObjectVisibility(false);
             }
-
         }
-
     }
 }

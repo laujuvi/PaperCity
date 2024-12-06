@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -14,6 +15,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject menuUI;
     [SerializeField] GameObject options;
     [SerializeField] GameObject controls;
+    [SerializeField] GameObject GuiltyRoomUIPanel;
+    [SerializeField] GameObject logObject;
+
+    [Header("References UI")]
+    [SerializeField] SceneLoadManager sceneLoadManager;
+    [SerializeField] GuiltyRoomManager guiltyRoomManager;
     public void UpdateCurrentEvidence(int currentInt)
     {
         currentEvidence = currentInt;
@@ -51,5 +58,35 @@ public class UIManager : MonoBehaviour
         {
             lenIcon.SetActive(isVisible);
         }
+    }
+    public void SetGuiltyRoomVisibility(bool isVisible)
+    {
+        if (lenIcon != null)
+        {
+            lenIcon.SetActive(isVisible);
+        }
+    }
+    public void SetLogObjectVisibility(bool isVisible)
+    {
+        if (lenIcon != null)
+        {
+            lenIcon.SetActive(isVisible);
+        }
+    }
+    public int GetMinClue()
+    {
+        return guiltyRoomManager.minClue;
+    }
+    public void PauseGame()
+    {
+        guiltyRoomManager.PauseGame();
+    }
+    public void GuiltyRoomSendMessage(string name, Color color, string message, Enum none)
+    {
+        guiltyRoomManager.boxMessageManager.SendMessage(name, color, message, (Emotions)none);
+    }
+    public void LoadNextScene()
+    {
+        sceneLoadManager.LoadNextScene();
     }
 }
