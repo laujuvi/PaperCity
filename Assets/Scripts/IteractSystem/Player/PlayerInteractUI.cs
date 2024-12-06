@@ -5,12 +5,15 @@ using TMPro;
 
 public class PlayerInteractUI : MonoBehaviour
 {
-    [SerializeField] private GameObject _containerGameObject;
     [SerializeField] private PlayerInteract _playerInteract;
     [SerializeField] private TextMeshProUGUI interactText;
+    [SerializeField] UIManager uiManager;
 
     private BoxMessageManager boxMessageManager;
-
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
     public void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
@@ -36,13 +39,15 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Show(IInteractable interactable)
     {
-        _containerGameObject.SetActive(true);
+        //_containerGameObject.SetActive(true);
+        uiManager.SetContainerGameobjectVisibility(true);
         interactText.text = interactable.GetInteractText();
     }
 
     private void Hide()
     {
-        _containerGameObject.SetActive(false);
+        //_containerGameObject.SetActive(false);
+        uiManager.SetContainerGameobjectVisibility(false);
     }
 
 }

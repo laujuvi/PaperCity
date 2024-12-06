@@ -33,16 +33,11 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
             uiManager.GuiltyRoomSendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
             //guiltyRoomManager.boxMessageManager.SendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
         }
-   
     }
-
-   
-
     public string GetInteractText()
     {
         return interactText;
     }
-
     public Transform GetTransform()
     {
         throw new System.NotImplementedException();

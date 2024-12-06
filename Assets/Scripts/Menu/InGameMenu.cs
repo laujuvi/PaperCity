@@ -12,6 +12,10 @@ public class InGameMenu : MonoBehaviour
 
     [SerializeField] UIManager uiManager;
     [SerializeField] GameSettings gameSettings;
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
     private void Start()
     {
         if(gameSettings != null)

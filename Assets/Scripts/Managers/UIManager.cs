@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject controls;
     [SerializeField] GameObject GuiltyRoomUIPanel;
     [SerializeField] GameObject logObject;
+    [SerializeField] GameObject _containerGameObject;
 
     [Header("References UI")]
     [SerializeField] SceneLoadManager sceneLoadManager;
@@ -61,16 +62,23 @@ public class UIManager : MonoBehaviour
     }
     public void SetGuiltyRoomVisibility(bool isVisible)
     {
-        if (lenIcon != null)
+        if (GuiltyRoomUIPanel != null)
         {
-            lenIcon.SetActive(isVisible);
+            GuiltyRoomUIPanel.SetActive(isVisible);
         }
     }
     public void SetLogObjectVisibility(bool isVisible)
     {
-        if (lenIcon != null)
+        if (logObject != null)
         {
-            lenIcon.SetActive(isVisible);
+            logObject.SetActive(isVisible);
+        }
+    }
+    public void SetContainerGameobjectVisibility(bool isVisible)
+    {
+        if (_containerGameObject != null)
+        {
+            _containerGameObject.SetActive(isVisible);
         }
     }
     public int GetMinClue()

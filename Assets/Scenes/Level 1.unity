@@ -15913,6 +15913,7 @@ MonoBehaviour:
   logText: {fileID: 404480288}
   logObject: {fileID: 1852437870}
   isLogOpen: 0
+  uiManager: {fileID: 0}
 --- !u!1 &627394494
 GameObject:
   m_ObjectHideFlags: 0
@@ -28774,6 +28775,38 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: menuUI
+      value: 
+      objectReference: {fileID: 559082358}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lenIcon
+      value: 
+      objectReference: {fileID: 532678003}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: options
+      value: 
+      objectReference: {fileID: 248624296}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: controls
+      value: 
+      objectReference: {fileID: 447804643}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: logObject
+      value: 
+      objectReference: {fileID: 1852437870}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: sceneLoadManager
+      value: 
+      objectReference: {fileID: 1676841817}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: GuiltyRoomUIPanel
+      value: 
+      objectReference: {fileID: 1154247563}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: guiltyRoomManager
+      value: 
+      objectReference: {fileID: 1760056965}
     - target: {fileID: 977856265702328708, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -46411,6 +46444,7 @@ MonoBehaviour:
   rightExitDoor: {fileID: 2109300187}
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
+  isNoteBookPickedUp: 1
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46423,12 +46457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6992dbebfd14f5c418896934b8f527be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuUI: {fileID: 559082358}
-  lenIcon: {fileID: 532678003}
-  options: {fileID: 248624296}
-  controls: {fileID: 447804643}
   mouseSensitivitySlider: {fileID: 1154247566}
-  sceneLoadManager: {fileID: 1676841817}
+  uiManager: {fileID: 2000642660}
+  gameSettings: {fileID: 0}
 --- !u!1 &1866685416
 GameObject:
   m_ObjectHideFlags: 0
