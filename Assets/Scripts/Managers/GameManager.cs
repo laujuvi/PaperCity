@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
     public int totalEvidence = 0;
 
     /* UI */
-    [Header("UI")]
-    [SerializeField] private ScoreScreenManager scoreScreen;
+    //[Header("UI")]
+    //[SerializeField] private ScoreScreenManager scoreScreen;
 
     /* NPC */
     [Header("NPC")]
@@ -220,13 +220,15 @@ public class GameManager : MonoBehaviour
         dataCollector.SetAllData();
 
         // Le paso esa data al score
-        scoreScreen.SetScoreValues(dataCollector.GetAllData());
+        uiManager.SetScoreValues(dataCollector.GetAllData());
+        //scoreScreen.SetScoreValues(dataCollector.GetAllData());
 
         // Llamo al score para que renderice la data que le pase
-        scoreScreen.UpdateScorePanel();
+        uiManager.UpdateScorePanel();
+        //scoreScreen.UpdateScorePanel();
 
-        scoreScreen.gameObject.SetActive(true);
-
+        //scoreScreen.gameObject.SetActive(true);
+        uiManager.SetScoreScreenVisibility(true);
     }
 
 }

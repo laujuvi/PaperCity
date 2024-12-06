@@ -1,6 +1,8 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,10 +23,26 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject win;
     [SerializeField] GameObject lose;
     [SerializeField] GameObject preScoreScreen;
+    [SerializeField] GameObject bgDialog;
 
     [Header("References UI")]
     [SerializeField] SceneLoadManager sceneLoadManager;
     [SerializeField] GuiltyRoomManager guiltyRoomManager;
+    [SerializeField] BoxMessageManager boxMessageManager;
+    [SerializeField] GameSettings gameSettings;
+    [SerializeField] LogManager logManager;
+    [SerializeField] ScoreScreenManager scoreScreenManager;
+    private void Start()
+    {
+        boxMessageManager = FindObjectOfType<BoxMessageManager>();
+        gameSettings = FindObjectOfType<GameSettings>();
+
+        if (boxMessageManager == null)
+        {
+            Debug.LogError("No se encontró un BoxMessageManager en la escena.");
+            return;
+        }
+    }
     public void UpdateCurrentEvidence(int currentInt)
     {
         currentEvidence = currentInt;
@@ -35,6 +53,8 @@ public class UIManager : MonoBehaviour
         totalEvidence = totalInt;
         cluesText.text = cluesText.text = $"{defaultCluesText} {currentEvidence}";
     }
+
+    #region GameobjectsUIVisibility
     public void SetMenuUIVisibility(bool isVisible)
     {
         if (menuUI != null)
@@ -105,6 +125,16 @@ public class UIManager : MonoBehaviour
             preScoreScreen.SetActive(isVisible);
         }
     }
+    public void SetBgDialogVisibility(bool isVisible)
+    {
+        if (bgDialog != null)
+        {
+            bgDialog.SetActive(isVisible);
+        }
+    }
+    #endregion
+
+    #region GuiltyRoomManager
     public int GetMinClue()
     {
         return guiltyRoomManager.minClue;
@@ -117,8 +147,48 @@ public class UIManager : MonoBehaviour
     {
         guiltyRoomManager.boxMessageManager.SendMessage(name, color, message, (Emotions)none);
     }
+    #endregion
+
+    #region SceneLoadManager
     public void LoadNextScene()
     {
         sceneLoadManager.LoadNextScene();
     }
+    #endregion
+
+    #region GameSettings
+    public void UpdateSensitivitySlider(Slider mouseSensSlider)
+    {
+        gameSettings.UpdateSensitivitySlider(mouseSensSlider);
+    }
+    public void OnDestroyGameSettingsGameobject()
+    {
+        gameSettings.DestroySelf();
+    }
+    #endregion
+
+    #region BoxMessageManager
+    public bool IsDisplayingMessage()
+    {
+        return boxMessageManager.IsDisplayingMessage();
+    }
+    #endregion
+
+    #region ScoreScreenManager
+    public void SetScoreValues(DataCollected dataCollected)
+    {
+        scoreScreenManager.SetScoreValues(dataCollected);
+    }
+    public void UpdateScorePanel()
+    {
+        scoreScreenManager.UpdateScorePanel();
+    }
+    public void SetScoreScreenVisibility(bool isVisible)
+    {
+        if (scoreScreenManager.gameObject != null)
+        {
+            scoreScreenManager.gameObject.SetActive(isVisible);
+        }
+    }
+    #endregion
 }

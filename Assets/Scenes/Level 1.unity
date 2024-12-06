@@ -15911,7 +15911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logText: {fileID: 404480288}
-  logObject: {fileID: 1852437870}
   isLogOpen: 0
   uiManager: {fileID: 0}
 --- !u!1 &627394494
@@ -19206,6 +19205,11 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!1 &761756823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4016898392915219804, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &761802575
 GameObject:
   m_ObjectHideFlags: 0
@@ -28796,6 +28800,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 248624296}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: bgDialog
+      value: 
+      objectReference: {fileID: 761756823}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: controls
       value: 
       objectReference: {fileID: 447804643}
@@ -28803,6 +28811,10 @@ PrefabInstance:
       propertyPath: logObject
       value: 
       objectReference: {fileID: 1852437870}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: logManager
+      value: 
+      objectReference: {fileID: 623633071}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: preScoreScreen
       value: 
@@ -28819,6 +28831,10 @@ PrefabInstance:
       propertyPath: guiltyRoomManager
       value: 
       objectReference: {fileID: 1760056965}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: scoreScreenManager
+      value: 
+      objectReference: {fileID: 1619908042}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: _containerGameObject
       value: 
@@ -46453,7 +46469,6 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
-  scoreScreen: {fileID: 1619908042}
   guiltyNPC: {fileID: 1918426441}
   totalNPCs: 4
   npcInteracted: []
@@ -46477,7 +46492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivitySlider: {fileID: 1154247566}
   uiManager: {fileID: 2000642660}
-  gameSettings: {fileID: 0}
 --- !u!1 &1866685416
 GameObject:
   m_ObjectHideFlags: 0

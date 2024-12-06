@@ -10,13 +10,13 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
     private PlayerController _playerController;
-    private DialogManager _dialogManager;
+    //private DialogManager _dialogManager;
 
     private int _currentLayerMask;
 
     private void Start()
     {
-        _dialogManager = FindObjectOfType<DialogManager>();
+        //_dialogManager = FindObjectOfType<DialogManager>();
         _playerController = FindObjectOfType<PlayerController>();
     }
 

@@ -94,4 +94,8 @@ public class GameSettings : MonoBehaviour
 
         sliderSensitivity.onValueChanged.AddListener(UpdateSensitivity);
     }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -26,20 +26,25 @@ public class BoxMessageManager : MonoBehaviour
     private int maxMessageLength = 290; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
     private Queue<MessageData> messageQueue = new Queue<MessageData>();
 
-    [Header("UI\n")]
+    //[Header("UI\n")]
 
     [Header("Textos")]
     [SerializeField] TextMeshProUGUI textMeshPro;
     [SerializeField] TextMeshProUGUI nameTextMeshPro;
 
-    [Header("Cuadro de dialogo")]
-    [SerializeField] GameObject bgDialog;
+    //[Header("Cuadro de dialogo")]
+    //[SerializeField] GameObject bgDialog;
 
     [Header("Imagenes")]
-    [SerializeField] RawImage lenIcon; //para ocultar esto
     [SerializeField] RawImage pjImage; // RawImage para mostrar la imagen del personaje.
     [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
     [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
+
+    [SerializeField] UIManager uiManager;
+    private void Awake()
+    {
+        uiManager = FindObjectOfType<UIManager>();
+    }
 
     public bool IsDisplayingMessage()
     {
@@ -61,7 +66,8 @@ public class BoxMessageManager : MonoBehaviour
 
         if (!isDisplayingMessage)
         {
-            bgDialog.SetActive(true);
+            //bgDialog.SetActive(true);
+            uiManager.SetBgDialogVisibility(true);
             StartCoroutine(DisplayMessage());
         }
     }
@@ -69,7 +75,8 @@ public class BoxMessageManager : MonoBehaviour
     private IEnumerator DisplayMessage()
     {
         isDisplayingMessage = true;
-        lenIcon.gameObject.SetActive(false);
+
+        uiManager.SetLenIconVisibility(false);
 
         while (messageQueue.Count > 0)
         {
@@ -104,8 +111,10 @@ public class BoxMessageManager : MonoBehaviour
 
         isDisplayingMessage = false;
         ResetSkippingTimers();
-        bgDialog.SetActive(false);
-        lenIcon.gameObject.SetActive(true);
+        //bgDialog.SetActive(false);
+        uiManager.SetBgDialogVisibility(false);
+
+        uiManager.SetLenIconVisibility(true);
     }
 
     private void FormatMessage(string message, Emotions emotion)

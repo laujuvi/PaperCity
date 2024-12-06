@@ -12,7 +12,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
     [SerializeField] private bool isFakeEvidence;
     [SerializeField] private string description;
 
-    private BoxMessageManager boxMessageManager;
+    //private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
     
     [Header("ListManager")]
@@ -24,7 +24,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     public void Start()
     {
-        boxMessageManager = FindObjectOfType<BoxMessageManager>();
+        //boxMessageManager = FindObjectOfType<BoxMessageManager>();
         dialogManager = FindObjectOfType<DialogManager>();
         _listManager = FindObjectOfType<ListManager>();
     }

@@ -11,19 +11,16 @@ public class InGameMenu : MonoBehaviour
     private bool isPaused = false;
 
     [SerializeField] UIManager uiManager;
-    [SerializeField] GameSettings gameSettings;
     private void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
     }
     private void Start()
     {
-        if(gameSettings != null)
-        {
-            gameSettings.UpdateSensitivitySlider(mouseSensitivitySlider);
+        uiManager.UpdateSensitivitySlider(mouseSensitivitySlider);
 
-            mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
-        }
+        mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
+        
         uiManager.SetMenuUIVisibility(false);
     }
     private void Update()
@@ -76,10 +73,7 @@ public class InGameMenu : MonoBehaviour
     }
     public void GoToMenu()
     {
-        if (gameSettings != null)
-        {
-            Destroy(gameSettings.gameObject);
-        }
+        uiManager.OnDestroyGameSettingsGameobject();
         Time.timeScale = 1f;
         uiManager.LoadNextScene();
     }

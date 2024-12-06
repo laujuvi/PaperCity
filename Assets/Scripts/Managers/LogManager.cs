@@ -8,7 +8,7 @@ public class LogManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI logText;
 
     [Header("Log Object")]
-    [SerializeField] GameObject logObject;
+    //[SerializeField] GameObject logObject;
     public bool isLogOpen = false;
 
     private List<MessageData> messageLog = new List<MessageData>();
