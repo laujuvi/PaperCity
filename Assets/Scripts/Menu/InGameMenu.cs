@@ -3,18 +3,16 @@ using UnityEngine.UI;
 
 public class InGameMenu : MonoBehaviour
 {
-    public GameObject menuUI;
-    public GameObject lenIcon;
-    public GameObject options;
-    public GameObject controls;
     public Slider mouseSensitivitySlider;
 
     public delegate void SensitivityChangedHandler();
     public static event SensitivityChangedHandler OnSensitivityChanged;
 
+    private bool isPaused = false;
+
+    [SerializeField] UIManager uiManager;
     [SerializeField] GameSettings gameSettings;
     [SerializeField] SceneLoadManager sceneLoadManager;
-    private bool isPaused = false;
     private void Start()
     {
         if(gameSettings != null)
@@ -23,7 +21,8 @@ public class InGameMenu : MonoBehaviour
 
             mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
         }
-        menuUI.SetActive(false);
+        uiManager.SetMenuUIVisibility(false);
+        //menuUI.SetActive(false);
     }
     private void Update()
     {
@@ -45,35 +44,44 @@ public class InGameMenu : MonoBehaviour
     }
     public void ResumeGame()
     {
-        menuUI.SetActive(false);
-        lenIcon.SetActive(true);
+        //menuUI.SetActive(false);
+        uiManager.SetMenuUIVisibility(false);
+        uiManager.SetLenIconVisibility(true);
+        //lenIcon.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
-        menuUI.SetActive(true);
-        lenIcon.SetActive(false);
+        //menuUI.SetActive(true);
+        uiManager.SetMenuUIVisibility(true);
+        uiManager.SetLenIconVisibility(false);
+        //lenIcon.SetActive(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
     public void GoToOptions()
     {
-        menuUI.SetActive(false);
-        options.SetActive(true);
-        print("options");
+        //menuUI.SetActive(false);
+        uiManager.SetMenuUIVisibility(false);
+        uiManager.SetOptionsVisibility(true);
+        //options.SetActive(true);
     }
     public void GoBackToMenu()
     {
-        menuUI.SetActive(true);
-        options.SetActive(false);
-        controls.SetActive(false);
-        print("menu");
+        //menuUI.SetActive(true);
+        uiManager.SetMenuUIVisibility(true);
+        uiManager.SetOptionsVisibility(false);
+        //options.SetActive(false);
+        uiManager.SetControlsVisibility(false);
+        //controls.SetActive(false);
     }
     public void GoToControls()
     {
-        controls.SetActive(true);
-        menuUI.SetActive(false);
+        //controls.SetActive(true);
+        uiManager.SetControlsVisibility(true);
+        uiManager.SetMenuUIVisibility(false);
+        //menuUI.SetActive(false);
     }
     public void GoToMenu()
     {
@@ -87,6 +95,5 @@ public class InGameMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        print("quit");
     }
 }
