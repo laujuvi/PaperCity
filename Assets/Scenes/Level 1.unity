@@ -15996,7 +15996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logText: {fileID: 404480288}
-  logObject: {fileID: 1852437870}
   isLogOpen: 0
 --- !u!1 &627394494
 GameObject:
@@ -22341,6 +22340,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 77c514256d693e844b65d5771f60fdd7, type: 3}
   m_PrefabInstance: {fileID: 868624634}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873593937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4016898392915219804, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &874453814
 GameObject:
   m_ObjectHideFlags: 0
@@ -22374,6 +22378,11 @@ Transform:
   - {fileID: 1821927468}
   m_Father: {fileID: 375471784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &875913231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 714180026005916842, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &876500042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28917,6 +28926,70 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.38679248
       objectReference: {fileID: 0}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 235556172}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lose
+      value: 
+      objectReference: {fileID: 562622674}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: menuUI
+      value: 
+      objectReference: {fileID: 559082358}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lenIcon
+      value: 
+      objectReference: {fileID: 532678003}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: options
+      value: 
+      objectReference: {fileID: 248624296}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: bgDialog
+      value: 
+      objectReference: {fileID: 873593937}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: controls
+      value: 
+      objectReference: {fileID: 447804643}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: logObject
+      value: 
+      objectReference: {fileID: 1852437870}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: logManager
+      value: 
+      objectReference: {fileID: 623633071}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: preScoreScreen
+      value: 
+      objectReference: {fileID: 1713275133}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: sceneLoadManager
+      value: 
+      objectReference: {fileID: 1676841817}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: GuiltyRoomUIPanel
+      value: 
+      objectReference: {fileID: 1154247563}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: boxMessageManager
+      value: 
+      objectReference: {fileID: 2139294260}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: guiltyRoomManager
+      value: 
+      objectReference: {fileID: 1760056965}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: scoreScreenManager
+      value: 
+      objectReference: {fileID: 1619908042}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: _containerGameObject
+      value: 
+      objectReference: {fileID: 875913231}
     - target: {fileID: 977856265702328708, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -46571,11 +46644,6 @@ MonoBehaviour:
     deducir qui\xE9n asesin\xF3 a Roger Ackroyd."
   currentEvidence: 0
   totalEvidence: 0
-  win: {fileID: 235556172}
-  lose: {fileID: 562622674}
-  scoreScreen: {fileID: 1619908042}
-  preScoreScreen: {fileID: 1713275133}
-  lenIcon: {fileID: 532678003}
   guiltyNPC: {fileID: 1918426441}
   totalNPCs: 4
   npcInteracted: []
@@ -46596,12 +46664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6992dbebfd14f5c418896934b8f527be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuUI: {fileID: 559082358}
-  lenIcon: {fileID: 532678003}
-  options: {fileID: 248624296}
-  controls: {fileID: 447804643}
   mouseSensitivitySlider: {fileID: 1154247566}
-  sceneLoadManager: {fileID: 1676841817}
 --- !u!1 &1866685416
 GameObject:
   m_ObjectHideFlags: 0

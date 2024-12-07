@@ -953,6 +953,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: menuUI
+      value: 
+      objectReference: {fileID: 1286344738}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: lenIcon
+      value: 
+      objectReference: {fileID: 646635851}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: options
+      value: 
+      objectReference: {fileID: 657494472}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: bgDialog
+      value: 
+      objectReference: {fileID: 494760214}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: boxMessageManager
+      value: 
+      objectReference: {fileID: 127049848}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: _containerGameObject
+      value: 
+      objectReference: {fileID: 494760213}
     - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: pjImage
       value: 
@@ -1231,6 +1255,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+--- !u!1 &494760213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 714180026005916842, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 494760212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &494760214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4016898392915219804, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 494760212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &497408438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1437,12 +1471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6992dbebfd14f5c418896934b8f527be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuUI: {fileID: 1286344738}
-  lenIcon: {fileID: 646635851}
-  options: {fileID: 657494472}
-  controls: {fileID: 0}
   mouseSensitivitySlider: {fileID: 554372600}
-  sceneLoadManager: {fileID: 0}
 --- !u!1001 &596996660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1851,11 +1880,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626582522}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &639376445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5885095295887652043, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
-  m_PrefabInstance: {fileID: 494760212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &646635851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8918153864075436308, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
@@ -3468,7 +3492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   logText: {fileID: 1007419429}
-  logObject: {fileID: 639376445}
   isLogOpen: 0
 --- !u!4 &1565306037
 Transform:

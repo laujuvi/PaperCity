@@ -7,16 +7,10 @@ public class PlayerInteractUI : MonoBehaviour
 {
     [SerializeField] private PlayerInteract _playerInteract;
     [SerializeField] private TextMeshProUGUI interactText;
-    [SerializeField] UIManager uiManager;
-
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
 
     private void Update()
     {
-        if(_playerInteract.GetInteractableObject() != null && !uiManager.IsDisplayingMessage()/*!boxMessageManager.IsDisplayingMessage()*/ )
+        if(_playerInteract.GetInteractableObject() != null && !GameManager.Instance.uIManager.IsDisplayingMessage()/*!boxMessageManager.IsDisplayingMessage()*/ )
         {
             Show(_playerInteract.GetInteractableObject());
         } 
@@ -28,12 +22,12 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Show(IInteractable interactable)
     {
-        uiManager.SetContainerGameobjectVisibility(true);
+        GameManager.Instance.uIManager.SetContainerGameobjectVisibility(true);
         interactText.text = interactable.GetInteractText();
     }
 
     private void Hide()
     {
-        uiManager.SetContainerGameobjectVisibility(false);
+        GameManager.Instance.uIManager.SetContainerGameobjectVisibility(false);
     }
 }

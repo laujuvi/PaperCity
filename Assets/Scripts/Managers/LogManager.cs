@@ -12,11 +12,7 @@ public class LogManager : MonoBehaviour
     public bool isLogOpen = false;
 
     private List<MessageData> messageLog = new List<MessageData>();
-    [SerializeField] UIManager uiManager;
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
+
     private void Update()
     {
         OpenLogView();
@@ -54,13 +50,13 @@ public class LogManager : MonoBehaviour
             {
                 CursorManager.ShowCursor();
                 GameManager.Instance.DisablePlayerController();
-                uiManager.SetLogObjectVisibility(true);
+                GameManager.Instance.uIManager.SetLogObjectVisibility(true);
             }
             if (!isLogOpen)
             {
                 CursorManager.HideCursor();
                 GameManager.Instance.EnablePlayerController();
-                uiManager.SetLogObjectVisibility(false);
+                GameManager.Instance.uIManager.SetLogObjectVisibility(false);
             }
         }
     }

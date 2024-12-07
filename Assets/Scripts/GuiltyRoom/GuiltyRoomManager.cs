@@ -15,15 +15,8 @@ public class GuiltyRoomManager : MonoBehaviour
     [SerializeField] public int minClue;
 
     [Header("GuiltyRoom UI Settings\n")]
-    //[SerializeField] public GameObject GuiltyRoomUIPanel;
     private bool isPaused;
-    //public GameObject lenIcon;
 
-    [SerializeField] UIManager uiManager;
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
     void Start()
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
@@ -46,7 +39,7 @@ public class GuiltyRoomManager : MonoBehaviour
             npcs[i].changeGuiltyText();
         }
         //GuiltyRoomUIPanel.gameObject.SetActive(false);
-        uiManager.SetGuiltyRoomVisibility(false);
+        GameManager.Instance.uIManager.SetGuiltyRoomVisibility(false);
         CursorManager.HideCursor();
         ResumeGame();
     }
@@ -54,21 +47,21 @@ public class GuiltyRoomManager : MonoBehaviour
     public void GoToGuiltyRoomNo()
     {
         //GuiltyRoomUIPanel.gameObject.SetActive(false);
-        uiManager.SetGuiltyRoomVisibility(false);
+        GameManager.Instance.uIManager.SetGuiltyRoomVisibility(false);
         CursorManager.HideCursor();
         ResumeGame();
     }
 
     public void ResumeGame()
     {
-        uiManager.SetLenIconVisibility(true);
+        GameManager.Instance.uIManager.SetLenIconVisibility(true);
         GameManager.Instance.EnablePlayerController();
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
-        uiManager.SetLenIconVisibility(false);
+        GameManager.Instance.uIManager.SetLenIconVisibility(false);
         GameManager.Instance.DisablePlayerController();
         Time.timeScale = 0f;
         isPaused = true;

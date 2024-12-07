@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("MANAGERS")]
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
-    [SerializeField] private UIManager uIManager;
+    [SerializeField] public UIManager uIManager;
     [SerializeField] private DataCollector dataCollector;
 
     /* PLAYER */
@@ -58,10 +58,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    [SerializeField] UIManager uiManager;
     private void Awake()
     {
-        uiManager = FindObjectOfType<UIManager>();
 
         if (Instance != null && Instance != this)
             Destroy(this);
@@ -70,8 +68,8 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        uiManager.SetWinScreenVisibility(false);
-        uiManager.SetLoseScreenVisibility(false);
+        uIManager.SetWinScreenVisibility(false);
+        uIManager.SetLoseScreenVisibility(false);
 
         if (uIManager != null && dialogManager != null)
         {
@@ -126,8 +124,8 @@ public class GameManager : MonoBehaviour
         //Meto este validador para que no pase nada si el player spamea el clic una vez que le tiro la pantalla final.
         if (playerHasAcused) return;
         Debug.Log("Checking guilty NPC. GuiltyNPC: " + guiltyNPC.name + " - LastNPCName: " + lastNPCName);
-        
-        uiManager.SetLenIconVisibility(false);
+
+        uIManager.SetLenIconVisibility(false);
 
         CursorManager.ShowCursor();
 
@@ -136,14 +134,14 @@ public class GameManager : MonoBehaviour
         if (guiltyNPC.name == lastNPCName)
         {
             Debug.Log("WIN");
-            uiManager.SetWinScreenVisibility(true);
+            uIManager.SetWinScreenVisibility(true);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             StartCoroutine(GoToScoreScreen());
         }
         else
         {
             Debug.Log("LOSE");
-            uiManager.SetLoseScreenVisibility(true);
+            uIManager.SetLoseScreenVisibility(true);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
         }
         musicSc.Stop();
@@ -207,28 +205,28 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3f); // Espera 3 segundos
 
-        uiManager.SetWinScreenVisibility(false);
-        uiManager.SetLoseScreenVisibility(false);
+        uIManager.SetWinScreenVisibility(false);
+        uIManager.SetLoseScreenVisibility(false);
 
-        uiManager.SetPreScoreScreenVisibility(true);
+        uIManager.SetPreScoreScreenVisibility(true);
 
         yield return new WaitForSeconds(2f);
 
-        uiManager.SetPreScoreScreenVisibility(false);
+        uIManager.SetPreScoreScreenVisibility(false);
 
         //Hago que el collector junte la data seteada
         dataCollector.SetAllData();
 
         // Le paso esa data al score
-        uiManager.SetScoreValues(dataCollector.GetAllData());
+        uIManager.SetScoreValues(dataCollector.GetAllData());
         //scoreScreen.SetScoreValues(dataCollector.GetAllData());
 
         // Llamo al score para que renderice la data que le pase
-        uiManager.UpdateScorePanel();
+        uIManager.UpdateScorePanel();
         //scoreScreen.UpdateScorePanel();
 
         //scoreScreen.gameObject.SetActive(true);
-        uiManager.SetScoreScreenVisibility(true);
+        uIManager.SetScoreScreenVisibility(true);
     }
 
 }

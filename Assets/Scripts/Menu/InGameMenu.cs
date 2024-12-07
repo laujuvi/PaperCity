@@ -10,18 +10,13 @@ public class InGameMenu : MonoBehaviour
 
     private bool isPaused = false;
 
-    [SerializeField] UIManager uiManager;
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
     private void Start()
     {
-        uiManager.UpdateSensitivitySlider(mouseSensitivitySlider);
+        //GameManager.Instance.uIManager.UpdateSensitivitySlider(mouseSensitivitySlider);
 
         mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
-        
-        uiManager.SetMenuUIVisibility(false);
+
+        //GameManager.Instance.uIManager.SetMenuUIVisibility(false);
     }
     private void Update()
     {
@@ -43,39 +38,39 @@ public class InGameMenu : MonoBehaviour
     }
     public void ResumeGame()
     {
-        uiManager.SetMenuUIVisibility(false);
-        uiManager.SetLenIconVisibility(true);
+        GameManager.Instance.uIManager.SetMenuUIVisibility(false);
+        GameManager.Instance.uIManager.SetLenIconVisibility(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void PauseGame()
     {
-        uiManager.SetMenuUIVisibility(true);
-        uiManager.SetLenIconVisibility(false);
+        GameManager.Instance.uIManager.SetMenuUIVisibility(true);
+        GameManager.Instance.uIManager.SetLenIconVisibility(false);
         Time.timeScale = 0f;
         isPaused = true;
     }
     public void GoToOptions()
     {
-        uiManager.SetMenuUIVisibility(false);
-        uiManager.SetOptionsVisibility(true);
+        GameManager.Instance.uIManager.SetMenuUIVisibility(false);
+        GameManager.Instance.uIManager.SetOptionsVisibility(true);
     }
     public void GoBackToMenu()
     {
-        uiManager.SetMenuUIVisibility(true);
-        uiManager.SetOptionsVisibility(false);
-        uiManager.SetControlsVisibility(false);
+        GameManager.Instance.uIManager.SetMenuUIVisibility(true);
+        GameManager.Instance.uIManager.SetOptionsVisibility(false);
+        GameManager.Instance.uIManager.SetControlsVisibility(false);
     }
     public void GoToControls()
     {
-        uiManager.SetControlsVisibility(true);
-        uiManager.SetMenuUIVisibility(false);
+        GameManager.Instance.uIManager.SetControlsVisibility(true);
+        GameManager.Instance.uIManager.SetMenuUIVisibility(false);
     }
     public void GoToMenu()
     {
-        uiManager.OnDestroyGameSettingsGameobject();
+        GameManager.Instance.uIManager.OnDestroyGameSettingsGameobject();
         Time.timeScale = 1f;
-        uiManager.LoadNextScene();
+        GameManager.Instance.uIManager.LoadNextScene();
     }
     public void QuitGame()
     {

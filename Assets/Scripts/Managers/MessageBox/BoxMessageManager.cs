@@ -40,12 +40,6 @@ public class BoxMessageManager : MonoBehaviour
     [SerializeField] Texture imageDefault; // Imagen de personajes no importantes.
     [SerializeField] List<ImageData> imageList; // Lista de imágenes con sus nombres.
 
-    [SerializeField] UIManager uiManager;
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
-
     public bool IsDisplayingMessage()
     {
         return isDisplayingMessage;
@@ -67,7 +61,7 @@ public class BoxMessageManager : MonoBehaviour
         if (!isDisplayingMessage)
         {
             //bgDialog.SetActive(true);
-            uiManager.SetBgDialogVisibility(true);
+            GameManager.Instance.uIManager.SetBgDialogVisibility(true);
             StartCoroutine(DisplayMessage());
         }
     }
@@ -76,7 +70,7 @@ public class BoxMessageManager : MonoBehaviour
     {
         isDisplayingMessage = true;
 
-        uiManager.SetLenIconVisibility(false);
+        GameManager.Instance.uIManager.SetLenIconVisibility(false);
 
         while (messageQueue.Count > 0)
         {
@@ -112,9 +106,9 @@ public class BoxMessageManager : MonoBehaviour
         isDisplayingMessage = false;
         ResetSkippingTimers();
         //bgDialog.SetActive(false);
-        uiManager.SetBgDialogVisibility(false);
+        GameManager.Instance.uIManager.SetBgDialogVisibility(false);
 
-        uiManager.SetLenIconVisibility(true);
+        GameManager.Instance.uIManager.SetLenIconVisibility(true);
     }
 
     private void FormatMessage(string message, Emotions emotion)

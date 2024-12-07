@@ -8,29 +8,25 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
 {
     [SerializeField] private string interactText;
     [SerializeField] private GuiltyRoomManager guiltyRoomManager;
-    [SerializeField] UIManager uiManager;
-    private void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
-    }
+
     private void Start()
     {
         guiltyRoomManager = FindObjectOfType<GuiltyRoomManager>();
     }
     public void Interact()
     {
-        if (GameManager.Instance.currentEvidence >= /*guiltyRoomManager.minClue*/uiManager.GetMinClue())
+        if (GameManager.Instance.currentEvidence >= /*guiltyRoomManager.minClue*/GameManager.Instance.uIManager.GetMinClue())
         {
             //guiltyRoomManager.GuiltyRoomUIPanel.SetActive(true);
-            uiManager.SetGuiltyRoomVisibility(true);
+            GameManager.Instance.uIManager.SetGuiltyRoomVisibility(true);
             //GameManager.Instance.ShowCursor();
             CursorManager.ShowCursor();
-            uiManager.PauseGame();
+            GameManager.Instance.uIManager.PauseGame();
             //guiltyRoomManager.PauseGame();
         }
         else 
         {
-            uiManager.GuiltyRoomSendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
+            GameManager.Instance.uIManager.GuiltyRoomSendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
             //guiltyRoomManager.boxMessageManager.SendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
         }
     }
