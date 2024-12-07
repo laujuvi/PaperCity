@@ -19638,6 +19638,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2764141503591028161, guid: f489ad07e6ddedc43b50ccbf20255aa3, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764141503591028161, guid: f489ad07e6ddedc43b50ccbf20255aa3, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303971716329658009, guid: f489ad07e6ddedc43b50ccbf20255aa3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8941470246576302270, guid: f489ad07e6ddedc43b50ccbf20255aa3, type: 3}
       propertyPath: m_Name
       value: bowl
@@ -42123,6 +42135,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2071527944}
     m_Modifications:
+    - target: {fileID: 2168734500156541792, guid: c4a7e1d8951b047428e72214d162df16, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168734500156541792, guid: c4a7e1d8951b047428e72214d162df16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128607417202968036, guid: c4a7e1d8951b047428e72214d162df16, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128607417202968036, guid: c4a7e1d8951b047428e72214d162df16, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6252932537897169310, guid: c4a7e1d8951b047428e72214d162df16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.454824
