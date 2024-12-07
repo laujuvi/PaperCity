@@ -12,7 +12,7 @@ public class ScriptableObjectToJson : MonoBehaviour
 
     [Header("Output JSON")]
     private string extensionFile = ".json";
-    [SerializeField] private string outputFilePath = "Scripts/JSONScripts/JSONs/";
+    [SerializeField] private string outputFilePath = "Scripts/Editor/JSONScripts/JSONs/";
 
     public void ConvertScriptableObjectToJSON()
     {

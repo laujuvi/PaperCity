@@ -10,7 +10,7 @@ public class JsonToScriptableObject : MonoBehaviour
 
     [Header("Output ScriptableObject")]
     private string extensionFile = ".asset";
-    [SerializeField] private string outputFilePath = "Scripts/JSONScripts/Scriptables/";
+    [SerializeField] private string outputFilePath = "Scripts/Editor/JSONScripts/Scriptables/";
 
     public void ConverJsonToScriptableObject()
     {
