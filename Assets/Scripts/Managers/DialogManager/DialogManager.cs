@@ -59,13 +59,15 @@ public class DialogManager : MonoBehaviour
 
     private Dictionary<string, bool> evidenceStatus = new Dictionary<string, bool>();
 
+ 
+
     private void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
         gameManager = GameManager.Instance;
 
         if (dialoguesPhase1Json != null && dialoguesPhase2Json != null && dialoguesPhaseFinalJson != null)
-        {
+        {           
             LoadDialoguesFromJson();
         }
         else

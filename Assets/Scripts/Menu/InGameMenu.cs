@@ -85,6 +85,10 @@ public class InGameMenu : MonoBehaviour
     }
     public void QuitGame()
     {
+        if (GameManager.Instance.completedGame == false)
+        {
+            GameManager.Instance.SentEndGamelEvents(GameManager.Instance.gameplayTime, true);
+        }
         Application.Quit();
         print("quit");
     }

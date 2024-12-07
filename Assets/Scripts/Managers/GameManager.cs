@@ -56,10 +56,12 @@ public class GameManager : MonoBehaviour
     private bool isGuiltyCheck = false;
 
     [Header("Analytics")]
-    private int gameplayTime = 0; 
+    public int gameplayTime = 0; 
     private float DeltaTime = 0;    
     private bool rightSuspect = false;
     public int openNoteBook = 0;
+    public bool completedGame = false;
+    public bool isLeavingGame = false;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -144,6 +146,7 @@ public class GameManager : MonoBehaviour
             lenIcon.SetActive(false);
             win.SetActive(true);
             SentEndLevelEvents(true, lastNPCName);
+            SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
@@ -157,6 +160,8 @@ public class GameManager : MonoBehaviour
             lenIcon.SetActive(false);
             lose.SetActive(true);
             SentEndLevelEvents(false, lastNPCName);
+            SentClueCountEvents(currentEvidence);
+            SentOpenNoteBookEvents(openNoteBook);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 
@@ -225,11 +230,30 @@ public class GameManager : MonoBehaviour
         return minEvidence;
     }
 
-    public void SentEvents(int gamplayTime)
+    public void SentEvents(int gameplayTime)
     {
         GameplayTime btnEvt = new GameplayTime
         {
-            gameplay_Time = gamplayTime,
+            gameplay_Time = gameplayTime,
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    } 
+    public void SentFirstClueEvents(int gameplayTime, string clueID)
+    {
+        FirstClue btnEvt = new FirstClue
+        {
+            gameplay_Time = gameplayTime,
+            clue_ID = clueID
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+    public void SentClueCountEvents(int clueCount)
+    {
+        ClueDiscovery btnEvt = new ClueDiscovery
+        {
+            clue_Count = clueCount
         };
 
         AnalyticsService.Instance.RecordEvent(btnEvt);
@@ -243,7 +267,7 @@ public class GameManager : MonoBehaviour
 
             suspect_ID = suspectID
         };
-
+        completedGame = true;
         AnalyticsService.Instance.RecordEvent(btnEvt);
     }
 
@@ -252,6 +276,18 @@ public class GameManager : MonoBehaviour
         Open_Notebook btnEvt = new Open_Notebook
         {
             open_NoteBook = TimesPlayeropenNotebook,
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+
+    public void SentEndGamelEvents(int gameplayTime, bool leaveGame)
+    {
+        Game_Abandoment btnEvt = new Game_Abandoment
+        {
+            gameplay_Time = gameplayTime,
+
+            Leave_Game = leaveGame
         };
 
         AnalyticsService.Instance.RecordEvent(btnEvt);

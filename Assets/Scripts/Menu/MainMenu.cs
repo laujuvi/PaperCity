@@ -24,6 +24,10 @@ public class MainMenu : MonoBehaviour
     }
     public void QuitGame()
     {
+        if(GameManager.Instance.completedGame == false)
+        {
+            GameManager.Instance.SentEndGamelEvents(GameManager.Instance.gameplayTime, true);
+        }
         Application.Quit();
     }
     public void OpenCredits()
