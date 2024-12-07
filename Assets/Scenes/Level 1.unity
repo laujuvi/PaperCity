@@ -45682,7 +45682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Maquina de escribir antigua
   pickablePJText: Detective
-  pickableText: "Roger siemopre quiso escribir novelas de detectives. Sol\xEDa consultarme
+  pickableText: "Roger siempre quiso escribir novelas de detectives. Sol\xEDa consultarme
     por algunos casos en busca de inspiraci\xF3n. Lamentablemente me encontraba tan
     ebrio que no lograba recordar ni uno."
 --- !u!114 &1807759686
