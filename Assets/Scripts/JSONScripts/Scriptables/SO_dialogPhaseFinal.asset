@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: SO_dialogPhaseFinal
+  m_EditorClassIdentifier: Assembly-CSharp::DialoguesData
+  dialogues:
+  - name: Bruce Ackroyd
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "\xBFYo? \xBFCulpable de la muerte de mi padre? \xBFEst\xE1 usted
+        loco? \xBFHa visto toda la evidencia? Lo siento mucho detective, pero yo
+        no soy el culpable..."
+      emotion: Talking
+  - name: Sra. Layla Ackroyd
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "No puedo creer que lo haya descubierto... Si... Yo asesin\xE9 a Roger...
+        Toda mi vida comenz\xF3 a desmoronarse desde que empez\xF3 a acostarse con
+        su nueva secretaria... Pens\xE9 que tal vez un nuevo hijo lo har\xEDa recapacitar,
+        pero entonces lleg\xF3 con los papeles de divorcio y supe que era el fin.
+        Entonces decid\xED terminar todo con mis propias manos..."
+      emotion: Talking
+  - name: Victor Howard
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "Hmmm... no me equivocaba con usted... desde el momento que lo vi
+        me di cuenta de que no era m\xE1s que un aficionado mediocre. Yo no soy el
+        culpable, detective. D\xE9jele el trabajo a alguien m\xE1s capaz que usted."
+      emotion: Talking
+  - name: James Moriarty
+    color: {r: 1, g: 0, b: 0, a: 1}
+    messages:
+    - talked: 0
+      isLoopingMessage: 1
+      evidence:
+        hasEvidence: 0
+        evidenceName: 
+        requiredMessage: 
+      message: "\xBF\xA1Pero c\xF3mo se le ocurre!? Vaya... parece que a\xF1os de
+        abuso de ron y ginebra han hecho lo suyo con usted... \xA1Culparme del asesinato
+        de Roger! \xA1Yo no soy el culpable, detective!"
+      emotion: Talking

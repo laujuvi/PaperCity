@@ -2,6 +2,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "NewDialoguesData", menuName = "Dialogues/DialoguesData", order = 1)]
+public class DialoguesData : ScriptableObject
+{
+    public List<DialogData> dialogues; // Reutiliza la clase DialogData de DialogManager.cs
+}
+
 [System.Serializable]
 public class EvidenceData
 {
