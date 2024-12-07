@@ -25506,6 +25506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenLoadManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44244,6 +44248,7 @@ MonoBehaviour:
   rightExitDoor: {fileID: 2109300187}
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
+  openNoteBook: 0
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51504,7 +51509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2124354587126923757, guid: a6f904ec9f446604a921812c3a236c97, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4346547063007040465, guid: a6f904ec9f446604a921812c3a236c97, type: 3}
       propertyPath: m_LocalPosition.x

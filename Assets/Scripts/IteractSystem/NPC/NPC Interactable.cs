@@ -14,6 +14,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
 
     private BoxMessageManager boxMessageManager;
     private DialogManager dialogManager;
+    private GuiltyRoomManager guiltyRoomManager;
     
     [Header("ListManager")]
     private ListManager _listManager;
@@ -34,6 +35,7 @@ public class NPCInteractable : MonoBehaviour, IInteractable
         {
             // Antes de avanzar con el dialogo se fija si no deberia mostrarse el mensaje de ir a la sala de interrogatorio
             if (!GameManager.Instance.isPlayerInGuiltyRoom && GameManager.Instance.currentEvidence >= GameManager.Instance.minEvidence) {
+                guiltyRoomManager.StopGuiltyRoomTimer();
                 GameManager.Instance.CheckPlayerSituation();
                 return;
             } 
@@ -51,7 +53,6 @@ public class NPCInteractable : MonoBehaviour, IInteractable
             }
         }
     }
-
     public string GetInteractText()
     {
         return interactText;

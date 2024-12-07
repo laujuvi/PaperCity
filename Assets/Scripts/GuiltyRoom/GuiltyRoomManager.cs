@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
 
 public class GuiltyRoomManager : MonoBehaviour
 {
-
     /* Guilty Room Sttings */
     [Header("GuiltyRoom Settings\n")]
-
-
     [SerializeField] private List<NPCInteractable> npcs = new List<NPCInteractable>();
     [SerializeField] private List<Transform> tpPoints = new List<Transform>();
     [SerializeField] private Transform playerTransform;
@@ -22,20 +20,19 @@ public class GuiltyRoomManager : MonoBehaviour
     [SerializeField] public GameObject GuiltyRoomUIPanel;
     private bool isPaused;
     public GameObject lenIcon;
+
+    private float guiltyRoomStartTime;
+    private float totalTimeInGuiltyRoom;
     // Start is called before the first frame update
     void Start()
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
         minClue = GameManager.Instance.GetMinEvidence();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void GoToGuiltyRoomYes()
     {
+        StartGuiltyRoomTimer();
+
         if (playerController != null)
         {
             characterController.enabled = false;
@@ -75,5 +72,27 @@ public class GuiltyRoomManager : MonoBehaviour
         GameManager.Instance.DisablePlayerController();
         Time.timeScale = 0f;
         isPaused = true;
+    }
+    public void StartGuiltyRoomTimer()
+    {
+        guiltyRoomStartTime = Time.time;
+    }
+    public void StopGuiltyRoomTimer()
+    {
+        totalTimeInGuiltyRoom = Time.time - guiltyRoomStartTime;
+        float timeSpent = GetGuiltyRoomTime();
+        SentGuiltyRoomTimeEvents(timeSpent);
+    }
+    public void SentGuiltyRoomTimeEvents(float timeSpentInGuiltyRoom)
+    {
+        GuiltyRoomTime btnEvt = new GuiltyRoomTime
+        {
+            guilty_Room_Time = timeSpentInGuiltyRoom,
+        };
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+    public float GetGuiltyRoomTime()
+    {
+        return totalTimeInGuiltyRoom;
     }
 }
