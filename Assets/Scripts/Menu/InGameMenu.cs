@@ -8,7 +8,8 @@ public class InGameMenu : MonoBehaviour
     public delegate void SensitivityChangedHandler();
     public static event SensitivityChangedHandler OnSensitivityChanged;
 
-    private bool isPaused = false;
+    bool isPaused = false;
+    string currentScreen = "Menu";
 
     private void Start()
     {
@@ -23,8 +24,15 @@ public class InGameMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             if (isPaused)
             {
-                ResumeGame();
-                CursorManager.HideCursor();
+                if(currentScreen == "Menu")
+                {
+                    ResumeGame();
+                    CursorManager.HideCursor();
+                }
+                else
+                {
+                    GoBackToMenu();
+                }
             }
             else
             {
@@ -42,6 +50,7 @@ public class InGameMenu : MonoBehaviour
         GameManager.Instance.uIManager.SetLenIconVisibility(true);
         Time.timeScale = 1f;
         isPaused = false;
+        currentScreen = "Game";
     }
     public void PauseGame()
     {
@@ -49,22 +58,26 @@ public class InGameMenu : MonoBehaviour
         GameManager.Instance.uIManager.SetLenIconVisibility(false);
         Time.timeScale = 0f;
         isPaused = true;
+        currentScreen = "Menu";
     }
     public void GoToOptions()
     {
         GameManager.Instance.uIManager.SetMenuUIVisibility(false);
         GameManager.Instance.uIManager.SetOptionsVisibility(true);
+        currentScreen = "Options";
     }
     public void GoBackToMenu()
     {
         GameManager.Instance.uIManager.SetMenuUIVisibility(true);
         GameManager.Instance.uIManager.SetOptionsVisibility(false);
         GameManager.Instance.uIManager.SetControlsVisibility(false);
+        currentScreen = "Menu";
     }
     public void GoToControls()
     {
         GameManager.Instance.uIManager.SetControlsVisibility(true);
         GameManager.Instance.uIManager.SetMenuUIVisibility(false);
+        currentScreen = "Controls";
     }
     public void GoToMenu()
     {
