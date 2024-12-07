@@ -1,7 +1,9 @@
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class JsonToScriptableObject : MonoBehaviour
 {
@@ -45,9 +47,10 @@ public class JsonToScriptableObject : MonoBehaviour
         try
         {
             string path = Path.Combine("Assets", $"{filePath}SO_{jsonFile.name}{extensionFile}");
-
+            #if UNITY_EDITOR
             // Guarda el ScriptableObject como un archivo .asset en el proyecto
             AssetDatabase.CreateAsset(obj, path);
+            #endif
             Debug.Log($"ScriptableObject guardado en: {path}");
         }
         catch (System.Exception ex)

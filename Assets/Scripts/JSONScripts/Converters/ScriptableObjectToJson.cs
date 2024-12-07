@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 using System.Linq;
 using System;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class ScriptableObjectToJson : MonoBehaviour
 {
@@ -43,6 +46,7 @@ public class ScriptableObjectToJson : MonoBehaviour
 
     private void SaveJsonToFile(string json, string filePath)
     {
+        #if UNITY_EDITOR
         string path = Path.Combine("Assets", $"{filePath}JSON_{scriptableObject.name}{extensionFile}");
 
         try
@@ -54,6 +58,9 @@ public class ScriptableObjectToJson : MonoBehaviour
         {
             Debug.LogError($"Error saving JSON_{scriptableObject.name}: " + ex.Message);
         }
+        #else
+        Debug.LogError("SaveScriptableObject solo puede usarse en el editor de Unity.");
+        #endif
     }
 
     // Contrato personalizado para excluir propiedades específicas

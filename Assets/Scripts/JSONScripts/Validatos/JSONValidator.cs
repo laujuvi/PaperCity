@@ -20,14 +20,16 @@ public class JSONValidator : MonoBehaviour
             Debug.LogError("No JSON assigned.");
             return;
         }
-
+        #if UNITY_EDITOR
         string originalPath = GetOriginalJsonPath(dialogJSON);
-
+        #endif
         var modifiedData = ValidateAndModifyJSON(dialogJSON.text);
 
         string modifiedJson = JsonConvert.SerializeObject(modifiedData, Formatting.Indented);
 
+        #if UNITY_EDITOR
         SaveModifiedJSON(modifiedJson, originalPath);
+        #endif
     }
 
     private JObject ValidateAndModifyJSON(string json)
