@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("Clues UI")]
     [SerializeField] TextMeshProUGUI cluesText;
-    private string defaultCluesText = "Clues found:";
+    private string defaultCluesText = "Pistas halladas:";
     private int currentEvidence = 0;
     private int totalEvidence = 0;
 
