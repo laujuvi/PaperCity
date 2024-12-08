@@ -4869,14 +4869,14 @@ RectTransform:
   m_GameObject: {fileID: 207196199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 442295116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076293945, y: -124}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -152}
   m_SizeDelta: {x: 1093.8899, y: 895.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207196201
@@ -4899,7 +4899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 449bba15710ad254eab272fe8a798b24, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6574a26ad09766b41a60764825343791, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -27223,7 +27223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
