@@ -12,39 +12,26 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private GameObject interactable;
     [SerializeField] private ChangeScene door;
     [SerializeField] private TutorialInteract2 Libreta;
-    [SerializeField] private GameObject LibretaUI;
-    [SerializeField] private GameObject LibretaUI2;
+    //[SerializeField] private GameObject LibretaUI;
+    //[SerializeField] private GameObject LibretaUI2;
 
     private TutorialInitialDialog TIDialog;
 
     void Start()
     {
         //GameManager.Instance.HideCursor();
+        GameManager.Instance.uIManager.SetDisabledNotebookIcon();
         CursorManager.HideCursor();
         GameManager.Instance.isNoteBookPickedUp = false;
         TIDialog = FindObjectOfType<TutorialInitialDialog>();
         Libreta.OnInteractableActivated += HandleLibretaActivated;
     }
 
-    private void Update()
-    {
-        NotebookStatusCheck();
-    }
-
-    private void NotebookStatusCheck()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            LibretaUI.gameObject.SetActive(LibretaUI2.activeSelf);
-        }
-    }
-
     private void HandleLibretaActivated()
     {
         Debug.Log("libreta handeada");
         GameManager.Instance.isNoteBookPickedUp = true;
-        LibretaUI.gameObject.SetActive(true);
-        //LibretaUI2.gameObject.SetActive(true);
+        GameManager.Instance.uIManager.SetEnableNotebookIcon();
         TIDialog.SecondDialogue();
         door.SetActiveScript(true);
     }

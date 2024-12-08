@@ -970,6 +970,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 494760214}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: logManager
+      value: 
+      objectReference: {fileID: 1565306036}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: notebookManager
+      value: 
+      objectReference: {fileID: 1963126567}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: boxMessageManager
       value: 
       objectReference: {fileID: 127049848}
@@ -985,6 +993,10 @@ PrefabInstance:
       propertyPath: logManager
       value: 
       objectReference: {fileID: 1565306036}
+    - target: {fileID: 1416068755183201392, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: hideDialogDelay
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1517828472184765461, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1253,7 +1265,10 @@ PrefabInstance:
     - {fileID: 9103943045345134513, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     - {fileID: 6165789374114049582, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963126567}
   m_SourcePrefab: {fileID: 100100000, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
 --- !u!1 &494760213 stripped
 GameObject:
@@ -2420,8 +2435,6 @@ MonoBehaviour:
   interactable: {fileID: 6294488535939444631}
   door: {fileID: 668003804}
   Libreta: {fileID: 6294488535939444637}
-  LibretaUI: {fileID: 602992185}
-  LibretaUI2: {fileID: 1404489143}
 --- !u!4 &948903712
 Transform:
   m_ObjectHideFlags: 0
@@ -4024,6 +4037,25 @@ Transform:
   - {fileID: 314688101}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1963126563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 494760212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963126567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963126563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd1bc341cfd5d94fbf03d013e739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notebook: {fileID: 1404489143}
+  notebookIcon: {fileID: 602992185}
 --- !u!1 &1985798832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 72649887939171019, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
