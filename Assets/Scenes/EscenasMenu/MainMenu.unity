@@ -384,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25049a43c42cdae4395a1d12faa5c19e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61720b0fb235e1145b6be53e22c5e798, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54ee5b2c59feec943b35f981ce84d0df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2d8c31637465f74c9f632309839a5d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a6e0a1d5a187f14f9d8b1e64048433f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6662404f445ce694e94980c8d65d11c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 485625166472b034abcb6a24abfe0c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5aa4c517f660818428c99489069a0d2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c79239d3623bf9445a72c5b3caa02e0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 332a4dba12822a64d89e68fe6d26cf32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 361828362, guid: 3205b55e4135b9c43b06b4b10fc3f26b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13f19fd31042b4141a818df5fb3fcf4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2549,7 +2549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7430233440796547978, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: transitionTime
