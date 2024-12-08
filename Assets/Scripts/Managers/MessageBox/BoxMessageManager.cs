@@ -20,7 +20,9 @@ public class BoxMessageManager : MonoBehaviour
 
     [Header("Parametros\n")]
     [SerializeField] float letterDelay = 0.15f;
-    [SerializeField] float hideDialogDelay = 1f; 
+    [SerializeField] float customHideDialogDelay = 3f;
+
+    private float hideDialogDelay; 
     private bool isDisplayingMessage = false;
     private bool isSkippingDialog = false;
     private int maxMessageLength = 290; //Aca se edita la cantidad de caracteres que se quieran ver en el cuadro de dialogo
@@ -146,7 +148,7 @@ public class BoxMessageManager : MonoBehaviour
     private void ResetSkippingTimers()
     {
         letterDelay = 0.05f;
-        hideDialogDelay = 1f;
+        hideDialogDelay = customHideDialogDelay;
         isSkippingDialog = false;
     }
 
