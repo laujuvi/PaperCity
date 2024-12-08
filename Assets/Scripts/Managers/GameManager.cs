@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     public bool isNoteBookPickedUp = true;
     private bool isGuiltyCheck = false;
     private bool playerHasAcused = false;
+    public bool isDisplayingMessage = false;
 
     public static GameManager Instance { get; private set; }
 
@@ -86,11 +87,13 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (isGuiltyCheck) {
-            if (!boxMessageManager.IsDisplayingMessage()) {
+            if (!isDisplayingMessage) {
                 CheckGuiltyNPC();
                 isGuiltyCheck = false;
             }
         }
+
+        isDisplayingMessage = boxMessageManager.IsDisplayingMessage();
     }
     public void DisablePlayerController()
     {
