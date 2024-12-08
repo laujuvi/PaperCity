@@ -21,7 +21,7 @@ public class ListManager : MonoBehaviour
 
     void Update()
     {
-        if (playerController.isBookOpen)
+        if (GameManager.Instance.uIManager.CheckNotebookStatus())
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

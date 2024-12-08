@@ -9,20 +9,15 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask interactableLayerMask_1;
     [SerializeField] private LayerMask interactableLayerMask_2;
     [SerializeField] private BoxMessageManager _boxMessageManager;
-    private PlayerController _playerController;
+
     //private DialogManager _dialogManager;
 
     private int _currentLayerMask;
 
-    private void Start()
-    {
-        //_dialogManager = FindObjectOfType<DialogManager>();
-        _playerController = FindObjectOfType<PlayerController>();
-    }
 
     void Update()
     {
-        if (_playerController.isBookOpen == false)
+        if (GameManager.Instance.uIManager.CheckNotebookStatus() == false)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {

@@ -31,10 +31,6 @@ public class PlayerController : MonoBehaviour
     [Header("Animator")]
     public Animator animator;
 
-    [Header("NoteBook")]
-    [SerializeField] GameObject NoteBook;
-    public bool isBookOpen = false;
-
     [SerializeField] private AudioManager audioManager; 
 
     [SerializeField] private float smooth = 4f;
@@ -156,28 +152,26 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManager.Instance.isNoteBookPickedUp) return;
 
-        if(isBookOpen == false)
+       if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (GameManager.Instance.uIManager.CheckNotebookStatus() == false)
             {
-                isBookOpen = true;
-                NoteBook.SetActive(true);
+
+                GameManager.Instance.uIManager.SetEnableNotebook();
 
                 //audioManager.PlaySFX(audioManager.notebookCheck);
                 AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookCheck, transform, 1f);
+            
             }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.R))
+            else
             {
-                isBookOpen = false;
-                NoteBook.SetActive(false);
+
+                GameManager.Instance.uIManager.SetDisabledNotebook();
 
                 //audioManager.PlaySFX(audioManager.notebookClose);
                 AudioManager.instance.PlaySoundFX(AudioManager.instance.notebookClose, transform, 1f);
             }
-        }
+       }
     }
     public void PlayAudio(AudioClip audioClip)
     {
