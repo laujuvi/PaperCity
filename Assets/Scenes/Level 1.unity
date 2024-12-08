@@ -17772,6 +17772,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
   m_PrefabInstance: {fileID: 1154247562}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &684422180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684422176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd1bc341cfd5d94fbf03d013e739417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notebook: {fileID: 2105455367}
+  notebookIcon: {fileID: 1750161571}
 --- !u!1 &686872554
 GameObject:
   m_ObjectHideFlags: 0
@@ -29252,6 +29266,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1713275133}
     - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: notebookManager
+      value: 
+      objectReference: {fileID: 684422180}
+    - target: {fileID: 955475068263987632, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: sceneLoadManager
       value: 
       objectReference: {fileID: 1676841817}
@@ -29337,7 +29355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2094171432710704487, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -29512,6 +29530,10 @@ PrefabInstance:
     - target: {fileID: 5783924847561361353, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_fontSize
       value: 68.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795464523618858731, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6011895836363935453, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       propertyPath: m_margin.w
@@ -29711,7 +29733,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2335532268320375066, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1388393780}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1974919501407510095, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 684422180}
   m_SourcePrefab: {fileID: 100100000, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
 --- !u!1 &1154247563 stripped
 GameObject:
@@ -43689,6 +43714,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2596938637961133430, guid: dfb026ff6915bf642b5738683a90d714, type: 3}
   m_PrefabInstance: {fileID: 1748275735}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1750161571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161258466648549141, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1750478004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47580,6 +47610,7 @@ MonoBehaviour:
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
   isNoteBookPickedUp: 1
+  isDisplayingMessage: 0
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52654,6 +52685,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105304371}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2105455367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5795464523618858731, guid: 902a2697507dc724794d1c7a0ffca489, type: 3}
+  m_PrefabInstance: {fileID: 1154247562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2106168004
 GameObject:
   m_ObjectHideFlags: 0
