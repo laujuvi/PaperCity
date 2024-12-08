@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameSettings gameSettings;
     [SerializeField] LogManager logManager;
     [SerializeField] ScoreScreenManager scoreScreenManager;
+    [SerializeField] NotebookManager notebookManager;
+
     private void Start()
     {
         boxMessageManager = FindObjectOfType<BoxMessageManager>();
@@ -62,6 +64,12 @@ public class UIManager : MonoBehaviour
             menuUI.SetActive(isVisible);
         }
     }
+
+    public bool GetMenuUIVisibility()
+    {
+        return menuUI.activeSelf;
+    }
+
     public void SetOptionsVisibility(bool isVisible)
     {
         if (options != null)
@@ -189,6 +197,33 @@ public class UIManager : MonoBehaviour
         {
             scoreScreenManager.gameObject.SetActive(isVisible);
         }
+    }
+    #endregion
+
+    #region NotebookManager
+    public void SetEnableNotebook()
+    {
+        notebookManager.EnableNotebook();
+    }
+
+    public void SetDisabledNotebook()
+    {
+        notebookManager.DisableNotebook();
+    }
+
+    public void SetEnableNotebookIcon()
+    {
+        notebookManager.EnableNotebookIcon();
+    }
+
+    public void SetDisabledNotebookIcon()
+    {
+        notebookManager.DisableNotebookIcon();
+    }
+
+    public bool CheckNotebookStatus()
+    {
+        return notebookManager.NotebookStatus();
     }
     #endregion
 }
