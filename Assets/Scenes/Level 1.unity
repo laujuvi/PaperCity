@@ -2171,26 +2171,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &102566780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102566777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d8970a3b2421841b9b89436a936b57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: Reloj dorado
-  pickablePJText: Detective
-  pickableText: "\"Un reloj dorado muy bonito... Hmmm, que extra\xF1a descripci\xF3n
-    \"Para R, mi estrella en las noches m\xE1s oscuras. V.\" \xBFQui\xE9n ser\xE1
-    este V?\""
-  miniClue: {fileID: 1602746673}
-  description: "Alguien quer\xEDa mucho a Roger y le regal\xF3 un reloj..."
-  audioManager: {fileID: 1867747139}
 --- !u!65 &102566781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17361,9 +17341,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7195369139264393590, guid: a4107451d687ef148a29fe2e81b12064, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1022318199}
-    - targetCorrespondingSourceObject: {fileID: 4293528877513006731, guid: a4107451d687ef148a29fe2e81b12064, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 102566780}
     - targetCorrespondingSourceObject: {fileID: 4293528877513006731, guid: a4107451d687ef148a29fe2e81b12064, type: 3}
       insertIndex: -1
       addedObject: {fileID: 102566779}
