@@ -3162,8 +3162,6 @@ Transform:
   - {fileID: 1109340194115227410}
   - {fileID: 3262748056480250972}
   - {fileID: 2714591579588838309}
-  - {fileID: 3697222301608619629}
-  - {fileID: 8444892955254086619}
   - {fileID: 3077931032379998166}
   - {fileID: 6520375594979584278}
   - {fileID: 7368415329881243412}
@@ -3172,6 +3170,8 @@ Transform:
   - {fileID: 7447857802545928678}
   - {fileID: 2815100376199939357}
   - {fileID: 3363535119557792422}
+  - {fileID: 8444892955254086619}
+  - {fileID: 3697222301608619629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &955475068263987632
@@ -3187,6 +3187,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cluesText: {fileID: 598805934241748756}
+  lenIcon: {fileID: 0}
+  menuUI: {fileID: 0}
+  options: {fileID: 0}
+  controls: {fileID: 0}
+  GuiltyRoomUIPanel: {fileID: 0}
+  logObject: {fileID: 0}
+  _containerGameObject: {fileID: 0}
+  win: {fileID: 0}
+  lose: {fileID: 0}
+  preScoreScreen: {fileID: 0}
+  bgDialog: {fileID: 0}
+  sceneLoadManager: {fileID: 0}
+  guiltyRoomManager: {fileID: 0}
+  boxMessageManager: {fileID: 0}
+  gameSettings: {fileID: 0}
+  logManager: {fileID: 0}
+  scoreScreenManager: {fileID: 0}
+  notebookManager: {fileID: 0}
 --- !u!1 &6096835694710529152
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,7 +3331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649daf0f886c01e418fb651c94b7639a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _containerGameObject: {fileID: 714180026005916842}
   _playerInteract: {fileID: 0}
   interactText: {fileID: 7464460146575593222}
 --- !u!223 &1630086569175414574
@@ -3780,11 +3797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logManager: {fileID: 0}
   letterDelay: 0.005
-  hideDialogDelay: 3
+  customHideDialogDelay: 3
   textMeshPro: {fileID: 3644353293378202260}
   nameTextMeshPro: {fileID: 1329560800796255218}
-  bgDialog: {fileID: 4016898392915219804}
-  lenIcon: {fileID: 4761903931679911674}
   pjImage: {fileID: 0}
   imageDefault: {fileID: 2800000, guid: c467067a0643cef4293b0d692cf16f00, type: 3}
   imageList:
