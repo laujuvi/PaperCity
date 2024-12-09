@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Services.Analytics;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour   
 {
     /* MANAGERS */
     [Header("MANAGERS")]
@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     public int gameplayTime = 0; 
     private float DeltaTime = 0;    
     private bool rightSuspect = false;
+    public int fakeClueCount = 0;
+    public bool isFirstClue = false;
     public int openNoteBook = 0;
     public bool completedGame = false;
     public bool isLeavingGame = false;
@@ -148,6 +150,7 @@ public class GameManager : MonoBehaviour
             SentEndLevelEvents(true, lastNPCName);
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
+            SentFakeClueEvents(fakeClueCount, isFirstClue);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None;
@@ -162,6 +165,7 @@ public class GameManager : MonoBehaviour
             SentEndLevelEvents(false, lastNPCName);
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
+            SentFakeClueEvents(fakeClueCount, isFirstClue);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 
@@ -245,6 +249,16 @@ public class GameManager : MonoBehaviour
         {
             gameplay_Time = gameplayTime,
             clue_ID = clueID
+        };
+
+        AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+    public void SentFakeClueEvents(int fakeClueCount, bool isFirstClue)
+    {
+        FakeClueCounter btnEvt = new FakeClueCounter
+        {
+            fake_Clue_Count = fakeClueCount,
+            is_First_Clue = isFirstClue
         };
 
         AnalyticsService.Instance.RecordEvent(btnEvt);

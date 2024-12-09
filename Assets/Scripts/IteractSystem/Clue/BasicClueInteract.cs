@@ -29,6 +29,7 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {         
+           GameManager.Instance.fakeClueCount++;
            boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
         
         }
