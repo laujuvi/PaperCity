@@ -11,9 +11,12 @@ public class InGameMenu : MonoBehaviour
     bool isPaused = false;
     string currentScreen = "Menu";
 
+    GameSettings gameSettings;
+
     private void Start()
     {
-        //GameManager.Instance.uIManager.UpdateSensitivitySlider(mouseSensitivitySlider);
+        gameSettings = FindObjectOfType<GameSettings>();
+        gameSettings.UpdateSensitivitySlider(mouseSensitivitySlider);
 
         mouseSensitivitySlider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
 
