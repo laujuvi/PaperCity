@@ -86,14 +86,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isGuiltyCheck) {
+        isDisplayingMessage = boxMessageManager.IsDisplayingMessage();
+
+        if (isGuiltyCheck)
+        {
             if (!isDisplayingMessage) {
                 CheckGuiltyNPC();
                 isGuiltyCheck = false;
             }
         }
-
-        isDisplayingMessage = boxMessageManager.IsDisplayingMessage();
     }
     public void DisablePlayerController()
     {
