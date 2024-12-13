@@ -64,6 +64,9 @@ public class GameManager : MonoBehaviour
     public int openNoteBook = 0;
     public bool completedGame = false;
     public bool isLeavingGame = false;
+    public int interactions = 0;
+    public int crouch = 0;
+    public int lookUp = 0;
 
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -305,5 +308,33 @@ public class GameManager : MonoBehaviour
         };
 
         AnalyticsService.Instance.RecordEvent(btnEvt);
+    }
+    public void SentGuiltyRoomTimeEvents(float timeSpentInGuiltyRoom)
+    {
+        AccusationDecisionTime Evt = new AccusationDecisionTime
+        {
+            decisionTime = timeSpentInGuiltyRoom,
+        };
+        AnalyticsService.Instance.RecordEvent(Evt);
+        AnalyticsService.Instance.Flush();
+    }
+    public void SentAccusationRoomCluesEvents(int _interactions)
+    {
+        AccusationRoomClues Evt = new AccusationRoomClues
+        {
+            accusationRoomClues = _interactions,
+        };
+        AnalyticsService.Instance.RecordEvent(Evt);
+        AnalyticsService.Instance.Flush();
+    }
+    public void SentActionUsedEvents(string actionName, int actionUsed)
+    {
+        ActionUsed Evt = new ActionUsed
+        {
+            actionName = actionName,
+            actionUsedTimes = actionUsed
+        };
+        AnalyticsService.Instance.RecordEvent(Evt);
+        AnalyticsService.Instance.Flush();
     }
 }

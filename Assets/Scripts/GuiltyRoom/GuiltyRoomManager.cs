@@ -23,7 +23,9 @@ public class GuiltyRoomManager : MonoBehaviour
 
     private float guiltyRoomStartTime;
     private float totalTimeInGuiltyRoom;
-    // Start is called before the first frame update
+
+    string crouch = "crouch";
+    string lookUp = "lookUp";
     void Start()
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
@@ -32,6 +34,9 @@ public class GuiltyRoomManager : MonoBehaviour
     public void GoToGuiltyRoomYes()
     {
         StartGuiltyRoomTimer();
+
+        GameManager.Instance.SentActionUsedEvents(crouch, GameManager.Instance.crouch);
+        GameManager.Instance.SentActionUsedEvents(lookUp, GameManager.Instance.lookUp);
 
         if (playerController != null)
         {
@@ -81,15 +86,7 @@ public class GuiltyRoomManager : MonoBehaviour
     {
         totalTimeInGuiltyRoom = Time.time - guiltyRoomStartTime;
         float timeSpent = GetGuiltyRoomTime();
-        SentGuiltyRoomTimeEvents(timeSpent);
-    }
-    public void SentGuiltyRoomTimeEvents(float timeSpentInGuiltyRoom)
-    {
-        GuiltyRoomTime btnEvt = new GuiltyRoomTime
-        {
-            guilty_Room_Time = timeSpentInGuiltyRoom,
-        };
-        AnalyticsService.Instance.RecordEvent(btnEvt);
+        GameManager.Instance.SentGuiltyRoomTimeEvents(timeSpent);
     }
     public float GetGuiltyRoomTime()
     {

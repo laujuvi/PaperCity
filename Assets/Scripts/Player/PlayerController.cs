@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
             float newCrouchScaleY = Mathf.Lerp(transform.localScale.y, crouchLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newCrouchScaleY, 1);
 
+            GameManager.Instance.crouch++;
         }
     }
     private void LookUp()
@@ -153,6 +154,8 @@ public class PlayerController : MonoBehaviour
             float targetLocalScaleY = currentLookUphHeight;
             float newScaleY = Mathf.Lerp(transform.localScale.y, targetLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newScaleY, 1);
+
+            GameManager.Instance.lookUp++;
         }
     }
     private void UpdateAnimator()

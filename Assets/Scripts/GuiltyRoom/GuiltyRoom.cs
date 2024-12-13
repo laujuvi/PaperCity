@@ -24,11 +24,7 @@ public class GuiltyRoom : MonoBehaviour, IInteractable
         {
             guiltyRoomManager.boxMessageManager.SendMessage("Detective", Color.white, "Necesito más pistas...", Emotions.None);
         }
-   
     }
-
-   
-
     public string GetInteractText()
     {
         return interactText;
