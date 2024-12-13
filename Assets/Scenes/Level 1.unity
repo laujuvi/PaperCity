@@ -5581,6 +5581,7 @@ MonoBehaviour:
   pickableText: 
   isFakeEvidence: 0
   description: 
+  guiltyRoomManager: {fileID: 0}
   clueName: 
   audioManager: {fileID: 0}
 --- !u!114 &228072838
@@ -12171,6 +12172,7 @@ MonoBehaviour:
   pickablePJText: Detective
   pickableText: "Los papeles de divorcio solamente est\xE1n firmados por Roger. \xBFQu\xE9
     hac\xEDan en la cocina? \xBFHabr\xE1n estado discutiendo esto antes de dormir?"
+  miniClue: 0
   miniClue: {fileID: 1245932220}
   description: "Roger quer\xEDa divorciarse de Layla."
   audioManager: {fileID: 1867747139}
@@ -12616,6 +12618,7 @@ MonoBehaviour:
   pickablePJText: Detective
   pickableText: "Es un lindo retrato. L\xE1stima que no va a ayudarme a descubrir
     al asesino."
+  miniClue: 0
 --- !u!1001 &525138159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14910,6 +14913,7 @@ MonoBehaviour:
   pickableText: "Un cat\xE1logo de departamentos... \xBFPodr\xEDa ser que alguno
     de los Ackroyd buscaba mudarse o simplemente se le cay\xF3 a alguien mientras
     lavaban ropa?"
+  miniClue: 0
   miniClue: {fileID: 844723763}
   description: "Alguien estaba buscando un lugar para vivir. \xBFRoger o Layla?"
   audioManager: {fileID: 1867747139}
@@ -17029,6 +17033,7 @@ MonoBehaviour:
   pickableText: "La escena del crimen. Roger fue asesinado en el living de su hogar.
     9 pu\xF1aladas y no por un profesional. Fue un crimen hecho con odio, pero no
     con demasiada premeditaci\xF3n."
+  miniClue: 0
   miniClue: {fileID: 576411446}
   description: Roger fue asesinado con un cuchillo de cocina
   audioManager: {fileID: 1867747139}
@@ -25508,7 +25513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274055436843173095, guid: bc60af539d6979c4eb641bc70efd030d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42632,6 +42637,7 @@ MonoBehaviour:
   pickableText: "Roger siemopre quiso escribir novelas de detectives. Sol\xEDa consultarme
     por algunos casos en busca de inspiraci\xF3n. Lamentablemente me encontraba tan
     ebrio que no lograba recordar ni uno."
+  miniClue: 0
 --- !u!1 &1813544265
 GameObject:
   m_ObjectHideFlags: 0
@@ -43598,6 +43604,7 @@ MonoBehaviour:
   pickableText: "Mi parte c\xEDnica lo tratar\xEDa de egoc\xE9ntrico... Pero la verdad
     es que es un gran autorretrato de Roger Ackroyd. No puedo creer que haya muerto.
     Debo encontrar al culpable"
+  miniClue: 0
 --- !u!1 &1841230117
 GameObject:
   m_ObjectHideFlags: 0
@@ -44248,7 +44255,15 @@ MonoBehaviour:
   rightExitDoor: {fileID: 2109300187}
   audioManager: {fileID: 1867747139}
   musicSc: {fileID: 2002252284}
+  gameplayTime: 0
+  fakeClueCount: 0
+  isFirstClue: 0
   openNoteBook: 0
+  completedGame: 0
+  isLeavingGame: 0
+  interactions: 0
+  crouch: 0
+  lookUp: 0
 --- !u!114 &1859243080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46853,6 +46868,7 @@ MonoBehaviour:
   pickablePJText: Detective
   pickableText: La comida favorita de Roger. Layla fue muy considerada, incluso teniendo
     en cuenta los rumores sobre su amante.
+  miniClue: 0
 --- !u!1001 &1992918460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51509,7 +51525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2124354587126923757, guid: a6f904ec9f446604a921812c3a236c97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4346547063007040465, guid: a6f904ec9f446604a921812c3a236c97, type: 3}
       propertyPath: m_LocalPosition.x
