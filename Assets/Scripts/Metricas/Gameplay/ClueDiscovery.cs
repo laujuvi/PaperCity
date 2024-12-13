@@ -9,6 +9,5 @@ public class ClueDiscovery : Unity.Services.Analytics.Event
 
     }
 
-    public int clueCount { set { SetParameter("clue_Count", value); } }
-    public string clueID { set { SetParameter("clue_ID", value); } }
+    public int clue_Count { set { SetParameter("clue_Count", value); } }
 }
