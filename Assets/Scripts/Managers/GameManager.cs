@@ -222,6 +222,7 @@ public class GameManager : MonoBehaviour
         // Si ya esta listo para acusar se busca al culpable
         if (!boxMessageManager.IsDisplayingMessage())
         {
+            SentAccusationRoomCluesEvents(interactions);
             CheckGuiltyNPC();
         }
     }

@@ -11623,6 +11623,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082909812}
     m_Modifications:
+    - target: {fileID: 3907468086987891792, guid: 7acdcff4dc1ba7540bf9f11306d22003, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7059331257171709216, guid: 7acdcff4dc1ba7540bf9f11306d22003, type: 3}
       propertyPath: m_Name
       value: MiniReloj dorado
@@ -13232,6 +13236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.172
       objectReference: {fileID: 0}
+    - target: {fileID: 8612943002980009568, guid: 10188ce719c8e9d49ac60d4f3c2261a7, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13697,6 +13705,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082909812}
     m_Modifications:
+    - target: {fileID: 350836326869824055, guid: 6b53672b1c2578e42821839c3b8122b8, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1341148241703498574, guid: 6b53672b1c2578e42821839c3b8122b8, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.069683
@@ -17667,6 +17679,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4744233091278108681, guid: 3adfdffd8f75ce9418d04f7701ce7841, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5655961321623275880, guid: 3adfdffd8f75ce9418d04f7701ce7841, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.961
@@ -17930,6 +17946,10 @@ PrefabInstance:
     - target: {fileID: 1952984684897487171, guid: c45dfd1f2267a7443a461e88190b399e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335884623379017706, guid: c45dfd1f2267a7443a461e88190b399e, type: 3}
+      propertyPath: miniClue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6689498129843964427, guid: c45dfd1f2267a7443a461e88190b399e, type: 3}
       propertyPath: m_LocalScale.x
@@ -20308,6 +20328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082909812}
     m_Modifications:
+    - target: {fileID: 199341222269591681, guid: d5014c1e4822eda47bd14a6c3434c78a, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 317935245176544842, guid: d5014c1e4822eda47bd14a6c3434c78a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.834
@@ -23432,6 +23456,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2042030449504164238, guid: 20d96c25986340e4d8b0ace3c982ca7b, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042746487604801473, guid: 20d96c25986340e4d8b0ace3c982ca7b, type: 3}
+      propertyPath: miniClue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6281726546419749342, guid: 20d96c25986340e4d8b0ace3c982ca7b, type: 3}
@@ -26908,6 +26936,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2082909812}
     m_Modifications:
+    - target: {fileID: 1101750261895402666, guid: 72eb48966149c6445b3b6fdafa4d72a1, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5221805039965656171, guid: 72eb48966149c6445b3b6fdafa4d72a1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -27590,6 +27622,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848470566568804003, guid: 9a3e58c8d85551e429daf9b3c2806044, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590764586030506876, guid: 9a3e58c8d85551e429daf9b3c2806044, type: 3}
+      propertyPath: miniClue
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -29348,6 +29384,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997673076845719235, guid: f77a47fbe884eb341b688e59e651a414, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343328646306919040, guid: f77a47fbe884eb341b688e59e651a414, type: 3}
+      propertyPath: miniClue
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -35606,6 +35646,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Selectable
       objectReference: {fileID: 0}
+    - target: {fileID: 7453164869103973361, guid: caa2d697fd92c9441b37cc10487110fb, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8752787826061753872, guid: caa2d697fd92c9441b37cc10487110fb, type: 3}
       propertyPath: m_Name
       value: MiniPesa
@@ -40185,6 +40229,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1302091432195011997, guid: fe6fc8ebeb22cd74c8339647c1dcb41b, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5493312558667279114, guid: fe6fc8ebeb22cd74c8339647c1dcb41b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -42228,6 +42276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.172
       objectReference: {fileID: 0}
+    - target: {fileID: 4444743423270904140, guid: f640001c00410a44390ecd6ea6f739c8, type: 3}
+      propertyPath: miniClue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8077731434153300761, guid: f640001c00410a44390ecd6ea6f739c8, type: 3}
       propertyPath: m_Name
       value: MiniBruceAckroydLetter
@@ -44237,7 +44289,7 @@ MonoBehaviour:
   - {fileID: 47834572}
   - {fileID: 1022318189}
   - {fileID: 1662503273}
-  minEvidence: 9
+  minEvidence: 1
   intermediateMessage: "Creo que ya tengo suficientes pistas para acusar a alguien
     y ver si mi instinto detectivesco sigue intacto... O podr\xEDa asegurarme y seguir
     buscando un poco m\xE1s..."

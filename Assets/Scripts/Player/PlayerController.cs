@@ -122,19 +122,22 @@ public class PlayerController : MonoBehaviour
 
         if (!PlayerDialogue.isHavingDialogue)
         {
+            bool previousCrouchState = isCrouch;
             crouch = Input.GetKeyDown(KeyCode.LeftControl);
 
             if (crouch)
             {
                 isCrouch = !isCrouch;
                 currentCrouchHeigt = isCrouch ? crouchHeight : 1f;
+                if(isCrouch && !previousCrouchState)
+                {
+                    GameManager.Instance.crouch++;
+                }
             }
 
             float crouchLocalScaleY = currentCrouchHeigt;
             float newCrouchScaleY = Mathf.Lerp(transform.localScale.y, crouchLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newCrouchScaleY, 1);
-
-            GameManager.Instance.crouch++;
         }
     }
     private void LookUp()
@@ -143,19 +146,21 @@ public class PlayerController : MonoBehaviour
 
         if (!PlayerDialogue.isHavingDialogue)
         {
+            bool previousLookUpState = isLookUp;
             lookUp = Input.GetKeyDown(KeyCode.Space);
 
             if (lookUp)
             {
                 isLookUp = !isLookUp;
                 currentLookUphHeight = isLookUp ? lookUphHeight : 1f;
+                if(isLookUp && !previousLookUpState)
+                {
+                    GameManager.Instance.lookUp++;
+                }
             }
-
             float targetLocalScaleY = currentLookUphHeight;
             float newScaleY = Mathf.Lerp(transform.localScale.y, targetLocalScaleY, Time.deltaTime * smooth);
             transform.localScale = new Vector3(1, newScaleY, 1);
-
-            GameManager.Instance.lookUp++;
         }
     }
     private void UpdateAnimator()
