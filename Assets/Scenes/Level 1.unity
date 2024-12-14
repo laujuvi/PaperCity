@@ -44268,6 +44268,7 @@ MonoBehaviour:
   boxMessageManager: {fileID: 2139294260}
   dialogManager: {fileID: 1119218544}
   uIManager: {fileID: 2000642660}
+  guiltyRoomManager: {fileID: 1760056965}
   _playerInteract: {fileID: 1631509814}
   _playerController: {fileID: 1631509816}
   isPlayerInGuiltyRoom: 0

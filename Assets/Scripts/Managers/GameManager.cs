@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BoxMessageManager boxMessageManager;
     [SerializeField] private DialogManager dialogManager;
     [SerializeField] private UIManager uIManager;
+    [SerializeField] GuiltyRoomManager guiltyRoomManager;
 
     /* PLAYER */
     [Header("PLAYER")]
@@ -222,6 +223,7 @@ public class GameManager : MonoBehaviour
         // Si ya esta listo para acusar se busca al culpable
         if (!boxMessageManager.IsDisplayingMessage())
         {
+            guiltyRoomManager.StopGuiltyRoomTimer();
             SentAccusationRoomCluesEvents(interactions);
             CheckGuiltyNPC();
         }

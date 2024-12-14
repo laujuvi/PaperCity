@@ -87,6 +87,7 @@ public class GuiltyRoomManager : MonoBehaviour
         totalTimeInGuiltyRoom = Time.time - guiltyRoomStartTime;
         float timeSpent = GetGuiltyRoomTime();
         GameManager.Instance.SentGuiltyRoomTimeEvents(timeSpent);
+        Debug.Log(timeSpent);
     }
     public float GetGuiltyRoomTime()
     {
