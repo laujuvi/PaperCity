@@ -148,6 +148,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Checking guilty NPC. GuiltyNPC: " + guiltyNPC.name + " - LastNPCName: " + lastNPCName);
         if (guiltyNPC.name == lastNPCName)
         {
+            Debug.Log(guiltyRoomManager.guiltyRoomElapsedTime);
             guiltyRoomManager.StopGuiltyRoomTimer();
 
             Debug.Log("WIN");
@@ -156,7 +157,7 @@ public class GameManager : MonoBehaviour
             SentEndLevelEvents(true, lastNPCName);
 
             SentAccusationRoomCluesEvents(interactions);
-            SentGuiltyRoomTimeEvents(guiltyRoomManager.guiltyRoomElapsedTime);
+            SentGuiltyRoomTimeEvents(guiltyRoomManager.GetGuiltyRoomTime());
 
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
@@ -169,6 +170,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Debug.Log(guiltyRoomManager.guiltyRoomElapsedTime);
             guiltyRoomManager.StopGuiltyRoomTimer();
 
             Debug.Log("LOSE");
@@ -177,7 +179,7 @@ public class GameManager : MonoBehaviour
             SentEndLevelEvents(false, lastNPCName);
 
             SentAccusationRoomCluesEvents(interactions);
-            SentGuiltyRoomTimeEvents(guiltyRoomManager.guiltyRoomElapsedTime);
+            SentGuiltyRoomTimeEvents(guiltyRoomManager.GetGuiltyRoomTime());
 
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);

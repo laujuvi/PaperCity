@@ -22,8 +22,6 @@ public class GuiltyRoomManager : MonoBehaviour
     public bool isTimerRuning = false;
     public GameObject lenIcon;
 
-    public float guiltyRoomStartTime;
-    public float totalTimeInGuiltyRoom;
     public float guiltyRoomElapsedTime;
 
     string crouch = "crouch";
@@ -97,8 +95,8 @@ public class GuiltyRoomManager : MonoBehaviour
         isTimerRuning = false;
         Debug.Log(guiltyRoomElapsedTime);
     }
-    //public float GetGuiltyRoomTime()
-    //{
-    //    return totalTimeInGuiltyRoom;
-    //}
+    public float GetGuiltyRoomTime()
+    {
+        return guiltyRoomElapsedTime;
+    }
 }
