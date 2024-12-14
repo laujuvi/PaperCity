@@ -19,10 +19,12 @@ public class GuiltyRoomManager : MonoBehaviour
 
     [SerializeField] public GameObject GuiltyRoomUIPanel;
     private bool isPaused;
+    public bool isTimerRuning = false;
     public GameObject lenIcon;
 
-    private float guiltyRoomStartTime;
-    private float totalTimeInGuiltyRoom;
+    public float guiltyRoomStartTime;
+    public float totalTimeInGuiltyRoom;
+    public float guiltyRoomElapsedTime;
 
     string crouch = "crouch";
     string lookUp = "lookUp";
@@ -30,6 +32,13 @@ public class GuiltyRoomManager : MonoBehaviour
     {
         boxMessageManager = FindAnyObjectByType<BoxMessageManager>();
         minClue = GameManager.Instance.GetMinEvidence();
+    }
+    private void Update()
+    {
+        if (isTimerRuning)
+        {
+            guiltyRoomElapsedTime += Time.deltaTime;
+        }
     }
     public void GoToGuiltyRoomYes()
     {
@@ -80,17 +89,16 @@ public class GuiltyRoomManager : MonoBehaviour
     }
     public void StartGuiltyRoomTimer()
     {
-        guiltyRoomStartTime = Time.time;
+        guiltyRoomElapsedTime = 0f;
+        isTimerRuning = true;
     }
     public void StopGuiltyRoomTimer()
     {
-        totalTimeInGuiltyRoom = Time.time - guiltyRoomStartTime;
-        float timeSpent = GetGuiltyRoomTime();
-        GameManager.Instance.SentGuiltyRoomTimeEvents(timeSpent);
-        Debug.Log(timeSpent);
+        isTimerRuning = false;
+        Debug.Log(guiltyRoomElapsedTime);
     }
-    public float GetGuiltyRoomTime()
-    {
-        return totalTimeInGuiltyRoom;
-    }
+    //public float GetGuiltyRoomTime()
+    //{
+    //    return totalTimeInGuiltyRoom;
+    //}
 }
