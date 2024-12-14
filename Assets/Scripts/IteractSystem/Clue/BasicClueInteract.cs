@@ -25,6 +25,11 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
             {
                 GameManager.Instance.interactions++;
             }
+            if (GameManager.Instance.currentEvidence == 0 && GameManager.Instance.fakeClueCount == 0)
+            {
+                GameManager.Instance.isFirstClue = true;
+            }
+            boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
         }
     }
    
