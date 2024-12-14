@@ -4,7 +4,7 @@ public class AccusationDecisionTime : Unity.Services.Analytics.Event
     {
 
     }
-    public float decisionTime { set { SetParameter("accusationTime", value); } }
+    public float decisionTime { set { SetParameter("decisionTime", value); } }
 }
 public class AccusationRoomClues : Unity.Services.Analytics.Event
 {
