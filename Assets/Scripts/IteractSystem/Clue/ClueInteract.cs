@@ -1,12 +1,9 @@
-using System.Buffers.Text;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 public class ClueInteract : BasicClueInteract
 {
-    [SerializeField] private BasicClueInteract miniClue;
+    [SerializeField] private new BasicClueInteract miniClue;
     [SerializeField] private string description;
     private DialogManager dialogManager;
     private GameManager gameManager;
