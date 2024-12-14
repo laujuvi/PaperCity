@@ -29,9 +29,12 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
     {
         if (gameObject.layer == LayerMask.NameToLayer("Pickeable"))
         {         
-           GameManager.Instance.fakeClueCount++;
-           boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
-        
+            GameManager.Instance.fakeClueCount++;
+            if (GameManager.Instance.currentEvidence == 0 && GameManager.Instance.fakeClueCount == 0)
+            {
+                GameManager.Instance.isFirstClue = true;
+            }
+            boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
         }
    
     }
