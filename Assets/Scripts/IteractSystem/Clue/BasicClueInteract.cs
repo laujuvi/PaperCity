@@ -8,7 +8,7 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
     [SerializeField] private string interactText;
     [SerializeField] public string pickablePJText = "Detective";
     [SerializeField] public string pickableText;
-    public bool miniClue;
+    public bool isMiniClue;
     private BoxMessageManager boxClueMessageManager;
 
     void Start()
@@ -21,7 +21,7 @@ public class BasicClueInteract : MonoBehaviour, IInteractable
         {         
             GameManager.Instance.fakeClueCount++;
             boxClueMessageManager.SendMessage(pickablePJText, Color.white, pickableText, Emotions.Talking);
-            if (miniClue)
+            if (isMiniClue)
             {
                 GameManager.Instance.interactions++;
             }

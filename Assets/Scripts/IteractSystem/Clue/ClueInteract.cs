@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ClueInteract : BasicClueInteract
 {
-    [SerializeField] private new BasicClueInteract miniClue;
+    [SerializeField] private BasicClueInteract miniClue;
     [SerializeField] private string description;
     private DialogManager dialogManager;
     private GameManager gameManager;
