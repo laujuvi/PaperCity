@@ -57,7 +57,8 @@ public class GameManager : MonoBehaviour
     private bool isGuiltyCheck = false;
 
     [Header("Analytics")]
-    public float gameplayTime = 0; 
+    public float gameplayTime = 0;
+    public int firstGameplayTime = 0; 
     private float DeltaTime = 0;    
     private bool rightSuspect = false;
     public int fakeClueCount = 0;
@@ -161,6 +162,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
+            SentFirstClueEvents(firstGameplayTime, "-");
             SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
@@ -184,6 +186,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
+            SentFirstClueEvents(firstGameplayTime, "-");
             SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();

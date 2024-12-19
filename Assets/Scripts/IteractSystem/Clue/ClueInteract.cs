@@ -33,7 +33,7 @@ public class ClueInteract : BasicClueInteract
         gameManager.CheckCurrentEvidence();
         if(GameManager.Instance.currentEvidence == 0)
         {
-            GameManager.Instance.SentFirstClueEvents((int)GameManager.Instance.gameplayTime, base.pickableText);
+            GameManager.Instance.firstGameplayTime = (int)GameManager.Instance.gameplayTime;
         }
         //audioManager.PlaySFX(audioManager.clueFound);
         AudioManager.instance.PlaySoundFX(AudioManager.instance.clueFound, transform, 1f);
