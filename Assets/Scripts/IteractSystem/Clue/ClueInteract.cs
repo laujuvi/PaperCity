@@ -31,10 +31,7 @@ public class ClueInteract : BasicClueInteract
         dialogManager.SetEvidenceStatus(gameObject.name, true); // Pongo en true para avisar que el player recogio la evidencia
         _listManager.AddText($"({description})");
         gameManager.CheckCurrentEvidence();
-        if(GameManager.Instance.currentEvidence == 0)
-        {
-            GameManager.Instance.firstGameplayTime = (int)GameManager.Instance.gameplayTime;
-        }
+        
         //audioManager.PlaySFX(audioManager.clueFound);
         AudioManager.instance.PlaySoundFX(AudioManager.instance.clueFound, transform, 1f);
         print("pick");

@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Analytics")]
     public float gameplayTime = 0;
-    public int firstGameplayTime = 0; 
+    public float firstGameplayTime = 0; 
     private float DeltaTime = 0;    
     private bool rightSuspect = false;
     public int fakeClueCount = 0;
@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
-            SentFirstClueEvents(firstGameplayTime, "-");
+            //SentFirstClueEvents((int)firstGameplayTime, "-");
             SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
-            SentFirstClueEvents(firstGameplayTime, "-");
+            //SentFirstClueEvents((int)firstGameplayTime, "-");
             SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
@@ -199,6 +199,11 @@ public class GameManager : MonoBehaviour
     public void CheckCurrentEvidence()
     {
         currentEvidence++;
+        if(currentEvidence == 1 )
+        {
+            SentFirstClueEvents((int)gameplayTime,"-");
+            Debug.Log((int)gameplayTime);
+        }
         uIManager.UpdateCurrentEvidence(currentEvidence);
         if (currentEvidence >= maxEvidence)
         {
