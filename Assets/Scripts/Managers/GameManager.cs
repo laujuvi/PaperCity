@@ -94,12 +94,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        DeltaTime += Time.deltaTime;
-        gameplayTime += ((int)DeltaTime);
+        gameplayTime += ((int)Time.deltaTime);
         if (isGuiltyCheck) {
             if (!boxMessageManager.IsDisplayingMessage()) {
                 CheckGuiltyNPC();
-                SentEvents(gameplayTime);
+                
                 isGuiltyCheck = false;
             }
                 
@@ -162,6 +161,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
+            SentEvents(gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None;
@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
+            SentEvents(gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 

@@ -10,6 +10,6 @@ public class TutorialTime : Unity.Services.Analytics.Event
 
     }
 
-    public float tutorial_Time { set { SetParameter("time_in_the_tutorial", value); } }
+    public float tutorial_Time { set { SetParameter("time_In_The_Tutorial", value); } }
 
 }
