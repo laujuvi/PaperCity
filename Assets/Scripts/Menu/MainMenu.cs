@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     {
         if(GameManager.Instance.completedGame == false)
         {
-            GameManager.Instance.SentEndGamelEvents(GameManager.Instance.gameplayTime, true);
+            GameManager.Instance.SentEndGamelEvents((int)GameManager.Instance.gameplayTime, true);
         }
         Application.Quit();
     }

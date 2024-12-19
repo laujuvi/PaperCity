@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     private bool isGuiltyCheck = false;
 
     [Header("Analytics")]
-    public int gameplayTime = 0; 
+    public float gameplayTime = 0; 
     private float DeltaTime = 0;    
     private bool rightSuspect = false;
     public int fakeClueCount = 0;
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        gameplayTime += ((int)Time.deltaTime);
+        gameplayTime += Time.deltaTime;
         if (isGuiltyCheck) {
             if (!boxMessageManager.IsDisplayingMessage()) {
                 CheckGuiltyNPC();
@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
-            SentEvents(gameplayTime);
+            SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.victorySound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None;
@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
             SentClueCountEvents(currentEvidence);
             SentOpenNoteBookEvents(openNoteBook);
             SentFakeClueEvents(fakeClueCount, isFirstClue);
-            SentEvents(gameplayTime);
+            SentEvents((int)gameplayTime);
             audioManager.PlaySoundFX(AudioManager.instance.defeatSound, transform, 1f);
             musicSc.Stop();
             Cursor.lockState = CursorLockMode.None; 
